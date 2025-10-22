@@ -25,7 +25,7 @@ The choice of which scaling techniques to use depends on the specific requiremen
 -   **Statelessness:** Designing services to be stateless simplifies horizontal scaling, as any instance can handle any request.
 -   **Data Partitioning:** How data is divided and distributed across multiple nodes to avoid hot spots and enable parallel processing.
 -   **Load Balancing:** Effectively distributing incoming traffic across available resources to prevent overload and ensure optimal performance.
--   **Monitoring and Automation:** Implementing robust monitoring to detect performance bottlenecks and automating scaling actions (e.g., auto-scaling groups).
+-   **Monitoring and Automation:** Implementing robust monitoring to detect performance bottlenecks and automating scaling actions (e.g., auto-scaling groups, serverless functions) based on predefined metrics or schedules.
 -   **Cost-Effectiveness:** Balancing the performance and availability benefits of scaling with the associated infrastructure and operational costs.
 -   **Complexity:** The increased complexity in managing and operating a horizontally scaled distributed system.
 

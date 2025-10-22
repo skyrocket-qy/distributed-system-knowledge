@@ -16,6 +16,7 @@ There are two primary patterns for service discovery:
 
 -   **[Client-Side Service Discovery](./client-side-discovery/README.md):** In this pattern, the client is responsible for querying the service registry to get the network locations of available service instances and then load-balancing requests across them.
 -   **[Server-Side Service Discovery](./server-side-discovery/README.md):** In this pattern, clients make requests to a service via a router or load balancer, which then queries the service registry and forwards the request to an available service instance.
+-   **DNS-based Discovery:** Services register their network locations with a DNS server, and clients resolve service names to IP addresses using standard DNS queries. This is common in container orchestration platforms like Kubernetes.
 
 ### Key Considerations
 

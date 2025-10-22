@@ -35,6 +35,7 @@ There are many popular messaging systems in use today, including:
 -   **Delivery Guarantees:** Understanding the guarantees provided by the messaging system (at-most-once, at-least-once, exactly-once).
 -   **Message Durability:** Ensuring messages are not lost in case of broker or consumer failures.
 -   **Ordering:** Maintaining the order of messages, especially in scenarios where strict ordering is required.
+-   **Idempotency:** Designing message consumers to process duplicate messages without causing unintended side effects, crucial when dealing with at-least-once delivery guarantees.
 -   **Throughput and Latency:** The performance characteristics of the messaging system under various loads.
 -   **Scalability:** How easily the messaging system can scale to handle increasing message volumes and consumers.
 -   **Monitoring and Management:** Tools and practices for observing and managing the messaging infrastructure.

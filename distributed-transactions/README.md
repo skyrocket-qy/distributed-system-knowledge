@@ -4,7 +4,7 @@
 
 In distributed systems, a **distributed transaction** is a transaction that involves multiple participants (e.g., databases, services) that are located on different network hosts. The primary challenge is to ensure atomicity, consistency, isolation, and durability (ACID properties) across all participating nodes, even in the face of network failures or node crashes.
 
-Traditional ACID transactions are straightforward in a single-node environment. However, extending these guarantees to a distributed setting introduces significant complexity and overhead, often leading to trade-offs in performance and availability.
+Traditional ACID transactions are straightforward in a single-node environment. However, extending these guarantees to a distributed setting introduces significant complexity and overhead, often leading to trade-offs in performance and availability. Consequently, in many modern distributed systems, especially microservices architectures, traditional distributed transactions (like 2PC/3PC) are often avoided in favor of alternative patterns that prioritize availability and partition tolerance, such as the Saga pattern, accepting eventual consistency.
 
 ### Key Challenges
 

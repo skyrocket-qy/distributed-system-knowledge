@@ -10,7 +10,7 @@ This directory aims to document various concepts, modes, and mechanisms related 
 
 - [Communication](./communication/README.md)
 - [Conflict Resolution](./conflict-resolution/README.md)
-- [Consensus](./coordination/consensus/README.md)
+
 - [Consistency Models](./consistency-models/README.md)
 - [Coordination](./coordination/README.md)
 - [Data Replication](./data-replication/README.md)
