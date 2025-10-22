@@ -4,6 +4,7 @@
 
 - [CAP Theorem](./concepts/foundations/cap-theorem)
 - [Communication](./concepts/foundations/communication)
+- [Concurrency Control](./concepts/foundations/concurrency-control)
 - [Conflict Resolution](./concepts/foundations/conflict-resolution)
 - [Consistency Models](./concepts/foundations/consistency-models)
 - [Coordination](./concepts/foundations/coordination)
