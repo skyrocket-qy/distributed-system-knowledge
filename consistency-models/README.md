@@ -6,13 +6,21 @@ In a distributed system, a **consistency model** is a contract between the syste
 
 The choice of a consistency model has a significant impact on the performance, availability, and complexity of a distributed system. There is often a trade-off between the strength of the consistency guarantee and the performance and availability of the system. Stronger consistency models are easier for developers to reason about, but they often come at the cost of higher latency and lower availability. Weaker consistency models can provide better performance and availability, but they require developers to handle the complexities of eventual consistency.
 
+### Key Considerations
+
+-   **Application Requirements:** The specific needs of the application regarding data accuracy, freshness, and user experience.
+-   **Performance vs. Consistency:** The inherent trade-off between providing strong consistency guarantees and achieving high performance and availability.
+-   **Developer Complexity:** The ease or difficulty for developers to reason about and work with a given consistency model.
+-   **Conflict Resolution:** How conflicts arising from concurrent updates are handled, especially in weaker consistency models.
+-   **Network Partitions:** The system's behavior and data availability during network failures that partition the system.
+
 ## Comparison
 
 | Model | Guarantee | Performance | Use Case |
 |---|---|---|---|
-| **[Strong Consistency](./strong-consistency)** | All replicas are always up-to-date | High latency | Financial systems, critical data |
-| **[Eventual Consistency](./eventual-consistency)** | Replicas will eventually be consistent | Low latency | Social media, e-commerce |
-| **[Causal Consistency](./causal-consistency)** | Causal order of operations is preserved | Medium latency | Collaborative editing, chat |
+| **[Strong Consistency](./strong-consistency)** | All replicas are always up-to-date | High latency (due to coordination overhead) | Financial systems, critical data |
+| **[Eventual Consistency](./eventual-consistency)** | Replicas will eventually be consistent | Low latency (allows for faster writes) | Social media, e-commerce |
+| **[Causal Consistency](./causal-consistency)** | Causal order of operations is preserved | Medium latency (requires tracking causal dependencies) | Collaborative editing, chat |
 
 ## Which service use it?
 

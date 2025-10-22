@@ -18,6 +18,15 @@ There are a number of different network topologies that can be used in a distrib
 
 The choice of which topology to use is a trade-off between a number of factors, including cost, performance, reliability, and scalability.
 
+### Key Considerations
+
+-   **Fault Tolerance:** The ability of the topology to withstand node or link failures without disrupting the entire system.
+-   **Scalability:** How easily new nodes can be added to the network without significant redesign or performance degradation.
+-   **Cost:** The financial expense associated with cabling, hardware, and maintenance for a given topology.
+-   **Performance:** The impact of the topology on communication latency and bandwidth.
+-   **Complexity:** The ease or difficulty of implementing, managing, and troubleshooting the network.
+-   **Security:** How the topology affects the network's vulnerability to attacks and unauthorized access.
+
 ## Comparison
 
 | Topology | Reliability | Scalability | Cost | Use Case |

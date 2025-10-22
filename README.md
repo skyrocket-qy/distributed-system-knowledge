@@ -1,12 +1,16 @@
 # Distributed Systems Concepts
 
+## Introduction
+
+A distributed system is a collection of independent computers that appears to its users as a single coherent system. These systems are designed to solve problems that are too large or complex for a single machine, offering advantages such as enhanced scalability, reliability, and fault tolerance. However, they also introduce significant challenges related to communication, consistency, coordination, and fault management due to the inherent complexities of networked environments.
+
 This directory aims to document various concepts, modes, and mechanisms related to distributed systems.
 
 ## Topics
 
 - [Communication](./communication/README.md)
 - [Conflict Resolution](./conflict-resolution/README.md)
-- [Consensus](./consensus/README.md)
+- [Consensus](./coordination/consensus/README.md)
 - [Consistency Models](./consistency-models/README.md)
 - [Coordination](./coordination/README.md)
 - [Data Replication](./data-replication/README.md)

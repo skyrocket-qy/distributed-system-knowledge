@@ -9,8 +9,16 @@ Without robust conflict resolution mechanisms, a distributed system can suffer f
 This section addresses various strategies and mechanisms for resolving these conflicts, including:
 - **Last-Write-Wins (LWW):** A simple approach where the update with the latest timestamp is chosen as the winner.
 - **Vector Clocks:** A more sophisticated mechanism that can detect concurrent updates and leave the resolution to the application.
-- **Conflict-free Replicated Data Types (CRDTs):** Data structures that are designed to be concurrently modified without causing conflicts.
+- **Conflict-free Replicated Data Types (CRDTs):** Data structures designed for concurrent modification without conflicts, often used in [Data Replication](../data-replication/README.md) and as a [Coordination](../coordination/README.md) mechanism.
 - **Application-specific Logic:** In some cases, the application itself is best equipped to resolve conflicts based on business rules.
+
+### Considerations
+
+-   **Data Semantics:** The nature of the data and the meaning of concurrent updates (e.g., merging text vs. financial transactions).
+-   **Application Requirements:** The acceptable level of data loss, consistency guarantees, and user experience.
+-   **Performance Overhead:** The computational and network resources required by the chosen resolution strategy.
+-   **Complexity:** The difficulty of implementing and maintaining the conflict resolution mechanism.
+-   **Determinism:** Whether the resolution process always yields the same result given the same set of conflicting updates.
 
 ## Comparison
 

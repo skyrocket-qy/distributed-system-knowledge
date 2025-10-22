@@ -4,7 +4,15 @@
 
 In distributed systems, **communication** is the mechanism by which processes running on different nodes interact and exchange information. Effective communication is fundamental to the functioning of any distributed system, as it enables coordination, data sharing, and the execution of distributed algorithms.
 
-This section explores various communication patterns, protocols, and models used for inter-process communication. Key challenges in distributed communication include handling network latency, ensuring message delivery, maintaining order, and dealing with failures.
+This section explores various communication patterns, protocols, and models used for inter-process communication. Key challenges in distributed communication include handling network latency, ensuring message delivery, maintaining order, and dealing with failures, which are often addressed through concepts discussed in [Consistency Models](../consistency-models/README.md) and [Fault Tolerance](../fault-tolerance/README.md).
+
+### Key Challenges
+
+-   **Network Latency:** The delay introduced by the time it takes for data to travel across the network.
+-   **Message Loss:** Messages can be dropped due to network congestion, hardware failures, or other issues.
+-   **Message Ordering:** Ensuring messages are processed in the order they were sent, especially across different nodes.
+-   **Partial Failures:** One part of the system failing while others continue to operate, leading to inconsistent states.
+-   **Security:** Protecting communication channels from eavesdropping, tampering, and unauthorized access.
 
 ## Comparison
 

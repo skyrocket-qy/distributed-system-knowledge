@@ -30,6 +30,15 @@ There are many popular messaging systems in use today, including:
 -   **Amazon SQS (Simple Queue Service):** A fully managed message queuing service from AWS.
 -   **Google Cloud Pub/Sub:** A fully managed real-time messaging service from Google Cloud.
 
+### Key Considerations
+
+-   **Delivery Guarantees:** Understanding the guarantees provided by the messaging system (at-most-once, at-least-once, exactly-once).
+-   **Message Durability:** Ensuring messages are not lost in case of broker or consumer failures.
+-   **Ordering:** Maintaining the order of messages, especially in scenarios where strict ordering is required.
+-   **Throughput and Latency:** The performance characteristics of the messaging system under various loads.
+-   **Scalability:** How easily the messaging system can scale to handle increasing message volumes and consumers.
+-   **Monitoring and Management:** Tools and practices for observing and managing the messaging infrastructure.
+
 ## Comparison
 
 | Pattern | Delivery | Scalability | Use Case |

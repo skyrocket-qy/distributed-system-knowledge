@@ -20,6 +20,15 @@ There are a number of different techniques that can be used to scale a distribut
 
 The choice of which scaling techniques to use depends on the specific requirements of the application. For example, a system that is read-heavy might benefit from caching, while a system that is write-heavy might benefit from sharding.
 
+### Key Considerations
+
+-   **Statelessness:** Designing services to be stateless simplifies horizontal scaling, as any instance can handle any request.
+-   **Data Partitioning:** How data is divided and distributed across multiple nodes to avoid hot spots and enable parallel processing.
+-   **Load Balancing:** Effectively distributing incoming traffic across available resources to prevent overload and ensure optimal performance.
+-   **Monitoring and Automation:** Implementing robust monitoring to detect performance bottlenecks and automating scaling actions (e.g., auto-scaling groups).
+-   **Cost-Effectiveness:** Balancing the performance and availability benefits of scaling with the associated infrastructure and operational costs.
+-   **Complexity:** The increased complexity in managing and operating a horizontally scaled distributed system.
+
 ## Comparison
 
 | Scaling Method | Approach | Cost | Scalability Limit | Use Case |

@@ -25,6 +25,15 @@ There are a number of techniques that can be used to build fault-tolerant distri
 
 The goal of fault tolerance is to mask failures from the end-user, providing the illusion of a continuously available and correct system. The specific techniques used will depend on the system's requirements for availability, consistency, and performance.
 
+### Key Considerations
+
+-   **Failure Domains:** Identifying independent components whose failure won't affect others.
+-   **Recovery Time Objective (RTO):** The maximum acceptable downtime after a failure.
+-   **Recovery Point Objective (RPO):** The maximum acceptable amount of data loss after a failure.
+-   **Cost:** The financial implications of implementing and maintaining fault-tolerant solutions.
+-   **Complexity:** The added complexity to the system design, development, and operation.
+-   **Testing:** Thoroughly testing failure scenarios to ensure the fault-tolerance mechanisms work as expected.
+
 
 ## Comparison
 

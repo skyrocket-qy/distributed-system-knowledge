@@ -17,6 +17,15 @@ There are two primary patterns for service discovery:
 -   **[Client-Side Service Discovery](./client-side-discovery/README.md):** In this pattern, the client is responsible for querying the service registry to get the network locations of available service instances and then load-balancing requests across them.
 -   **[Server-Side Service Discovery](./server-side-discovery/README.md):** In this pattern, clients make requests to a service via a router or load balancer, which then queries the service registry and forwards the request to an available service instance.
 
+### Key Considerations
+
+-   **Service Registration:** How services register themselves with the registry (e.g., self-registration, third-party registration).
+-   **Health Checking:** Mechanisms to determine the health and availability of registered service instances.
+-   **Caching:** Caching service locations to reduce load on the registry and improve performance.
+-   **Security:** Securing access to the service registry and ensuring only authorized services can register or discover.
+-   **Consistency:** The consistency model of the service registry itself (e.g., eventual consistency vs. strong consistency).
+-   **Integration:** How service discovery integrates with other components like load balancers, API gateways, and configuration management.
+
 ## Pros & Cons
 
 ### Pros

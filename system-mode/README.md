@@ -20,6 +20,15 @@ This section provides an overview of some of the most common system modes found 
 
 Understanding the trade-offs between these different system modes is essential for designing and building effective distributed systems.
 
+### Key Considerations
+
+-   **Scalability Requirements:** How much the system needs to grow in terms of users, data, or transactions.
+-   **Consistency Needs:** The level of data consistency required by the application (e.g., strong, eventual).
+-   **Availability Goals:** The desired uptime and resilience to failures.
+-   **Fault Tolerance:** The ability of the system to continue operating despite component failures.
+-   **Development and Operational Complexity:** The effort required to build, deploy, and maintain the system.
+-   **Cost:** The financial implications of infrastructure, development, and operations for a given system mode.
+
 
 ## Comparison
 

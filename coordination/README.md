@@ -9,6 +9,14 @@ Without proper coordination, a distributed system can suffer from a variety of p
 - **Deadlocks:** When two or more processes are blocked, each waiting for the other to release a resource.
 - **Inconsistent State:** When different nodes in the system have different views of the same data.
 
+### Key Challenges
+
+-   **Distributed Consensus:** Reaching agreement among multiple nodes on a single data value or decision, even in the presence of failures.
+-   **Leader Election:** Dynamically selecting a single coordinator (leader) from a group of nodes.
+-   **Distributed Transactions:** Ensuring atomicity, consistency, isolation, and durability (ACID) properties across multiple independent operations in a distributed environment.
+-   **Clock Synchronization:** Maintaining a consistent notion of time across distributed nodes, which is crucial for ordering events.
+-   **Failure Handling:** Designing coordination mechanisms that are resilient to node crashes, network partitions, and other failures.
+
 
 ## Comparison
 
@@ -18,7 +26,7 @@ Without proper coordination, a distributed system can suffer from a variety of p
 | **[Quorum](./quorum)** | Consistency | Medium | Medium | Read/write operations in replicated systems |
 | **[Gossip](./gossip)** | Dissemination | High | Low | Cluster membership, failure detection |
 | **[Vector Clock](./vector-clock)** | Causality | High | Medium | Detecting concurrent updates, versioning |
-| **[CRDT](./crdt)** | Conflict-free replication | High | High | Collaborative applications |
+| **[CRDT](./crdt)** | Conflict-free replication | High | High | Collaborative applications, enabling automatic conflict resolution as seen in [Conflict Resolution](../conflict-resolution/README.md) and used in [Data Replication](../data-replication/README.md) |
 | **[Event Streaming](./event-streaming)** | Data flow | High | Medium | Real-time data processing, microservices |
 
 ## Which service use it?
