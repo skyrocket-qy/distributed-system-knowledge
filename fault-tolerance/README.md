@@ -45,6 +45,7 @@ The goal of fault tolerance is to mask failures from the end-user, providing the
 | **[Snapshot](./snapshot)** | Fast | High | Medium | Stateful applications, databases |
 | **[Consensus-Based Recovery](./consensus-recovery)** | Slow | High | High | Distributed databases, state machine replication |
 | **[Gossip-Based Recovery](./gossip-recovery)** | Slow | Low | Low | Peer-to-peer networks, cluster membership |
+| **[Idempotency](./idempotency)** | Instant | Low | Medium | Message processing, payment systems |
 
 ## Which service use it?
 
@@ -77,3 +78,5 @@ The goal of fault tolerance is to mask failures from the end-user, providing the
 -   **System Modes:** Various system architectures and modes (e.g., active-passive, quorum-based) are designed with specific fault tolerance characteristics to handle different types of failures and recovery scenarios. [Discover System Modes](../system-mode/README.md).
 
 -   **Coordination:** Fault tolerance mechanisms, especially failure detection, leader election, and recovery processes, heavily rely on effective coordination among distributed components. [Explore Coordination Concepts](../coordination/README.md).
+
+-   **Idempotency:** A crucial property for operations in fault-tolerant systems, ensuring that repeated executions of an operation produce the same result, preventing unintended side effects during retries. [Understand Idempotency](./idempotency/README.md).

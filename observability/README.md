@@ -20,7 +20,7 @@ Observability is typically achieved through the collection and analysis of three
 |---|---|---|---|
 | **Logs** | Timestamped, immutable records of discrete events that happened within a service. | Provide detailed context about specific events, errors, or state changes. | Application logs, server logs, error messages |
 | **Metrics** | Aggregatable numerical measurements that represent the state of a system over time. | Quantify system behavior, track trends, identify performance issues, and trigger alerts. | CPU utilization, memory usage, request rates, error rates, latency |
-| **Traces** | Representations of the end-to-end journey of a single request or transaction as it propagates through multiple services. | Visualize the flow of requests, identify bottlenecks, and understand dependencies between services. | OpenTelemetry traces, Zipkin, Jaeger |
+| **[Distributed Tracing](./distributed-tracing)** | Representations of the end-to-end journey of a single request or transaction as it propagates through multiple services. | Visualize the flow of requests, identify bottlenecks, and understand dependencies between services. | OpenTelemetry traces, Zipkin, Jaeger |
 
 ## Comparison
 
@@ -54,3 +54,5 @@ Beyond collecting telemetry, effective observability involves actively using thi
 -   **Communication:** Monitoring communication patterns, latency, and errors between services is a vital aspect of observability, providing insights into the health and performance of inter-service interactions in distributed environments. [Explore Communication Patterns](../communication/README.md).
 
 -   **System Modes:** Observability is particularly challenging and critical in complex distributed system modes like microservices architectures, where understanding the behavior of numerous interacting components is essential for operational success. [Discover System Modes](../system-mode/README.md).
+
+-   **Distributed Tracing:** A crucial technique for gaining end-to-end visibility into request flows across multiple services, essential for debugging and performance optimization in distributed systems. [Understand Distributed Tracing](./distributed-tracing/README.md).

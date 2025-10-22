@@ -1,4 +1,4 @@
-# Coordination Consensus
+# Distributed Consensus
 
 ## Core
 
@@ -6,12 +6,10 @@ This section discusses consensus mechanisms specifically in the context of distr
 
 ## Comparison
 
-| Feature | Description |
-|---|---|
-| **Agreement** | All nodes agree on a single value. |
-| **Fault Tolerance** | Can tolerate a certain number of node failures. |
-| **Complexity** | Generally complex to implement and reason about. |
-| **Performance** | Can incur significant latency due to coordination overhead. |
+| Algorithm | Understandability | Fault Tolerance | Performance | Use Case |
+|---|---|---|---|---|
+| **[Paxos](./paxos)** | Low | High | Medium | Critical systems, high-consistency requirements |
+| **[Raft](./raft)** | High | High | Medium | Distributed key-value stores, coordination services |
 
 ## Which service use it?
 
@@ -36,3 +34,7 @@ This section discusses consensus mechanisms specifically in the context of distr
 -   **Distributed Transactions:** While challenging, some distributed transaction protocols, such as Two-Phase Commit, utilize consensus-like mechanisms to ensure atomicity across multiple participating nodes. [Explore Distributed Transactions](../distributed-transactions/README.md).
 
 -   **Coordination:** Consensus is a core mechanism for coordination in distributed systems, enabling nodes to agree on shared states, elect leaders, and manage distributed locks. [Discover Coordination Concepts](../coordination/README.md).
+
+-   **Paxos:** A foundational, albeit complex, algorithm for achieving distributed consensus, known for its strong theoretical guarantees. [Understand Paxos ./paxos/README.md].
+
+-   **Raft:** A consensus algorithm designed for understandability, often preferred over Paxos for its clarity and ease of implementation in practical systems. [Understand Raft ./raft/README.md].

@@ -24,9 +24,10 @@ Without proper coordination, a distributed system can suffer from a variety of p
 |---|---|---|---|---|
 | **[Quorum](./quorum)** | Consistency | Medium | Medium | Read/write operations in replicated systems |
 | **[Gossip](./gossip)** | Dissemination | High | Low | Cluster membership, failure detection |
-| **[Vector Clock](./vector-clock)** | Causality | High | Medium | Detecting concurrent updates, versioning |
-| **[CRDT](./crdt)** | Conflict-free replication | High | High | Collaborative applications, enabling automatic conflict resolution as seen in [Conflict Resolution](../conflict-resolution/README.md) and used in [Data Replication](../data-replication/README.md) |
+| **[Vector Clock](../conflict-resolution/vector-clocks)** | Causality | High | Medium | Detecting concurrent updates, versioning |
+| **[CRDT](../conflict-resolution/crdts)** | Conflict-free replication | High | High | Collaborative applications, enabling automatic conflict resolution as seen in [Conflict Resolution](../conflict-resolution/README.md) and used in [Data Replication](../data-replication/README.md) |
 | **[Event Streaming](./event-streaming)** | Data flow | High | Medium | Real-time data processing, microservices |
+| **[Leader Election](./leader-election)** | Fault Tolerance | Medium | Medium | Consensus, distributed databases |
 
 ## Which service use it?
 
@@ -65,3 +66,5 @@ Without proper coordination, a distributed system can suffer from a variety of p
 
 
 -   **System Modes:** Different distributed system architectures and modes (e.g., master-slave, peer-to-peer, sharded) impose varying requirements and challenges for coordination among their components. [Discover System Modes](../system-mode/README.md).
+
+-   **Leader Election:** A critical coordination mechanism for selecting a unique process to manage shared resources or tasks, often used in conjunction with distributed consensus. [Understand Leader Election](./leader-election/README.md).

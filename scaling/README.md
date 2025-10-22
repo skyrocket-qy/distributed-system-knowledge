@@ -35,6 +35,7 @@ The choice of which scaling techniques to use depends on the specific requiremen
 |---|---|---|---|---|
 | **[Vertical Scaling](./vertical)** | Add resources to a single node | High | Limited by hardware | Monolithic applications, databases |
 | **[Horizontal Scaling](./horizontal)** | Add more nodes to the system | Low | High | Microservices, distributed databases |
+| **[Distributed Caching](./distributed-caching)** | Store data in memory across nodes | Medium | High | Web applications, databases |
 
 ## Which service use it?
 
@@ -52,3 +53,5 @@ The choice of which scaling techniques to use depends on the specific requiremen
 -   **Communication:** Efficient communication patterns and protocols are essential in scaled-out distributed systems, especially when distributing requests via load balancing or coordinating tasks across numerous nodes. [Explore Communication Patterns](../communication/README.md).
 
 -   **Service Discovery:** In dynamic, horizontally scaled environments, service discovery mechanisms are crucial for services to locate and communicate with each other as instances are added or removed. [Understand Service Discovery](../service-discovery/README.md).
+
+-   **Distributed Caching:** A critical technique for improving performance and scalability by storing frequently accessed data closer to the application, reducing the load on backend systems. [Understand Distributed Caching](./distributed-caching/README.md).

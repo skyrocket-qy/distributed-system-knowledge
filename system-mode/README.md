@@ -34,7 +34,7 @@ Understanding the trade-offs between these different system modes is essential f
 
 | Mode | Scalability | Consistency | Availability | Complexity | Use Case |
 |---|---|---|---|---|---|
-| **[Leader-Follower](./master-slave)** | High (read), Low (write) | Strong (read from leader) | High | Medium | Databases, replicated systems |
+| **[Leader-Follower](./leader-follower)** | High (read), Low (write) | Strong (read from leader) | High | Medium | Databases, replicated systems |
 | **[Multi-Master](./multi-master)** | High | Eventual | High | High | Multi-datacenter deployments |
 | **[Peer-to-Peer](./peer-to-peer)** | High | Eventual | High | High | File sharing, content delivery |
 | **[Sharded/Partitioned](./sharded-partitioned)** | High | Varies | High | High | Large-scale databases |
