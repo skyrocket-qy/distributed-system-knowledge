@@ -1,36 +1,43 @@
 # Client-Server Communication
 
-This section describes the Client-Server communication model, a fundamental distributed system architecture where clients request services from servers.
+## Core
 
-## Core Concept
+The **Client-Server** model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called **servers**, and service requesters, called **clients**. It is the most traditional and widely used architecture for network applications.
 
-The **Client-Server** model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called **servers**, and service requesters, called **clients**.
-
--   **Client**: A process or application that initiates communication by sending a request to a server. The client is typically a user-facing application, such as a web browser or a mobile app.
--   **Server**: A process or application that waits for and responds to requests from clients. The server is typically a powerful machine that provides a specific service, such as hosting a website or a database.
+-   **Client**: A process or application that initiates communication by sending a request to a server. The client is typically a user-facing application, such as a web browser, a mobile app, or a desktop application. It is responsible for the user interface and for forming and sending requests.
+-   **Server**: A process or application that listens for and responds to requests from clients. The server is typically a powerful machine that provides a specific service, such as hosting a website, managing a database, or performing business logic. It is responsible for processing requests and returning results.
 
 The communication between the client and the server follows a **request-response** cycle:
 
-1.  The client sends a request to the server over the network.
-2.  The server receives and processes the request.
-3.  The server sends a response back to the client.
+1.  The client establishes a connection with the server.
+2.  The client sends a request to the server over the network.
+3.  The server receives the request, processes it, and may perform some computation or data retrieval.
+4.  The server sends a response back to the client.
+5.  The client receives the response and processes it.
 
-This interaction is typically **synchronous**, meaning the client waits for the response from the server before continuing its execution.
+This interaction is typically **synchronous**, meaning the client blocks (waits) for the response from the server before continuing its execution.
 
-## Characteristics
+## Comparison
 
--   **Centralized Control**: The server is the central point of control and the single source of truth.
--   **Scalability**: The server can be scaled vertically (by adding more resources) or horizontally (by adding more servers) to handle a large number of clients.
--   **One-to-Many Relationship**: One server can serve multiple clients.
--   **Location Transparency**: The client and server can be located on different machines, and the client does not need to know the physical location of the server.
+| Model | Coupling | Key Difference | Example |
+|---|---|---|---|
+| **Client-Server** | Tight | Centralized server manages all resources and clients. | Web server (HTTP) |
+| **[Peer-to-Peer (P2P)](../p2p)** | Loose | Decentralized; all nodes are equal and can act as both client and server. | BitTorrent |
+| **[Publish-Subscribe](../pubsub)** | Loose | Decoupled; publishers send messages to topics without knowing the subscribers. | Apache Kafka |
 
-## Advantages and Disadvantages
+## Trade-offs
 
-| Advantages | Disadvantages |
-|---|---|
-| **Centralization**: Centralized control and data management make it easy to manage and maintain the system. | **Single Point of Failure**: The server is a single point of failure. If the server goes down, the entire system becomes unavailable. |
-| **Scalability**: The server can be scaled to handle a large number of clients. | **Bottleneck**: The server can become a bottleneck if it is not powerful enough to handle all the client requests. |
-| **Security**: The centralized architecture makes it easier to implement security measures. | **Cost**: The server can be expensive to set up and maintain. |
+### Advantages
+
+-   **Centralization**: Centralized control and data management make it easier to manage, secure, and maintain the system. Updates and maintenance can be performed on the server without affecting the clients.
+-   **Scalability**: The server can be scaled vertically (by adding more resources like CPU and RAM) or horizontally (by adding more server machines behind a load balancer) to handle a large number of clients.
+-   **Clear Separation of Concerns**: The roles of client and server are distinct, leading to a clean separation of concerns. The client handles the presentation layer, while the server handles the business logic and data layer.
+
+### Disadvantages
+
+-   **Single Point of Failure**: The server is a single point of failure. If the server goes down, the entire system becomes unavailable. This can be mitigated with redundancy, but that adds complexity.
+-   **Bottleneck**: The server can become a performance bottleneck if it receives too many requests simultaneously.
+-   **Cost**: The server can be expensive to purchase, set up, and maintain, especially for high-traffic applications that require powerful hardware and infrastructure.
 
 ## Which service use it?
 

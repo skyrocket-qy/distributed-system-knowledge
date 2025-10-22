@@ -25,4 +25,10 @@ This directory aims to document various concepts, modes, and mechanisms related 
 -   **Distributed Databases (e.g., Apache Cassandra, MongoDB, Google Spanner):** Databases designed to store and manage data across multiple nodes for scalability, availability, and fault tolerance.
 -   **Big Data Processing Frameworks (e.g., Apache Hadoop, Apache Spark):** Systems that process and analyze vast datasets by distributing computation across clusters of machines.
 -   **Content Delivery Networks (CDNs):** Networks of geographically distributed servers that deliver web content to users based on their location, improving performance and availability.
--   **Financial Trading Systems:** High-frequency trading platforms and banking systems rely on distributed architectures for low-latency processing, high throughput, and strong consistency.
+-   **Financial Trading Systems:** High-frequency trading platforms and banking systems rely on on distributed architectures for low-latency processing, high throughput, and strong consistency.
+
+## Further Reading
+
+-   [What is a distributed system?](https://www.atlassian.com/microservices/microservices-architecture/distributed-architecture)
+-   [Distributed Systems: An Introduction](https://www.confluent.io/learn/distributed-systems/)
+-   [What Are Distributed Systems?](https://www.splunk.com/en_us/blog/learn/distributed-systems.html)
