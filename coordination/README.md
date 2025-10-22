@@ -28,6 +28,7 @@ Without proper coordination, a distributed system can suffer from a variety of p
 | **[CRDT](../conflict-resolution/crdts)** | Conflict-free replication | High | High | Collaborative applications, enabling automatic conflict resolution as seen in [Conflict Resolution](../conflict-resolution/README.md) and used in [Data Replication](../data-replication/README.md) |
 | **[Event Streaming](./event-streaming)** | Data flow | High | Medium | Real-time data processing, microservices |
 | **[Leader Election](./leader-election)** | Fault Tolerance | Medium | Medium | Consensus, distributed databases |
+| **[Distributed Locks](./distributed-locks)** | Mutual Exclusion | Low | High | Resource access, critical sections |
 
 ## Which service use it?
 
@@ -67,4 +68,6 @@ Without proper coordination, a distributed system can suffer from a variety of p
 
 -   **System Modes:** Different distributed system architectures and modes (e.g., master-slave, peer-to-peer, sharded) impose varying requirements and challenges for coordination among their components. [Discover System Modes](../system-mode/README.md).
 
--   **Leader Election:** A critical coordination mechanism for selecting a unique process to manage shared resources or tasks, often used in conjunction with distributed consensus. [Understand Leader Election](./leader-election/README.md).
+-   **Leader Election:** A critical coordination mechanism for selecting a unique process to manage shared resources or tasks, often used in conjunction with distributed consensus. [Understand Leader Election ./leader-election/README.md].
+
+-   **Distributed Locks:** A mechanism to ensure mutual exclusion for shared resources across multiple nodes, preventing race conditions and ensuring data consistency. [Understand Distributed Locks ./distributed-locks/README.md].
