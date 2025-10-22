@@ -46,3 +46,19 @@ When designing a system with multi-master replication, several factors need care
 -   **Distributed Databases (e.g., MySQL, PostgreSQL with BDR):** When configured for multi-master replication, these databases allow writes to occur on multiple nodes, which then synchronize with each other. This is often used for high availability and geographic distribution.
 -   **Distributed Version Control Systems (e.g., Git):** In Git, every developer's local repository is a full copy of the codebase, acting as a master. Changes can be made and committed locally, and then pushed and pulled between repositories, effectively operating in a multi-master fashion.
 -   **Some Distributed Key-Value Stores:** Certain key-value stores can be configured to allow writes to multiple nodes, handling conflicts through various resolution strategies.
+
+## Related Concepts
+
+-   **System Modes:** Multi-master is a key system mode that allows multiple nodes to accept write operations, enhancing availability and write scalability compared to single-master architectures. [Explore other System Modes](../README.md).
+
+-   **Multi-Leader Data Replication:** Multi-master mode is essentially the implementation of multi-leader data replication, where multiple nodes act as primary, accepting writes and synchronizing changes among themselves. [Learn more about Multi-Leader Replication](../../data-replication/multi-leader/README.md).
+
+-   **Fault Tolerance:** Multi-master systems significantly enhance fault tolerance for write operations, as the failure of one master does not prevent other masters from continuing to process writes, improving overall system resilience. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+-   **Scaling:** Multi-master replication contributes to scaling by distributing write traffic across multiple nodes, reducing write latency for geographically dispersed users, and increasing the system's overall write throughput. [Learn about Scaling](../../scaling/README.md).
+
+-   **Distributed Transactions:** Due to the inherent complexities of conflict resolution and eventual consistency, multi-master systems typically avoid traditional distributed transactions in favor of patterns like Sagas for maintaining consistency across services. [Explore Distributed Transactions](../../distributed-transactions/README.md).
+
+-   **Conflict Resolution:** A critical aspect of multi-master systems is the need for robust conflict resolution mechanisms to handle concurrent updates to the same data from different master nodes. [Explore Conflict Resolution](../../conflict-resolution/README.md).
+
+-   **Eventual Consistency:** Multi-master replication typically results in eventual consistency, meaning that while data may temporarily diverge across masters, it will eventually converge to a consistent state. [Understand Eventual Consistency](../../consistency-models/eventual-consistency/README.md).

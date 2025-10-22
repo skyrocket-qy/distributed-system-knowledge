@@ -49,3 +49,17 @@ By tuning R and W, system designers can trade off between read and write latency
 -   **Amazon DynamoDB:** While not explicitly exposing N, R, W, DynamoDB offers eventually consistent and strongly consistent reads, where strong consistency implicitly relies on a quorum-like agreement among replicas.
 -   **Distributed File Systems (e.g., HDFS):** HDFS uses a configurable replication factor (e.g., 3) for data blocks. While not a strict R+W>N quorum for every operation, the concept of requiring a certain number of replicas to be available for reads and writes is similar.
 -   **Consensus Algorithms (e.g., Paxos, Raft):** These algorithms fundamentally rely on quorums (a majority of nodes) to make decisions and ensure consistency in distributed state machines, such as for leader election and log replication.
+
+## Related Concepts
+
+-   **System Modes:** Quorum-based systems represent a specific system mode designed to manage consistency and availability trade-offs in distributed environments by requiring a minimum number of nodes for operations. [Explore other System Modes](../README.md).
+
+-   **Quorum (Coordination):** The concept of a quorum is a fundamental coordination mechanism, ensuring that a sufficient number of nodes participate in an operation to guarantee its integrity and consistency across the distributed system. [Learn more about Quorum as a Coordination mechanism](../../coordination/quorum/README.md).
+
+-   **Consistency Models:** Quorum-based systems offer tunable consistency, allowing designers to balance strong consistency with availability and performance by adjusting the read (R) and write (W) quorum sizes relative to the total number of replicas (N). [Explore Consistency Models](../../consistency-models/README.md).
+
+-   **Fault Tolerance:** Quorum-based systems are inherently fault-tolerant, as they can continue to operate and maintain consistency even if a minority of nodes fail, provided the quorum threshold is still met. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+-   **Data Replication:** Quorum reads and writes are commonly used in replicated storage systems to ensure data integrity and availability across multiple copies of data, allowing for flexible consistency guarantees. [Understand Data Replication](../../data-replication/README.md).
+
+-   **Distributed Consensus:** Quorum is a cornerstone of many distributed consensus algorithms (e.g., Paxos, Raft), where a majority of nodes must agree on a decision to ensure consistency and fault tolerance, directly influencing quorum-based system design. [Understand Distributed Consensus](../../distributed-consensus/README.md).

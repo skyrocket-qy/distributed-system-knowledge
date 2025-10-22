@@ -40,3 +40,17 @@ Some common use cases for federation include:
 -   **Multi-Cloud Deployments:** Enterprises often deploy applications across different cloud providers (AWS, Azure, GCP) to avoid vendor lock-in, improve resilience, and optimize costs. These setups often involve federated control planes or management layers.
 
 -   **Large-Scale Enterprise Systems:** Global companies with operations in multiple regions or data centers might use federated architectures to provide localized services while maintaining a global view or shared data.
+
+## Related Concepts
+
+-   **System Modes:** Federated multi-cluster represents an advanced system mode designed for managing and coordinating applications across multiple independent clusters, forming a larger, geographically distributed system. [Explore other System Modes](../README.md).
+
+-   **Scaling:** This mode is primarily adopted for massive scalability, allowing systems to grow beyond the limits of a single cluster and handle global user bases or vast amounts of data by distributing workloads across multiple clusters. [Learn about Scaling](../../scaling/README.md).
+
+-   **Fault Tolerance:** Federated multi-cluster architectures significantly enhance fault tolerance by distributing services across independent clusters, ensuring that the failure of an entire cluster does not lead to a complete system outage. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+-   **Communication:** Effective communication mechanisms and protocols are essential for enabling seamless interaction and data exchange between services residing in different, loosely coupled clusters within a federated system. [Explore Communication Patterns](../../communication/README.md).
+
+-   **Service Discovery:** In a federated multi-cluster environment, sophisticated service discovery mechanisms are required to enable services in one cluster to locate and communicate with services in other clusters, often spanning different geographical regions or cloud providers. [Understand Service Discovery](../../service-discovery/README.md).
+
+-   **Security:** Securing communication, access, and data across multiple, potentially heterogeneous clusters in a federated setup presents significant security challenges, requiring robust identity, authentication, and authorization strategies. [Explore Security](../../security/README.md).

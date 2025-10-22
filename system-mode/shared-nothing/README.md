@@ -35,3 +35,17 @@ For example, a distributed database might partition its data by a user ID. All d
 -   **Massively Parallel Processing (MPP) Data Warehouses (e.g., Teradata, Greenplum, Amazon Redshift):** These systems distribute large datasets and query processing across many nodes, each with its own CPU, memory, and storage.
 -   **Distributed File Systems (e.g., Apache HDFS):** HDFS stores large files across multiple machines, with each DataNode managing its own local storage.
 -   **Web Search Engines (e.g., Google Search):** The indexing and serving infrastructure of large search engines are built on shared-nothing principles to handle the immense scale of the web.
+
+## Related Concepts
+
+-   **System Modes:** Shared-nothing is a foundational system mode that emphasizes independent nodes with no shared resources, enabling massive horizontal scalability and fault tolerance in distributed systems. [Explore other System Modes](../README.md).
+
+-   **Horizontal Scaling:** The shared-nothing architecture is the primary enabler of horizontal scaling, allowing systems to increase capacity by simply adding more independent nodes, rather than upgrading existing ones. [Learn about Horizontal Scaling](../../scaling/horizontal/README.md).
+
+-   **Sharded/Partitioned System Mode:** Data in shared-nothing systems is typically partitioned or sharded across nodes, with each node responsible for a subset of the data, which is crucial for distributing storage and processing load. [Understand Sharded/Partitioned Systems](../sharded-partitioned/README.md).
+
+-   **Fault Tolerance:** Shared-nothing architectures inherently provide high fault tolerance, as the failure of one node does not affect the operation of other independent nodes, and data can be replicated for resilience. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+-   **Data Replication:** Data replication is commonly employed in shared-nothing systems to ensure high availability and durability, with copies of data distributed across multiple independent nodes. [Understand Data Replication](../../data-replication/README.md).
+
+-   **Consistency Models:** Due to the distributed nature and emphasis on availability and partition tolerance, many shared-nothing systems opt for eventual consistency, requiring careful design to handle potential inconsistencies. [Explore Consistency Models](../../consistency-models/README.md).

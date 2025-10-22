@@ -36,3 +36,17 @@ Replication can be configured in two primary ways:
 -   **Relational Databases (e.g., MySQL, PostgreSQL, SQL Server):** This is a very common replication setup for traditional databases, where a primary database handles all writes and replicates data to one or more secondary (read-only) databases.
 -   **Redis:** Redis can be configured in a master-replica (formerly master-slave) setup, where the master handles writes and replicas serve read requests.
 -   **Some Message Brokers (e.g., RabbitMQ with mirrored queues):** While not a pure master-slave, some message queue systems use similar concepts for high availability, where a primary node handles writes and mirrors messages to other nodes.
+
+## Related Concepts
+
+-   **System Modes:** Master-slave (or leader-follower) is a fundamental system mode where a single master node handles all writes and replicates data to one or more slave nodes, which serve read requests. [Explore other System Modes](../README.md).
+
+-   **Data Replication:** Master-slave is a primary pattern for data replication, ensuring that multiple copies of data exist across different nodes, with the master being the authoritative source for updates. [Understand Data Replication](../../data-replication/README.md).
+
+-   **Fault Tolerance:** While master-slave setups provide high availability for reads, the master node represents a single point of failure for writes, necessitating robust fault tolerance mechanisms like failover to ensure continuous write availability. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+-   **Scaling:** Master-slave architectures primarily scale read operations by distributing read traffic across multiple slave nodes, allowing the system to handle a higher volume of read requests. [Learn about Scaling](../../scaling/README.md).
+
+-   **Consistency Models:** The consistency guarantees in a master-slave setup depend on the replication mode; synchronous replication can provide strong consistency, while asynchronous replication typically leads to eventual consistency. [Explore Consistency Models](../../consistency-models/README.md).
+
+-   **Active-Passive Failover:** Master-slave configurations often implement active-passive failover, where a passive slave node is promoted to become the new master if the active master fails, ensuring continuity of write operations. [Explore Active-Passive Failover](../../fault-tolerance/active-passive-failover/README.md).
