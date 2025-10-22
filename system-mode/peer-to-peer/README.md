@@ -9,8 +9,8 @@ Each peer can act as both a client (requesting services) and a server (providing
 ## How It Works
 
 In a P2P network, peers need a way to discover each other. This can be done in several ways:
--   **Centralized Discovery:** A central server (a tracker or bootstrap server) maintains a list of active peers. New peers connect to this server to get a list of other peers they can connect to. While discovery is centralized, the actual data exchange is P2P.
--   **Decentralized Discovery:** Peers discover each other using protocols like Distributed Hash Tables (DHTs). In a DHT, each peer is responsible for storing a small portion of the routing information, creating a decentralized index for the entire network.
+-   **[Centralized Discovery](../../service-discovery/centralized-discovery/README.md):** A central server (a tracker or bootstrap server) maintains a list of active peers. New peers connect to this server to get a list of other peers they can connect to. While discovery is centralized, the actual data exchange is P2P.
+-   **[Decentralized Discovery](../../service-discovery/decentralized-discovery/README.md):** Peers discover each other using protocols like Distributed Hash Tables (DHTs). In a DHT, each peer is responsible for storing a small portion of the routing information, creating a decentralized index for the entire network.
 
 Once connected, peers can exchange information directly. For example, in a file-sharing application, a peer can download parts of a file from multiple other peers simultaneously, increasing download speed.
 
