@@ -29,6 +29,15 @@ This section addresses various strategies and mechanisms for resolving these con
 | **[CRDTs](./crdts)** | High | None | Automatic, deterministic | Collaborative editing, real-time apps |
 | **[Timestamps with Logical Clocks](./timestamps-with-logical-clocks)** | Medium | Medium | Causal ordering | Distributed databases, event sourcing |
 
+## Trade-offs
+
+| Strategy | Advantages | Disadvantages |
+|---|---|---|
+| **Last-Write-Wins (LWW)** | Simple, low overhead | Potential for data loss, relies on synchronized clocks |
+| **Vector Clocks** | Detects concurrency, prevents data loss | Increased complexity, requires application-level resolution |
+| **CRDTs** | Automatic resolution, no data loss | High complexity, limited data types |
+| **Timestamps with Logical Clocks** | Causal ordering, prevents data loss | Increased overhead, requires clock synchronization |
+
 ## Which service use it?
 
 

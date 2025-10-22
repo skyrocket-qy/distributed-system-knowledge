@@ -2,36 +2,38 @@
 
 ## Introduction
 
-A distributed system is a collection of independent computers that appears to its users as a single coherent system. These systems are designed to solve problems that are too large or complex for a single machine, offering advantages such as enhanced scalability, reliability, and fault tolerance. However, they also introduce significant challenges related to **[Communication](./communication/README.md)**, **[Consistency Models](./consistency-models/README.md)**, **[Coordination](./coordination/README.md)**, and **[Fault Tolerance](./fault-tolerance/README.md)** due to the inherent complexities of networked environments. These core challenges are addressed through various mechanisms, including **[Data Replication](./data-replication/README.md)**, **[Distributed Consensus](./distributed-consensus/README.md)**, **[Distributed Transactions](./distributed-transactions/README.md)**, **[Messaging](./messaging/README.md)**, **[Scaling](./scaling/README.md)**, **[Security](./security/README.md)**, **[Service Discovery](./service-discovery/README.md)**, **[System Modes](./system-mode/README.md)**, and **[Topology](./topology/README.md)**. A fundamental concept in distributed systems is the **[CAP theorem](./system-mode/cap-tradeoff-tunable/README.md)**, which states that it is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees: Consistency, Availability, and Partition tolerance. This trade-off heavily influences design choices across various aspects of distributed systems.
+A distributed system is a collection of independent computers that appears to its users as a single coherent system. These systems are designed to solve problems that are too large or complex for a single machine, offering advantages such as enhanced scalability, reliability, and fault tolerance.
 
-This directory aims to document various concepts, modes, and mechanisms related to distributed systems.
+This repository explores the fundamental concepts, patterns, and infrastructure of distributed systems.
 
-## Topics
+## Concepts
 
-- [Communication](./communication/README.md)
-- [Conflict Resolution](./conflict-resolution/README.md)
+### Foundations
 
-- [Consistency Models](./consistency-models/README.md)
-- [Coordination](./coordination/README.md)
-- [Data Replication](./data-replication/README.md)
-- [Fault Tolerance](./fault-tolerance/README.md)
-- [Messaging](./messaging/README.md)
-- [Scaling](./scaling/README.md)
-- [Security](./security/README.md)
-- [System Modes](./system-mode/README.md)
-- [Topology](./topology/README.md)
-- [Distributed Transactions](./distributed-transactions/README.md)
-- [Distributed Consensus](./distributed-consensus/README.md)
-- [Observability](./observability/README.md)
+-   **[Communication](./concepts/foundations/communication/README.md):** The exchange of information between processes on different nodes.
+-   **[Conflict Resolution](./concepts/foundations/conflict-resolution/README.md):** Managing inconsistencies that arise from concurrent updates.
+-   **[Consistency Models](./concepts/foundations/consistency-models/README.md):** Guarantees about the visibility and ordering of updates.
+-   **[Coordination](./concepts/foundations/coordination/README.md):** Managing interactions and dependencies between processes.
+-   **[Distributed Consensus](./concepts/foundations/distributed-consensus/README.md):** Reaching agreement among a group of nodes.
+-   **[Distributed Transactions](./concepts/foundations/distributed-transactions/README.md):** Ensuring atomicity and consistency across multiple nodes.
+-   **[Fault Tolerance](./concepts/foundations/fault-tolerance/README.md):** The ability of a system to continue operating in the event of failures.
+-   **[Security](./concepts/foundations/security/README.md):** Protecting the system from unauthorized access and malicious attacks.
+-   **[System Modes](./concepts/foundations/system-mode/README.md):** The different operational states of a distributed system.
+-   **[Topology](./concepts/foundations/topology/README.md):** The arrangement of nodes and connections in a network.
 
-## Common Distributed System Implementations
+### Patterns
 
--   **Cloud Computing Platforms (e.g., AWS, Azure, GCP):** These platforms are massive distributed systems that provide infrastructure, platforms, and software as services.
--   **Large-Scale Web Applications (e.g., Google Search, Facebook, Netflix):** These services handle billions of requests and petabytes of data by distributing their workload across thousands of servers.
--   **Distributed Databases (e.g., Apache Cassandra, MongoDB, Google Spanner):** Databases designed to store and manage data across multiple nodes for scalability, availability, and fault tolerance.
--   **Big Data Processing Frameworks (e.g., Apache Hadoop, Apache Spark):** Systems that process and analyze vast datasets by distributing computation across clusters of machines.
--   **Content Delivery Networks (CDNs):** Networks of geographically distributed servers that deliver web content to users based on their location, improving performance and availability.
--   **Financial Trading Systems:** High-frequency trading platforms and banking systems rely on on distributed architectures for low-latency processing, high throughput, and strong consistency.
+-   **[Data Replication](./concepts/patterns/data-replication/README.md):** Creating and maintaining multiple copies of data on different nodes.
+-   **[Messaging](./concepts/patterns/messaging/README.md):** Asynchronous communication between processes.
+-   **[Observability](./concepts/patterns/observability/README.md):** Gaining insights into the behavior of a system.
+-   **[Scaling](./concepts/patterns/scaling/README.md):** Increasing the capacity of a system to handle more load.
+-   **[Service Discovery](./concepts/patterns/service-discovery/README.md):** The process of automatically detecting devices and services on a network.
+
+### Infrastructure
+
+-   **[Caching](./concepts/infrastructure/caching/README.md):** Storing data in a temporary location for faster access.
+-   **[Load Balancing](./concepts/infrastructure/load-balancing/README.md):** Distributing traffic across multiple servers.
+-   **[Proxies](./concepts/infrastructure/proxies/README.md):** Intermediary servers that forward requests between clients and servers.
 
 ## Further Reading
 

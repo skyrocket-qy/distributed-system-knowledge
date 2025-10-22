@@ -33,6 +33,16 @@ This section explores various communication patterns, protocols, and models used
 | **[Peer-to-Peer (P2P)](./p2p)** | Loose | Both | Decentralized | File sharing, content delivery |
 | **[Actor Model](./actor-model)** | Loose | Asynchronous | Decentralized | Concurrent and parallel systems |
 
+## Trade-offs
+
+| Pattern | Advantages | Disadvantages |
+|---|---|---|
+| **Client-Server** | Simple to implement, centralized control | Single point of failure, scalability bottlenecks |
+| **Message Queue** | Decoupling, scalability, fault tolerance | Increased complexity, potential for latency |
+| **Publish-Subscribe** | Scalability, flexibility, loose coupling | Message ordering challenges, potential for message loss |
+| **Peer-to-Peer** | Decentralized, fault-tolerant, scalable | Complex to manage, security concerns |
+| **Actor Model** | High concurrency, fault isolation | Complex programming model, potential for deadlocks |
+
 ## Which service use it?
 
 

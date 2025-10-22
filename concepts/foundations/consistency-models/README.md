@@ -22,6 +22,14 @@ The choice of a consistency model has a significant impact on the performance, a
 | **[Eventual Consistency](./eventual-consistency)** | Replicas will eventually be consistent | Low latency (allows for faster writes) | Social media, e-commerce |
 | **[Causal Consistency](./causal-consistency)** | Causal order of operations is preserved | Medium latency (requires tracking causal dependencies) | Collaborative editing, chat |
 
+## Trade-offs
+
+| Model | Advantages | Disadvantages |
+|---|---|---|
+| **Strong Consistency** | Simplifies application development, predictable behavior | Higher latency, lower availability |
+| **Eventual Consistency** | High availability, low latency for writes | More complex for developers, potential for stale data |
+| **Causal Consistency** | Good balance, preserves logical order | More complex than eventual, dependency tracking overhead |
+
 ## Which service use it?
 
 
@@ -34,7 +42,7 @@ The choice of a consistency model has a significant impact on the performance, a
 
 ## Related Concepts
 
--   **[Data Replication](../data-replication/README.md):** The choice of a consistency model directly influences how data is replicated across multiple nodes and how those replicas are kept in sync. Stronger consistency often requires more complex replication strategies.
+-   **[Data Replication](../../patterns/data-replication/README.md):** The choice of a consistency model directly influences how data is replicated across multiple nodes and how those replicas are kept in sync. Stronger consistency often requires more complex replication strategies.
 -   **[Distributed Transactions](../distributed-transactions/README.md):** Ensuring ACID properties in distributed transactions heavily relies on the underlying consistency model. Weaker consistency models often lead to alternative transaction patterns like Sagas.
 -   **[CAP Theorem](../system-mode/cap-tradeoff-tunable/README.md):** A foundational principle stating that a distributed data store cannot simultaneously provide more than two out of Consistency, Availability, and Partition tolerance. Consistency models represent different trade-offs within the CAP theorem.
 -   **[Distributed Consensus](../distributed-consensus/README.md):** Algorithms like Paxos and Raft are often employed to achieve strong consistency across distributed systems by ensuring all nodes agree on a single state or order of operations.

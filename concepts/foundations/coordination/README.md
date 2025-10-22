@@ -30,6 +30,18 @@ Without proper coordination, a distributed system can suffer from a variety of p
 | **[Leader Election](./leader-election)** | Fault Tolerance | Medium | Medium | Consensus, distributed databases |
 | **[Distributed Locks](./distributed-locks)** | Mutual Exclusion | Low | High | Resource access, critical sections |
 
+## Trade-offs
+
+| Mechanism | Advantages | Disadvantages |
+|---|---|---|
+| **Quorum** | Ensures consistency, tunable | Can reduce availability |
+| **Gossip** | Highly scalable, resilient | Eventual consistency, no delivery guarantees |
+| **Vector Clock** | Causal ordering, detects concurrency | Overhead of maintaining clocks |
+| **CRDT** | Conflict-free, highly available | Complex to design and implement |
+| **Event Streaming** | Decoupling, scalability | Can be complex to manage, potential for latency |
+| **Leader Election** | Simplifies coordination, fault-tolerant | Leader can be a bottleneck |
+| **Distributed Locks** | Ensures mutual exclusion | Can reduce performance, risk of deadlock |
+
 ## Which service use it?
 
 
@@ -50,24 +62,24 @@ Without proper coordination, a distributed system can suffer from a variety of p
 
 
 
--   **Distributed Transactions:** Coordination is fundamental to ensuring atomicity, consistency, isolation, and durability (ACID) across multiple participants in a distributed transaction. [Explore Distributed Transactions](../distributed-transactions/README.md).
+-   **[Distributed Transactions](../distributed-transactions/README.md):** Coordination is fundamental to ensuring atomicity, consistency, isolation, and durability (ACID) across multiple participants in a distributed transaction.
 
 
 
--   **Consistency Models:** Coordination mechanisms are often employed to enforce specific consistency models, from strong consistency requiring tight coordination to eventual consistency allowing more relaxed coordination. [Learn about Consistency Models](../consistency-models/README.md).
+-   **[Consistency Models](../consistency-models/README.md):** Coordination mechanisms are often employed to enforce specific consistency models, from strong consistency requiring tight coordination to eventual consistency allowing more relaxed coordination.
 
 
 
--   **Fault Tolerance:** Effective coordination is crucial for building fault-tolerant systems, enabling processes like leader election, failure detection, and recovery to operate reliably despite node or network failures. [Understand Fault Tolerance](../fault-tolerance/README.md).
+-   **[Fault Tolerance](../fault-tolerance/README.md):** Effective coordination is crucial for building fault-tolerant systems, enabling processes like leader election, failure detection, and recovery to operate reliably despite node or network failures.
 
 
 
--   **Communication:** All forms of coordination in distributed systems inherently rely on communication channels to exchange messages, synchronize states, and propagate decisions among nodes. [Explore Communication Patterns](../communication/README.md).
+-   **[Communication](../communication/README.md):** All forms of coordination in distributed systems inherently rely on communication channels to exchange messages, synchronize states, and propagate decisions among nodes.
 
 
 
--   **System Modes:** Different distributed system architectures and modes (e.g., master-slave, peer-to-peer, sharded) impose varying requirements and challenges for coordination among their components. [Discover System Modes](../system-mode/README.md).
+-   **[System Modes](../system-mode/README.md):** Different distributed system architectures and modes (e.g., master-slave, peer-to-peer, sharded) impose varying requirements and challenges for coordination among their components.
 
--   **Leader Election:** A critical coordination mechanism for selecting a unique process to manage shared resources or tasks, often used in conjunction with distributed consensus. [Understand Leader Election ./leader-election/README.md].
+-   **[Leader Election](./leader-election/README.md):** A critical coordination mechanism for selecting a unique process to manage shared resources or tasks, often used in conjunction with distributed consensus.
 
--   **Distributed Locks:** A mechanism to ensure mutual exclusion for shared resources across multiple nodes, preventing race conditions and ensuring data consistency. [Understand Distributed Locks ./distributed-locks/README.md].
+-   **[Distributed Locks](./distributed-locks/README.md):** A mechanism to ensure mutual exclusion for shared resources across multiple nodes, preventing race conditions and ensuring data consistency.
