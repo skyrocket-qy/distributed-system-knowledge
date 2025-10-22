@@ -62,3 +62,5 @@ The choice of which topology to use is a trade-off between a number of factors, 
 -   **System Modes:** Different distributed system architectures or modes (e.g., client-server, peer-to-peer) often implicitly or explicitly adopt certain network topologies that best suit their operational model and requirements. [Discover System Modes](../system-mode/README.md).
 
 -   **Distributed Consensus:** The underlying network topology can affect the performance, reliability, and even the feasibility of distributed consensus algorithms, as message propagation and failure detection are topology-dependent. [Understand Distributed Consensus](../distributed-consensus/README.md).
+
+## Trade-offs

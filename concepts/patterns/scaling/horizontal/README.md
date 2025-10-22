@@ -38,3 +38,5 @@ This section explains Horizontal Scaling (scaling out), a method of increasing c
 -   **Service Discovery:** In dynamic, horizontally scaled environments, service discovery mechanisms are crucial for services to find and communicate with each other without hardcoding locations. [Understand Service Discovery](../../service-discovery/README.md).
 
 -   **Fault Tolerance:** Horizontal scaling inherently contributes to fault tolerance by providing redundancy; if one instance fails, others can continue to handle the workload. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
+
+## Trade-offs

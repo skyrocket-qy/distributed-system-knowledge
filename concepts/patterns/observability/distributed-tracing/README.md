@@ -41,3 +41,7 @@ Each request is assigned a unique trace ID, and as it moves through different se
 -   **Fault Tolerance:** Helps in quickly identifying the root cause of failures and performance degradation in a distributed system, aiding in faster recovery. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Communication:** Provides visibility into the communication patterns and latency between different services. [Explore Communication Patterns](../../communication/README.md).
 -   **Scaling:** Helps in identifying performance bottlenecks that might hinder scaling efforts and optimize resource utilization. [Learn about Scaling](../../scaling/README.md).
+
+## Comparison
+
+## Trade-offs

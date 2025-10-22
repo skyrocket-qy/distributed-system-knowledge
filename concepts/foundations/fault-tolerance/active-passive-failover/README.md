@@ -38,3 +38,5 @@ This section describes Active-Passive Failover, a fault-tolerance strategy where
 -   **Leader-Follower (Master-Slave) System Mode:** Active-passive failover is a common implementation pattern for leader-follower (or master-slave) system modes, where the passive node acts as a follower ready to be promoted to leader. [Discover Leader-Follower Systems](../../system-mode/master-slave/README.md).
 
 -   **Service Discovery:** After a failover event, service discovery mechanisms are essential to update clients and other services about the new active node's location, ensuring traffic is correctly routed to the operational instance. [Understand Service Discovery](../../service-discovery/README.md).
+
+## Trade-offs

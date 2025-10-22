@@ -74,3 +74,5 @@ The Actor Model's principles make it particularly well-suited for distributed en
 
 
 -   **Messaging:** The Actor Model's reliance on asynchronous message passing aligns closely with general messaging concepts, providing a structured way to handle inter-component communication in a decoupled manner. [Explore Messaging Systems](../../messaging/README.md).
+
+## Trade-offs

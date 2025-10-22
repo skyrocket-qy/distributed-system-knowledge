@@ -44,3 +44,5 @@
 -   **Distributed Consensus:** For replication strategies aiming for strong consistency, distributed consensus algorithms are often employed to ensure that all replicas agree on the order of updates and maintain a consistent state across the system. [Understand Distributed Consensus](../distributed-consensus/README.md).
 
 -   **System Modes:** Various distributed system architectures and modes, such as master-slave, multi-master, or peer-to-peer, are defined by their underlying data replication strategies and how they manage data copies. [Discover System Modes](../system-mode/README.md).
+
+## Trade-offs

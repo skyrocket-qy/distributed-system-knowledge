@@ -62,3 +62,7 @@ When designing a system with multi-master replication, several factors need care
 -   **Conflict Resolution:** A critical aspect of multi-master systems is the need for robust conflict resolution mechanisms to handle concurrent updates to the same data from different master nodes. [Explore Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **Eventual Consistency:** Multi-master replication typically results in eventual consistency, meaning that while data may temporarily diverge across masters, it will eventually converge to a consistent state. [Understand Eventual Consistency](../../consistency-models/eventual-consistency/README.md).
+
+## Comparison
+
+## Trade-offs

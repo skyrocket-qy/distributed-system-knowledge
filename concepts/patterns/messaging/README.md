@@ -87,3 +87,5 @@ There are many popular messaging systems in use today, including:
 
 
 -   **Event-Driven System Mode:** Messaging, particularly publish-subscribe patterns, is the backbone of event-driven architectures, where the system's behavior is primarily driven by the production, detection, and consumption of events. [Discover Event-Driven Systems](../system-mode/event-driven/README.md).
+
+## Trade-offs

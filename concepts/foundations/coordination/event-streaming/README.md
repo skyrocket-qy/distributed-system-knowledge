@@ -42,3 +42,5 @@ This section explores event streaming as a coordination pattern in distributed s
 -   **Scaling:** Event streaming platforms are designed for massive scalability, capable of handling and processing vast volumes of real-time data, making them essential for applications with high data throughput requirements. [Learn about Scaling](../../scaling/README.md).
 
 -   **Data Replication:** The durable log of events in an event streaming platform can be considered a form of data replication, ensuring that events are not lost and can be replayed to reconstruct state or recover from failures. [Understand Data Replication](../../data-replication/README.md).
+
+## Trade-offs

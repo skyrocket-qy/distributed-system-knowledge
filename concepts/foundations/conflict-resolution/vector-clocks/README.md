@@ -36,3 +36,5 @@ This section explains how Vector Clocks are used in conflict resolution to detec
 -   **Eventual Consistency:** In eventually consistent systems, vector clocks are frequently employed to manage and reconcile divergent data states by providing a clear understanding of the causal history of updates, facilitating the convergence of replicas. [Understand Eventual Consistency](../../consistency-models/eventual-consistency/README.md).
 
 -   **Timestamps with Logical Clocks:** Vector clocks are an advanced form of logical clock that, unlike simple timestamps, can directly detect concurrency, making them superior for managing causal relationships in distributed environments. [Compare with Timestamps with Logical Clocks](../timestamps-with-logical-clocks/README.md).
+
+## Trade-offs

@@ -98,3 +98,5 @@ Understanding the trade-offs between these different system modes is essential f
 
 
 -   **Service Discovery:** In dynamic system modes, particularly microservices architectures, service discovery is crucial for components to locate and communicate with each other as instances are dynamically provisioned and de-provisioned. [Understand Service Discovery](../service-discovery/README.md).
+
+## Trade-offs

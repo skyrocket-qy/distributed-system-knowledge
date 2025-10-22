@@ -38,3 +38,5 @@ This section explores Gossip-Based Recovery mechanisms, where the Gossip protoco
 -   **Decentralized Service Discovery:** Gossip can be leveraged for decentralized service discovery and membership management, allowing nodes to discover new members and detect failures without a centralized registry. [Explore Decentralized Service Discovery](../../service-discovery/decentralized-discovery/README.md).
 
 -   **Data Replication:** Gossip protocols can be used to disseminate information about data updates and replica states, contributing to the consistency and recovery of replicated data in distributed databases. [Understand Data Replication](../../data-replication/README.md).
+
+## Trade-offs

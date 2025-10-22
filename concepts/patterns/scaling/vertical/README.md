@@ -34,3 +34,5 @@ This section explains Vertical Scaling (scaling up), a method of increasing capa
 -   **Fault Tolerance:** Vertical scaling can introduce a single point of failure; if the single, powerful machine goes down, the entire service becomes unavailable, highlighting the need for robust fault tolerance strategies. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **System Modes:** Vertical scaling is often associated with traditional monolithic application architectures, where a single application instance runs on a powerful server, contrasting with distributed system modes like microservices or sharded databases. [Discover System Modes](../../system-mode/README.md).
+
+## Trade-offs

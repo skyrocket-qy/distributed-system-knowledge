@@ -40,3 +40,5 @@ This section describes the Active-Active Cluster configuration for fault toleran
 -   **Conflict Resolution:** A critical challenge in active-active clusters, especially those allowing writes to multiple nodes, is managing and resolving conflicts that arise from concurrent updates to the same data. [Explore Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **Service Discovery:** Load balancers and service discovery mechanisms are essential for distributing incoming requests efficiently across all active nodes in the cluster and for dynamically routing traffic away from failed instances. [Understand Service Discovery](../../service-discovery/README.md).
+
+## Trade-offs

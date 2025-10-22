@@ -38,3 +38,5 @@ This section describes Synchronous Replication, a data replication mode where th
 -   **Distributed Consensus:** Algorithms like Paxos or Raft often employ synchronous communication patterns to ensure that all participants agree on the order of operations and the state of the data, which is critical for synchronous replication. [Understand Distributed Consensus](../../distributed-consensus/README.md).
 
 -   **Fault Tolerance:** While synchronous replication ensures zero data loss, it can impact availability during replica failures, as the primary might block until a quorum of replicas responds. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+## Trade-offs

@@ -54,3 +54,7 @@ Some common use cases for federation include:
 -   **Service Discovery:** In a federated multi-cluster environment, sophisticated service discovery mechanisms are required to enable services in one cluster to locate and communicate with services in other clusters, often spanning different geographical regions or cloud providers. [Understand Service Discovery](../../service-discovery/README.md).
 
 -   **Security:** Securing communication, access, and data across multiple, potentially heterogeneous clusters in a federated setup presents significant security challenges, requiring robust identity, authentication, and authorization strategies. [Explore Security](../../security/README.md).
+
+## Comparison
+
+## Trade-offs

@@ -30,3 +30,7 @@
 -   **Distributed Consensus:** Algorithms like Paxos and Raft, which are used for distributed consensus, inherently include leader election as a core component. [Understand Distributed Consensus](../../distributed-consensus/README.md).
 -   **Fault Tolerance:** A robust leader election mechanism is essential for fault-tolerant systems, allowing them to recover from leader failures and maintain continuous operation. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
 -   **System Modes:** Many distributed system architectures, such as master-slave (leader-follower) or quorum-based systems, rely heavily on leader election for their operational model. [Discover System Modes](../../system-mode/README.md).
+
+## Comparison
+
+## Trade-offs

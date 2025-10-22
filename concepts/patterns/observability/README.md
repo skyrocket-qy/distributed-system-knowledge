@@ -56,3 +56,4 @@ Beyond collecting telemetry, effective observability involves actively using thi
 -   **System Modes:** Observability is particularly challenging and critical in complex distributed system modes like microservices architectures, where understanding the behavior of numerous interacting components is essential for operational success. [Discover System Modes](../system-mode/README.md).
 
 -   **Distributed Tracing:** A crucial technique for gaining end-to-end visibility into request flows across multiple services, essential for debugging and performance optimization in distributed systems. [Understand Distributed Tracing](./distributed-tracing/README.md).
+## Trade-offs

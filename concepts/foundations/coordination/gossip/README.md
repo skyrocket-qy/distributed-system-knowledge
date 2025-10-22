@@ -38,3 +38,5 @@ The Gossip protocol, also known as the epidemic protocol, is a style of computer
 -   **Decentralized Service Discovery:** Gossip can be leveraged to implement decentralized service discovery and cluster membership management, allowing nodes to dynamically discover new members and detect failures without a centralized registry. [Explore Decentralized Service Discovery](../../service-discovery/decentralized-discovery/README.md).
 
 -   **Data Replication:** Gossip protocols can be used to efficiently propagate data updates and replica states across a distributed system, contributing to the consistency and availability of replicated data. [Understand Data Replication](../../data-replication/README.md).
+
+## Trade-offs

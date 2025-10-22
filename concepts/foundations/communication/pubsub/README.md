@@ -38,3 +38,5 @@ This section explains the Publish-Subscribe (Pub/Sub) communication pattern, whe
 -   **Event-Driven System Mode:** The Publish-Subscribe pattern is a cornerstone of event-driven architectures, where system behavior is primarily driven by the production and consumption of events, enabling reactive and scalable designs. [Discover Event-Driven Systems](../../system-mode/event-driven/README.md).
 
 -   **Event Streaming (Coordination):** Event streaming platforms often leverage the Publish-Subscribe model to provide continuous, real-time data flow and integration, acting as a powerful coordination mechanism. [Explore Event Streaming for Coordination](../../coordination/event-streaming/README.md).
+
+## Trade-offs

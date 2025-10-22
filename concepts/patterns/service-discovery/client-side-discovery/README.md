@@ -54,3 +54,5 @@ Client-Side Service Discovery is a pattern where the client application is respo
 -   **Horizontal Scaling:** Client-side service discovery is particularly valuable in horizontally scaled environments, as it allows client applications to adapt to a fluctuating number of service instances without manual configuration. [Learn about Horizontal Scaling](../../scaling/horizontal/README.md).
 
 -   **Fault Tolerance:** By enabling clients to query for and connect only to healthy service instances, client-side discovery contributes to the overall fault tolerance of a distributed system, ensuring requests are routed away from failed components. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+## Trade-offs

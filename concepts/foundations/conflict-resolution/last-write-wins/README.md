@@ -36,3 +36,5 @@ This section describes the Last Write Wins (LWW) strategy for conflict resolutio
 -   **Eventual Consistency:** LWW is a common conflict resolution mechanism employed in eventually consistent systems, where replicas may temporarily diverge, and the system relies on a simple rule to converge to a final state. [Understand Eventual Consistency](../../consistency-models/eventual-consistency/README.md).
 
 -   **Data Replication:** LWW is frequently applied in replicated data scenarios, particularly in multi-master or asynchronous replication setups, where concurrent writes to the same data item across different replicas are possible. [Understand Data Replication](../../data-replication/README.md).
+
+## Trade-offs

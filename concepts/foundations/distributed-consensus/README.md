@@ -38,3 +38,5 @@ This section discusses consensus mechanisms specifically in the context of distr
 -   **Paxos:** A foundational, albeit complex, algorithm for achieving distributed consensus, known for its strong theoretical guarantees. [Understand Paxos ./paxos/README.md].
 
 -   **Raft:** A consensus algorithm designed for understandability, often preferred over Paxos for its clarity and ease of implementation in practical systems. [Understand Raft ./raft/README.md].
+
+## Trade-offs

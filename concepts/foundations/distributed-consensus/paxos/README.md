@@ -40,3 +40,7 @@
 -   **Strong Consistency:** Paxos is used to achieve strong consistency in distributed systems by ensuring all replicas agree on the order of operations. [Learn about Strong Consistency](../../consistency-models/strong-consistency/README.md).
 -   **Fault Tolerance:** Paxos is designed to tolerate crash failures of nodes and message loss, making it a key component in building fault-tolerant systems. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Raft:** A more understandable alternative to Paxos for achieving distributed consensus. [Compare with Raft](./raft/README.md).
+
+## Comparison
+
+## Trade-offs

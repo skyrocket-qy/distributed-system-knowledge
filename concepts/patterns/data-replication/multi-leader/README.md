@@ -38,3 +38,5 @@ This section explains Multi-Leader Replication, a data replication strategy wher
 -   **Fault Tolerance:** Multi-leader replication significantly enhances fault tolerance and disaster recovery capabilities by allowing writes to continue even if one or more leader nodes or entire data centers become unavailable. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Multi-Master System Mode:** Multi-leader replication is essentially the implementation of a multi-master system mode, where multiple nodes are designated as primary and can handle write operations. [Discover Multi-Master Systems](../../system-mode/multi-master/README.md).
+
+## Trade-offs

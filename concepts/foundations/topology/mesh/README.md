@@ -27,3 +27,9 @@ This section explains the Mesh topology in distributed systems.
 -   **Communication:** The multiple communication paths in a mesh topology enhance communication reliability and can reduce latency by allowing data to travel along the most efficient route between nodes. [Explore Communication Patterns](../../communication/README.md).
 
 -   **Service Discovery:** In large and dynamic mesh networks, especially those involving microservices, service discovery mechanisms are crucial for efficiently locating and communicating with various service instances across the interconnected nodes. [Understand Service Discovery](../../service-discovery/README.md).
+
+## Core
+
+## Comparison
+
+## Trade-offs

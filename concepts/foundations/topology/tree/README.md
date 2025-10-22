@@ -25,3 +25,9 @@ This section explains the Tree topology in distributed systems.
 -   **Scaling:** Tree topologies are generally scalable, allowing for the expansion of the network by adding new branches or sub-networks without significantly impacting the existing structure. [Learn about Scaling](../../scaling/README.md).
 
 -   **Communication:** The hierarchical nature of a tree topology dictates the communication paths between nodes, influencing latency and the potential for bottlenecks at higher-level hubs. [Explore Communication Patterns](../../communication/README.md).
+
+## Core
+
+## Comparison
+
+## Trade-offs

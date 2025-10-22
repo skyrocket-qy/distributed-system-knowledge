@@ -48,3 +48,7 @@ Raft operates in terms of *terms*, which are continuously increasing integers. E
 -   **Strong Consistency:** Raft is designed to provide strong consistency, ensuring that all committed operations are visible to all clients in the same order. [Learn about Strong Consistency](../../consistency-models/strong-consistency/README.md).
 -   **Fault Tolerance:** Raft is inherently fault-tolerant, capable of tolerating failures of a minority of nodes (e.g., `(N-1)/2` failures in an N-node cluster). [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Paxos:** A more complex but foundational consensus algorithm that Raft aims to simplify. [Compare with Paxos](./paxos/README.md).
+
+## Comparison
+
+## Trade-offs

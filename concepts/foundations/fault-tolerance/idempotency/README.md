@@ -33,3 +33,7 @@ Without idempotency, retrying failed operations could lead to unintended side ef
 -   **Distributed Transactions:** In distributed transactions, especially with patterns like Saga, idempotency helps in making compensating transactions safe to retry. [Explore Distributed Transactions](../../distributed-transactions/README.md).
 -   **Messaging:** Essential for consumers of message queues to handle duplicate messages that can occur with "at-least-once" delivery semantics. [Learn about Messaging](../../messaging/README.md).
 -   **Consistency Models:** Idempotency contributes to maintaining consistency in distributed systems by preventing unintended state changes from repeated operations. [Explore Consistency Models](../../consistency-models/README.md).
+
+## Comparison
+
+## Trade-offs

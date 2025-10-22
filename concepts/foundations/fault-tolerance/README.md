@@ -83,3 +83,5 @@ The goal of fault tolerance is to mask failures from the end-user, providing the
 -   **Idempotency:** A crucial property for operations in fault-tolerant systems, ensuring that repeated executions of an operation produce the same result, preventing unintended side effects during retries. [Understand Idempotency](./idempotency/README.md).
 
 -   **Chaos Engineering:** A proactive approach to testing the resilience of distributed systems by intentionally injecting failures to uncover weaknesses. [Understand Chaos Engineering ./chaos-engineering/README.md].
+
+## Trade-offs

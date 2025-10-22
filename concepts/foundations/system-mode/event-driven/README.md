@@ -50,3 +50,7 @@ When an event producer sends an event, it is published to the event bus. The eve
 -   **Communication:** Event-driven architectures represent a distinct communication paradigm that emphasizes asynchronous, non-blocking interactions, contrasting with traditional synchronous request-response models. [Explore Communication Patterns](../../communication/README.md).
 
 -   **Scaling:** Event-driven systems are inherently highly scalable, as new consumers can be added to process events in parallel, and producers can continue to emit events without waiting for consumers, facilitating horizontal scaling. [Learn about Scaling](../../scaling/README.md).
+
+## Comparison
+
+## Trade-offs

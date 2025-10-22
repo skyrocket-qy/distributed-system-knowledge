@@ -31,3 +31,5 @@ This section describes the causal consistency model, which is a weaker guarantee
 -   **Vector Clocks:** Vector clocks are the foundational mechanism used to implement causal consistency, allowing distributed systems to track and enforce the causal relationships between events across different nodes. [Learn more about Vector Clocks for Coordination](../../coordination/vector-clock/README.md).
 
 -   **Conflict Resolution:** Causal consistency helps in understanding the causal history of updates, which is crucial for resolving conflicts that arise from concurrent operations in distributed systems. [Explore Conflict Resolution](../../conflict-resolution/README.md).
+
+## Trade-offs

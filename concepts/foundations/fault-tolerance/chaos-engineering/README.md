@@ -40,3 +40,7 @@
 -   **Observability:** Robust observability (metrics, logs, traces) is essential for conducting chaos experiments and understanding their impact. [Explore Observability ../../observability/README.md].
 -   **Resilience Engineering:** Chaos Engineering is a key practice within the broader field of resilience engineering, focusing on building and maintaining resilient systems. [Related to Fault Tolerance](../README.md).
 -   **System Modes:** Different system architectures (e.g., microservices, serverless) present unique challenges and opportunities for applying chaos engineering principles. [Discover System Modes ../../system-mode/README.md].
+
+## Comparison
+
+## Trade-offs

@@ -39,3 +39,6 @@ Traditional ACID transactions are straightforward in a single-node environment. 
 -   **Distributed Consensus:** While not always a direct application, the principles of distributed consensus are often at play in the commit phases of protocols like Two-Phase Commit, where all participants must agree on a final decision. [Understand Distributed Consensus](../distributed-consensus/README.md).
 
 -   **Microservices Architecture (System Mode):** In modern microservices, traditional distributed transactions are often replaced by patterns like Saga, which prioritize availability and use eventual consistency, reflecting a different approach to system design. [Discover System Modes](../system-mode/README.md).
+## Comparison
+
+## Trade-offs

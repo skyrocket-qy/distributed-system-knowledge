@@ -38,3 +38,7 @@
 -   **Consistency Models:** The choice of caching strategy and cache coherency mechanisms directly impacts the consistency guarantees provided to cached data. [Explore Consistency Models](../../consistency-models/README.md).
 -   **Fault Tolerance:** Designing a distributed cache to be fault-tolerant ensures that the application can continue to function even if some cache nodes fail. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Service Discovery:** In dynamic environments, service discovery is used to locate available cache servers. [Understand Service Discovery](../../service-discovery/README.md).
+
+## Comparison
+
+## Trade-offs

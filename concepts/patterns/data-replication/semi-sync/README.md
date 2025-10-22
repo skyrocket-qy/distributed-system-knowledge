@@ -36,3 +36,5 @@ This section explains Semi-Synchronous Replication, a data replication mode that
 -   **Consistency Models:** Semi-synchronous replication offers a consistency guarantee stronger than eventual consistency but typically weaker than strict strong consistency, providing a tunable trade-off for various application needs. [Explore Consistency Models](../../consistency-models/README.md).
 
 -   **Fault Tolerance:** By ensuring that at least one replica has received the data before the primary commits, semi-synchronous replication significantly reduces the risk of data loss compared to purely asynchronous methods, enhancing fault tolerance. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+## Trade-offs

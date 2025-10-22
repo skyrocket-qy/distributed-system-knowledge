@@ -27,3 +27,9 @@ This section explains the Star topology in distributed systems.
 -   **Fault Tolerance:** While individual node failures do not affect the rest of the network in a star topology, the central hub represents a single point of failure, making its reliability critical for overall system fault tolerance. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Communication:** The star topology dictates that all communication between peripheral nodes must pass through the central hub, influencing communication latency and potential bottlenecks. [Explore Communication Patterns](../../communication/README.md).
+
+## Core
+
+## Comparison
+
+## Trade-offs

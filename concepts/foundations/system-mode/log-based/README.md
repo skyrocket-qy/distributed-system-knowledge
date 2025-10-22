@@ -52,3 +52,7 @@ The state of the system can be derived at any point in time by replaying the log
 -   **Event Streaming:** Log-based systems are closely related to event streaming platforms, which are often built upon the concept of a distributed, immutable log to provide real-time data flow and processing capabilities. [Explore Event Streaming](../../coordination/event-streaming/README.md).
 
 -   **Observability:** Logs are a fundamental pillar of observability, and in log-based systems, the event log provides an exhaustive, auditable record of all changes, which is invaluable for debugging, auditing, and understanding system behavior. [Understand Observability](../../observability/README.md).
+
+## Comparison
+
+## Trade-offs

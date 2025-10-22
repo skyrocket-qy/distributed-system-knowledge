@@ -36,3 +36,5 @@ This section explains Checkpointing as a fault-tolerance technique, involving pe
 -   **Data Replication:** Checkpointing can be used in conjunction with data replication to ensure that replicated data can be consistently recovered across all nodes, especially in stateful distributed applications. [Understand Data Replication](../../data-replication/README.md).
 
 -   **Consistency Models:** Achieving consistent checkpoints in a distributed system requires careful consideration of consistency models to ensure that the saved state accurately reflects a valid global state of the system, avoiding inconsistencies upon recovery. [Learn about Consistency Models](../../consistency-models/README.md).
+
+## Trade-offs

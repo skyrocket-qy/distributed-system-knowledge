@@ -48,3 +48,7 @@ Server-Side Service Discovery is a pattern where clients make requests to a serv
 -   **Fault Tolerance:** The intermediary (router/load balancer) in server-side discovery must be highly available and fault-tolerant itself to avoid becoming a single point of failure, and it contributes to overall system fault tolerance by routing requests away from unhealthy service instances. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Microservices Architecture (System Mode):** Server-side service discovery is a common and often preferred pattern in microservices architectures, simplifying client implementations and providing centralized control over traffic management and routing. [Discover System Modes](../../system-mode/README.md).
+
+## Comparison
+
+## Trade-offs

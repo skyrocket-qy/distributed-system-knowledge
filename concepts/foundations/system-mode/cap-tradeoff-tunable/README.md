@@ -34,3 +34,7 @@ Tunable systems often expose configuration parameters that allow administrators 
 -   **Data Replication:** Data replication is essential for achieving both availability and consistency in distributed systems, and the CAP theorem guides how replication strategies are designed to meet specific consistency and availability goals. [Understand Data Replication](../../data-replication/README.md).
 
 -   **Quorum-Based System Mode:** Quorum mechanisms are frequently used to implement tunable consistency, allowing systems to dynamically adjust the number of nodes required for read and write operations to achieve desired CAP trade-offs. [Explore Quorum-Based Systems](../quorum-based/README.md).
+
+## Comparison
+
+## Trade-offs

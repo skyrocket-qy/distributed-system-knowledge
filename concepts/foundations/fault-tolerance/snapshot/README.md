@@ -36,3 +36,5 @@ This section describes Snapshot Recovery as a fault-tolerance mechanism, where t
 -   **Checkpointing:** Snapshot recovery is closely related to checkpointing, where the state of a process or system is periodically saved. Snapshots typically refer to a broader system state, while checkpointing can be more granular. [Compare with Checkpointing](../checkpoint/README.md).
 
 -   **Consistency Models:** Ensuring a consistent snapshot across a distributed system, especially one with concurrent writes, requires careful consideration of consistency models to guarantee that the captured state is valid and coherent. [Learn about Consistency Models](../../consistency-models/README.md).
+
+## Trade-offs

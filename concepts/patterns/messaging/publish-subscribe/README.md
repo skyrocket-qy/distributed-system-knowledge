@@ -32,3 +32,5 @@ This section describes the Publish-Subscribe pattern, where messages are publish
 -   **Event-Driven System Mode:** The Publish-Subscribe pattern is a cornerstone of event-driven architectures, where system behavior is orchestrated by the flow of events, enabling reactive and scalable designs. [Discover Event-Driven Systems](../../system-mode/event-driven/README.md).
 
 -   **Coordination:** Publish-Subscribe can be used for loose coordination, allowing components to react to events and implicitly coordinate their actions without direct dependencies or explicit command structures. [Explore Coordination Concepts](../../coordination/README.md).
+
+## Trade-offs

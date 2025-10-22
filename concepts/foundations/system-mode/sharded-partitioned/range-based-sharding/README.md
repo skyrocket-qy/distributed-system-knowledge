@@ -49,3 +49,9 @@ Range-based sharding is a sharding strategy where data is partitioned based on a
 -   **Horizontal Scaling:** Range-based sharding is a fundamental technique for achieving horizontal scalability in databases and data stores, allowing systems to handle larger datasets and higher loads by adding more machines. [Learn about Horizontal Scaling](../../../scaling/horizontal/README.md).
 
 -   **Data Replication:** Sharding is often combined with data replication within each shard to provide fault tolerance and high availability, ensuring that data remains accessible even if a shard fails. [Understand Data Replication](../../../data-replication/README.md).
+
+## Core
+
+## Comparison
+
+## Trade-offs

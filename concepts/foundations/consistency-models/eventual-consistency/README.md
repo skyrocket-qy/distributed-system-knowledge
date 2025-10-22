@@ -30,3 +30,5 @@ This section describes the eventual consistency model, where the system guarante
 -   **CAP Theorem:** Eventual consistency is a choice made when prioritizing Availability and Partition Tolerance over strong Consistency, as described by the CAP theorem. [Understand the CAP Theorem](../../system-mode/cap-tradeoff-tunable/README.md).
 
 -   **Strong Consistency:** In contrast to eventual consistency, strong consistency guarantees that all reads return the most recent write, but often at the cost of availability or partition tolerance. [Compare with Strong Consistency](../strong-consistency/README.md).
+
+## Trade-offs

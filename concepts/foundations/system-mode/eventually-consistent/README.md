@@ -52,3 +52,6 @@ Several popular services and systems leverage eventual consistency to achieve hi
 -   **Conflict Resolution:** Due to the nature of eventual consistency, concurrent updates can lead to divergent data states, making robust conflict resolution mechanisms essential to merge these inconsistencies gracefully. [Understand Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **CAP Theorem:** The choice of an eventually consistent system mode is a direct reflection of the CAP theorem, where availability and partition tolerance are prioritized over strong consistency, accepting that data may not always be immediately consistent. [Understand the CAP Theorem](../cap-tradeoff-tunable/README.md).
+## Comparison
+
+## Trade-offs

@@ -44,3 +44,5 @@ There are two main ways to coordinate Sagas:
 -   **Microservices Architecture (System Mode):** The Saga pattern is a cornerstone for managing data consistency in microservices architectures, where each service typically owns its data and direct distributed transactions are avoided. [Discover System Modes](../../system-mode/README.md).
 
 -   **Fault Tolerance:** Sagas contribute to fault tolerance by providing a structured way to handle failures within a distributed business process, allowing for recovery through compensating transactions rather than a complete rollback. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+## Comparison

@@ -36,3 +36,5 @@ This section describes Multi-Source Replication, a data replication setup where 
 -   **Conflict Resolution:** Aggregating data from multiple independent sources can introduce conflicts when the same data is updated differently across sources, necessitating robust conflict resolution strategies during the integration process. [Understand Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **Messaging:** Event streaming platforms or message queues are frequently used in multi-source replication scenarios to reliably capture and transport data changes from various sources to the central replica for processing and aggregation. [Explore Messaging Systems](../../messaging/README.md).
+
+## Trade-offs

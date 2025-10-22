@@ -55,3 +55,5 @@ The choice of which scaling techniques to use depends on the specific requiremen
 -   **Service Discovery:** In dynamic, horizontally scaled environments, service discovery mechanisms are crucial for services to locate and communicate with each other as instances are added or removed. [Understand Service Discovery](../service-discovery/README.md).
 
 -   **Distributed Caching:** A critical technique for improving performance and scalability by storing frequently accessed data closer to the application, reducing the load on backend systems. [Understand Distributed Caching](./distributed-caching/README.md).
+
+## Trade-offs

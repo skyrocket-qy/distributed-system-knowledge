@@ -45,3 +45,5 @@ The protocol involves a coordinator and multiple participants. It operates in tw
 -   **Fault Tolerance:** 2PC has known limitations regarding fault tolerance, particularly its blocking nature and the coordinator being a single point of failure, which can lead to participants being stuck in an uncertain state. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Strong Consistency:** Protocols like 2PC are designed to achieve strong consistency across distributed data, ensuring that all participants see the same state after a transaction is committed. [Explore Strong Consistency](../../consistency-models/strong-consistency/README.md).
+
+## Comparison

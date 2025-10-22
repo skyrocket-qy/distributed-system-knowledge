@@ -63,3 +63,7 @@ By tuning R and W, system designers can trade off between read and write latency
 -   **Data Replication:** Quorum reads and writes are commonly used in replicated storage systems to ensure data integrity and availability across multiple copies of data, allowing for flexible consistency guarantees. [Understand Data Replication](../../data-replication/README.md).
 
 -   **Distributed Consensus:** Quorum is a cornerstone of many distributed consensus algorithms (e.g., Paxos, Raft), where a majority of nodes must agree on a decision to ensure consistency and fault tolerance, directly influencing quorum-based system design. [Understand Distributed Consensus](../../distributed-consensus/README.md).
+
+## Comparison
+
+## Trade-offs

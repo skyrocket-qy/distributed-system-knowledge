@@ -50,3 +50,7 @@ A sharded architecture also requires a routing or query coordination layer. When
 -   **System Modes:** Sharding represents a specific system mode designed to manage large datasets and high throughput, contrasting with other modes like master-slave or shared-nothing architectures. [Discover other System Modes](../README.md).
 
 -   **Consistency Models:** Ensuring data consistency across shards, particularly for operations that span multiple partitions, is a critical challenge that often involves trade-offs between strong consistency and performance/availability. [Explore Consistency Models](../../consistency-models/README.md).
+
+## Comparison
+
+## Trade-offs

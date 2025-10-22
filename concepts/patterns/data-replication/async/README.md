@@ -36,3 +36,5 @@ This section describes Asynchronous Replication, a data replication mode where t
 -   **Semi-Synchronous Replication:** A hybrid approach that offers a balance between the consistency guarantees of synchronous replication and the performance benefits of asynchronous replication. [Explore Semi-Synchronous Replication](../semi-sync/README.md).
 
 -   **Fault Tolerance:** Asynchronous replication plays a crucial role in disaster recovery and high availability strategies, allowing systems to recover from failures by having data replicated to other nodes. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+## Trade-offs

@@ -38,3 +38,5 @@ This section details how CRDTs are designed to resolve conflicts automatically a
 -   **Coordination:** By providing automatic conflict resolution, CRDTs significantly simplify coordination in distributed systems, allowing nodes to operate more independently while still ensuring data convergence. [Discover CRDTs as a Coordination mechanism](../../coordination/crdt/README.md).
 
 -   **Vector Clocks:** While CRDTs aim to avoid conflicts, understanding causal relationships (often tracked by vector clocks) is still relevant for some CRDT implementations or for debugging and reasoning about concurrent operations. [Compare with Vector Clocks](../vector-clocks/README.md).
+
+## Trade-offs

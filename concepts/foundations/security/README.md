@@ -58,3 +58,5 @@ The goal of security in distributed systems is to ensure the confidentiality, in
 -   **[System Modes](../system-mode/README.md):** Different distributed system architectures (e.g., microservices, peer-to-peer) introduce unique security challenges and require specific security patterns and considerations tailored to their operational models.
 
 -   **[Distributed Transactions](../distributed-transactions/README.md):** Securing distributed transactions is vital to prevent fraud, ensure data integrity, and maintain the atomicity and consistency of operations across multiple services or databases.
+
+## Trade-offs

@@ -48,3 +48,5 @@ Centralized Discovery is a service discovery pattern where a central server, oft
 -   **Fault Tolerance:** The primary drawback of centralized discovery is its susceptibility to being a single point of failure, making robust fault tolerance strategies for the central server critical for system reliability. [Learn about Fault Tolerance](../../fault-tolerance/README.MD).
 
 -   **Distributed Consensus:** To overcome the single point of failure issue and ensure high availability and consistency, a centralized service registry itself often employs distributed consensus algorithms internally to replicate its state across multiple nodes. [Understand Distributed Consensus](../../distributed-consensus/README.MD).
+
+## Trade-offs

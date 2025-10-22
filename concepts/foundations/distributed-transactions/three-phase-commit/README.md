@@ -47,3 +47,5 @@ Like 2PC, 3PC involves a coordinator and multiple participants. It operates in t
 -   **Fault Tolerance:** 3PC aims to enhance fault tolerance over 2PC by reducing the likelihood of participants being left in an uncertain (blocking) state during coordinator failures, though it still has limitations under network partitions. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Strong Consistency:** Protocols like 3PC are designed to achieve strong consistency across distributed data, ensuring that all participants see the same state after a transaction is committed. [Explore Strong Consistency](../../consistency-models/strong-consistency/README.md).
+
+## Comparison

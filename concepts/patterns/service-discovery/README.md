@@ -59,3 +59,7 @@ There are two primary patterns for service discovery:
 -   **Microservices Architecture (System Mode):** Service discovery is a cornerstone of microservices architectures, enabling the dynamic and independent deployment, scaling, and management of numerous small services. [Discover System Modes](../system-mode/README.md).
 
 -   **Distributed Consensus:** Highly available and consistent service registries often rely on distributed consensus algorithms to ensure that all nodes in the registry agree on the current state of registered services. [Understand Distributed Consensus](../distributed-consensus/README.md).
+
+## Comparison
+
+## Trade-offs

@@ -54,3 +54,7 @@ P2P networks can be:
 -   **Distributed Consensus:** Many prominent P2P applications, such as cryptocurrencies, rely on sophisticated distributed consensus algorithms to maintain a consistent and agreed-upon state across the decentralized network. [Understand Distributed Consensus](../../distributed-consensus/README.md).
 
 -   **Topology:** P2P networks can adopt various topologies (e.g., mesh, ring, star) to organize their connections and facilitate communication and discovery among peers, each with its own trade-offs in performance and resilience. [Explore Network Topologies](../../topology/README.md).
+
+## Comparison
+
+## Trade-offs

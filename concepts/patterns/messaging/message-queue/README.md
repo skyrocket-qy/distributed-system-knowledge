@@ -32,3 +32,5 @@ This section describes the Message Queue pattern, where messages are sent to a q
 -   **Fault Tolerance:** Message Queues enhance fault tolerance by buffering messages, ensuring that messages are not lost even if consuming services are temporarily unavailable, and enabling retry mechanisms. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Scaling:** Message Queues are crucial for scaling distributed systems by enabling asynchronous task processing, load leveling during traffic spikes, and distributing work efficiently across multiple worker instances. [Learn about Scaling](../../scaling/horizontal/README.md).
+
+## Trade-offs

@@ -27,3 +27,9 @@ This section explains the Ring topology in distributed systems.
 -   **Fault Tolerance:** While a simple ring topology can be vulnerable to a single node or link failure, implementations often include redundancy (e.g., dual rings) to enhance fault tolerance and ensure continuous operation. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Distributed Hash Tables (DHTs):** Many DHT implementations, such as Chord, conceptually organize nodes in a ring structure to facilitate efficient data lookup and distribution in decentralized systems. [Explore Decentralized Service Discovery (which uses DHTs)](../../service-discovery/decentralized-discovery/README.md).
+
+## Core
+
+## Comparison
+
+## Trade-offs

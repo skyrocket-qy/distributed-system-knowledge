@@ -25,3 +25,9 @@ This section explains the Bus topology in distributed systems.
 -   **Communication:** In a bus topology, all communication travels along the single shared medium, meaning all nodes receive all transmissions, which can lead to collisions and reduced efficiency with increased traffic. [Explore Communication Patterns](../../communication/README.md).
 
 -   **Fault Tolerance:** A significant drawback of the bus topology is its single point of failure; a break in the main bus cable or a failure of a single node can disrupt communication for the entire network. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+## Core
+
+## Comparison
+
+## Trade-offs

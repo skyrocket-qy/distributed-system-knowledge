@@ -36,3 +36,7 @@ Implementing distributed locks correctly is notoriously challenging due to the i
 -   **Fault Tolerance:** Designing distributed locks to be fault-tolerant is crucial to prevent deadlocks and ensure the system can recover from failures of the lock holder or the lock service itself. [Understand Fault Tolerance ../../fault-tolerance/README.md].
 -   **Distributed Transactions:** In some cases, distributed locks can be used as part of a distributed transaction to ensure atomicity across multiple operations. [Explore Distributed Transactions ../../distributed-transactions/README.md].
 -   **Leader Election:** Often, the leader in a distributed system implicitly holds a form of a distributed lock for certain operations. [Understand Leader Election ./leader-election/README.md].
+
+## Comparison
+
+## Trade-offs

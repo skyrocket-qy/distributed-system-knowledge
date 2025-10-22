@@ -49,3 +49,7 @@ For example, a distributed database might partition its data by a user ID. All d
 -   **Data Replication:** Data replication is commonly employed in shared-nothing systems to ensure high availability and durability, with copies of data distributed across multiple independent nodes. [Understand Data Replication](../../data-replication/README.md).
 
 -   **Consistency Models:** Due to the distributed nature and emphasis on availability and partition tolerance, many shared-nothing systems opt for eventual consistency, requiring careful design to handle potential inconsistencies. [Explore Consistency Models](../../consistency-models/README.md).
+
+## Comparison
+
+## Trade-offs

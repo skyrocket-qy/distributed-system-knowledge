@@ -36,3 +36,5 @@ This section explains how timestamps combined with logical clocks (e.g., Lamport
 -   **Causal Consistency:** Logical clocks, particularly vector clocks, are fundamental to implementing causal consistency, ensuring that causally related operations are observed in the correct order across a distributed system. [Explore Causal Consistency](../../consistency-models/causal-consistency/README.md).
 
 -   **Coordination:** Logical clocks serve as a coordination mechanism by providing a consistent way to order events across distributed nodes, which is crucial for maintaining data integrity and resolving conflicts. [Discover Coordination Concepts](../../coordination/README.md).
+
+## Trade-offs
