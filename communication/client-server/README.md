@@ -9,6 +9,15 @@ The **Client-Server** model is a distributed application structure that partitio
 
 The communication between the client and the server follows a **request-response** cycle:
 
+```
++--------+         +--------+
+| Client | <-----> | Server |
++--------+         +--------+
+    ^                  ^
+    | Request          | Response
+    v                  v
+```
+
 1.  The client establishes a connection with the server.
 2.  The client sends a request to the server over the network.
 3.  The server receives the request, processes it, and may perform some computation or data retrieval.

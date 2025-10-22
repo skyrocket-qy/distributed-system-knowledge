@@ -31,3 +31,8 @@ The choice of a consistency model has a significant impact on the performance, a
 -   **Eventual Consistency:** Social media feeds, e-commerce product catalogs, DNS, and large-scale web services where high availability and performance are prioritized over immediate consistency.
 
 -   **Causal Consistency:** Collaborative editing applications, distributed social networks, and systems that need to preserve the causal order of events without requiring global strong consistency.
+
+## Related Concepts
+
+-   **[Data Replication](../data-replication/README.md):** The choice of a consistency model directly influences how data is replicated across multiple nodes and how those replicas are kept in sync. Stronger consistency often requires more complex replication strategies.
+-   **[Distributed Transactions](../distributed-transactions/README.md):** Ensuring ACID properties in distributed transactions heavily relies on the underlying consistency model. Weaker consistency models often lead to alternative transaction patterns like Sagas.

@@ -35,7 +35,7 @@ Understanding the trade-offs between these different system modes is essential f
 | Mode | Scalability | Consistency | Availability | Complexity | Use Case |
 |---|---|---|---|---|---|
 | **[Leader-Follower](./leader-follower)** | High (read), Low (write) | Strong (read from leader) | High | Medium | Databases, replicated systems |
-| **[Master-Slave](./master-slave)** | High (read), Low (write) | Strong (read from master) | High | Medium | Databases, replicated systems |
+| **[Master-Slave](./master-slave)** | High (read), Low (write) | Strong (read from master) | High | Medium | Databases, replicated systems (Note: 'Leader-Follower' is the preferred modern terminology) |
 | **[Multi-Master](./multi-master)** | High | Eventual | High | High | Multi-datacenter deployments |
 | **[Peer-to-Peer](./peer-to-peer)** | High | Eventual | High | High | File sharing, content delivery |
 | **[Sharded/Partitioned](./sharded-partitioned)** | High | Varies | High | High | Large-scale databases |
@@ -59,7 +59,7 @@ Understanding the trade-offs between these different system modes is essential f
 
 -   **Leader-Follower:** Replicated databases (e.g., MySQL, PostgreSQL), distributed consensus systems (e.g., ZooKeeper, etcd), and message queues.
 
--   **Multi-Master:** Geographically distributed databases, distributed version control systems (e.g., Git), and some highly available web services.
+-   **Master-Slave:** Geographically distributed databases, distributed version control systems (e.g., Git), and some highly available web services (Note: 'Leader-Follower' is the preferred modern terminology).
 
 -   **Sharded (Partitioned):** Large-scale databases (SQL and NoSQL), distributed search engines, and big data processing systems.
 

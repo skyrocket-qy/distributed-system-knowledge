@@ -17,6 +17,7 @@ This directory aims to document various concepts, modes, and mechanisms related 
 - [Fault Tolerance](./fault-tolerance/README.md)
 - [Messaging](./messaging/README.md)
 - [Scaling](./scaling/README.md)
+- [Security](./security/README.md)
 - [System Modes](./system-mode/README.md)
 - [Topology](./topology/README.md)
 - [Distributed Transactions](./distributed-transactions/README.md)
