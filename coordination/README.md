@@ -11,7 +11,7 @@ Without proper coordination, a distributed system can suffer from a variety of p
 
 ### Key Challenges
 
--   **Distributed Consensus:** Reaching agreement among multiple nodes on a single data value or decision, even in the presence of failures.
+-   **Distributed Consensus:** Reaching agreement among multiple nodes on a single data value or decision, even in the presence of failures. See [Distributed Consensus](../distributed-consensus/README.md) for more details.
 -   **Leader Election:** Dynamically selecting a single coordinator (leader) from a group of nodes.
 -   **Distributed Transactions:** Ensuring atomicity, consistency, isolation, and durability (ACID) properties across multiple independent operations in a distributed environment.
 -   **Clock Synchronization:** Maintaining a consistent notion of time across distributed nodes, which is crucial for ordering events.
@@ -22,7 +22,6 @@ Without proper coordination, a distributed system can suffer from a variety of p
 
 | Mechanism | Primary Goal | Scalability | Complexity | Use Case |
 |---|---|---|---|---|
-| **[Consensus](./consensus)** | Agreement | Low | High | Leader election, distributed transactions |
 | **[Quorum](./quorum)** | Consistency | Medium | Medium | Read/write operations in replicated systems |
 | **[Gossip](./gossip)** | Dissemination | High | Low | Cluster membership, failure detection |
 | **[Vector Clock](./vector-clock)** | Causality | High | Medium | Detecting concurrent updates, versioning |
@@ -32,8 +31,6 @@ Without proper coordination, a distributed system can suffer from a variety of p
 ## Which service use it?
 
 
-
--   **Consensus:** Distributed databases (e.g., etcd, ZooKeeper, Apache Kafka for controller election), distributed transaction systems, and leader election in replicated systems.
 
 -   **Quorum:** Distributed storage systems (e.g., Apache Cassandra, Amazon DynamoDB), and any system requiring a certain number of nodes to agree on an operation for consistency.
 

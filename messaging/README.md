@@ -46,6 +46,7 @@ There are many popular messaging systems in use today, including:
 |---|---|---|---|
 | **[Message Queue](./message-queue)** | One-to-one | High | Task distribution, work queues |
 | **[Publish-Subscribe](./publish-subscribe)** | One-to-many | High | Event notification, real-time data streaming |
+| **Request-Reply** | One-to-one (with correlation) | Medium | Synchronous-like interactions over async messaging |
 
 ## Which service use it?
 

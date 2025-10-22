@@ -22,6 +22,14 @@ Observability is typically achieved through the collection and analysis of three
 | **Metrics** | Aggregatable numerical measurements that represent the state of a system over time. | Quantify system behavior, track trends, identify performance issues, and trigger alerts. | CPU utilization, memory usage, request rates, error rates, latency |
 | **Traces** | Representations of the end-to-end journey of a single request or transaction as it propagates through multiple services. | Visualize the flow of requests, identify bottlenecks, and understand dependencies between services. | OpenTelemetry traces, Zipkin, Jaeger |
 
+## Comparison
+
+| Telemetry Type | Granularity | Storage Cost | Query Complexity | Primary Use |
+|---|---|---|---|---|
+| **Logs** | High (event-level detail) | High | High (text search, parsing) | Debugging, forensic analysis, detailed event context |
+| **Metrics** | Low (aggregated data points) | Low | Low (numerical queries, aggregations) | Monitoring system health, alerting, trend analysis, dashboards |
+| **Traces** | Medium (request-level flow) | Medium | Medium (graph traversal, span filtering) | Performance optimization, root cause analysis, understanding service dependencies |
+
 ## Operational Aspects
 
 Beyond collecting telemetry, effective observability involves actively using this data for operational insights:

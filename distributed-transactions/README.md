@@ -17,12 +17,11 @@ Traditional ACID transactions are straightforward in a single-node environment. 
 
 ## Mechanisms
 
-| Mechanism | Description | Trade-offs | Use Case |
-|---|---|---|---||
-| **Two-Phase Commit (2PC)** | A classic atomic commitment protocol that ensures all participants either commit or abort a transaction. It involves a coordinator and multiple participants. | High latency, blocking, single point of failure (coordinator) | Distributed databases, enterprise systems requiring strong consistency |
-| **Three-Phase Commit (3PC)** | An extension of 2PC designed to be non-blocking in the face of coordinator failure, by adding a "prepare to commit" phase. | More complex, still susceptible to network partitions, higher overhead than 2PC | Systems where blocking is unacceptable, but strong consistency is still desired |
-| **Saga Pattern** | A sequence of local transactions, where each local transaction updates its own database and publishes an event. If a step fails, compensating transactions are executed to undo the preceding steps. | Eventual consistency, increased complexity in error handling, no global rollback | Microservices architectures, long-running business processes |
-| **Distributed Sagas (Orchestration/Choreography)** | Different approaches to managing the flow of sagas, either through a central orchestrator or by participants reacting to events. | Orchestration: Centralized control, easier to manage complex workflows. Choreography: Decentralized, more resilient to orchestrator failure, harder to monitor. | Microservices, complex business workflows |
+| Mechanism | Trade-offs | Use Case |
+|---|---|---|
+| **[Two-Phase Commit (2PC)](./two-phase-commit)** | High latency, blocking, single point of failure (coordinator) | Distributed databases, enterprise systems requiring strong consistency |
+| **[Three-Phase Commit (3PC)](./three-phase-commit)** | More complex, still susceptible to network partitions, higher overhead than 2PC | Systems where blocking is unacceptable, but strong consistency is still desired |
+| **[Saga Pattern](./saga-pattern)** | Eventual consistency, increased complexity in error handling, no global rollback | Microservices architectures, long-running business processes |
 
 ## Which service use it?
 

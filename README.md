@@ -21,6 +21,7 @@ This directory aims to document various concepts, modes, and mechanisms related 
 - [System Modes](./system-mode/README.md)
 - [Topology](./topology/README.md)
 - [Distributed Transactions](./distributed-transactions/README.md)
+- [Distributed Consensus](./distributed-consensus/README.md)
 - [Observability](./observability/README.md)
 
 ## Common Distributed System Implementations

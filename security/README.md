@@ -31,6 +31,16 @@ The goal of security in distributed systems is to ensure the confidentiality, in
 | **Security Auditing & Logging** | Recording and reviewing security-relevant events. | Detects suspicious activities and aids in forensic analysis. |
 | **Intrusion Detection/Prevention Systems (IDS/IPS)** | Monitoring network or system activities for malicious behavior. | Identifies and potentially blocks security threats. |
 
+## Comparison
+
+| Mechanism | Purpose | Implementation Complexity | Impact on Performance |
+|---|---|---|---|
+| **Authentication** | Verify identity | Medium to High (depending on method) | Low to Medium (initial handshake) |
+| **Authorization** | Control access to resources | Medium to High (fine-grained policies) | Low to Medium (policy evaluation) |
+| **Encryption** | Protect data confidentiality | Medium (key management, algorithm choice) | Medium to High (CPU overhead) |
+| **Digital Signatures** | Verify integrity and authenticity | Medium (key management, signing/verification) | Medium (CPU overhead) |
+| **Firewalls & Network Segmentation** | Restrict network access | Medium (rule configuration) | Low (packet filtering) |
+
 ## Related Concepts
 
 -   **[Fault Tolerance](../fault-tolerance/README.md):** Security measures often need to be fault-tolerant themselves to ensure continuous protection.
