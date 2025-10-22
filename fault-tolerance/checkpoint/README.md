@@ -26,3 +26,13 @@ This section explains Checkpointing as a fault-tolerance technique, involving pe
 -   **Distributed Databases:** Some distributed databases use checkpointing internally to periodically flush in-memory changes to disk, reducing recovery time after a crash.
 
 -   **Virtual Machine (VM) Snapshots:** While not exactly the same, the concept of taking a snapshot of a running VM's state is analogous to checkpointing, allowing the VM to be restored to a previous point in time.
+
+## Related Concepts
+
+-   **Fault Tolerance:** Checkpointing is a fundamental fault tolerance technique that enables distributed systems to recover from failures by rolling back to a previously saved consistent state, minimizing data loss and downtime. [Explore other Fault Tolerance strategies](../README.md).
+
+-   **Snapshot Recovery:** Checkpointing is closely related to snapshot recovery, where a complete state of a system or component is captured at a specific point in time for later restoration. Checkpointing often refers to more granular, periodic state saving. [Compare with Snapshot Recovery](../snapshot/README.md).
+
+-   **Data Replication:** Checkpointing can be used in conjunction with data replication to ensure that replicated data can be consistently recovered across all nodes, especially in stateful distributed applications. [Understand Data Replication](../../data-replication/README.md).
+
+-   **Consistency Models:** Achieving consistent checkpoints in a distributed system requires careful consideration of consistency models to ensure that the saved state accurately reflects a valid global state of the system, avoiding inconsistencies upon recovery. [Learn about Consistency Models](../../consistency-models/README.md).

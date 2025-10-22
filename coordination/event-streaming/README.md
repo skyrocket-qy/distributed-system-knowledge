@@ -28,3 +28,17 @@ This section explores event streaming as a coordination pattern in distributed s
 -   **Fraud Detection:** Analyzing streams of financial transactions in real-time to identify and flag suspicious activities.
 
 -   **Personalization and Recommendation Engines:** Processing user behavior events in real-time to provide personalized content and product recommendations.
+
+## Related Concepts
+
+-   **Coordination:** Event streaming serves as a powerful coordination pattern in distributed systems, enabling loosely coupled components to react to real-time data flows and integrate their functionalities asynchronously. [Explore other Coordination techniques](../README.md).
+
+-   **Messaging:** Event streaming is a specialized form of messaging, often built upon publish-subscribe principles, designed for high-throughput, durable, and ordered delivery of events across a distributed system. [Explore Messaging Systems](../../messaging/README.md).
+
+-   **Publish-Subscribe:** Event streaming platforms typically implement a publish-subscribe model, where event producers publish messages to topics, and multiple consumers can subscribe to these topics to receive and process events. [Understand Publish-Subscribe](../../messaging/publish-subscribe/README.md).
+
+-   **Event-Driven System Mode:** Event streaming is a cornerstone of event-driven architectures, where the entire system's behavior is orchestrated by the flow of events, enabling reactive, scalable, and resilient designs. [Discover Event-Driven Systems](../../system-mode/event-driven/README.md).
+
+-   **Scaling:** Event streaming platforms are designed for massive scalability, capable of handling and processing vast volumes of real-time data, making them essential for applications with high data throughput requirements. [Learn about Scaling](../../scaling/README.md).
+
+-   **Data Replication:** The durable log of events in an event streaming platform can be considered a form of data replication, ensuring that events are not lost and can be replayed to reconstruct state or recover from failures. [Understand Data Replication](../../data-replication/README.md).

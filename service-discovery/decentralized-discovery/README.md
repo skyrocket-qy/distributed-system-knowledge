@@ -39,3 +39,17 @@ Decentralized discovery often relies on Distributed Hash Tables (DHTs) or gossip
 -   **Kademlia:** A specific type of DHT used in many P2P applications, including BitTorrent, Ethereum, and IPFS.
 -   **Apache Cassandra:** Uses a gossip protocol for node discovery and state propagation within its cluster.
 -   **IPFS (InterPlanetary File System):** Utilizes DHTs for content routing and peer discovery.
+
+## Related Concepts
+
+-   **Service Discovery:** Decentralized discovery is a key pattern within the broader concept of service discovery, distributing the responsibility of locating service instances across the network rather than relying on a central authority. [Explore Service Discovery](../README.md).
+
+-   **Centralized Discovery:** In contrast, centralized discovery relies on a single server or cluster to maintain the service registry, offering simpler management but introducing a potential single point of failure. [Compare with Centralized Discovery](../centralized-discovery/README.md).
+
+-   **Peer-to-Peer Communication:** Decentralized discovery mechanisms, such as DHTs and gossip protocols, are inherently built upon peer-to-peer communication, where nodes interact directly to exchange information and discover each other. [Understand Peer-to-Peer Communication](../../communication/p2p/README.md).
+
+-   **Gossip Protocol (Coordination):** Gossip protocols are a common and robust mechanism used in decentralized discovery for disseminating information about network membership and service availability in a highly scalable and fault-tolerant manner. [Learn more about the Gossip Protocol](../../coordination/gossip/README.md).
+
+-   **Fault Tolerance:** Decentralized discovery inherently provides high fault tolerance, as the absence or failure of individual nodes does not typically disrupt the entire discovery process, making the system more resilient. [Understand Fault Tolerance](../../fault-tolerance/README.md).
+
+-   **Peer-to-Peer System Mode:** Decentralized discovery is a foundational component of peer-to-peer system modes, enabling the self-organizing and self-healing nature of such distributed architectures. [Discover Peer-to-Peer Systems](../../system-mode/peer-to-peer/README.md).

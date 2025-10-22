@@ -26,3 +26,15 @@ This section describes Active-Passive Failover, a fault-tolerance strategy where
 -   **Virtual Machine Clusters:** Virtualization platforms (e.g., VMware vSphere, Microsoft Hyper-V) use active-passive failover to automatically restart virtual machines on healthy hosts if a host fails.
 
 -   **Message Brokers:** Some message queue systems can be configured in an active-passive mode to ensure message durability and availability.
+
+## Related Concepts
+
+-   **Fault Tolerance:** Active-passive failover is a widely used fault tolerance strategy designed to ensure high availability by providing a standby system ready to take over operations upon primary failure. [Explore other Fault Tolerance strategies](../README.md).
+
+-   **Active-Active Cluster:** In contrast, active-active clusters distribute the workload across multiple active nodes simultaneously, offering better resource utilization and potentially faster recovery, but with increased complexity. [Compare with Active-Active Clusters](../active-active-cluster/README.md).
+
+-   **Data Replication:** Data replication is crucial for active-passive setups, as changes from the active node must be continuously synchronized to the passive node to ensure data consistency and minimize data loss during a failover. [Understand Data Replication](../../data-replication/README.md).
+
+-   **Leader-Follower (Master-Slave) System Mode:** Active-passive failover is a common implementation pattern for leader-follower (or master-slave) system modes, where the passive node acts as a follower ready to be promoted to leader. [Discover Leader-Follower Systems](../../system-mode/master-slave/README.md).
+
+-   **Service Discovery:** After a failover event, service discovery mechanisms are essential to update clients and other services about the new active node's location, ensuring traffic is correctly routed to the operational instance. [Understand Service Discovery](../../service-discovery/README.md).

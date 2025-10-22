@@ -36,3 +36,17 @@ To achieve this, strong consistency models often rely on two more specific conce
 -   **Financial Systems:** Banking applications, stock trading platforms, and payment gateways require strong consistency to ensure accurate transaction processing and prevent data anomalies.
 -   **Distributed Databases with Consensus (e.g., Google Spanner, CockroachDB, etcd, ZooKeeper):** These systems use algorithms like Paxos or Raft to ensure that all replicas agree on the order of operations, providing strong consistency guarantees across distributed nodes.
 -   **Critical Business Applications:** Any application where data integrity and immediate visibility of changes are paramount, such as inventory management or reservation systems.
+
+## Related Concepts
+
+-   **Consistency Models:** Strong consistency is the strictest consistency model, guaranteeing that all clients see the same, most up-to-date version of the data at all times. [Explore other Consistency Models](../README.md).
+
+-   **Eventual Consistency:** In stark contrast, eventual consistency prioritizes availability and performance over immediate consistency, allowing for temporary inconsistencies that eventually resolve. [Compare with Eventual Consistency](../eventual-consistency/README.md).
+
+-   **Sequential Consistency:** Sequential consistency is a specific form of strong consistency that ensures all operations appear to execute in some sequential order, and operations from a single process maintain their program order. [Learn more about Sequential Consistency](../sequential/README.md).
+
+-   **Distributed Consensus:** Strong consistency is often achieved through distributed consensus algorithms (e.g., Paxos, Raft), which enable a group of nodes to agree on a single value or order of operations despite failures. [Understand Distributed Consensus](../../distributed-consensus/README.md).
+
+-   **Synchronous Data Replication:** Synchronous replication is a primary mechanism for implementing strong consistency, as it ensures that all replicas acknowledge an update before the transaction is considered committed. [Explore Synchronous Data Replication](../../data-replication/sync/README.md).
+
+-   **Fault Tolerance:** While strong consistency provides robust data guarantees, it can sometimes come at the cost of availability during network partitions or node failures, requiring careful design of fault tolerance strategies. [Understand Fault Tolerance](../../fault-tolerance/README.md).
