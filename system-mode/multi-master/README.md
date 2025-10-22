@@ -8,14 +8,15 @@ In a multi-master setup, each master node can process writes independently and t
 
 ## How It Works
 
-When a write is made to any master node, that node updates its local data store and then propagates the change to all other master nodes in the system. Since writes can occur concurrently on different masters, conflicts can arise. For example, two clients might update the same piece of data on two different masters at the same time.
+When a write is made to any master node, that node updates its local data store and then propagates the change to all other master nodes in the system. This propagation often occurs via change logs or message queues, ensuring that all masters eventually receive the updates. Since writes can occur concurrently on different masters, conflicts can arise. For example, two clients might update the same piece of data on two different masters at the same time.
 
-**Conflict Resolution** is a critical aspect of multi-master systems. Common strategies for handling conflicts include:
--   **Last Write Wins (LWW):** The write with the later timestamp overwrites the earlier one. This is simple to implement but can lead to data loss.
--   **Vector Clocks:** A more sophisticated timestamping mechanism that can detect concurrent updates and flag them for resolution.
+**[Conflict Resolution](../../conflict-resolution/README.md)** is a critical aspect of multi-master systems. Common strategies for handling conflicts include:
+-   **[Last Write Wins (LWW)](../../conflict-resolution/last-write-wins/README.md):** The write with the later timestamp overwrites the earlier one. This is simple to implement but can lead to data loss.
+-   **[Vector Clocks](../../conflict-resolution/vector-clocks/README.md):** A more sophisticated timestamping mechanism that can detect concurrent updates and flag them for resolution, allowing for application-level merging.
+-   **[Conflict-free Replicated Data Types (CRDTs)](../../conflict-resolution/crdts/README.md):** Data structures that can be replicated across multiple servers, allowing concurrent updates without conflicts, and guaranteeing eventual consistency.
 -   **Application-Specific Logic:** The application itself is responsible for resolving conflicts, often by merging the conflicting changes or prompting a user for a decision.
 
-Replication between masters can be synchronous or asynchronous. Asynchronous replication is more common, as synchronous replication would introduce high latency for every write.
+Replication between masters can be synchronous or asynchronous. Asynchronous replication is more common, as synchronous replication would introduce high latency for every write and negate some of the benefits of a multi-master setup.
 
 ## Pros & Cons
 
@@ -28,8 +29,17 @@ Replication between masters can be synchronous or asynchronous. Asynchronous rep
 ### Cons
 
 -   **Conflict Resolution Complexity:** The need to handle and resolve write conflicts adds significant complexity to the system.
--   **Eventual Consistency:** Due to replication lag, data is typically eventually consistent. Different nodes might have different versions of the data for a short period.
+-   **[Eventual Consistency](../../consistency-models/eventual-consistency/README.md):** Due to replication lag and the asynchronous nature of updates, data is typically eventually consistent. This means that different nodes might have different versions of the data for a short period, and all replicas are guaranteed to converge to the same state only if no new updates are made for a sufficient period.
 -   **Difficult to Reason About:** The possibility of concurrent writes and conflicts can make it harder to reason about the state of the data and the behavior of the system.
+
+## Key Considerations
+
+When designing a system with multi-master replication, several factors need careful consideration:
+
+-   **Network Latency:** While multi-master reduces write latency for local clients, high network latency between master nodes can increase replication lag and the window for conflicts.
+-   **Data Consistency Requirements:** Multi-master inherently leads to eventual consistency. Systems requiring strong consistency for all operations might find multi-master unsuitable without additional mechanisms (e.g., distributed transactions, which add complexity).
+-   **Operational Overhead:** Managing multiple active masters, monitoring replication, and handling conflict resolution logic adds to operational complexity compared to single-master setups.
+-   **Application Design:** Applications need to be designed to gracefully handle eventual consistency and potential conflicts. This might involve implementing custom conflict resolution logic or designing data models that minimize conflicts (e.g., using CRDTs).
 
 ## Which service use it?
 
