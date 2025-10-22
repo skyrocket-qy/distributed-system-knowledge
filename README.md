@@ -35,6 +35,11 @@ This repository explores the fundamental concepts, patterns, and infrastructure 
 -   **[Load Balancing](./concepts/infrastructure/load-balancing/README.md):** Distributing traffic across multiple servers.
 -   **[Proxies](./concepts/infrastructure/proxies/README.md):** Intermediary servers that forward requests between clients and servers.
 
+## Resources
+
+-   **[Contributing](./CONTRIBUTING.md):** Guidelines for contributing to this project.
+-   **[Glossary](./GLOSSARY.md):** Definitions of common terms in distributed systems.
+
 ## Further Reading
 
 -   [What is a distributed system?](https://www.atlassian.com/microservices/microservices-architecture/distributed-architecture)
