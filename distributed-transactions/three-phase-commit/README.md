@@ -35,3 +35,15 @@ Like 2PC, 3PC involves a coordinator and multiple participants. It operates in t
 
 -   **Systems where blocking is unacceptable:** 3PC is considered in scenarios where the blocking nature of 2PC is deemed too detrimental, and a non-blocking guarantee is highly desired, even at the cost of increased complexity and overhead.
 -   **Distributed databases:** Some distributed database systems might implement variations of 3PC to improve availability during coordinator failures, though it is less commonly adopted than 2PC due to its complexity and remaining vulnerabilities.
+
+## Related Concepts
+
+-   **Distributed Transactions:** Three-Phase Commit (3PC) is an atomic commitment protocol designed to ensure atomicity and consistency across multiple participants in a distributed transaction. [Explore Distributed Transactions](../README.md).
+
+-   **Two-Phase Commit (2PC):** 3PC was developed to address some of the blocking issues and single points of failure inherent in the Two-Phase Commit protocol, offering improved fault tolerance in certain scenarios. [Compare with Two-Phase Commit](../two-phase-commit/README.md).
+
+-   **Distributed Consensus:** Atomic commitment protocols like 3PC are fundamentally a form of distributed consensus, where all participating nodes must agree on whether to commit or abort a transaction. [Understand Distributed Consensus](../../distributed-consensus/README.md).
+
+-   **Fault Tolerance:** 3PC aims to enhance fault tolerance over 2PC by reducing the likelihood of participants being left in an uncertain (blocking) state during coordinator failures, though it still has limitations under network partitions. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
+
+-   **Strong Consistency:** Protocols like 3PC are designed to achieve strong consistency across distributed data, ensuring that all participants see the same state after a transaction is committed. [Explore Strong Consistency](../../consistency-models/strong-consistency/README.md).

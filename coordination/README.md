@@ -41,3 +41,27 @@ Without proper coordination, a distributed system can suffer from a variety of p
 -   **CRDT (Conflict-free Replicated Data Types):** Real-time collaborative applications (e.g., Google Docs-like editors), distributed counters, and shared data structures in eventually consistent systems.
 
 -   **Event Streaming:** Microservices architectures, real-time analytics platforms, IoT data processing, and any system requiring asynchronous, decoupled communication and data flow.
+
+
+
+## Related Concepts
+
+
+
+-   **Distributed Transactions:** Coordination is fundamental to ensuring atomicity, consistency, isolation, and durability (ACID) across multiple participants in a distributed transaction. [Explore Distributed Transactions](../distributed-transactions/README.md).
+
+
+
+-   **Consistency Models:** Coordination mechanisms are often employed to enforce specific consistency models, from strong consistency requiring tight coordination to eventual consistency allowing more relaxed coordination. [Learn about Consistency Models](../consistency-models/README.md).
+
+
+
+-   **Fault Tolerance:** Effective coordination is crucial for building fault-tolerant systems, enabling processes like leader election, failure detection, and recovery to operate reliably despite node or network failures. [Understand Fault Tolerance](../fault-tolerance/README.md).
+
+
+
+-   **Communication:** All forms of coordination in distributed systems inherently rely on communication channels to exchange messages, synchronize states, and propagate decisions among nodes. [Explore Communication Patterns](../communication/README.md).
+
+
+
+-   **System Modes:** Different distributed system architectures and modes (e.g., master-slave, peer-to-peer, sharded) impose varying requirements and challenges for coordination among their components. [Discover System Modes](../system-mode/README.md).

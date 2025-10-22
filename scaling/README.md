@@ -40,3 +40,15 @@ The choice of which scaling techniques to use depends on the specific requiremen
 
 -   **Vertical Scaling:** Traditional monolithic applications, single-instance relational databases (e.g., a powerful SQL Server instance), and specialized high-performance computing tasks that benefit from a single, very powerful machine.
 -   **Horizontal Scaling:** Most modern web applications, microservices architectures, distributed databases (NoSQL and sharded SQL), big data processing frameworks (e.g., Apache Spark, Hadoop), and cloud-native applications.
+
+## Related Concepts
+
+-   **Data Replication:** Often used in conjunction with scaling to distribute data copies across multiple nodes, primarily for read scaling and to enhance fault tolerance. [Explore Data Replication](../data-replication/README.md).
+
+-   **Sharded/Partitioned System Mode:** A key technique for horizontal scaling, particularly for databases, where data is divided into smaller, independent pieces (shards) and distributed across multiple servers. [Understand Sharded/Partitioned Systems](../system-mode/sharded-partitioned/README.md).
+
+-   **Fault Tolerance:** Scaling strategies frequently incorporate fault tolerance mechanisms to ensure that the system remains available and resilient to failures as its size and complexity increase. [Learn about Fault Tolerance](../fault-tolerance/README.md).
+
+-   **Communication:** Efficient communication patterns and protocols are essential in scaled-out distributed systems, especially when distributing requests via load balancing or coordinating tasks across numerous nodes. [Explore Communication Patterns](../communication/README.md).
+
+-   **Service Discovery:** In dynamic, horizontally scaled environments, service discovery mechanisms are crucial for services to locate and communicate with each other as instances are added or removed. [Understand Service Discovery](../service-discovery/README.md).

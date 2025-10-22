@@ -32,3 +32,15 @@
 -   **Multi-Leader Replication:** Employed in geographically distributed systems or multi-datacenter deployments where local writes need to be fast and available. For instance, an e-commerce platform with data centers in different regions might use multi-leader replication to allow users in each region to write to their local database replica, with changes asynchronously replicated to other regions. Conflicts (e.g., two users buying the last item simultaneously from different regions) are resolved later, often using techniques like Last-Write-Wins or custom application logic (e.g., some NoSQL databases, distributed file systems).
 -   **Multi-Source Replication:** Used in data warehousing, data integration scenarios, or complex ETL (Extract, Transform, Load) pipelines where data from various sources needs to be consolidated into a single target.
 -   **CRDT (Conflict-free Replicated Data Types):** Ideal for collaborative applications (e.g., real-time text editors, shared whiteboards), distributed counters, and other scenarios where concurrent updates need to be merged automatically without manual conflict resolution.
+
+## Related Concepts
+
+-   **Consistency Models:** The choice of data replication strategy is intrinsically linked to the desired consistency model, as different replication approaches offer varying guarantees regarding data visibility and ordering across replicas. [Explore Consistency Models](../consistency-models/README.md).
+
+-   **Fault Tolerance:** Data replication is a cornerstone of fault-tolerant distributed systems, ensuring data availability and durability even in the event of node failures, network partitions, or other system disruptions. [Understand Fault Tolerance](../fault-tolerance/README.md).
+
+-   **Scaling:** Replication plays a vital role in scaling distributed systems, particularly for read-heavy workloads, by distributing data copies across multiple nodes to handle increased query volume and improve performance. [Learn about Scaling](../scaling/README.md).
+
+-   **Distributed Consensus:** For replication strategies aiming for strong consistency, distributed consensus algorithms are often employed to ensure that all replicas agree on the order of updates and maintain a consistent state across the system. [Understand Distributed Consensus](../distributed-consensus/README.md).
+
+-   **System Modes:** Various distributed system architectures and modes, such as master-slave, multi-master, or peer-to-peer, are defined by their underlying data replication strategies and how they manage data copies. [Discover System Modes](../system-mode/README.md).

@@ -36,3 +36,15 @@ Centralized Discovery is a service discovery pattern where a central server, oft
 
 -   **BitTorrent Trackers:** In older BitTorrent implementations, trackers were central servers that kept track of who had what pieces of a file and helped peers find each other. Modern BitTorrent often uses DHTs for decentralized discovery, but trackers still exist.
 -   **Bootstrap Servers:** Many decentralized systems still use a small set of bootstrap nodes or servers to help new nodes join the network for the first time, after which they switch to a decentralized discovery mechanism.
+
+## Related Concepts
+
+-   **Service Discovery:** Centralized discovery is a fundamental pattern within the broader concept of service discovery, providing a central authority for managing and locating service instances. [Explore Service Discovery](../README.MD).
+
+-   **Decentralized Discovery:** In contrast, decentralized discovery mechanisms (e.g., DHTs, gossip protocols) distribute the discovery responsibility across all nodes, aiming to eliminate single points of failure and improve scalability. [Compare with Decentralized Discovery](../decentralized-discovery/README.MD).
+
+-   **Client-Side Service Discovery:** Centralized registries are often queried by client-side discovery mechanisms, where the client directly interacts with the central server to obtain a list of available service instances. [Understand Client-Side Service Discovery](../client-side-discovery/README.MD).
+
+-   **Fault Tolerance:** The primary drawback of centralized discovery is its susceptibility to being a single point of failure, making robust fault tolerance strategies for the central server critical for system reliability. [Learn about Fault Tolerance](../../fault-tolerance/README.MD).
+
+-   **Distributed Consensus:** To overcome the single point of failure issue and ensure high availability and consistency, a centralized service registry itself often employs distributed consensus algorithms internally to replicate its state across multiple nodes. [Understand Distributed Consensus](../../distributed-consensus/README.MD).

@@ -42,3 +42,15 @@ This section addresses various strategies and mechanisms for resolving these con
 -   **Timestamps with Logical Clocks:** Used in distributed databases and event sourcing systems to establish a causal order of events and resolve conflicts based on that order, providing stronger consistency guarantees than simple physical timestamps.
 
 -   **Application-specific Logic:** Many complex distributed systems, especially those dealing with business logic, implement custom conflict resolution strategies tailored to their specific domain requirements.
+
+## Related Concepts
+
+-   **Consistency Models:** Conflict resolution is most critical in systems that adopt weaker consistency models, such as eventual consistency, where concurrent updates can lead to divergent states that require merging. [Explore Consistency Models](../consistency-models/README.md).
+
+-   **Data Replication:** Conflicts are a direct consequence of data replication, especially in multi-master or asynchronous replication setups where multiple copies of data can be updated independently. [Understand Data Replication](../data-replication/README.md).
+
+-   **Distributed Transactions:** While distributed transactions aim to prevent conflicts through strong consistency, complex scenarios or alternative patterns like Sagas may still require conflict detection and resolution mechanisms. [Learn about Distributed Transactions](../distributed-transactions/README.md).
+
+-   **System Modes:** Certain distributed system architectures, particularly those allowing writes to multiple nodes (e.g., multi-master systems), inherently increase the likelihood of conflicts, making robust conflict resolution strategies essential. [Discover System Modes](../system-mode/README.md).
+
+-   **Coordination:** Conflict resolution mechanisms often involve coordination among nodes to detect conflicts, agree on resolution strategies, and propagate the resolved state across the system. [Explore Coordination Concepts](../coordination/README.md).

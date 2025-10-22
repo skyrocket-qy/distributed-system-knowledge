@@ -43,6 +43,18 @@ The goal of security in distributed systems is to ensure the confidentiality, in
 
 ## Related Concepts
 
--   **[Fault Tolerance](../fault-tolerance/README.md):** Security measures often need to be fault-tolerant themselves to ensure continuous protection.
--   **[Observability](../observability/README.md):** Security logging and monitoring are critical components of overall system observability, helping to detect and respond to security incidents.
--   **[Communication](../communication/README.md):** Secure communication protocols (e.g., TLS) are fundamental to protecting data in transit between distributed components.
+
+
+-   **[Fault Tolerance](../fault-tolerance/README.md):** Security measures often need to be fault-tolerant themselves to ensure continuous protection, and failures in security components can have severe consequences.
+
+-   **[Observability](../observability/README.md):** Security logging, auditing, and monitoring are critical components of overall system observability, helping to detect and respond to security incidents and maintain compliance.
+
+-   **[Communication](../communication/README.md):** Secure communication protocols (e.g., TLS, mutual TLS) are fundamental to protecting data in transit between distributed components, preventing eavesdropping and tampering.
+
+-   **[Distributed Consensus](../distributed-consensus/README.md):** Consensus mechanisms can be leveraged for secure key management, establishing trust anchors, or ensuring agreement on security policies across a distributed system.
+
+-   **[Service Discovery](../service-discovery/README.md):** Secure service discovery is crucial to prevent unauthorized services from registering or discovering others, ensuring that only legitimate components can communicate within the system.
+
+-   **[System Modes](../system-mode/README.md):** Different distributed system architectures (e.g., microservices, peer-to-peer) introduce unique security challenges and require specific security patterns and considerations tailored to their operational models.
+
+-   **[Distributed Transactions](../distributed-transactions/README.md):** Securing distributed transactions is vital to prevent fraud, ensure data integrity, and maintain the atomicity and consistency of operations across multiple services or databases.

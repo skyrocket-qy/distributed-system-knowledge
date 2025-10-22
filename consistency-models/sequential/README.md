@@ -45,3 +45,15 @@ This model does not require that this global order be the same as the real-time 
 
 *   **Transactional Databases:** While not always strictly sequential, many transactional databases aim for strong consistency models that are close to sequential consistency for critical operations.
 *   **Distributed Consensus Algorithms:** Algorithms like Paxos or Raft, which are used to achieve agreement among distributed processes, often provide guarantees that can be considered sequentially consistent for the agreed-upon values.
+
+## Related Concepts
+
+-   **Consistency Models:** Sequential consistency is a strong form of consistency, providing a strict ordering guarantee that simplifies reasoning about distributed system behavior. [Explore other Consistency Models](../README.md).
+
+-   **Strong Consistency:** Often considered the gold standard, sequential consistency is a specific and very strict type of strong consistency, ensuring a global total order of operations. [Compare with other forms of Strong Consistency](../strong-consistency/README.md).
+
+-   **Eventual Consistency:** In stark contrast, eventual consistency prioritizes availability and performance over immediate consistency, allowing for temporary inconsistencies that eventually resolve. [Compare with Eventual Consistency](../eventual-consistency/README.md).
+
+-   **Distributed Consensus:** Algorithms like Paxos and Raft are often employed to achieve strong consistency guarantees, including those approximating sequential consistency, by ensuring all nodes agree on a single order of events. [Understand Distributed Consensus](../../distributed-consensus/README.md).
+
+-   **Coordination:** Achieving sequential consistency in a distributed system requires sophisticated coordination mechanisms to enforce the global ordering of operations across all participating nodes. [Discover Coordination Concepts](../../coordination/README.md).
