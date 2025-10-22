@@ -29,6 +29,14 @@ The choice of which scaling techniques to use depends on the specific requiremen
 -   **Cost-Effectiveness:** Balancing the performance and availability benefits of scaling with the associated infrastructure and operational costs.
 -   **Complexity:** The increased complexity in managing and operating a horizontally scaled distributed system.
 
+## Characteristics
+
+- **Performance**: The ability of a system to maintain a high level of performance as the load increases.
+- **Availability**: The ability of a system to remain operational and accessible as the load increases.
+- **Cost-effectiveness**: The ability of a system to maintain a low cost per transaction as the load increases.
+- **Elasticity**: The ability of a system to automatically scale up and down as the load changes.
+- **Manageability**: The ease with which a system can be managed and operated as it scales.
+
 ## Comparison
 
 | Scaling Method | Approach | Cost | Scalability Limit | Use Case |
@@ -36,6 +44,11 @@ The choice of which scaling techniques to use depends on the specific requiremen
 | **[Vertical Scaling](./vertical)** | Add resources to a single node | High | Limited by hardware | Monolithic applications, databases |
 | **[Horizontal Scaling](./horizontal)** | Add more nodes to the system | Low | High | Microservices, distributed databases |
 | **[Distributed Caching](./distributed-caching)** | Store data in memory across nodes | Medium | High | Web applications, databases |
+
+## Trade-offs
+
+- **Performance vs. Cost**: Scaling up a system can improve performance, but it can also be expensive.
+- **Availability vs. Complexity**: Scaling out a system can improve availability, but it can also be complex to manage.
 
 ## Which service use it?
 
@@ -55,5 +68,3 @@ The choice of which scaling techniques to use depends on the specific requiremen
 -   **Service Discovery:** In dynamic, horizontally scaled environments, service discovery mechanisms are crucial for services to locate and communicate with each other as instances are added or removed. [Understand Service Discovery](../service-discovery/README.md).
 
 -   **Distributed Caching:** A critical technique for improving performance and scalability by storing frequently accessed data closer to the application, reducing the load on backend systems. [Understand Distributed Caching](./distributed-caching/README.md).
-
-## Trade-offs

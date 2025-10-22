@@ -4,6 +4,14 @@
 
 This section describes the Active-Active Cluster configuration for fault tolerance, where multiple nodes are simultaneously active and capable of handling requests, providing high availability and improved performance.
 
+## Characteristics
+
+- **High Availability**: All nodes are active and can handle requests, providing high availability.
+- **Load Balancing**: The workload is distributed across all active nodes, improving performance.
+- **Scalability**: The cluster can be scaled by adding more active nodes.
+- **Fault Tolerance**: The cluster is resilient to the failure of individual nodes.
+- **Complexity**: Active-active clusters are more complex to manage than active-passive clusters.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section describes the Active-Active Cluster configuration for fault toleran
 | **Performance** | Improved, workload distributed across nodes. |
 | **Complexity** | High, requires robust conflict resolution and synchronization. |
 | **Cost** | Higher, more resources are actively used. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **High Availability**: All nodes are active and can handle requests, providing high availability. | **Complexity**: Active-active clusters are more complex to manage than active-passive clusters. |
+| **Load Balancing**: The workload is distributed across all active nodes, improving performance. | **Cost**: Active-active clusters are more expensive to operate. |
+| **Scalability**: The cluster can be scaled by adding more active nodes. | **Consistency**: Maintaining data consistency across all active nodes can be challenging. |
 
 ## Which service use it?
 
@@ -40,5 +56,3 @@ This section describes the Active-Active Cluster configuration for fault toleran
 -   **Conflict Resolution:** A critical challenge in active-active clusters, especially those allowing writes to multiple nodes, is managing and resolving conflicts that arise from concurrent updates to the same data. [Explore Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **Service Discovery:** Load balancers and service discovery mechanisms are essential for distributing incoming requests efficiently across all active nodes in the cluster and for dynamically routing traffic away from failed instances. [Understand Service Discovery](../../service-discovery/README.md).
-
-## Trade-offs

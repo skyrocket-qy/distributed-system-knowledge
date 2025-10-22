@@ -4,6 +4,14 @@
 
 This section explains how timestamps combined with logical clocks (e.g., Lamport timestamps, Vector Clocks) are used to resolve conflicts in distributed systems by establishing a causal order of events.
 
+## Characteristics
+
+- **Causal Ordering**: Logical clocks can establish a partial or total order of events.
+- **Conflict Detection**: They can detect concurrent updates and potential conflicts.
+- **No Clock Synchronization**: Logical clocks do not require synchronized physical clocks.
+- **Overhead**: They introduce overhead in terms of storage and network bandwidth.
+- **Complexity**: Logical clocks can be complex to implement and manage.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section explains how timestamps combined with logical clocks (e.g., Lamport
 | **Conflict Detection** | Can detect concurrent updates. |
 | **Complexity** | More complex than simple LWW, but less than CRDTs. |
 | **Implementation** | Requires careful management of clock values. |
+
+## Trade-offs
+
+- **Overhead vs. Correctness**: Logical clocks introduce overhead, but they can ensure correctness in the presence of concurrent updates.
+- **Complexity vs. Power**: Logical clocks are more complex than simple timestamps, but they are also more powerful.
 
 ## Which service use it?
 
@@ -36,5 +49,3 @@ This section explains how timestamps combined with logical clocks (e.g., Lamport
 -   **Causal Consistency:** Logical clocks, particularly vector clocks, are fundamental to implementing causal consistency, ensuring that causally related operations are observed in the correct order across a distributed system. [Explore Causal Consistency](../../consistency-models/causal-consistency/README.md).
 
 -   **Coordination:** Logical clocks serve as a coordination mechanism by providing a consistent way to order events across distributed nodes, which is crucial for maintaining data integrity and resolving conflicts. [Discover Coordination Concepts](../../coordination/README.md).
-
-## Trade-offs

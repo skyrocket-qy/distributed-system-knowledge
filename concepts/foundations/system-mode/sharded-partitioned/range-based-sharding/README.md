@@ -1,8 +1,29 @@
 # Range-Based Sharding
 
-## Overview
+## Core
 
 Range-based sharding is a sharding strategy where data is partitioned based on a contiguous range of values of the shard key. Each shard is responsible for storing data whose shard key falls within a predefined range. This method is intuitive and often aligns well with how data is naturally queried.
+
+## Characteristics
+
+- **Efficient Range Queries**: Range-based sharding is efficient for queries that involve a range of shard keys.
+- **Uneven Data Distribution**: It can lead to uneven data distribution and hot spots.
+- **Simple Rebalancing**: Rebalancing data can be simpler than with hash-based sharding.
+- **Data Locality**: Related data is co-located on the same shard.
+- **Predictable Data Growth**: It is well-suited for systems with predictable data growth patterns.
+
+## Comparison
+
+| Feature | Range-Based Sharding | Hash-Based Sharding |
+|---|---|---|
+| **Data Distribution** | Uneven | Even |
+| **Range Queries** | Efficient | Inefficient |
+| **Rebalancing** | Simple | Complex |
+
+## Trade-offs
+
+- **Range Queries vs. Data Distribution**: Range-based sharding is efficient for range queries, but it can lead to uneven data distribution.
+- **Simplicity vs. Flexibility**: Range-based sharding is simple to implement, but it is not as flexible as directory-based sharding.
 
 ## How It Works
 
@@ -11,7 +32,7 @@ Range-based sharding is a sharding strategy where data is partitioned based on a
 3.  **Data Placement:** When a new data record arrives, its shard key is evaluated to determine which predefined range it falls into, and the record is then stored on the corresponding shard.
 4.  **Query Routing:** When a client requests data, the shard key in the query is used to identify the specific shard(s) that hold the relevant data. The request is then routed to the appropriate shard(s).
 
-## Characteristics
+## Pros & Cons
 
 ### Pros
 
@@ -49,9 +70,3 @@ Range-based sharding is a sharding strategy where data is partitioned based on a
 -   **Horizontal Scaling:** Range-based sharding is a fundamental technique for achieving horizontal scalability in databases and data stores, allowing systems to handle larger datasets and higher loads by adding more machines. [Learn about Horizontal Scaling](../../../scaling/horizontal/README.md).
 
 -   **Data Replication:** Sharding is often combined with data replication within each shard to provide fault tolerance and high availability, ensuring that data remains accessible even if a shard fails. [Understand Data Replication](../../../data-replication/README.md).
-
-## Core
-
-## Comparison
-
-## Trade-offs

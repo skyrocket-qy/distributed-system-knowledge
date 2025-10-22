@@ -4,6 +4,28 @@
 
 Client-Side Service Discovery is a pattern where the client application is responsible for determining the network locations of available service instances. Instead of relying on an intermediary, the client directly queries a service registry to retrieve a list of healthy and available service instances. Once it has this list, the client typically uses a load-balancing algorithm to select one of the instances for its request.
 
+## Characteristics
+
+- **Client-side Logic**: The client is responsible for querying the service registry and load balancing.
+- **Direct Communication**: The client communicates directly with the service instance.
+- **Service Registry**: A central service registry is required to store the locations of service instances.
+- **Flexibility**: The client can implement custom load balancing and retry logic.
+- **Complexity**: The client becomes more complex, as it needs to handle service discovery logic.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Client Responsibility** | Client handles discovery and load balancing. |
+| **Infrastructure Complexity** | Simpler infrastructure, more complex clients. |
+| **Performance** | Potentially lower latency due to direct communication. |
+| **Flexibility** | High, clients can implement custom logic. |
+
+## Trade-offs
+
+- **Flexibility vs. Complexity**: Client-side service discovery provides more flexibility, but it also increases the complexity of the client.
+- **Performance vs. Reliability**: Direct communication can improve performance, but it can also make the client more vulnerable to service failures.
+
 ## How It Works
 
 1.  **Service Registration:** When a service instance starts, it registers its network location (IP address and port) with a centralized service registry. It also periodically sends heartbeats to the registry to indicate its health and availability.
@@ -15,15 +37,6 @@ Client-Side Service Discovery is a pattern where the client application is respo
 
 -   **Service Registry:** A database that stores the locations of service instances (e.g., Netflix Eureka, Apache ZooKeeper, HashiCorp Consul).
 -   **Client-Side Load Balancer:** A component within the client application (or a library used by the client) that selects a service instance from the registry's response (e.g., Netflix Ribbon).
-
-## Comparison
-
-| Feature | Description |
-|---|---|
-| **Client Responsibility** | Client handles discovery and load balancing. |
-| **Infrastructure Complexity** | Simpler infrastructure, more complex clients. |
-| **Performance** | Potentially lower latency due to direct communication. |
-| **Flexibility** | High, clients can implement custom logic. |
 
 ## Pros
 
@@ -54,5 +67,3 @@ Client-Side Service Discovery is a pattern where the client application is respo
 -   **Horizontal Scaling:** Client-side service discovery is particularly valuable in horizontally scaled environments, as it allows client applications to adapt to a fluctuating number of service instances without manual configuration. [Learn about Horizontal Scaling](../../scaling/horizontal/README.md).
 
 -   **Fault Tolerance:** By enabling clients to query for and connect only to healthy service instances, client-side discovery contributes to the overall fault tolerance of a distributed system, ensuring requests are routed away from failed components. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
-## Trade-offs

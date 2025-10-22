@@ -10,6 +10,28 @@ In distributed systems, the **CAP theorem** states that it is impossible for a d
 
 A **CAP tradeoff-tunable** system mode is one that allows system designers to make deliberate, often dynamic, tradeoffs between these three properties. Rather than being strictly CP (consistent and partition-tolerant) or AP (available and partition-tolerant), these systems can be configured to favor one property over the other, depending on the application's requirements.
 
+## Characteristics
+
+- **Tunable Consistency**: The consistency level can be tuned on a per-operation basis.
+- **Tunable Availability**: The availability level can be tuned on a per-operation basis.
+- **Partition Tolerance**: The system is designed to be partition tolerant.
+- **Flexibility**: The system provides flexibility in choosing the desired trade-off between consistency and availability.
+- **Complexity**: The system can be complex to configure and manage.
+
+## Comparison
+
+| System | Consistency | Availability |
+|---|---|---|
+| **Cassandra** | Tunable | Tunable |
+| **Riak** | Tunable | Tunable |
+| **DynamoDB** | Tunable | Tunable |
+
+## Trade-offs
+
+- **Consistency vs. Availability**: The system must trade off between consistency and availability in the presence of network partitions.
+- **Performance vs. Consistency**: Higher consistency levels can lead to higher latency.
+- **Complexity vs. Flexibility**: The flexibility of tuning the CAP tradeoff comes at the cost of increased complexity.
+
 ## How It Works
 
 Tunable systems often expose configuration parameters that allow administrators to control the system's behavior in the face of network partitions. For example, a system might allow you to specify the number of replicas that must acknowledge a write before it is considered successful.
@@ -34,7 +56,3 @@ Tunable systems often expose configuration parameters that allow administrators 
 -   **Data Replication:** Data replication is essential for achieving both availability and consistency in distributed systems, and the CAP theorem guides how replication strategies are designed to meet specific consistency and availability goals. [Understand Data Replication](../../data-replication/README.md).
 
 -   **Quorum-Based System Mode:** Quorum mechanisms are frequently used to implement tunable consistency, allowing systems to dynamically adjust the number of nodes required for read and write operations to achieve desired CAP trade-offs. [Explore Quorum-Based Systems](../quorum-based/README.md).
-
-## Comparison
-
-## Trade-offs

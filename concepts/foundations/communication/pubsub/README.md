@@ -4,6 +4,13 @@
 
 This section explains the Publish-Subscribe (Pub/Sub) communication pattern, where senders (publishers) broadcast messages to an intermediary, and receivers (subscribers) receive messages they are interested in.
 
+## Characteristics
+
+-   **Asynchronous Communication**: Publishers and subscribers operate independently and do not need to be available at the same time.
+-   **Loose Coupling**: Publishers and subscribers are decoupled; publishers do not know who the subscribers are, and subscribers do not know who the publishers are.
+-   **Scalability**: The system can be scaled by adding more publishers or subscribers.
+-   **Flexibility**: New subscribers can be added without affecting existing publishers.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +19,14 @@ This section explains the Publish-Subscribe (Pub/Sub) communication pattern, whe
 | **Asynchronicity** | Communication is typically asynchronous. |
 | **Scalability** | Can scale to a large number of publishers and subscribers. |
 | **Flexibility** | New subscribers can be added without changing publishers. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Decoupling**: Publishers and subscribers are decoupled and do not need to know about each other. | **Complexity**: The pub/sub system adds another component to the system, which increases the complexity. |
+| **Scalability**: The system can be scaled by adding more publishers or subscribers. | **Message Ordering**: Message ordering is not guaranteed. |
+| **Flexibility**: New subscribers can be added without affecting existing publishers. | **Message Delivery**: Message delivery is not guaranteed. |
 
 ## Which service use it?
 
@@ -38,5 +53,3 @@ This section explains the Publish-Subscribe (Pub/Sub) communication pattern, whe
 -   **Event-Driven System Mode:** The Publish-Subscribe pattern is a cornerstone of event-driven architectures, where system behavior is primarily driven by the production and consumption of events, enabling reactive and scalable designs. [Discover Event-Driven Systems](../../system-mode/event-driven/README.md).
 
 -   **Event Streaming (Coordination):** Event streaming platforms often leverage the Publish-Subscribe model to provide continuous, real-time data flow and integration, acting as a powerful coordination mechanism. [Explore Event Streaming for Coordination](../../coordination/event-streaming/README.md).
-
-## Trade-offs

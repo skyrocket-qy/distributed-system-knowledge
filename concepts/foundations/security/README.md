@@ -17,6 +17,31 @@ The goal of security in distributed systems is to ensure the confidentiality, in
 -   **Auditing and Logging:** Collecting and analyzing security-related events to detect and respond to incidents.
 -   **Supply Chain Security:** Ensuring the security of third-party libraries, frameworks, and services used in the distributed system.
 
+## Characteristics
+
+- **Confidentiality**: Preventing the unauthorized disclosure of information.
+- **Integrity**: Ensuring that data is not altered or destroyed in an unauthorized manner.
+- **Availability**: Ensuring that systems and data are accessible when needed.
+- **Authentication**: Verifying the identity of users and systems.
+- **Authorization**: Granting or denying access to resources.
+- **Non-repudiation**: Ensuring that a party cannot deny the authenticity of their signature on a document or the sending of a message that they originated.
+
+## Comparison
+
+| Mechanism | Purpose | Implementation Complexity | Impact on Performance |
+|---|---|---|---|
+| **Authentication** | Verify identity | Medium to High (depending on method) | Low to Medium (initial handshake) |
+| **Authorization** | Control access to resources | Medium to High (fine-grained policies) | Low to Medium (policy evaluation) |
+| **Encryption** | Protect data confidentiality | Medium (key management, algorithm choice) | Medium to High (CPU overhead) |
+| **Digital Signatures** | Verify integrity and authenticity | Medium (key management, signing/verification) | Medium (CPU overhead) |
+| **Firewalls & Network Segmentation** | Restrict network access | Medium (rule configuration) | Low (packet filtering) |
+
+## Trade-offs
+
+- **Security vs. Performance**: Security measures can introduce performance overhead.
+- **Security vs. Usability**: Security measures can make a system more difficult to use.
+- **Security vs. Cost**: Security measures can be expensive to implement and maintain.
+
 ## Common Mechanisms
 
 | Mechanism | Description | Purpose |
@@ -30,16 +55,6 @@ The goal of security in distributed systems is to ensure the confidentiality, in
 | **Secrets Management** | Securely storing and managing sensitive information (e.g., API keys, passwords). | Prevents hardcoding sensitive data and provides secure access. |
 | **Security Auditing & Logging** | Recording and reviewing security-relevant events. | Detects suspicious activities and aids in forensic analysis. |
 | **Intrusion Detection/Prevention Systems (IDS/IPS)** | Monitoring network or system activities for malicious behavior. | Identifies and potentially blocks security threats. |
-
-## Comparison
-
-| Mechanism | Purpose | Implementation Complexity | Impact on Performance |
-|---|---|---|---|
-| **Authentication** | Verify identity | Medium to High (depending on method) | Low to Medium (initial handshake) |
-| **Authorization** | Control access to resources | Medium to High (fine-grained policies) | Low to Medium (policy evaluation) |
-| **Encryption** | Protect data confidentiality | Medium (key management, algorithm choice) | Medium to High (CPU overhead) |
-| **Digital Signatures** | Verify integrity and authenticity | Medium (key management, signing/verification) | Medium (CPU overhead) |
-| **Firewalls & Network Segmentation** | Restrict network access | Medium (rule configuration) | Low (packet filtering) |
 
 ## Related Concepts
 
@@ -58,5 +73,3 @@ The goal of security in distributed systems is to ensure the confidentiality, in
 -   **[System Modes](../system-mode/README.md):** Different distributed system architectures (e.g., microservices, peer-to-peer) introduce unique security challenges and require specific security patterns and considerations tailored to their operational models.
 
 -   **[Distributed Transactions](../distributed-transactions/README.md):** Securing distributed transactions is vital to prevent fraud, ensure data integrity, and maintain the atomicity and consistency of operations across multiple services or databases.
-
-## Trade-offs

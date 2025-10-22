@@ -4,14 +4,13 @@
 
 Sequential consistency is a strong consistency model that ensures that the result of any execution is the same as if all operations by all processes were executed in some sequential order, and the operations of each individual process appear in this sequence in the order specified by its program. In simpler terms, it means that all processes see all operations in the same global order, even if the actual physical order of execution differs.
 
-## How It Works
+## Characteristics
 
-Sequential consistency is achieved by ensuring that:
-
-1.  **Global Order:** All read and write operations from all processes appear to execute in a single, total order.
-2.  **Program Order:** Operations from a single process appear in this global order in the sequence specified by that process's program.
-
-This model does not require that this global order be the same as the real-time order of operations. It only requires that *some* global sequential order exists that is consistent with the program order of individual processes.
+- **Total Order**: All operations are seen in the same order by all processes.
+- **Program Order**: Operations from a single process are seen in the order they were issued.
+- **Stronger than Causal Consistency**: Sequential consistency is a stronger guarantee than causal consistency.
+- **Weaker than Linearizability**: Sequential consistency is a weaker guarantee than linearizability.
+- **High Latency**: Sequential consistency can introduce high latency due to the need for global ordering.
 
 ## Comparison
 

@@ -1,6 +1,29 @@
 # Tree Topology
 
-This section explains the Tree topology in distributed systems.
+## Core
+
+This section explains the Tree topology in distributed systems. A tree topology is a hybrid topology that combines the characteristics of a bus topology and a star topology.
+
+## Characteristics
+
+- **Scalability**: Tree topology is highly scalable, as new nodes can be added to the network as leaf nodes.
+- **Hierarchical**: Tree topology has a hierarchical structure, which makes it easy to manage.
+- **Single Point of Failure**: The root node of the tree is a single point of failure.
+- **Complexity**: Tree topology is more complex than bus or star topology.
+- **Cost**: Tree topology is more expensive than bus or star topology.
+
+## Comparison
+
+| Topology | Scalability | Complexity | Cost |
+|---|---|---|---|
+| **Tree** | High | High | High |
+| **Star** | Medium | Medium | Medium |
+| **Bus** | Low | Low | Low |
+
+## Trade-offs
+
+- **Scalability vs. Complexity**: Tree topology is highly scalable, but it is also complex to manage.
+- **Cost vs. Reliability**: Tree topology is expensive, and the root node is a single point of failure.
 
 ## Which service use it?
 
@@ -25,9 +48,3 @@ This section explains the Tree topology in distributed systems.
 -   **Scaling:** Tree topologies are generally scalable, allowing for the expansion of the network by adding new branches or sub-networks without significantly impacting the existing structure. [Learn about Scaling](../../scaling/README.md).
 
 -   **Communication:** The hierarchical nature of a tree topology dictates the communication paths between nodes, influencing latency and the potential for bottlenecks at higher-level hubs. [Explore Communication Patterns](../../communication/README.md).
-
-## Core
-
-## Comparison
-
-## Trade-offs

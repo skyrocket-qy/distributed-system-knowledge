@@ -13,6 +13,14 @@
 -   **Fault Tolerance:** How replication contributes to the system's ability to withstand node failures and data loss.
 -   **Scalability:** How replication strategies support scaling read and write operations.
 
+## Characteristics
+
+- **Fault Tolerance**: Replication provides fault tolerance by ensuring that data is available even if some nodes fail.
+- **Availability**: Replication increases the availability of data by providing multiple copies.
+- **Performance**: Replication can improve read performance by allowing reads to be served from multiple nodes.
+- **Consistency**: Replication can introduce consistency issues, as different replicas may have different versions of the data.
+- **Cost**: Replication increases the cost of the system, as it requires additional storage and network resources.
+
 ## Comparison
 
 | Strategy | Consistency | Performance | Complexity | Use Case |
@@ -23,6 +31,12 @@
 | **[Multi-Leader](./multi-leader)** | Eventual | High | High | Multi-datacenter deployments |
 | **[Multi-Source](./multi-source)** | Eventual | High | High | Data aggregation, complex data flows |
 | **[CRDT](./crdt)** | Eventual | High | High | Collaborative applications, leveraging their conflict-free nature as discussed in [Conflict Resolution](../conflict-resolution/README.md) and as a [Coordination](../coordination/README.md) mechanism |
+
+## Trade-offs
+
+- **Consistency vs. Performance**: Stronger consistency models typically have lower performance.
+- **Consistency vs. Availability**: Stronger consistency models typically have lower availability.
+- **Cost vs. Fault Tolerance**: Higher levels of fault tolerance typically require more replicas and higher costs.
 
 ## Which service use it?
 
@@ -44,5 +58,3 @@
 -   **Distributed Consensus:** For replication strategies aiming for strong consistency, distributed consensus algorithms are often employed to ensure that all replicas agree on the order of updates and maintain a consistent state across the system. [Understand Distributed Consensus](../distributed-consensus/README.md).
 
 -   **System Modes:** Various distributed system architectures and modes, such as master-slave, multi-master, or peer-to-peer, are defined by their underlying data replication strategies and how they manage data copies. [Discover System Modes](../system-mode/README.md).
-
-## Trade-offs

@@ -17,6 +17,13 @@ Without proper coordination, a distributed system can suffer from a variety of p
 -   **Clock Synchronization:** Maintaining a consistent notion of time across distributed nodes, which is crucial for ordering events.
 -   **Failure Handling:** Designing coordination mechanisms that are resilient to node crashes, network partitions, and other failures.
 
+## Characteristics
+
+- **Consistency**: Coordination mechanisms are used to ensure consistency in a distributed system.
+- **Ordering**: Coordination mechanisms are used to order events and operations.
+- **Mutual Exclusion**: Coordination mechanisms are used to ensure that only one process can access a shared resource at a time.
+- **Fault Tolerance**: Coordination mechanisms are designed to be resilient to failures.
+- **Scalability**: Coordination mechanisms should be scalable to a large number of nodes.
 
 ## Comparison
 

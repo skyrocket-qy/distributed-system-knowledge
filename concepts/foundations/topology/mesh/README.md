@@ -1,6 +1,30 @@
 # Mesh Topology
 
-This section explains the Mesh topology in distributed systems.
+## Core
+
+This section explains the Mesh topology in distributed systems. In a mesh topology, each network device is interconnected with every other device.
+
+## Characteristics
+
+- **Reliability**: Mesh topology is highly reliable due to the presence of multiple paths between any two nodes.
+- **Scalability**: It is difficult to add new nodes to a mesh network.
+- **Cost**: Mesh topology is expensive to implement due to the large amount of cabling required.
+- **Performance**: Mesh topology offers high performance due to the presence of dedicated links between nodes.
+- **Complexity**: Mesh topology is complex to manage and troubleshoot.
+
+## Comparison
+
+| Topology | Reliability | Scalability | Cost | Performance | Complexity |
+|---|---|---|---|---|---|
+| **Mesh** | High | Low | High | High | High |
+| **Star** | Medium | Medium | Medium | Medium | Medium |
+| **Bus** | Low | Low | Low | Low | Low |
+| **Ring** | Medium | Low | Medium | Medium | Medium |
+
+## Trade-offs
+
+- **Reliability vs. Cost**: Mesh topology is highly reliable, but it is also expensive.
+- **Performance vs. Complexity**: Mesh topology offers high performance, but it is also complex to manage.
 
 ## Which service use it?
 
@@ -27,9 +51,3 @@ This section explains the Mesh topology in distributed systems.
 -   **Communication:** The multiple communication paths in a mesh topology enhance communication reliability and can reduce latency by allowing data to travel along the most efficient route between nodes. [Explore Communication Patterns](../../communication/README.md).
 
 -   **Service Discovery:** In large and dynamic mesh networks, especially those involving microservices, service discovery mechanisms are crucial for efficiently locating and communicating with various service instances across the interconnected nodes. [Understand Service Discovery](../../service-discovery/README.md).
-
-## Core
-
-## Comparison
-
-## Trade-offs

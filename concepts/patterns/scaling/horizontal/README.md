@@ -4,6 +4,14 @@
 
 This section explains Horizontal Scaling (scaling out), a method of increasing capacity by adding more machines to a distributed system.
 
+## Characteristics
+
+- **High Scalability**: Horizontal scaling provides high scalability, as new machines can be added to the system to increase capacity.
+- **Cost-effective**: It can be a cost-effective way to scale, as it allows for the use of commodity hardware.
+- **High Availability**: Horizontal scaling can improve the availability of a system by providing redundancy.
+- **Complexity**: Horizontal scaling can be complex to manage, as it requires distributed coordination and data partitioning.
+- **Distributed Coordination**: Horizontal scaling requires a mechanism to distribute the load across multiple machines.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section explains Horizontal Scaling (scaling out), a method of increasing c
 | **Scalability** | High, theoretically unlimited. |
 | **Cost** | Can be cost-effective using commodity hardware. |
 | **Complexity** | Higher, requires distributed coordination and data partitioning. |
+
+## Trade-offs
+
+- **Scalability vs. Complexity**: Horizontal scaling provides high scalability, but it can also be complex to manage.
+- **Cost vs. Performance**: Horizontal scaling can be cost-effective, but it can also introduce performance overhead due to the need for distributed coordination.
 
 ## Which service use it?
 
@@ -38,5 +51,3 @@ This section explains Horizontal Scaling (scaling out), a method of increasing c
 -   **Service Discovery:** In dynamic, horizontally scaled environments, service discovery mechanisms are crucial for services to find and communicate with each other without hardcoding locations. [Understand Service Discovery](../../service-discovery/README.md).
 
 -   **Fault Tolerance:** Horizontal scaling inherently contributes to fault tolerance by providing redundancy; if one instance fails, others can continue to handle the workload. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
-
-## Trade-offs

@@ -9,6 +9,14 @@ To achieve this, strong consistency models often rely on two more specific conce
 -   **Linearizability:** This is the strongest form of consistency. It requires that all operations appear to have been executed atomically at some point between their invocation and their completion. This gives the illusion of a single, centralized system, making it easier to reason about the system's behavior.
 -   **Sequential Consistency:** This is a slightly weaker model that still provides strong guarantees. It requires that all operations appear to be executed in some sequential order, and that the operations of any individual client appear in the same order as they were issued. However, the global order of operations from different clients is not guaranteed to be the same as the real-time order.
 
+## Characteristics
+
+- **Linearizability**: All operations appear to be executed atomically at some point in time.
+- **Sequential Consistency**: All operations appear to be executed in some sequential order.
+- **High Latency**: Strong consistency can introduce high latency due to the need for coordination.
+- **Low Availability**: Strong consistency can reduce availability in the presence of network partitions.
+- **Simplicity**: Strong consistency is simple for developers to reason about.
+
 ## Comparison
 
 | Algorithm | Description | Fault Tolerance | Performance | Use Case |

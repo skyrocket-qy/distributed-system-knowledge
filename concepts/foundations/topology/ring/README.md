@@ -1,6 +1,30 @@
 # Ring Topology
 
-This section explains the Ring topology in distributed systems.
+## Core
+
+This section explains the Ring topology in distributed systems. In a ring topology, each device is connected to two other devices on either side of it.
+
+## Characteristics
+
+- **Simplicity**: Ring topology is simple to install and manage.
+- **Cost-effective**: It is a cost-effective choice for small networks.
+- **Reliability**: Ring topology is more reliable than a bus topology.
+- **Scalability**: It is difficult to add new nodes to the network.
+- **Performance**: The performance of the network degrades as more nodes are added.
+
+## Comparison
+
+| Topology | Simplicity | Cost | Reliability | Scalability | Performance |
+|---|---|---|---|---|---|
+| **Ring** | High | Medium | Medium | Low | Low |
+| **Star** | Medium | Medium | Medium | Medium | Medium |
+| **Bus** | High | Low | Low | Low | Low |
+| **Mesh** | Low | High | High | High | High |
+
+## Trade-offs
+
+- **Simplicity vs. Scalability**: Ring topology is simple, but it is not very scalable.
+- **Cost vs. Performance**: Ring topology is cost-effective, but it does not offer good performance.
 
 ## Which service use it?
 
@@ -27,9 +51,3 @@ This section explains the Ring topology in distributed systems.
 -   **Fault Tolerance:** While a simple ring topology can be vulnerable to a single node or link failure, implementations often include redundancy (e.g., dual rings) to enhance fault tolerance and ensure continuous operation. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Distributed Hash Tables (DHTs):** Many DHT implementations, such as Chord, conceptually organize nodes in a ring structure to facilitate efficient data lookup and distribution in decentralized systems. [Explore Decentralized Service Discovery (which uses DHTs)](../../service-discovery/decentralized-discovery/README.md).
-
-## Core
-
-## Comparison
-
-## Trade-offs

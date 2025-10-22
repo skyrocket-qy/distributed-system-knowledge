@@ -4,6 +4,14 @@
 
 This section describes Synchronous Replication, a data replication mode where the primary node waits for confirmation from replica nodes that they have received and committed the transaction before committing itself, prioritizing strong consistency.
 
+## Characteristics
+
+- **Strong Consistency**: Synchronous replication provides strong consistency, as all replicas are guaranteed to be up-to-date.
+- **Zero Data Loss**: There is no data loss in the event of a primary node failure.
+- **High Latency**: Write operations have higher latency, as they must be acknowledged by all replicas.
+- **Low Availability**: The system may become unavailable if a replica node fails.
+- **Complexity**: Synchronous replication is more complex to implement and manage than asynchronous replication.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section describes Synchronous Replication, a data replication mode where th
 | **Performance** | Higher latency for writes. |
 | **Availability** | Reduced availability during replica failures. |
 | **Complexity** | More complex to implement and manage. |
+
+## Trade-offs
+
+- **Consistency vs. Performance**: Synchronous replication provides strong consistency, but it has higher latency than asynchronous replication.
+- **Consistency vs. Availability**: Synchronous replication provides strong consistency, but it may become unavailable if a replica node fails.
 
 ## Which service use it?
 
@@ -38,5 +51,3 @@ This section describes Synchronous Replication, a data replication mode where th
 -   **Distributed Consensus:** Algorithms like Paxos or Raft often employ synchronous communication patterns to ensure that all participants agree on the order of operations and the state of the data, which is critical for synchronous replication. [Understand Distributed Consensus](../../distributed-consensus/README.md).
 
 -   **Fault Tolerance:** While synchronous replication ensures zero data loss, it can impact availability during replica failures, as the primary might block until a quorum of replicas responds. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
-## Trade-offs

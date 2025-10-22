@@ -20,6 +20,22 @@ There are two main ways to coordinate Sagas:
 1.  **Choreography:** Each service produces and listens to events, and decides what to do next without a central coordinator. This is decentralized and can be more resilient but harder to monitor and manage complex workflows.
 2.  **Orchestration:** A central orchestrator (or Saga execution coordinator) tells each participant service what local transaction to execute. The orchestrator manages the sequence of steps and executes compensating transactions if a step fails. This provides a clearer view of the Saga's progress and simplifies error handling.
 
+## Characteristics
+
+- **Eventual Consistency**: Sagas provide eventual consistency, not atomic consistency.
+- **Compensating Transactions**: Sagas rely on compensating transactions to undo changes in case of a failure.
+- **Asynchronous**: Sagas are typically asynchronous and event-driven.
+- **Decentralized**: Sagas can be implemented in a decentralized way using choreography.
+- **Long-Lived**: Sagas can be long-lived transactions that span multiple services.
+
+## Comparison
+
+| Feature | Saga | 2PC |
+|---|---|---|
+| **Consistency** | Eventual | Strong |
+| **Coupling** | Loose | Tight |
+| **Complexity** | High | Medium |
+
 ## Trade-offs
 
 -   **Eventual Consistency:** Sagas provide eventual consistency, meaning that at any given point, the system might be in an inconsistent state until all local transactions and potential compensating transactions are completed.
@@ -44,5 +60,3 @@ There are two main ways to coordinate Sagas:
 -   **Microservices Architecture (System Mode):** The Saga pattern is a cornerstone for managing data consistency in microservices architectures, where each service typically owns its data and direct distributed transactions are avoided. [Discover System Modes](../../system-mode/README.md).
 
 -   **Fault Tolerance:** Sagas contribute to fault tolerance by providing a structured way to handle failures within a distributed business process, allowing for recovery through compensating transactions rather than a complete rollback. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
-## Comparison

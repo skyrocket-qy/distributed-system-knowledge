@@ -29,6 +29,13 @@ Understanding the trade-offs between these different system modes is essential f
 -   **Development and Operational Complexity:** The effort required to build, deploy, and maintain the system.
 -   **Cost:** The financial implications of infrastructure, development, and operations for a given system mode.
 
+## Characteristics
+
+- **Scalability**: The ability of a system to handle a growing amount of work.
+- **Consistency**: The property that ensures that every node in a distributed system has the same view of the data.
+- **Availability**: The property that ensures that a system is operational and accessible.
+- **Fault Tolerance**: The ability of a system to continue operating in the event of failures.
+- **Complexity**: The degree to which a system is difficult to understand, design, and implement.
 
 ## Comparison
 
@@ -46,6 +53,12 @@ Understanding the trade-offs between these different system modes is essential f
 | **[Federated Multi-Cluster](./federated-multi-cluster)** | High | Varies | High | High | Large-scale, multi-cloud deployments |
 | **[CAP Tradeoff (Tunable)](./cap-tradeoff-tunable)** | Varies | Tunable | Tunable | High | Systems requiring flexibility |
 | **Microservices** | High | Varies | High | High | Modern cloud-native applications, complex business systems |
+
+## Trade-offs
+
+- **Scalability vs. Consistency**: Systems that are highly scalable often have weaker consistency guarantees.
+- **Availability vs. Consistency**: Systems that are highly available often have weaker consistency guarantees.
+- **Performance vs. Consistency**: Systems that have high performance often have weaker consistency guarantees.
 
 ## Which service use it?
 
@@ -98,5 +111,3 @@ Understanding the trade-offs between these different system modes is essential f
 
 
 -   **Service Discovery:** In dynamic system modes, particularly microservices architectures, service discovery is crucial for components to locate and communicate with each other as instances are dynamically provisioned and de-provisioned. [Understand Service Discovery](../service-discovery/README.md).
-
-## Trade-offs

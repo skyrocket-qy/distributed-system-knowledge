@@ -20,6 +20,7 @@ To maintain consistency and quality, please adhere to the following guidelines w
 All sub-topic documents should follow this structure:
 
 -   **Core:** A detailed explanation of the concept. This section should cover the "what," "why," and "how" of the topic.
+-   **Characteristics:** A summary of key attributes, such as scalability, fault tolerance, and consistency.
 -   **Comparison:** A comparison of different approaches or patterns related to the concept. Use tables to make the comparison clear and concise.
 -   **Trade-offs:** A discussion of the advantages and disadvantages of each approach or pattern. This section should help readers understand when to use a particular solution.
 

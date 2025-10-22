@@ -1,6 +1,30 @@
 # Bus Topology
 
-This section explains the Bus topology in distributed systems.
+## Core
+
+This section explains the Bus topology in distributed systems. A bus topology is a network setup where each computer and network device are connected to a single cable or backbone.
+
+## Characteristics
+
+- **Simplicity**: Bus topology is simple to install and requires less cable than other topologies.
+- **Cost-effective**: It is a cost-effective choice for small networks.
+- **Single Point of Failure**: A break in the main cable can bring down the entire network.
+- **Scalability**: It is difficult to add new nodes to the network.
+- **Performance**: The performance of the network degrades as more nodes are added.
+
+## Comparison
+
+| Topology | Simplicity | Cost | Scalability | Performance |
+|---|---|---|---|---|
+| **Bus** | High | Low | Low | Low |
+| **Star** | Medium | Medium | Medium | Medium |
+| **Ring** | Medium | Medium | Medium | Medium |
+| **Mesh** | Low | High | High | High |
+
+## Trade-offs
+
+- **Simplicity vs. Reliability**: Bus topology is simple, but it is not very reliable.
+- **Cost vs. Performance**: Bus topology is cost-effective, but it does not offer good performance.
 
 ## Which service use it?
 
@@ -25,9 +49,3 @@ This section explains the Bus topology in distributed systems.
 -   **Communication:** In a bus topology, all communication travels along the single shared medium, meaning all nodes receive all transmissions, which can lead to collisions and reduced efficiency with increased traffic. [Explore Communication Patterns](../../communication/README.md).
 
 -   **Fault Tolerance:** A significant drawback of the bus topology is its single point of failure; a break in the main bus cable or a failure of a single node can disrupt communication for the entire network. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
-## Core
-
-## Comparison
-
-## Trade-offs

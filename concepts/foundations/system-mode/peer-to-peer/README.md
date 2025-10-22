@@ -6,6 +6,31 @@ A **Peer-to-Peer (P2P)** system mode is a decentralized architectural model wher
 
 Each peer can act as both a client (requesting services) and a server (providing services). This creates a resilient and scalable network where the failure of a single peer does not bring down the entire system.
 
+## Characteristics
+
+- **Decentralization**: There is no central server; all nodes are equal.
+- **Scalability**: The system scales as more peers join the network.
+- **Resilience**: The system is resilient to the failure of individual nodes.
+- **Autonomy**: Each peer is autonomous and can control its own resources.
+- **Self-organization**: The network can organize itself without a central coordinator.
+
+## Comparison
+
+| Feature | Peer-to-Peer | Client-Server |
+|---|---|---|
+| **Architecture** | Decentralized | Centralized |
+| **Scalability** | High | Low |
+| **Resilience** | High | Low |
+| **Complexity** | High | Low |
+
+## Trade-offs
+
+- **Scalability**: The system scales as more peers join the network.
+- **Resilience**: The system is resilient to the failure of individual nodes.
+- **Complexity**: P2P networks can be complex to design and manage.
+- **Security**: P2P networks can be vulnerable to security threats.
+- **Availability**: Data is only available if the peers storing it are online.
+
 ## How It Works
 
 In a P2P network, peers need a way to discover each other. This can be done in several ways:
@@ -54,7 +79,3 @@ P2P networks can be:
 -   **Distributed Consensus:** Many prominent P2P applications, such as cryptocurrencies, rely on sophisticated distributed consensus algorithms to maintain a consistent and agreed-upon state across the decentralized network. [Understand Distributed Consensus](../../distributed-consensus/README.md).
 
 -   **Topology:** P2P networks can adopt various topologies (e.g., mesh, ring, star) to organize their connections and facilitate communication and discovery among peers, each with its own trade-offs in performance and resilience. [Explore Network Topologies](../../topology/README.md).
-
-## Comparison
-
-## Trade-offs

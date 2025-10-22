@@ -12,6 +12,27 @@
 -   **Fault Tolerance:** Ensuring the cache remains available and data is not lost if a cache node fails.
 -   **Network Overhead:** The overhead of communicating with cache servers, though typically much lower than communicating with a database.
 
+## Characteristics
+
+- **Performance**: Distributed caching can significantly improve the performance of a system by reducing the latency of data access.
+- **Scalability**: Distributed caching can improve the scalability of a system by reducing the load on the backend data store.
+- **Availability**: Distributed caching can improve the availability of a system by providing a fallback in case the backend data store is unavailable.
+- **Consistency**: Distributed caching can introduce consistency issues, as the cached data may not be up-to-date.
+- **Cost**: Distributed caching can be expensive to implement and maintain.
+
+## Comparison
+
+| Caching Strategy | Write Latency | Data Consistency |
+|---|---|---|
+| **Cache-Aside** | High | Eventual |
+| **Write-Through** | High | Strong |
+| **Write-Back** | Low | Eventual |
+
+## Trade-offs
+
+- **Performance vs. Consistency**: Caching can improve performance, but it can also introduce consistency issues.
+- **Cost vs. Performance**: Caching can be expensive, but it can also significantly improve performance.
+
 ## Types of Distributed Caching Architectures
 
 -   **Client-Side Caching:** Each client maintains its own cache. Simple but can lead to stale data if not managed carefully.
@@ -38,7 +59,3 @@
 -   **Consistency Models:** The choice of caching strategy and cache coherency mechanisms directly impacts the consistency guarantees provided to cached data. [Explore Consistency Models](../../consistency-models/README.md).
 -   **Fault Tolerance:** Designing a distributed cache to be fault-tolerant ensures that the application can continue to function even if some cache nodes fail. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Service Discovery:** In dynamic environments, service discovery is used to locate available cache servers. [Understand Service Discovery](../../service-discovery/README.md).
-
-## Comparison
-
-## Trade-offs

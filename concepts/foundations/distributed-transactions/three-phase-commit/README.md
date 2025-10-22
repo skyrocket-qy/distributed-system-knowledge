@@ -25,6 +25,21 @@ Like 2PC, 3PC involves a coordinator and multiple participants. It operates in t
     *   **If any participant fails to send "Ack" (or fails to respond within a timeout):** The coordinator sends an "Abort" message to all participants, and the transaction is aborted.
 2.  **Participants commit:** Upon receiving "DoCommit," participants commit the transaction and release resources. They then send a "Done" message to the coordinator.
 
+## Characteristics
+
+- **Non-blocking**: 3PC is non-blocking in the case of a coordinator failure, as participants can reach a consistent decision.
+- **Atomic**: All participants either commit or abort the transaction.
+- **Consistent**: The protocol ensures that all participants reach a consistent decision.
+- **Durable**: The outcome of the transaction is durable, even in the case of failures.
+- **Complex**: 3PC is more complex than 2PC, as it involves an extra phase.
+
+## Comparison
+
+| Protocol | Blocking | Complexity |
+|---|---|---|
+| **3PC** | No | High |
+| **2PC** | Yes | Medium |
+
 ## Trade-offs
 
 -   **More Complex:** The addition of an extra phase makes 3PC more complex to implement and manage than 2PC.
@@ -47,5 +62,3 @@ Like 2PC, 3PC involves a coordinator and multiple participants. It operates in t
 -   **Fault Tolerance:** 3PC aims to enhance fault tolerance over 2PC by reducing the likelihood of participants being left in an uncertain (blocking) state during coordinator failures, though it still has limitations under network partitions. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Strong Consistency:** Protocols like 3PC are designed to achieve strong consistency across distributed data, ensuring that all participants see the same state after a transaction is committed. [Explore Strong Consistency](../../consistency-models/strong-consistency/README.md).
-
-## Comparison

@@ -6,6 +6,31 @@
 
 In a multi-master setup, each master node can process writes independently and then replicate its changes to the other master nodes. This model is often used to achieve high availability, distribute write traffic, and reduce write latency in geographically distributed systems.
 
+## Characteristics
+
+- **High Availability**: Multiple nodes can accept write operations, providing high availability for writes.
+- **Low Latency**: Clients can connect to the nearest master, reducing write latency.
+- **Scalability**: The write load is distributed across multiple nodes, increasing write throughput.
+- **Complexity**: Multi-master systems are complex due to the need for conflict resolution.
+- **Eventual Consistency**: Data is typically eventually consistent across all master nodes.
+
+## Comparison
+
+| Feature | Multi-Master | Single-Master |
+|---|---|---|
+| **Writes** | Multiple Nodes | Single Node |
+| **Availability** | High | Low |
+| **Latency** | Low | High |
+| **Complexity** | High | Low |
+
+## Trade-offs
+
+- **High Availability**: Multi-master systems provide high availability for writes.
+- **Low Latency**: Clients can connect to the nearest master, reducing write latency.
+- **Scalability**: The write load is distributed across multiple nodes, increasing write throughput.
+- **Complexity**: Multi-master systems are complex due to the need for conflict resolution.
+- **Eventual Consistency**: Data is typically eventually consistent across all master nodes.
+
 ## How It Works
 
 When a write is made to any master node, that node updates its local data store and then propagates the change to all other master nodes in the system. This propagation often occurs via change logs or message queues, ensuring that all masters eventually receive the updates. Since writes can occur concurrently on different masters, conflicts can arise. For example, two clients might update the same piece of data on two different masters at the same time.
@@ -62,7 +87,3 @@ When designing a system with multi-master replication, several factors need care
 -   **Conflict Resolution:** A critical aspect of multi-master systems is the need for robust conflict resolution mechanisms to handle concurrent updates to the same data from different master nodes. [Explore Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **Eventual Consistency:** Multi-master replication typically results in eventual consistency, meaning that while data may temporarily diverge across masters, it will eventually converge to a consistent state. [Understand Eventual Consistency](../../consistency-models/eventual-consistency/README.md).
-
-## Comparison
-
-## Trade-offs

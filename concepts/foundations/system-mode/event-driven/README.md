@@ -6,6 +6,29 @@ An **event-driven** system mode is an architectural pattern in which the flow of
 
 In an event-driven system, components are loosely coupled and communicate with each other by producing and consuming events. This is in contrast to a traditional request-response model, where components are tightly coupled and communicate with each other by making direct calls.
 
+## Characteristics
+
+- **Loose Coupling**: Components in an event-driven system are loosely coupled.
+- **Asynchronous**: Communication in an event-driven system is asynchronous.
+- **Scalability**: Event-driven systems are highly scalable.
+- **Resilience**: Event-driven systems are resilient to component failures.
+- **Eventual Consistency**: Event-driven systems are often eventually consistent.
+
+## Comparison
+
+| Feature | Event-Driven | Request-Response |
+|---|---|---|
+| **Coupling** | Loose | Tight |
+| **Communication** | Asynchronous | Synchronous |
+| **Scalability** | High | Low |
+| **Resilience** | High | Low |
+
+## Trade-offs
+
+- **Loose Coupling vs. Complexity**: Event-driven systems are loosely coupled, but they can be more complex to design and debug.
+- **Scalability vs. Consistency**: Event-driven systems are highly scalable, but they often provide weaker consistency guarantees.
+- **Resilience vs. Ordering**: Event-driven systems are resilient to component failures, but they may not guarantee the order of events.
+
 ## How It Works
 
 Event-driven systems typically consist of three main components:
@@ -50,7 +73,3 @@ When an event producer sends an event, it is published to the event bus. The eve
 -   **Communication:** Event-driven architectures represent a distinct communication paradigm that emphasizes asynchronous, non-blocking interactions, contrasting with traditional synchronous request-response models. [Explore Communication Patterns](../../communication/README.md).
 
 -   **Scaling:** Event-driven systems are inherently highly scalable, as new consumers can be added to process events in parallel, and producers can continue to emit events without waiting for consumers, facilitating horizontal scaling. [Learn about Scaling](../../scaling/README.md).
-
-## Comparison
-
-## Trade-offs

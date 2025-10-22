@@ -4,6 +4,14 @@
 
 This section explains Multi-Leader Replication, a data replication strategy where multiple nodes can act as leaders, accepting writes and then replicating them to other leaders and followers, often used for multi-datacenter deployments.
 
+## Characteristics
+
+- **High Write Availability**: Multiple nodes can accept writes, providing high write availability.
+- **Low Write Latency**: Clients can write to the nearest leader, reducing write latency.
+- **Conflict Resolution**: Multi-leader replication requires a mechanism to resolve conflicts that can arise from concurrent writes to different leaders.
+- **Eventual Consistency**: Data is typically eventually consistent across all leader nodes.
+- **Complexity**: Multi-leader replication is complex to implement and manage.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section explains Multi-Leader Replication, a data replication strategy wher
 | **Read Performance** | High, reads can be served locally. |
 | **Conflict Resolution** | Requires robust conflict resolution mechanisms. |
 | **Complexity** | High, due to conflict management and synchronization. |
+
+## Trade-offs
+
+- **Availability vs. Consistency**: Multi-leader replication provides high write availability, but it provides weaker consistency guarantees.
+- **Performance vs. Complexity**: Multi-leader replication provides low write latency, but it is complex to implement and manage.
 
 ## Which service use it?
 
@@ -38,5 +51,3 @@ This section explains Multi-Leader Replication, a data replication strategy wher
 -   **Fault Tolerance:** Multi-leader replication significantly enhances fault tolerance and disaster recovery capabilities by allowing writes to continue even if one or more leader nodes or entire data centers become unavailable. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Multi-Master System Mode:** Multi-leader replication is essentially the implementation of a multi-master system mode, where multiple nodes are designated as primary and can handle write operations. [Discover Multi-Master Systems](../../system-mode/multi-master/README.md).
-
-## Trade-offs

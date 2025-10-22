@@ -1,8 +1,30 @@
 # Directory-Based Sharding
 
-## Overview
+## Core
 
 Directory-based sharding is a sharding strategy where a lookup table, often called a "directory" or "router," is maintained to map each shard key to the specific shard where its corresponding data resides. Instead of using a deterministic function (like a hash or range) to locate data, the system consults this directory to find the correct shard for any given piece of data.
+
+## Characteristics
+
+- **Flexibility**: Directory-based sharding provides the most flexibility in data distribution.
+- **Dynamic Rebalancing**: It allows for easy and dynamic rebalancing of data across shards.
+- **Centralized Directory**: It relies on a centralized directory service, which can be a single point of failure.
+- **Performance Overhead**: It can introduce performance overhead due to the need for a directory lookup.
+- **Complexity**: It can be complex to implement and manage the directory service.
+
+## Comparison
+
+| Feature | Directory-Based Sharding | Hash-Based Sharding | Range-Based Sharding |
+|---|---|---|---|
+| **Flexibility** | High | Low | Medium |
+| **Rebalancing** | Easy | Hard | Medium |
+| **Performance** | Medium | High | High |
+| **Complexity** | High | Low | Medium |
+
+## Trade-offs
+
+- **Flexibility vs. Complexity**: Directory-based sharding provides the most flexibility, but it is also the most complex to implement and manage.
+- **Performance vs. Flexibility**: The flexibility of directory-based sharding comes at the cost of performance overhead.
 
 ## How It Works
 
@@ -13,7 +35,7 @@ Directory-based sharding is a sharding strategy where a lookup table, often call
 5.  **Redirection:** The directory service returns the address or identifier of the shard that holds the data for that key.
 6.  **Data Access:** The routing layer then forwards the client's request to the appropriate shard.
 
-## Characteristics
+## Pros & Cons
 
 ### Pros
 
@@ -52,9 +74,3 @@ Directory-based sharding is a sharding strategy where a lookup table, often call
 -   **Service Discovery:** The directory service in directory-based sharding functions similarly to a service registry, mapping logical data identifiers (shard keys) to physical locations (shards), akin to how service discovery maps service names to instances. [Understand Service Discovery](../../../service-discovery/README.md).
 
 -   **Fault Tolerance:** The directory service itself is a critical component and must be designed with high availability and fault tolerance in mind to prevent it from becoming a single point of failure for the entire sharded system. [Understand Fault Tolerance](../../../fault-tolerance/README.md).
-
-## Core
-
-## Comparison
-
-## Trade-offs

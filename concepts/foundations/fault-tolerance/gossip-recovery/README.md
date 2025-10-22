@@ -4,6 +4,14 @@
 
 This section explores Gossip-Based Recovery mechanisms, where the Gossip protocol is used to disseminate recovery information and facilitate fault tolerance in distributed systems.
 
+## Characteristics
+
+- **Decentralized**: There is no central point of failure for recovery.
+- **Robustness**: The recovery process is resilient to node failures and network partitions.
+- **Scalability**: The recovery process scales well to a large number of nodes.
+- **Convergence**: Information eventually propagates throughout the network.
+- **Simplicity**: Gossip-based recovery is relatively simple to implement.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section explores Gossip-Based Recovery mechanisms, where the Gossip protoco
 | **Robustness** | Highly resilient to node failures and network partitions. |
 | **Scalability** | Scales well to a large number of nodes. |
 | **Convergence** | Information eventually propagates throughout the network. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Decentralized**: There is no central point of failure for recovery. | **Latency**: Information propagation can be slow. |
+| **Robustness**: The recovery process is resilient to node failures and network partitions. | **Message Overhead**: The protocol can generate a lot of network traffic. |
+| **Scalability**: The recovery process scales well to a large number of nodes. | **Ordering**: The protocol does not guarantee message ordering. |
 
 ## Which service use it?
 
@@ -38,5 +54,3 @@ This section explores Gossip-Based Recovery mechanisms, where the Gossip protoco
 -   **Decentralized Service Discovery:** Gossip can be leveraged for decentralized service discovery and membership management, allowing nodes to discover new members and detect failures without a centralized registry. [Explore Decentralized Service Discovery](../../service-discovery/decentralized-discovery/README.md).
 
 -   **Data Replication:** Gossip protocols can be used to disseminate information about data updates and replica states, contributing to the consistency and recovery of replicated data in distributed databases. [Understand Data Replication](../../data-replication/README.md).
-
-## Trade-offs

@@ -14,6 +14,14 @@ The choice of a consistency model has a significant impact on the performance, a
 -   **Conflict Resolution:** How conflicts arising from concurrent updates are handled, especially in weaker consistency models.
 -   **Network Partitions:** The system's behavior and data availability during network failures that partition the system.
 
+## Characteristics
+
+- **Ordering**: The order in which operations are seen by different processes.
+- **Visibility**: The time it takes for a write to be visible to other processes.
+- **Staleness**: The possibility of reading stale data.
+- **Complexity**: The complexity of the consistency model for developers to reason about.
+- **Performance**: The performance of the system in terms of latency and throughput.
+
 ## Comparison
 
 | Model | Guarantee | Performance | Use Case |

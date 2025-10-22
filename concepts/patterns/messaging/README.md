@@ -40,6 +40,14 @@ There are many popular messaging systems in use today, including:
 -   **Scalability:** How easily the messaging system can scale to handle increasing message volumes and consumers.
 -   **Monitoring and Management:** Tools and practices for observing and managing the messaging infrastructure.
 
+## Characteristics
+
+- **Asynchronous**: Messaging is an asynchronous communication pattern.
+- **Decoupling**: Senders and receivers are decoupled from each other.
+- **Reliability**: Messaging systems can provide guarantees about message delivery.
+- **Scalability**: Messaging systems can be scaled to handle a large volume of messages.
+- **Flexibility**: Messaging systems are flexible and can be used to implement a variety of communication patterns.
+
 ## Comparison
 
 | Pattern | Delivery | Scalability | Use Case |
@@ -47,6 +55,11 @@ There are many popular messaging systems in use today, including:
 | **[Message Queue](./message-queue)** | One-to-one | High | Task distribution, work queues |
 | **[Publish-Subscribe](./publish-subscribe)** | One-to-many | High | Event notification, real-time data streaming |
 | **Request-Reply** | One-to-one (with correlation) | Medium | Synchronous-like interactions over async messaging |
+
+## Trade-offs
+
+- **Performance vs. Reliability**: Higher reliability guarantees can come at the cost of lower performance.
+- **Complexity vs. Flexibility**: More flexible messaging patterns can be more complex to manage.
 
 ## Which service use it?
 
@@ -87,5 +100,3 @@ There are many popular messaging systems in use today, including:
 
 
 -   **Event-Driven System Mode:** Messaging, particularly publish-subscribe patterns, is the backbone of event-driven architectures, where the system's behavior is primarily driven by the production, detection, and consumption of events. [Discover Event-Driven Systems](../system-mode/event-driven/README.md).
-
-## Trade-offs

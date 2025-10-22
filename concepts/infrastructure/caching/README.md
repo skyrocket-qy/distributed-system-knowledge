@@ -4,6 +4,14 @@
 
 **Caching** is the process of storing copies of files or data in a temporary storage location, or "cache," so that they can be accessed more quickly. Caching is used to reduce latency and improve the performance of systems by serving data from the cache instead of fetching it from the original source.
 
+## Characteristics
+
+- **Performance**: Caching can significantly improve the performance of a system by reducing the latency of data access.
+- **Scalability**: Caching can improve the scalability of a system by reducing the load on the backend data store.
+- **Availability**: Caching can improve the availability of a system by providing a fallback in case the backend data store is unavailable.
+- **Consistency**: Caching can introduce consistency issues, as the cached data may not be up-to-date.
+- **Cost**: Caching can be expensive to implement and maintain.
+
 ## Comparison
 
 | Type | How it works | Use Case |

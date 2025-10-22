@@ -13,6 +13,28 @@ Without idempotency, retrying failed operations could lead to unintended side ef
 -   **State Management:** For stateful operations, carefully manage the state to ensure that re-processing an operation doesn't alter the state beyond its initial intended change.
 -   **External Systems:** Consider the idempotency guarantees of any external services or databases that your system interacts with.
 
+## Characteristics
+
+- **Safety**: Idempotent operations are safe to retry.
+- **Determinism**: Idempotent operations produce the same result every time they are called with the same parameters.
+- **Side Effects**: Idempotent operations have the same side effects every time they are called with the same parameters.
+- **Fault Tolerance**: Idempotency is a key technique for building fault-tolerant systems.
+
+## Comparison
+
+| Operation | Idempotent |
+|---|---|
+| `x = 5` | Yes |
+| `x++` | No |
+| `DELETE /users/123` | Yes |
+| `POST /users` | No |
+
+## Trade-offs
+
+- **Complexity**: Implementing idempotency can add complexity to the system.
+- **Performance**: Idempotency can introduce performance overhead.
+- **State Management**: Idempotency can require additional state management.
+
 ## Implementation Strategies
 
 -   **Unique Transaction IDs:** Assign a unique ID to each operation. Before processing, check if this ID has already been processed. If so, return the previous result without re-executing the operation.
@@ -33,7 +55,3 @@ Without idempotency, retrying failed operations could lead to unintended side ef
 -   **Distributed Transactions:** In distributed transactions, especially with patterns like Saga, idempotency helps in making compensating transactions safe to retry. [Explore Distributed Transactions](../../distributed-transactions/README.md).
 -   **Messaging:** Essential for consumers of message queues to handle duplicate messages that can occur with "at-least-once" delivery semantics. [Learn about Messaging](../../messaging/README.md).
 -   **Consistency Models:** Idempotency contributes to maintaining consistency in distributed systems by preventing unintended state changes from repeated operations. [Explore Consistency Models](../../consistency-models/README.md).
-
-## Comparison
-
-## Trade-offs

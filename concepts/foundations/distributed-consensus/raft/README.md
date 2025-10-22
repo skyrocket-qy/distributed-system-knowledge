@@ -17,6 +17,27 @@
 -   **Network Partitions:** Handling situations where nodes are isolated from each other due to network failures.
 -   **Performance:** While simpler than Paxos, Raft still incurs latency due to the need for consensus on every state change.
 
+## Characteristics
+
+- **Understandability**: Raft is designed to be easy to understand.
+- **Strong Leader**: Raft uses a strong leader to simplify the management of the replicated log.
+- **Leader Election**: Raft uses a randomized timer to elect a leader.
+- **Membership Changes**: Raft supports adding and removing servers from the cluster.
+- **Log Compaction**: Raft supports log compaction to reduce the size of the log.
+
+## Comparison
+
+| Algorithm | Understandability | Performance |
+|---|---|---|
+| **Raft** | High | High |
+| **Paxos** | Low | High |
+
+## Trade-offs
+
+- **Performance**: Raft can have lower throughput than other consensus algorithms in some cases.
+- **Complexity**: Raft is simpler than Paxos, but it is still a complex algorithm.
+- **Flexibility**: Raft is less flexible than Paxos.
+
 ## How It Works
 
 Raft operates in terms of *terms*, which are continuously increasing integers. Each term begins with an election, and if an election is successful, a single leader manages the cluster for the rest of the term.
@@ -48,7 +69,3 @@ Raft operates in terms of *terms*, which are continuously increasing integers. E
 -   **Strong Consistency:** Raft is designed to provide strong consistency, ensuring that all committed operations are visible to all clients in the same order. [Learn about Strong Consistency](../../consistency-models/strong-consistency/README.md).
 -   **Fault Tolerance:** Raft is inherently fault-tolerant, capable of tolerating failures of a minority of nodes (e.g., `(N-1)/2` failures in an N-node cluster). [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Paxos:** A more complex but foundational consensus algorithm that Raft aims to simplify. [Compare with Paxos](./paxos/README.md).
-
-## Comparison
-
-## Trade-offs

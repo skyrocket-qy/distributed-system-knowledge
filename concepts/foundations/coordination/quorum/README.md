@@ -4,6 +4,14 @@
 
 This section explains the concept of Quorum in distributed systems, particularly its role in ensuring consistency and availability for coordination.
 
+## Characteristics
+
+- **Consistency**: Quorum-based systems provide tunable consistency, allowing a trade-off between consistency and availability.
+- **Availability**: Quorum-based systems can remain available even if some nodes fail.
+- **Fault Tolerance**: Quorum-based systems are resilient to a certain number of node failures.
+- **Latency**: The latency of an operation depends on the number of nodes in the quorum.
+- **Scalability**: Quorum-based systems can be scaled by adding more nodes.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section explains the concept of Quorum in distributed systems, particularly
 | **Availability** | Can maintain availability during some node failures. |
 | **Fault Tolerance** | Tolerates failures up to a certain threshold. |
 | **Complexity** | Adds complexity in configuration and management. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Tunable Consistency**: Quorum-based systems provide tunable consistency. | **Complexity**: Quorum-based systems can be complex to configure and manage. |
+| **Availability**: Quorum-based systems can remain available even if some nodes fail. | **Latency**: The latency of an operation depends on the number of nodes in the quorum. |
+| **Fault Tolerance**: Quorum-based systems are resilient to a certain number of node failures. | **Scalability**: Quorum-based systems can be scaled by adding more nodes. |
 
 ## Which service use it?
 
@@ -36,5 +52,3 @@ This section explains the concept of Quorum in distributed systems, particularly
 -   **Fault Tolerance:** Quorum-based systems are inherently fault-tolerant, as they can continue to operate and maintain consistency even if a minority of nodes fail, provided the quorum threshold is still met. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Data Replication:** Quorum reads and writes are commonly used in replicated storage systems to ensure data integrity and availability across multiple copies of data, allowing for flexible consistency guarantees. [Understand Data Replication](../../data-replication/README.md).
-
-## Trade-offs

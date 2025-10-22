@@ -4,6 +4,14 @@
 
 This section describes the causal consistency model, which is a weaker guarantee than strong consistency but stronger than eventual consistency. It ensures that operations that are causally related are seen by all processes in the same order.
 
+## Characteristics
+
+- **Causal Ordering**: Causal consistency preserves the causal order of operations.
+- **Concurrent Operations**: Concurrent operations may be seen in a different order by different processes.
+- **Weaker than Strong Consistency**: Causal consistency is a weaker guarantee than strong consistency.
+- **Stronger than Eventual Consistency**: Causal consistency is a stronger guarantee than eventual consistency.
+- **Vector Clocks**: Causal consistency is often implemented using vector clocks.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section describes the causal consistency model, which is a weaker guarantee
 | **Strength** | Stronger than eventual, weaker than strong consistency. |
 | **Complexity** | Requires tracking causal dependencies. |
 | **Performance** | Better performance than strong consistency. |
+
+## Trade-offs
+
+- **Performance vs. Consistency**: Causal consistency provides better performance than strong consistency, but it provides weaker guarantees.
+- **Complexity vs. Power**: Causal consistency is more complex to implement than eventual consistency, but it provides stronger guarantees.
 
 ## Which service use it?
 
@@ -31,5 +44,3 @@ This section describes the causal consistency model, which is a weaker guarantee
 -   **Vector Clocks:** Vector clocks are the foundational mechanism used to implement causal consistency, allowing distributed systems to track and enforce the causal relationships between events across different nodes. [Learn more about Vector Clocks for Coordination](../../coordination/vector-clock/README.md).
 
 -   **Conflict Resolution:** Causal consistency helps in understanding the causal history of updates, which is crucial for resolving conflicts that arise from concurrent operations in distributed systems. [Explore Conflict Resolution](../../conflict-resolution/README.md).
-
-## Trade-offs

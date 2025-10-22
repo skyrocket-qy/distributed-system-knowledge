@@ -4,6 +4,14 @@
 
 A **proxy** is a server that acts as an intermediary for requests from clients seeking resources from other servers. Proxies provide a gateway between users and the internet, and they can be used for a variety of purposes, including load balancing, security, and caching.
 
+## Characteristics
+
+- **Intermediary**: A proxy acts as an intermediary between clients and servers.
+- **Security**: Proxies can be used to enhance security by filtering traffic and hiding the identity of the client or server.
+- **Performance**: Proxies can improve performance by caching frequently accessed content.
+- **Load Balancing**: Proxies can be used to distribute traffic across multiple servers.
+- **Anonymity**: Proxies can be used to anonymize traffic by hiding the client's IP address.
+
 ## Comparison
 
 | Type | How it works | Use Case |

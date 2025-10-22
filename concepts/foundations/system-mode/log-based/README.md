@@ -6,6 +6,28 @@ A **log-based** system mode is an architectural pattern in which the state of a 
 
 This is in contrast to a traditional approach where the current state of the system is stored in a mutable database. In a log-based system, the database is considered to be a cache of the current state, and it can be rebuilt at any time by replaying the log.
 
+## Characteristics
+
+- **Immutability**: The log is immutable and append-only.
+- **Source of Truth**: The log is the single source of truth for the state of the system.
+- **Replayability**: The state of the system can be reconstructed by replaying the log.
+- **Durability**: The log is durable and can be used for recovery.
+- **Auditing**: The log provides a complete audit trail of all changes to the system.
+
+## Comparison
+
+| Feature | Log-Based | Traditional |
+|---|---|---|
+| **State** | Immutable Log | Mutable Database |
+| **Source of Truth** | Log | Database |
+| **Replayability** | Yes | No |
+
+## Trade-offs
+
+- **Storage Overhead**: The log can grow to be very large.
+- **Replay Time**: Replaying the log can be time-consuming.
+- **Complexity**: Log-based systems can be complex to implement.
+
 ## How It Works
 
 Log-based systems are often used in conjunction with a consensus algorithm, such as Raft or Paxos, to ensure that all nodes in the system agree on the order of the events in the log.
@@ -52,7 +74,3 @@ The state of the system can be derived at any point in time by replaying the log
 -   **Event Streaming:** Log-based systems are closely related to event streaming platforms, which are often built upon the concept of a distributed, immutable log to provide real-time data flow and processing capabilities. [Explore Event Streaming](../../coordination/event-streaming/README.md).
 
 -   **Observability:** Logs are a fundamental pillar of observability, and in log-based systems, the event log provides an exhaustive, auditable record of all changes, which is invaluable for debugging, auditing, and understanding system behavior. [Understand Observability](../../observability/README.md).
-
-## Comparison
-
-## Trade-offs

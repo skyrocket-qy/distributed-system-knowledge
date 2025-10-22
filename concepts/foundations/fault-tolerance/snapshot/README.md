@@ -4,6 +4,14 @@
 
 This section describes Snapshot Recovery as a fault-tolerance mechanism, where the state of a distributed system is periodically saved to allow for quick restoration after a failure.
 
+## Characteristics
+
+- **Point-in-time Recovery**: Snapshots provide a point-in-time recovery of the system's state.
+- **Data Loss**: Data loss can occur between the last snapshot and the time of failure.
+- **Performance Overhead**: Taking snapshots can be a resource-intensive operation.
+- **Storage Overhead**: Snapshots can consume a significant amount of storage space.
+- **Consistency**: Snapshots must be consistent across all nodes in the system.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section describes Snapshot Recovery as a fault-tolerance mechanism, where t
 | **Data Loss** | Data loss up to the last snapshot. |
 | **Overhead** | Can be high, depending on snapshot frequency and data size. |
 | **Complexity** | Relatively simple to implement for individual components. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Fast Recovery**: Snapshots provide a fast way to recover from failures. | **Data Loss**: Data loss can occur between the last snapshot and the time of failure. |
+| **Simple**: Snapshots are relatively simple to implement. | **Performance Overhead**: Taking snapshots can be a resource-intensive operation. |
+| **Consistent**: Snapshots can be taken in a consistent state. | **Storage Overhead**: Snapshots can consume a significant amount of storage space. |
 
 ## Which service use it?
 
@@ -36,5 +52,3 @@ This section describes Snapshot Recovery as a fault-tolerance mechanism, where t
 -   **Checkpointing:** Snapshot recovery is closely related to checkpointing, where the state of a process or system is periodically saved. Snapshots typically refer to a broader system state, while checkpointing can be more granular. [Compare with Checkpointing](../checkpoint/README.md).
 
 -   **Consistency Models:** Ensuring a consistent snapshot across a distributed system, especially one with concurrent writes, requires careful consideration of consistency models to guarantee that the captured state is valid and coherent. [Learn about Consistency Models](../../consistency-models/README.md).
-
-## Trade-offs

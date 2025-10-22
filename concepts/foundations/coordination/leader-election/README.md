@@ -11,6 +11,28 @@
 -   **Efficiency:** The election process should be efficient in terms of messages exchanged and time taken, especially in large-scale systems.
 -   **Fairness:** Ideally, all eligible nodes should have a fair chance of becoming the leader.
 
+## Characteristics
+
+- **Uniqueness**: At any given time, there is at most one leader.
+- **Liveness**: Eventually, a leader is elected.
+- **Fault Tolerance**: The election process is resilient to node failures.
+- **Efficiency**: The election process is efficient in terms of messages and time.
+- **Fairness**: All nodes have a fair chance of becoming the leader.
+
+## Comparison
+
+| Algorithm | Complexity | Fault Tolerance |
+|---|---|---|
+| **Bully Algorithm** | O(n^2) | Low |
+| **Ring Algorithm** | O(n) | Low |
+| **Paxos/Raft** | High | High |
+
+## Trade-offs
+
+- **Complexity**: Leader election algorithms can be complex to implement and understand.
+- **Overhead**: Leader election can introduce overhead in terms of messages and time.
+- **Single Point of Failure**: The leader can become a single point of failure.
+
 ## Algorithms
 
 -   **Bully Algorithm:** A simple algorithm where the process with the highest identifier (e.g., IP address, process ID) is elected as the leader. When a process detects a leader failure, it initiates an election by sending election messages to all processes with higher identifiers. If no one responds, it declares itself the leader. If a higher-ranked process responds, that process takes over the election.
@@ -30,7 +52,3 @@
 -   **Distributed Consensus:** Algorithms like Paxos and Raft, which are used for distributed consensus, inherently include leader election as a core component. [Understand Distributed Consensus](../../distributed-consensus/README.md).
 -   **Fault Tolerance:** A robust leader election mechanism is essential for fault-tolerant systems, allowing them to recover from leader failures and maintain continuous operation. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
 -   **System Modes:** Many distributed system architectures, such as master-slave (leader-follower) or quorum-based systems, rely heavily on leader election for their operational model. [Discover System Modes](../../system-mode/README.md).
-
-## Comparison
-
-## Trade-offs

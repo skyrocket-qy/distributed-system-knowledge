@@ -6,6 +6,33 @@ A **federated multi-cluster** system mode is an architectural pattern in which m
 
 This is in contrast to a single, large cluster, where all nodes are managed by a single control plane. Federation is often used in large-scale, geographically distributed systems, where it is not feasible or desirable to have a single, centralized control plane.
 
+## Characteristics
+
+- **Scalability**: Federated systems can be scaled to a much larger size than single-cluster systems.
+- **High Availability**: Federated systems are highly available, as they can tolerate the failure of an entire cluster.
+- **Flexibility**: Federation allows for a great deal of flexibility in how services are deployed and managed.
+- **Complexity**: Federated systems can be complex to design, build, and operate.
+- **Security**: Securing a federated system can be challenging.
+- **Cost**: Federated systems can be more expensive to operate.
+
+## Comparison
+
+| Feature | Federated Multi-Cluster | Single Cluster |
+|---|---|---|
+| **Scalability** | High | Low |
+| **Availability** | High | Low |
+| **Complexity** | High | Low |
+| **Cost** | High | Low |
+
+## Trade-offs
+
+- **Scalability**: Federated systems can be scaled to a much larger size than single-cluster systems.
+- **High Availability**: Federated systems are highly available, as they can tolerate the failure of an entire cluster.
+- **Flexibility**: Federation allows for a great deal of flexibility in how services are deployed and managed.
+- **Complexity**: Federated systems can be complex to design, build, and operate.
+- **Security**: Securing a federated system can be challenging.
+- **Cost**: Federated systems can be more expensive to operate.
+
 ## How It Works
 
 Federated systems typically use a set of APIs and protocols to enable communication and resource sharing between clusters. For example, a federated system might use a service mesh to route traffic between services in different clusters, or it might use a distributed storage system to replicate data between clusters.
@@ -54,7 +81,3 @@ Some common use cases for federation include:
 -   **Service Discovery:** In a federated multi-cluster environment, sophisticated service discovery mechanisms are required to enable services in one cluster to locate and communicate with services in other clusters, often spanning different geographical regions or cloud providers. [Understand Service Discovery](../../service-discovery/README.md).
 
 -   **Security:** Securing communication, access, and data across multiple, potentially heterogeneous clusters in a federated setup presents significant security challenges, requiring robust identity, authentication, and authorization strategies. [Explore Security](../../security/README.md).
-
-## Comparison
-
-## Trade-offs

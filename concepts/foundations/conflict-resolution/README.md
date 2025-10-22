@@ -20,6 +20,14 @@ This section addresses various strategies and mechanisms for resolving these con
 -   **Complexity:** The difficulty of implementing and maintaining the conflict resolution mechanism.
 -   **Determinism:** Whether the resolution process always yields the same result given the same set of conflicting updates.
 
+## Characteristics
+
+- **Conflict Detection**: The ability to detect when two or more updates conflict with each other.
+- **Conflict Resolution**: The process of resolving a conflict and choosing a winning update.
+- **Data Convergence**: The process of ensuring that all replicas of the data eventually converge to the same state.
+- **Data Loss**: The possibility of losing data during conflict resolution.
+- **Complexity**: The complexity of the conflict resolution algorithm.
+
 ## Comparison
 
 | Strategy | Complexity | Data Loss Risk | Resolution Logic | Use Case |

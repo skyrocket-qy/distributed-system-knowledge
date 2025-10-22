@@ -15,13 +15,27 @@ Traditional ACID transactions are straightforward in a single-node environment. 
 -   **Network Latency:** The time taken for messages to travel between participants can significantly slow down distributed transactions.
 -   **Partial Failures:** Handling situations where some participants fail while others succeed, making it difficult to coordinate a global commit or rollback.
 
-## Mechanisms
+## Characteristics
+
+- **Atomicity**: All participants either commit or abort the transaction.
+- **Consistency**: The transaction brings the system from one valid state to another.
+- **Isolation**: Concurrent transactions do not interfere with each other.
+- **Durability**: The outcome of the transaction is durable, even in the case of failures.
+- **Complexity**: Distributed transactions are more complex than local transactions.
+
+## Comparison
 
 | Mechanism | Trade-offs | Use Case |
 |---|---|---|
 | **[Two-Phase Commit (2PC)](./two-phase-commit)** | High latency, blocking, single point of failure (coordinator) | Distributed databases, enterprise systems requiring strong consistency |
 | **[Three-Phase Commit (3PC)](./three-phase-commit)** | More complex, still susceptible to network partitions, higher overhead than 2PC | Systems where blocking is unacceptable, but strong consistency is still desired |
 | **[Saga Pattern](./saga-pattern)** | Eventual consistency, increased complexity in error handling, no global rollback | Microservices architectures, long-running business processes |
+
+## Trade-offs
+
+- **Performance**: Distributed transactions can be slow due to the overhead of coordination and network latency.
+- **Availability**: Distributed transactions can be blocked if a participant is unavailable.
+- **Complexity**: Distributed transactions are complex to implement and manage.
 
 ## Which service use it?
 
@@ -39,6 +53,3 @@ Traditional ACID transactions are straightforward in a single-node environment. 
 -   **Distributed Consensus:** While not always a direct application, the principles of distributed consensus are often at play in the commit phases of protocols like Two-Phase Commit, where all participants must agree on a final decision. [Understand Distributed Consensus](../distributed-consensus/README.md).
 
 -   **Microservices Architecture (System Mode):** In modern microservices, traditional distributed transactions are often replaced by patterns like Saga, which prioritize availability and use eventual consistency, reflecting a different approach to system design. [Discover System Modes](../system-mode/README.md).
-## Comparison
-
-## Trade-offs

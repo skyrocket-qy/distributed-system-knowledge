@@ -15,6 +15,29 @@ Implementing distributed locks correctly is notoriously challenging due to the i
 -   **Performance:** Acquiring and releasing locks should not introduce significant latency or overhead.
 -   **Split-Brain:** Preventing a scenario where multiple nodes believe they hold the same lock due to network partitions.
 
+## Characteristics
+
+- **Mutual Exclusion**: Only one process can hold the lock at a time.
+- **Deadlock Freedom**: The system should not enter a deadlock state where processes are blocked indefinitely.
+- **Fault Tolerance**: The lock service should be resilient to failures.
+- **Scalability**: The lock service should be scalable to a large number of clients.
+- **Fairness**: All clients should have a fair chance of acquiring the lock.
+
+## Comparison
+
+| Implementation | Complexity | Fault Tolerance |
+|---|---|---|
+| **Single-Node Redis** | Low | Low |
+| **ZooKeeper/etcd** | Medium | High |
+| **Relational Databases** | Medium | Medium |
+| **Consensus Algorithms** | High | High |
+
+## Trade-offs
+
+- **Performance**: Distributed locks can introduce overhead and reduce performance.
+- **Complexity**: Distributed locks can be complex to implement and manage.
+- **Single Point of Failure**: The lock service can become a single point of failure.
+
 ## Implementation Strategies
 
 -   **Single-Node Redis:** Using Redis as a simple distributed lock manager. While easy to implement, it has a single point of failure. Redlock is an algorithm for achieving a more robust distributed lock with Redis.
@@ -36,7 +59,3 @@ Implementing distributed locks correctly is notoriously challenging due to the i
 -   **Fault Tolerance:** Designing distributed locks to be fault-tolerant is crucial to prevent deadlocks and ensure the system can recover from failures of the lock holder or the lock service itself. [Understand Fault Tolerance ../../fault-tolerance/README.md].
 -   **Distributed Transactions:** In some cases, distributed locks can be used as part of a distributed transaction to ensure atomicity across multiple operations. [Explore Distributed Transactions ../../distributed-transactions/README.md].
 -   **Leader Election:** Often, the leader in a distributed system implicitly holds a form of a distributed lock for certain operations. [Understand Leader Election ./leader-election/README.md].
-
-## Comparison
-
-## Trade-offs

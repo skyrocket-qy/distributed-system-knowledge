@@ -28,6 +28,14 @@ The Actor Model's principles make it particularly well-suited for distributed en
 -   **Scalability:** Location transparency and message-driven communication facilitate scaling out by distributing actors across multiple nodes.
 -   **Responsiveness:** Non-blocking communication ensures that actors can continue processing other messages even when waiting for a response from another actor.
 
+## Characteristics
+
+- **Concurrency**: The model is inherently concurrent, with actors executing independently.
+- **Asynchronous Communication**: Actors communicate through asynchronous message passing.
+- **Isolation**: Actors are isolated and do not share state.
+- **Fault Tolerance**: The model supports fault tolerance through supervision hierarchies.
+- **Location Transparency**: Actors can be located on any node in the system.
+
 ## Comparison
 
 | Feature | Description |
@@ -36,6 +44,14 @@ The Actor Model's principles make it particularly well-suited for distributed en
 | **Concurrency** | Achieved through asynchronous message passing, not shared memory. |
 | **Fault Tolerance** | Built-in supervision hierarchies allow for resilient systems. |
 | **Location Transparency** | Actors can be local or remote, abstracting distribution. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Concurrency**: The model simplifies concurrent programming. | **Complexity**: The model can be complex to debug. |
+| **Fault Tolerance**: The model supports fault tolerance. | **State Management**: State management can be complex. |
+| **Scalability**: The model is highly scalable. | **Message Ordering**: Message ordering is not guaranteed. |
 
 ## Which service use it?
 
@@ -74,5 +90,3 @@ The Actor Model's principles make it particularly well-suited for distributed en
 
 
 -   **Messaging:** The Actor Model's reliance on asynchronous message passing aligns closely with general messaging concepts, providing a structured way to handle inter-component communication in a decoupled manner. [Explore Messaging Systems](../../messaging/README.md).
-
-## Trade-offs

@@ -23,6 +23,13 @@ This section explores various communication patterns, protocols, and models used
 -   **Security:** Protecting communication channels from eavesdropping, tampering, and unauthorized access.
     *   **Interconnection:** A dedicated concern within the [Security](../security/README.md) topic, involving encryption, authentication, and authorization mechanisms applied to communication protocols.
 
+## Characteristics
+
+- **Scalability:** The ability to handle a growing number of messages and nodes.
+- **Fault Tolerance:** The system's resilience to node or network failures.
+- **Consistency:** Guarantees about the ordering and visibility of messages.
+- **Security:** Measures to protect data during transit.
+
 ## Comparison
 
 | Pattern | Coupling | Synchronicity | Topology | Use Case |

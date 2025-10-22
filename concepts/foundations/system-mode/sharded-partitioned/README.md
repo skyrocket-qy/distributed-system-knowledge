@@ -6,6 +6,28 @@
 
 This distribution of data allows the system to handle a larger volume of data and a higher load of read/write operations than would be possible with a single server. Sharding is a key technique for achieving horizontal scalability in distributed databases and other data-intensive applications.
 
+## Characteristics
+
+- **Scalability**: Sharding allows a system to scale horizontally by adding more nodes.
+- **Performance**: Sharding can improve performance by distributing the workload across multiple nodes.
+- **Availability**: Sharding can improve availability by isolating failures to a single shard.
+- **Complexity**: Sharding adds complexity to the system, as data needs to be partitioned and routed to the correct shard.
+- **Consistency**: Maintaining consistency across shards can be challenging.
+
+## Comparison
+
+| Sharding Strategy | Data Distribution | Range Queries | Rebalancing |
+|---|---|---|---|
+| **Range-Based** | Uneven | Efficient | Simple |
+| **Hash-Based** | Even | Inefficient | Complex |
+| **Directory-Based** | Flexible | Efficient | Simple |
+
+## Trade-offs
+
+- **Scalability vs. Complexity**: Sharding provides scalability, but it also adds complexity to the system.
+- **Performance vs. Consistency**: Sharding can improve performance, but it can also make it more difficult to maintain consistency.
+- **Availability vs. Consistency**: Sharding can improve availability, but it can also make it more difficult to maintain consistency.
+
 ## How It Works
 
 A sharded system requires a **partitioning key** (or **shard key**), which is a specific field or column in the data that is used to determine which shard a particular piece of data belongs to. The system uses a **partitioning function** to map each key to a specific shard.
@@ -50,7 +72,3 @@ A sharded architecture also requires a routing or query coordination layer. When
 -   **System Modes:** Sharding represents a specific system mode designed to manage large datasets and high throughput, contrasting with other modes like master-slave or shared-nothing architectures. [Discover other System Modes](../README.md).
 
 -   **Consistency Models:** Ensuring data consistency across shards, particularly for operations that span multiple partitions, is a critical challenge that often involves trade-offs between strong consistency and performance/availability. [Explore Consistency Models](../../consistency-models/README.md).
-
-## Comparison
-
-## Trade-offs

@@ -4,6 +4,27 @@
 
 Service Discovery is a crucial component in modern distributed systems, especially in microservices architectures. It is the process of automatically detecting network services and devices. Without service discovery, applications would need to be configured with the hostnames and port numbers of all the services they consume, which is impractical in dynamic environments where service instances are frequently scaled up/down, replaced, or moved.
 
+## Characteristics
+
+- **Dynamic**: Service discovery allows for the dynamic registration and deregistration of service instances.
+- **Resilience**: It improves the resilience of a system by allowing clients to discover healthy service instances.
+- **Scalability**: It enables the horizontal scaling of services by allowing new instances to be discovered automatically.
+- **Decoupling**: It decouples services from their network locations, making the system more flexible.
+- **Complexity**: It can add complexity to a system, as it requires a service registry and a discovery mechanism.
+
+## Comparison
+
+| Pattern | Client Complexity | Infrastructure Complexity |
+|---|---|---|
+| **Client-Side Discovery** | High | Low |
+| **Server-Side Discovery** | Low | High |
+| **DNS-based Discovery** | Low | Medium |
+
+## Trade-offs
+
+- **Complexity vs. Flexibility**: More flexible service discovery patterns are often more complex to manage.
+- **Performance vs. Consistency**: A highly consistent service registry may have higher latency.
+
 ## How It Works
 
 Service discovery typically involves two main components:
@@ -59,7 +80,3 @@ There are two primary patterns for service discovery:
 -   **Microservices Architecture (System Mode):** Service discovery is a cornerstone of microservices architectures, enabling the dynamic and independent deployment, scaling, and management of numerous small services. [Discover System Modes](../system-mode/README.md).
 
 -   **Distributed Consensus:** Highly available and consistent service registries often rely on distributed consensus algorithms to ensure that all nodes in the registry agree on the current state of registered services. [Understand Distributed Consensus](../distributed-consensus/README.md).
-
-## Comparison
-
-## Trade-offs

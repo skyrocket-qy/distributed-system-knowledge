@@ -13,6 +13,28 @@ Each request is assigned a unique trace ID, and as it moves through different se
 -   **Storage and Analysis:** Tracing data can be voluminous, requiring scalable storage and powerful analysis tools to make sense of it.
 -   **Sampling:** Due to the volume of data, often only a sample of requests is traced, which means not all issues might be captured.
 
+## Characteristics
+
+- **End-to-end Visibility**: Distributed tracing provides an end-to-end view of a request's journey through a distributed system.
+- **Latency Analysis**: It helps in identifying performance bottlenecks and latency issues.
+- **Root Cause Analysis**: It facilitates root cause analysis of errors and failures.
+- **Service Dependency Analysis**: It helps in understanding the dependencies between services.
+- **Request Profiling**: It provides a detailed profile of a request, including the time spent in each service.
+
+## Comparison
+
+| Tool | Open Source | Standard |
+|---|---|---|
+| **OpenTelemetry** | Yes | Yes |
+| **Jaeger** | Yes | No |
+| **Zipkin** | Yes | No |
+
+## Trade-offs
+
+- **Overhead vs. Visibility**: Collecting and transmitting tracing data can introduce performance overhead, but it provides valuable visibility into the system.
+- **Sampling vs. Completeness**: Sampling a subset of requests can reduce the overhead, but it may not capture all the issues.
+- **Instrumentation vs. Adoption**: Instrumenting all services can be a complex and time-consuming task, which can be a barrier to adoption.
+
 ## Components of a Distributed Tracing System
 
 -   **Trace:** Represents the entire journey of a single request through the distributed system.
@@ -41,7 +63,3 @@ Each request is assigned a unique trace ID, and as it moves through different se
 -   **Fault Tolerance:** Helps in quickly identifying the root cause of failures and performance degradation in a distributed system, aiding in faster recovery. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Communication:** Provides visibility into the communication patterns and latency between different services. [Explore Communication Patterns](../../communication/README.md).
 -   **Scaling:** Helps in identifying performance bottlenecks that might hinder scaling efforts and optimize resource utilization. [Learn about Scaling](../../scaling/README.md).
-
-## Comparison
-
-## Trade-offs

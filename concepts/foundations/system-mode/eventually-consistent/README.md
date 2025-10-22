@@ -6,6 +6,29 @@
 
 In an eventually consistent system, there is a period of time during which different nodes in the system may have different copies of the data. This is in contrast to a strongly consistent system, where all nodes have the same copy of the data at all times.
 
+## Characteristics
+
+- **High Availability**: Eventually consistent systems are highly available, as they can continue to operate even if some nodes are offline.
+- **Low Latency**: Eventually consistent systems have low latency, as writes can be acknowledged as soon as they are made to a single node.
+- **Scalability**: Eventually consistent systems are highly scalable, as new nodes can be added to the system without affecting the existing nodes.
+- **Stale Data**: It is possible to read stale data in an eventually consistent system.
+- **Complexity**: Eventual consistency can add complexity to the system, as developers need to be aware of the possibility of reading stale data.
+
+## Comparison
+
+| Feature | Eventually Consistent | Strongly Consistent |
+|---|---|---|
+| **Availability** | High | Low |
+| **Latency** | Low | High |
+| **Scalability** | High | Low |
+| **Consistency** | Eventual | Strong |
+
+## Trade-offs
+
+- **Availability vs. Consistency**: Eventually consistent systems trade off consistency for availability.
+- **Performance vs. Consistency**: Eventually consistent systems have better performance than strongly consistent systems.
+- **Simplicity vs. Complexity**: Eventually consistent systems are more complex to reason about than strongly consistent systems.
+
 ## How It Works
 
 Eventual consistency is typically achieved through replication. When a write is made to one node, that node updates its local copy of the data and then asynchronously sends the update to the other nodes in the system.
@@ -52,6 +75,3 @@ Several popular services and systems leverage eventual consistency to achieve hi
 -   **Conflict Resolution:** Due to the nature of eventual consistency, concurrent updates can lead to divergent data states, making robust conflict resolution mechanisms essential to merge these inconsistencies gracefully. [Understand Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **CAP Theorem:** The choice of an eventually consistent system mode is a direct reflection of the CAP theorem, where availability and partition tolerance are prioritized over strong consistency, accepting that data may not always be immediately consistent. [Understand the CAP Theorem](../cap-tradeoff-tunable/README.md).
-## Comparison
-
-## Trade-offs

@@ -27,6 +27,14 @@ The communication in a P2P network is distributed and dynamic:
 
 This interaction can be **synchronous** or **asynchronous**, depending on the specific application and protocol.
 
+## Characteristics
+
+- **Decentralization**: There is no central server; peers communicate directly with each other.
+- **Symmetry**: All peers are equal and can act as both clients and servers.
+- **Scalability**: The network scales as more peers join.
+- **Resilience**: The network is resilient to failures, as there is no single point of failure.
+- **Dynamic Topology**: The network topology can change as peers join and leave the network.
+
 ## Comparison
 
 | Model | Coupling | Key Difference | Example |

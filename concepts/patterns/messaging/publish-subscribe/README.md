@@ -4,6 +4,14 @@
 
 This section describes the Publish-Subscribe pattern, where messages are published to a topic and received by multiple subscribers.
 
+## Characteristics
+
+- **One-to-many Delivery**: Each message is delivered to multiple subscribers.
+- **Asynchronous**: Publishers and subscribers are decoupled and communicate asynchronously.
+- **Decoupling**: Publishers and subscribers are decoupled and do not need to know about each other.
+- **Scalability**: Publish-subscribe systems can be scaled to handle a large number of publishers and subscribers.
+- **Flexibility**: New subscribers can be added without affecting existing publishers.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section describes the Publish-Subscribe pattern, where messages are publish
 | **Decoupling** | High decoupling between publisher and subscribers. |
 | **Asynchronicity** | Asynchronous communication. |
 | **Scalability** | Scalable for broadcasting events to many consumers. |
+
+## Trade-offs
+
+- **Performance vs. Reliability**: Higher reliability guarantees can come at the cost of lower performance.
+- **Complexity vs. Flexibility**: More flexible messaging patterns can be more complex to manage.
 
 ## Which service use it?
 
@@ -32,5 +45,3 @@ This section describes the Publish-Subscribe pattern, where messages are publish
 -   **Event-Driven System Mode:** The Publish-Subscribe pattern is a cornerstone of event-driven architectures, where system behavior is orchestrated by the flow of events, enabling reactive and scalable designs. [Discover Event-Driven Systems](../../system-mode/event-driven/README.md).
 
 -   **Coordination:** Publish-Subscribe can be used for loose coordination, allowing components to react to events and implicitly coordinate their actions without direct dependencies or explicit command structures. [Explore Coordination Concepts](../../coordination/README.md).
-
-## Trade-offs

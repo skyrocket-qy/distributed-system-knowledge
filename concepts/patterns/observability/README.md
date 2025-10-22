@@ -14,13 +14,13 @@ Observability is typically achieved through the collection and analysis of three
 -   **Alerting Fatigue:** Designing effective alerts that are actionable and minimize false positives.
 -   **Tooling Complexity:** Managing and integrating various observability tools can be challenging.
 
-## Pillars of Observability
+## Characteristics
 
-| Pillar | Description | Purpose | Examples |
-|---|---|---|---|
-| **Logs** | Timestamped, immutable records of discrete events that happened within a service. | Provide detailed context about specific events, errors, or state changes. | Application logs, server logs, error messages |
-| **Metrics** | Aggregatable numerical measurements that represent the state of a system over time. | Quantify system behavior, track trends, identify performance issues, and trigger alerts. | CPU utilization, memory usage, request rates, error rates, latency |
-| **[Distributed Tracing](./distributed-tracing)** | Representations of the end-to-end journey of a single request or transaction as it propagates through multiple services. | Visualize the flow of requests, identify bottlenecks, and understand dependencies between services. | OpenTelemetry traces, Zipkin, Jaeger |
+- **Logs**: Detailed, timestamped records of events.
+- **Metrics**: Aggregated, numerical data about the system's performance.
+- **Traces**: End-to-end view of a request's journey through the system.
+- **Alerting**: Proactive notification of potential issues.
+- **Dashboards**: Visual representation of the system's health and performance.
 
 ## Comparison
 
@@ -29,6 +29,20 @@ Observability is typically achieved through the collection and analysis of three
 | **Logs** | High (event-level detail) | High | High (text search, parsing) | Debugging, forensic analysis, detailed event context |
 | **Metrics** | Low (aggregated data points) | Low | Low (numerical queries, aggregations) | Monitoring system health, alerting, trend analysis, dashboards |
 | **Traces** | Medium (request-level flow) | Medium | Medium (graph traversal, span filtering) | Performance optimization, root cause analysis, understanding service dependencies |
+
+## Trade-offs
+
+- **Cost vs. Visibility**: Collecting and storing observability data can be expensive, but it provides valuable visibility into the system.
+- **Overhead vs. Insight**: Instrumenting applications to generate telemetry data can introduce performance overhead, but it provides deep insights into the system's behavior.
+- **Signal vs. Noise**: It can be challenging to filter out the noise and identify the meaningful signals in the vast amount of observability data.
+
+## Pillars of Observability
+
+| Pillar | Description | Purpose | Examples |
+|---|---|---|---|
+| **Logs** | Timestamped, immutable records of discrete events that happened within a service. | Provide detailed context about specific events, errors, or state changes. | Application logs, server logs, error messages |
+| **Metrics** | Aggregatable numerical measurements that represent the state of a system over time. | Quantify system behavior, track trends, identify performance issues, and trigger alerts. | CPU utilization, memory usage, request rates, error rates, latency |
+| **[Distributed Tracing](./distributed-tracing)** | Representations of the end-to-end journey of a single request or transaction as it propagates through multiple services. | Visualize the flow of requests, identify bottlenecks, and understand dependencies between services. | OpenTelemetry traces, Zipkin, Jaeger |
 
 ## Operational Aspects
 
@@ -56,4 +70,3 @@ Beyond collecting telemetry, effective observability involves actively using thi
 -   **System Modes:** Observability is particularly challenging and critical in complex distributed system modes like microservices architectures, where understanding the behavior of numerous interacting components is essential for operational success. [Discover System Modes](../system-mode/README.md).
 
 -   **Distributed Tracing:** A crucial technique for gaining end-to-end visibility into request flows across multiple services, essential for debugging and performance optimization in distributed systems. [Understand Distributed Tracing](./distributed-tracing/README.md).
-## Trade-offs

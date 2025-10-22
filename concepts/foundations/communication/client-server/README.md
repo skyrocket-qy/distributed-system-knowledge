@@ -26,6 +26,13 @@ The communication between the client and the server follows a **request-response
 
 This interaction is typically **synchronous**, meaning the client blocks (waits) for the response from the server before continuing its execution.
 
+## Characteristics
+
+- **Centralized Control**: A central server manages resources and data, simplifying administration and security.
+- **Synchronous Communication**: Clients typically send a request and wait for a response, leading to a blocking interaction model.
+- **One-to-Many Relationship**: A single server serves multiple clients.
+- **Scalability**: Can be scaled vertically (increasing server resources) or horizontally (adding more servers behind a load balancer).
+
 ## Comparison
 
 | Model | Coupling | Key Difference | Example |

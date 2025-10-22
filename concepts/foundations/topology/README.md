@@ -27,6 +27,14 @@ The choice of which topology to use is a trade-off between a number of factors, 
 -   **Complexity:** The ease or difficulty of implementing, managing, and troubleshooting the network.
 -   **Security:** How the topology affects the network's vulnerability to attacks and unauthorized access.
 
+## Characteristics
+
+- **Reliability**: The ability of a topology to withstand failures.
+- **Scalability**: The ability of a topology to grow as the number of nodes increases.
+- **Cost**: The cost of implementing and maintaining a topology.
+- **Performance**: The performance of a topology in terms of latency and bandwidth.
+- **Complexity**: The complexity of implementing and managing a topology.
+
 ## Comparison
 
 | Topology | Reliability | Scalability | Cost | Use Case |
@@ -36,6 +44,12 @@ The choice of which topology to use is a trade-off between a number of factors, 
 | **[Ring](./ring)** | High | Low | Medium | Telecom networks |
 | **[Mesh](./mesh)** | High | High | High | Wide area networks (WANs) |
 | **[Tree](./tree)** | Medium | High | High | Large networks |
+
+## Trade-offs
+
+- **Reliability vs. Cost**: More reliable topologies are often more expensive.
+- **Scalability vs. Complexity**: More scalable topologies are often more complex.
+- **Performance vs. Cost**: Higher performance topologies are often more expensive.
 
 ## Which service use it?
 
@@ -62,5 +76,3 @@ The choice of which topology to use is a trade-off between a number of factors, 
 -   **System Modes:** Different distributed system architectures or modes (e.g., client-server, peer-to-peer) often implicitly or explicitly adopt certain network topologies that best suit their operational model and requirements. [Discover System Modes](../system-mode/README.md).
 
 -   **Distributed Consensus:** The underlying network topology can affect the performance, reliability, and even the feasibility of distributed consensus algorithms, as message propagation and failure detection are topology-dependent. [Understand Distributed Consensus](../distributed-consensus/README.md).
-
-## Trade-offs

@@ -21,6 +21,21 @@ The protocol involves a coordinator and multiple participants. It operates in tw
     *   **If global-abort:** Participants roll back their local transaction using the undo log and release any held resources. They then send an "acknowledgment" to the coordinator.
 3.  **Coordinator finalizes:** The coordinator waits for acknowledgments from all participants before finalizing the transaction.
 
+## Characteristics
+
+- **Blocking**: 2PC is a blocking protocol; if the coordinator fails, participants may be blocked and unable to proceed.
+- **Atomic**: All participants either commit or abort the transaction.
+- **Consistent**: The protocol ensures that all participants reach a consistent decision.
+- **Durable**: The outcome of the transaction is durable, even in the case of failures.
+- **Centralized**: The protocol relies on a central coordinator to make the final decision.
+
+## Comparison
+
+| Protocol | Blocking | Complexity |
+|---|---|---|
+| **2PC** | Yes | Medium |
+| **3PC** | No | High |
+
 ## Trade-offs
 
 -   **High Latency:** The two-phase communication and blocking nature introduce significant latency, especially with many participants or high network delays.
@@ -45,5 +60,3 @@ The protocol involves a coordinator and multiple participants. It operates in tw
 -   **Fault Tolerance:** 2PC has known limitations regarding fault tolerance, particularly its blocking nature and the coordinator being a single point of failure, which can lead to participants being stuck in an uncertain state. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Strong Consistency:** Protocols like 2PC are designed to achieve strong consistency across distributed data, ensuring that all participants see the same state after a transaction is committed. [Explore Strong Consistency](../../consistency-models/strong-consistency/README.md).
-
-## Comparison

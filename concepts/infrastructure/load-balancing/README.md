@@ -4,6 +4,14 @@
 
 **Load balancing** is the process of distributing incoming network traffic across multiple servers to ensure that no single server is overwhelmed. By spreading the load, load balancing improves responsiveness and increases the availability of applications.
 
+## Characteristics
+
+- **Scalability**: Load balancing can improve the scalability of a system by distributing the load across multiple servers.
+- **Availability**: Load balancing can improve the availability of a system by redirecting traffic away from failed servers.
+- **Performance**: Load balancing can improve the performance of a system by reducing the response time.
+- **Flexibility**: Load balancing can provide flexibility in adding and removing servers from the pool.
+- **Complexity**: Load balancing can add complexity to a system.
+
 ## Comparison
 
 | Type | How it works | Use Case |

@@ -4,6 +4,14 @@
 
 This section describes Active-Passive Failover, a fault-tolerance strategy where a standby (passive) system takes over operations from a primary (active) system upon failure.
 
+## Characteristics
+
+- **High Availability**: Active-passive failover provides high availability by ensuring that a standby system is available to take over in case of a failure.
+- **Fault Tolerance**: The system is resilient to the failure of the active node.
+- **Redundancy**: The passive node is a redundant copy of the active node.
+- **Consistency**: Data is replicated from the active node to the passive node to ensure consistency.
+- **Failover**: The process of switching from the active node to the passive node is called failover.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section describes Active-Passive Failover, a fault-tolerance strategy where
 | **Complexity** | Relatively simple to implement. |
 | **Cost** | Lower than active-active, as passive resources are idle. |
 | **Performance** | No performance gain, as only one node is active. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **High Availability**: Active-passive failover provides high availability. | **Downtime**: There is a brief downtime during failover. |
+| **Simple**: Active-passive failover is relatively simple to implement. | **Cost**: The passive node is idle and does not contribute to the performance of the system. |
+| **Consistent**: Data is replicated from the active node to the passive node to ensure consistency. | **Data Loss**: Data loss can occur if the active node fails before the data is replicated to the passive node. |
 
 ## Which service use it?
 
@@ -38,5 +54,3 @@ This section describes Active-Passive Failover, a fault-tolerance strategy where
 -   **Leader-Follower (Master-Slave) System Mode:** Active-passive failover is a common implementation pattern for leader-follower (or master-slave) system modes, where the passive node acts as a follower ready to be promoted to leader. [Discover Leader-Follower Systems](../../system-mode/master-slave/README.md).
 
 -   **Service Discovery:** After a failover event, service discovery mechanisms are essential to update clients and other services about the new active node's location, ensuring traffic is correctly routed to the operational instance. [Understand Service Discovery](../../service-discovery/README.md).
-
-## Trade-offs

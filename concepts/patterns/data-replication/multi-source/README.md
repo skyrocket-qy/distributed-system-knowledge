@@ -4,6 +4,14 @@
 
 This section describes Multi-Source Replication, a data replication setup where a single replica receives data from multiple primary sources, often used for data aggregation or complex data flows.
 
+## Characteristics
+
+- **Data Aggregation**: Multi-source replication is used to aggregate data from multiple sources into a single replica.
+- **Complexity**: It can be complex to manage, especially when dealing with conflicts and data transformations.
+- **Consistency**: The consistency of the replica depends on the replication methods used by the sources.
+- **Use Case**: It is often used in data warehousing and data integration scenarios.
+- **Centralized Replica**: There is a single, centralized replica that receives data from all sources.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section describes Multi-Source Replication, a data replication setup where 
 | **Complexity** | High, especially with conflict resolution and data transformation. |
 | **Use Case** | Data warehousing, complex data integration. |
 | **Consistency** | Varies, often eventual consistency. |
+
+## Trade-offs
+
+- **Complexity vs. Power**: Multi-source replication is a powerful tool for data aggregation, but it can be complex to manage.
+- **Consistency vs. Flexibility**: The consistency of the replica depends on the replication methods used by the sources, which provides flexibility but can also lead to inconsistencies.
 
 ## Which service use it?
 
@@ -36,5 +49,3 @@ This section describes Multi-Source Replication, a data replication setup where 
 -   **Conflict Resolution:** Aggregating data from multiple independent sources can introduce conflicts when the same data is updated differently across sources, necessitating robust conflict resolution strategies during the integration process. [Understand Conflict Resolution](../../conflict-resolution/README.md).
 
 -   **Messaging:** Event streaming platforms or message queues are frequently used in multi-source replication scenarios to reliably capture and transport data changes from various sources to the central replica for processing and aggregation. [Explore Messaging Systems](../../messaging/README.md).
-
-## Trade-offs

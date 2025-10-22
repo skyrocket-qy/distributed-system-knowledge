@@ -4,6 +4,14 @@
 
 The Gossip protocol, also known as the epidemic protocol, is a style of computer-to-computer communication inspired by the way diseases spread or rumors circulate among humans. In a distributed system, nodes periodically exchange information with a small, randomly selected set of other nodes. This decentralized communication pattern ensures that information eventually propagates throughout the entire network without relying on a central coordinator. It's commonly used for tasks like membership management, failure detection, and data dissemination due to its robustness, scalability, and fault tolerance.
 
+## Characteristics
+
+- **Decentralized**: There is no central coordinator; all nodes are equal.
+- **Scalable**: The protocol scales well to a large number of nodes.
+- **Fault-tolerant**: The protocol is resilient to node failures and network partitions.
+- **Eventually consistent**: Information eventually propagates to all nodes in the network.
+- **Lightweight**: The protocol is lightweight and does not require a lot of resources.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ The Gossip protocol, also known as the epidemic protocol, is a style of computer
 | **Robustness** | Highly resilient to node failures and network partitions. |
 | **Scalability** | Scales well to a large number of nodes. |
 | **Convergence** | Information eventually propagates throughout the network. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Decentralized**: There is no central coordinator; all nodes are equal. | **Latency**: Information propagation can be slow. |
+| **Scalable**: The protocol scales well to a large number of nodes. | **Message Overhead**: The protocol can generate a lot of network traffic. |
+| **Fault-tolerant**: The protocol is resilient to node failures and network partitions. | **Ordering**: The protocol does not guarantee message ordering. |
 
 ## Which service use it?
 
@@ -38,5 +54,3 @@ The Gossip protocol, also known as the epidemic protocol, is a style of computer
 -   **Decentralized Service Discovery:** Gossip can be leveraged to implement decentralized service discovery and cluster membership management, allowing nodes to dynamically discover new members and detect failures without a centralized registry. [Explore Decentralized Service Discovery](../../service-discovery/decentralized-discovery/README.md).
 
 -   **Data Replication:** Gossip protocols can be used to efficiently propagate data updates and replica states across a distributed system, contributing to the consistency and availability of replicated data. [Understand Data Replication](../../data-replication/README.md).
-
-## Trade-offs

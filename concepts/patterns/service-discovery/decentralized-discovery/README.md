@@ -4,6 +4,28 @@
 
 Decentralized Discovery is a service discovery pattern where there is no central authority or server responsible for maintaining a registry of active peers or service instances. Instead, peers discover each other through distributed protocols and data structures, making the system more resilient to single points of failure and censorship.
 
+## Characteristics
+
+- **Resilience**: Decentralized discovery is resilient to node failures, as there is no single point of failure.
+- **Scalability**: It scales well with the number of peers, as the discovery load is distributed across the entire network.
+- **Complexity**: It is more complex to implement and manage than centralized discovery.
+- **Latency**: Discovery latency can be higher and less predictable than centralized methods.
+- **Security**: It is vulnerable to security threats such as Sybil attacks.
+
+## Comparison
+
+| Feature | Decentralized Discovery | Centralized Discovery |
+|---|---|---|
+| **Architecture** | Decentralized | Centralized |
+| **Resilience** | High | Low |
+| **Scalability** | High | Low |
+| **Complexity** | High | Low |
+
+## Trade-offs
+
+- **Resilience vs. Complexity**: Decentralized discovery is more resilient than centralized discovery, but it is also more complex.
+- **Scalability vs. Latency**: Decentralized discovery is more scalable than centralized discovery, but it can have higher latency.
+
 ## How It Works
 
 Decentralized discovery often relies on Distributed Hash Tables (DHTs) or gossip protocols:
@@ -53,7 +75,3 @@ Decentralized discovery often relies on Distributed Hash Tables (DHTs) or gossip
 -   **Fault Tolerance:** Decentralized discovery inherently provides high fault tolerance, as the absence or failure of individual nodes does not typically disrupt the entire discovery process, making the system more resilient. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Peer-to-Peer System Mode:** Decentralized discovery is a foundational component of peer-to-peer system modes, enabling the self-organizing and self-healing nature of such distributed architectures. [Discover Peer-to-Peer Systems](../../system-mode/peer-to-peer/README.md).
-
-## Comparison
-
-## Trade-offs

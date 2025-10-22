@@ -4,6 +4,14 @@
 
 This section explores event streaming as a coordination pattern in distributed systems, enabling real-time data flow and integration.
 
+## Characteristics
+
+- **Real-time**: Events are processed in real-time as they are generated.
+- **Scalable**: Event streaming platforms are highly scalable and can handle a large volume of events.
+- **Durable**: Events are stored in a durable log and can be replayed.
+- **Decoupled**: Producers and consumers of events are decoupled and can evolve independently.
+- **Ordered**: Events are typically ordered within a partition.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section explores event streaming as a coordination pattern in distributed s
 | **Decoupling** | Producers and consumers are highly decoupled. |
 | **Scalability** | Highly scalable for high-throughput data. |
 | **Durability** | Events are typically persisted for a configurable duration. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Real-time**: Events are processed in real-time as they are generated. | **Complexity**: Event streaming platforms can be complex to set up and manage. |
+| **Scalable**: Event streaming platforms are highly scalable and can handle a large volume of events. | **Cost**: Event streaming platforms can be expensive to operate. |
+| **Durable**: Events are stored in a durable log and can be replayed. | **Latency**: Event streaming platforms can introduce latency. |
 
 ## Which service use it?
 
@@ -42,5 +58,3 @@ This section explores event streaming as a coordination pattern in distributed s
 -   **Scaling:** Event streaming platforms are designed for massive scalability, capable of handling and processing vast volumes of real-time data, making them essential for applications with high data throughput requirements. [Learn about Scaling](../../scaling/README.md).
 
 -   **Data Replication:** The durable log of events in an event streaming platform can be considered a form of data replication, ensuring that events are not lost and can be replayed to reconstruct state or recover from failures. [Understand Data Replication](../../data-replication/README.md).
-
-## Trade-offs

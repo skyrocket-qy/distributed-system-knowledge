@@ -19,13 +19,34 @@
 -   **Measurement and Observability:** Having robust monitoring and tracing in place to accurately observe the system's response to injected failures.
 -   **Buy-in:** Gaining organizational support for intentionally breaking things in production.
 
+## Characteristics
+
+- **Proactive**: Chaos engineering is a proactive approach to identifying weaknesses in a system.
+- **Experimental**: Chaos engineering involves running experiments to test the resilience of a system.
+- **Controlled**: Chaos experiments are conducted in a controlled environment to minimize the impact of failures.
+- **Automated**: Chaos experiments are automated to run continuously.
+- **Observability**: Chaos engineering relies on robust observability to monitor the impact of failures.
+
+## Comparison
+
+| Approach | Proactive | Experimental |
+|---|---|---|
+| **Chaos Engineering** | Yes | Yes |
+| **Traditional Testing** | No | No |
+
+## Trade-offs
+
+- **Complexity**: Chaos engineering can be complex to implement and manage.
+- **Risk**: Chaos engineering involves intentionally injecting failures into a system, which can be risky.
+- **Cost**: Chaos engineering can be expensive to implement and maintain.
+
 ## Common Chaos Experiments
 
 -   **Server Shutdowns:** Randomly terminating instances to test resilience to node failures.
 -   **Network Latency/Partitioning:** Introducing delays or blocking communication between services to simulate network issues.
 -   **Resource Exhaustion:** Injecting CPU, memory, or disk pressure to test how services handle resource contention.
 -   **Dependency Failures:** Simulating the failure of a critical downstream service or database.
--   **Time Skew:** Introducing clock drift between nodes to test time-sensitive operations.
+--   **Time Skew:** Introducing clock drift between nodes to test time-sensitive operations.
 
 ## Which service use it?
 
@@ -39,8 +60,4 @@
 -   **Fault Tolerance:** Chaos Engineering is a proactive approach to validating and improving the fault tolerance of distributed systems. [Understand Fault Tolerance](../README.md).
 -   **Observability:** Robust observability (metrics, logs, traces) is essential for conducting chaos experiments and understanding their impact. [Explore Observability ../../observability/README.md].
 -   **Resilience Engineering:** Chaos Engineering is a key practice within the broader field of resilience engineering, focusing on building and maintaining resilient systems. [Related to Fault Tolerance](../README.md).
--   **System Modes:** Different system architectures (e.g., microservices, serverless) present unique challenges and opportunities for applying chaos engineering principles. [Discover System Modes ../../system-mode/README.md].
-
-## Comparison
-
-## Trade-offs
+-   **System Modes:** Different system architectures (e.g., microservices, serverless) present unique challenges and opportunities for applying chaos engineering principles. [Discover System Modes ../../system-mode/README.md).

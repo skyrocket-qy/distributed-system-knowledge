@@ -4,12 +4,26 @@
 
 This section discusses consensus mechanisms specifically in the context of distributed coordination.
 
+## Characteristics
+
+- **Agreement**: All non-faulty processes agree on the same value.
+- **Validity**: If all non-faulty processes propose the same value, then all non-faulty processes will decide on that value.
+- **Termination**: All non-faulty processes eventually decide on a value.
+- **Fault Tolerance**: The consensus algorithm is resilient to a certain number of process failures.
+- **Asynchrony**: The consensus algorithm is designed to work in an asynchronous network.
+
 ## Comparison
 
 | Algorithm | Understandability | Fault Tolerance | Performance | Use Case |
 |---|---|---|---|---|
 | **[Paxos](./paxos)** | Low | High | Medium | Critical systems, high-consistency requirements |
 | **[Raft](./raft)** | High | High | Medium | Distributed key-value stores, coordination services |
+
+## Trade-offs
+
+- **Performance**: Consensus algorithms can have high latency due to the need for multiple rounds of communication.
+- **Complexity**: Consensus algorithms can be complex to implement and understand.
+- **Scalability**: The scalability of consensus algorithms is limited by the number of processes.
 
 ## Which service use it?
 
@@ -38,5 +52,3 @@ This section discusses consensus mechanisms specifically in the context of distr
 -   **Paxos:** A foundational, albeit complex, algorithm for achieving distributed consensus, known for its strong theoretical guarantees. [Understand Paxos ./paxos/README.md].
 
 -   **Raft:** A consensus algorithm designed for understandability, often preferred over Paxos for its clarity and ease of implementation in practical systems. [Understand Raft ./raft/README.md].
-
-## Trade-offs

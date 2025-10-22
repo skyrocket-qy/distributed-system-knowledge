@@ -4,6 +4,14 @@
 
 This section discusses Consensus-Based Recovery, where distributed consensus algorithms are leveraged to ensure consistent state recovery after failures in a distributed system.
 
+## Characteristics
+
+- **Strong Consistency**: Consensus-based recovery provides strong consistency guarantees.
+- **Fault Tolerance**: The recovery process is resilient to a certain number of node failures.
+- **Complexity**: Consensus-based recovery is complex to implement and understand.
+- **Performance Overhead**: The consensus protocol can introduce performance overhead.
+- **Scalability**: The scalability of the recovery process is limited by the consensus protocol.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section discusses Consensus-Based Recovery, where distributed consensus alg
 | **Complexity** | High, due to the nature of consensus algorithms. |
 | **Recovery Time** | Can be slower due to coordination overhead. |
 | **Fault Tolerance** | Highly fault-tolerant, can withstand multiple failures. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Strong Consistency**: Consensus-based recovery provides strong consistency guarantees. | **Complexity**: Consensus-based recovery is complex to implement and understand. |
+| **Fault Tolerance**: The recovery process is resilient to a certain number of node failures. | **Performance Overhead**: The consensus protocol can introduce performance overhead. |
+| **Scalability**: The scalability of the recovery process is limited by the consensus protocol. | **Latency**: The consensus protocol can introduce latency. |
 
 ## Which service use it?
 
@@ -36,5 +52,3 @@ This section discusses Consensus-Based Recovery, where distributed consensus alg
 -   **Coordination:** Consensus protocols are a sophisticated form of coordination, enabling distributed components to make collective decisions and maintain a coherent global state, especially during recovery operations. [Discover Coordination Concepts](../../coordination/README.md).
 
 -   **Data Replication:** Consensus is often employed in replicated data systems to ensure that all replicas are consistently updated and that a valid state can be recovered across the entire replicated dataset after a failure. [Understand Data Replication](../../data-replication/README.md).
-
-## Trade-offs

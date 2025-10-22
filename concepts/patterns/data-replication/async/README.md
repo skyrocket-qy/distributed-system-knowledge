@@ -4,6 +4,14 @@
 
 This section describes Asynchronous Replication, a data replication mode where the primary node commits a transaction before receiving confirmation that the replica nodes have received or applied the changes, prioritizing performance and availability over immediate consistency.
 
+## Characteristics
+
+- **Eventual Consistency**: Asynchronous replication provides eventual consistency, as there is a delay in propagating changes to replicas.
+- **High Performance**: Write operations have low latency, as they do not need to wait for acknowledgment from replicas.
+- **Data Loss**: There is a potential for data loss if the primary node fails before the changes are propagated to the replicas.
+- **Simplicity**: Asynchronous replication is simpler to implement and manage than synchronous replication.
+- **High Availability**: The system can remain available for writes even if a replica node fails.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section describes Asynchronous Replication, a data replication mode where t
 | **Performance** | High write throughput, low latency. |
 | **Data Loss** | Potential for data loss on primary failure. |
 | **Complexity** | Relatively simple to implement. |
+
+## Trade-offs
+
+- **Performance vs. Consistency**: Asynchronous replication provides high performance, but it provides weaker consistency guarantees.
+- **Availability vs. Consistency**: Asynchronous replication provides high availability, but it provides weaker consistency guarantees.
 
 ## Which service use it?
 
@@ -36,5 +49,3 @@ This section describes Asynchronous Replication, a data replication mode where t
 -   **Semi-Synchronous Replication:** A hybrid approach that offers a balance between the consistency guarantees of synchronous replication and the performance benefits of asynchronous replication. [Explore Semi-Synchronous Replication](../semi-sync/README.md).
 
 -   **Fault Tolerance:** Asynchronous replication plays a crucial role in disaster recovery and high availability strategies, allowing systems to recover from failures by having data replicated to other nodes. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
-## Trade-offs

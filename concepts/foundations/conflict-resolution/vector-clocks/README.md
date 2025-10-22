@@ -4,6 +4,14 @@
 
 This section explains how Vector Clocks are used in conflict resolution to detect concurrent updates and establish a partial ordering of events across distributed systems.
 
+## Characteristics
+
+- **Causal Ordering**: Vector clocks can establish a partial causal order of events.
+- **Conflict Detection**: They can detect concurrent updates and potential conflicts.
+- **No Clock Synchronization**: Vector clocks do not require synchronized physical clocks.
+- **Overhead**: They introduce overhead in terms of storage and network bandwidth, as the size of the vector clock is proportional to the number of nodes.
+- **Complexity**: Vector clocks can be complex to implement and manage.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section explains how Vector Clocks are used in conflict resolution to detec
 | **Conflict Detection** | Excellent at detecting concurrent updates. |
 | **Complexity** | More complex to implement and manage than simple timestamps. |
 | **Overhead** | Can incur storage and communication overhead with many nodes. |
+
+## Trade-offs
+
+- **Overhead vs. Correctness**: Vector clocks introduce overhead, but they can ensure correctness in the presence of concurrent updates.
+- **Complexity vs. Power**: Vector clocks are more complex than simple timestamps, but they are also more powerful.
 
 ## Which service use it?
 
@@ -36,5 +49,3 @@ This section explains how Vector Clocks are used in conflict resolution to detec
 -   **Eventual Consistency:** In eventually consistent systems, vector clocks are frequently employed to manage and reconcile divergent data states by providing a clear understanding of the causal history of updates, facilitating the convergence of replicas. [Understand Eventual Consistency](../../consistency-models/eventual-consistency/README.md).
 
 -   **Timestamps with Logical Clocks:** Vector clocks are an advanced form of logical clock that, unlike simple timestamps, can directly detect concurrency, making them superior for managing causal relationships in distributed environments. [Compare with Timestamps with Logical Clocks](../timestamps-with-logical-clocks/README.md).
-
-## Trade-offs

@@ -4,6 +4,14 @@
 
 This section describes the Message Queue pattern, where messages are sent to a queue and consumed by a single receiver.
 
+## Characteristics
+
+- **One-to-one Delivery**: Each message is delivered to a single consumer.
+- **Asynchronous**: Producers and consumers are decoupled and communicate asynchronously.
+- **Buffering**: Message queues can buffer messages, allowing consumers to process them at their own pace.
+- **Load Leveling**: Message queues can help to smooth out peaks in workload.
+- **Reliability**: Message queues can provide guarantees about message delivery.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section describes the Message Queue pattern, where messages are sent to a q
 | **Decoupling** | High decoupling between sender and receiver. |
 | **Asynchronicity** | Asynchronous communication. |
 | **Scalability** | Scalable for task distribution and load leveling. |
+
+## Trade-offs
+
+- **Performance vs. Reliability**: Higher reliability guarantees can come at the cost of lower performance.
+- **Complexity vs. Flexibility**: More flexible messaging patterns can be more complex to manage.
 
 ## Which service use it?
 
@@ -32,5 +45,3 @@ This section describes the Message Queue pattern, where messages are sent to a q
 -   **Fault Tolerance:** Message Queues enhance fault tolerance by buffering messages, ensuring that messages are not lost even if consuming services are temporarily unavailable, and enabling retry mechanisms. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 
 -   **Scaling:** Message Queues are crucial for scaling distributed systems by enabling asynchronous task processing, load leveling during traffic spikes, and distributing work efficiently across multiple worker instances. [Learn about Scaling](../../scaling/horizontal/README.md).
-
-## Trade-offs

@@ -16,6 +16,27 @@
 -   **Complexity:** Paxos is notoriously difficult to understand and implement correctly.
 -   **Liveness:** While ensuring safety (agreement on a single value), basic Paxos does not guarantee liveness (that a value will eventually be chosen) without additional mechanisms (e.g., leader election).
 
+## Characteristics
+
+- **Safety**: Paxos guarantees that only one value can be chosen.
+- **Liveness**: Paxos does not guarantee that a value will eventually be chosen.
+- **Fault Tolerance**: Paxos is resilient to node failures and network partitions.
+- **Asynchrony**: Paxos is designed to work in an asynchronous network.
+- **Complexity**: Paxos is a complex algorithm.
+
+## Comparison
+
+| Algorithm | Understandability | Performance |
+|---|---|---|
+| **Paxos** | Low | High |
+| **Raft** | High | High |
+
+## Trade-offs
+
+- **Complexity**: Paxos is a complex algorithm to implement and understand.
+- **Liveness**: Paxos does not guarantee liveness.
+- **Performance**: Paxos can have high latency due to the two-phase commit protocol.
+
 ## How It Works (Simplified Two-Phase Paxos)
 
 1.  **Phase 1 (Prepare):**
@@ -40,7 +61,3 @@
 -   **Strong Consistency:** Paxos is used to achieve strong consistency in distributed systems by ensuring all replicas agree on the order of operations. [Learn about Strong Consistency](../../consistency-models/strong-consistency/README.md).
 -   **Fault Tolerance:** Paxos is designed to tolerate crash failures of nodes and message loss, making it a key component in building fault-tolerant systems. [Understand Fault Tolerance](../../fault-tolerance/README.md).
 -   **Raft:** A more understandable alternative to Paxos for achieving distributed consensus. [Compare with Raft](./raft/README.md).
-
-## Comparison
-
-## Trade-offs

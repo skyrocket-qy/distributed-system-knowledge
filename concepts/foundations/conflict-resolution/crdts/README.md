@@ -4,6 +4,14 @@
 
 This section details how CRDTs are designed to resolve conflicts automatically and deterministically, making them suitable for collaborative and eventually consistent distributed systems.
 
+## Characteristics
+
+- **Conflict-free**: CRDTs are designed to be conflict-free, meaning that they can be updated concurrently without requiring a central authority to resolve conflicts.
+- **Convergent**: CRDTs are convergent, meaning that all replicas will eventually converge to the same state.
+- **Commutative**: The order in which updates are applied does not matter.
+- **Associative**: Updates can be grouped together in any way.
+- **Idempotent**: Applying the same update multiple times has the same effect as applying it once.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section details how CRDTs are designed to resolve conflicts automatically a
 | **Consistency** | Eventual consistency. |
 | **Complexity** | Can be complex to design and implement. |
 | **Use Case** | Collaborative editing, shared data structures. |
+
+## Trade-offs
+
+- **Complexity vs. Power**: CRDTs are more complex than other conflict resolution strategies, but they are also more powerful.
+- **Performance vs. Correctness**: CRDTs can have a performance overhead, but they can ensure correctness in the presence of concurrent updates.
 
 ## Which service use it?
 
@@ -38,5 +51,3 @@ This section details how CRDTs are designed to resolve conflicts automatically a
 -   **Coordination:** By providing automatic conflict resolution, CRDTs significantly simplify coordination in distributed systems, allowing nodes to operate more independently while still ensuring data convergence. [Discover CRDTs as a Coordination mechanism](../../coordination/crdt/README.md).
 
 -   **Vector Clocks:** While CRDTs aim to avoid conflicts, understanding causal relationships (often tracked by vector clocks) is still relevant for some CRDT implementations or for debugging and reasoning about concurrent operations. [Compare with Vector Clocks](../vector-clocks/README.md).
-
-## Trade-offs

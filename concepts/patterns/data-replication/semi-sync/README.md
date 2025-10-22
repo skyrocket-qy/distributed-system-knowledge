@@ -4,6 +4,14 @@
 
 This section explains Semi-Synchronous Replication, a data replication mode that offers a balance between synchronous and asynchronous replication, providing stronger consistency guarantees than async without the full latency impact of sync.
 
+## Characteristics
+
+- **Reduced Data Loss**: Semi-synchronous replication reduces the risk of data loss compared to asynchronous replication.
+- **Improved Consistency**: It provides stronger consistency guarantees than asynchronous replication.
+- **Moderate Latency**: Write operations have moderate latency, as they must be acknowledged by at least one replica.
+- **Moderate Availability**: The system may become unavailable if the replica node fails.
+- **Moderate Complexity**: It is more complex to implement and manage than asynchronous replication.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,11 @@ This section explains Semi-Synchronous Replication, a data replication mode that
 | **Performance** | Better than synchronous, worse than asynchronous. |
 | **Data Loss** | Reduced risk compared to asynchronous. |
 | **Complexity** | More complex than asynchronous, less than synchronous. |
+
+## Trade-offs
+
+- **Consistency vs. Performance**: Semi-synchronous replication provides a balance between consistency and performance.
+- **Consistency vs. Availability**: It provides a balance between consistency and availability.
 
 ## Which service use it?
 
@@ -36,5 +49,3 @@ This section explains Semi-Synchronous Replication, a data replication mode that
 -   **Consistency Models:** Semi-synchronous replication offers a consistency guarantee stronger than eventual consistency but typically weaker than strict strong consistency, providing a tunable trade-off for various application needs. [Explore Consistency Models](../../consistency-models/README.md).
 
 -   **Fault Tolerance:** By ensuring that at least one replica has received the data before the primary commits, semi-synchronous replication significantly reduces the risk of data loss compared to purely asynchronous methods, enhancing fault tolerance. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
-## Trade-offs

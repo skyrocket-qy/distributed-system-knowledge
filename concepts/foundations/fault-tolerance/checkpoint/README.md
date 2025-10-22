@@ -4,6 +4,14 @@
 
 This section explains Checkpointing as a fault-tolerance technique, involving periodically saving the state of a distributed computation to stable storage to enable rollback recovery.
 
+## Characteristics
+
+- **State Persistence**: Checkpointing involves periodically saving the state of a system to persistent storage.
+- **Rollback Recovery**: Checkpointing enables rollback recovery to a previous consistent state.
+- **Fault Tolerance**: Checkpointing is a key technique for building fault-tolerant systems.
+- **Performance Overhead**: Checkpointing can introduce performance overhead.
+- **Storage Overhead**: Checkpointing can consume a significant amount of storage space.
+
 ## Comparison
 
 | Feature | Description |
@@ -12,6 +20,14 @@ This section explains Checkpointing as a fault-tolerance technique, involving pe
 | **Overhead** | Introduces overhead due to state saving. |
 | **Recovery Time** | Depends on the frequency of checkpoints and state size. |
 | **Data Loss** | Minimal data loss, up to the last checkpoint. |
+
+## Trade-offs
+
+| Advantages | Disadvantages |
+|---|---|
+| **Fault Tolerance**: Checkpointing is a key technique for building fault-tolerant systems. | **Performance Overhead**: Checkpointing can introduce performance overhead. |
+| **Rollback Recovery**: Checkpointing enables rollback recovery to a previous consistent state. | **Storage Overhead**: Checkpointing can consume a significant amount of storage space. |
+| **Data Loss**: Minimal data loss, up to the last checkpoint. | **Complexity**: Checkpointing can be complex to implement. |
 
 ## Which service use it?
 
@@ -36,5 +52,3 @@ This section explains Checkpointing as a fault-tolerance technique, involving pe
 -   **Data Replication:** Checkpointing can be used in conjunction with data replication to ensure that replicated data can be consistently recovered across all nodes, especially in stateful distributed applications. [Understand Data Replication](../../data-replication/README.md).
 
 -   **Consistency Models:** Achieving consistent checkpoints in a distributed system requires careful consideration of consistency models to ensure that the saved state accurately reflects a valid global state of the system, avoiding inconsistencies upon recovery. [Learn about Consistency Models](../../consistency-models/README.md).
-
-## Trade-offs

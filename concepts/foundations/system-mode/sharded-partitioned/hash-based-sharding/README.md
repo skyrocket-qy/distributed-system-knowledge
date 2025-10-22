@@ -1,8 +1,29 @@
 # Hash-Based Sharding
 
-## Overview
+## Core
 
 Hash-based sharding is a sharding strategy where data is distributed across shards by applying a hash function to the shard key. The output of the hash function determines which shard a particular piece of data will reside on. This method aims to achieve an even distribution of data across all available shards.
+
+## Characteristics
+
+- **Even Data Distribution**: Hash-based sharding provides a uniform distribution of data across shards.
+- **Efficient Key-Based Lookups**: It is efficient for queries that involve a specific shard key.
+- **Inefficient Range Queries**: It is inefficient for queries that involve a range of shard keys.
+- **Rebalancing Complexity**: Adding or removing shards can be complex and may require re-hashing all the data.
+- **Simple Routing**: Routing queries to the correct shard is simple and fast.
+
+## Comparison
+
+| Feature | Hash-Based Sharding | Range-Based Sharding |
+|---|---|---|
+| **Data Distribution** | Even | Uneven |
+| **Range Queries** | Inefficient | Efficient |
+| **Rebalancing** | Complex | Simple |
+
+## Trade-offs
+
+- **Even Data Distribution vs. Range Queries**: Hash-based sharding provides even data distribution, but it is inefficient for range queries.
+- **Simplicity vs. Flexibility**: Hash-based sharding is simple to implement, but it is not flexible when it comes to adding or removing shards.
 
 ## How It Works
 
@@ -12,7 +33,7 @@ Hash-based sharding is a sharding strategy where data is distributed across shar
 4.  **Data Placement:** The data record is then stored on the shard identified by the hash function's output.
 5.  **Query Routing:** When a client requests data, the same hash function is applied to the provided shard key to determine the correct shard to query. The request is then routed to that specific shard.
 
-## Characteristics
+## Pros & Cons
 
 ### Pros
 
@@ -49,9 +70,3 @@ Hash-based sharding is a sharding strategy where data is distributed across shar
 -   **Horizontal Scaling:** Hash-based sharding is a fundamental technique for achieving horizontal scalability in databases and data stores, allowing systems to handle larger datasets and higher loads by adding more machines, especially for key-value lookups. [Learn about Horizontal Scaling](../../../scaling/horizontal/README.md).
 
 -   **Data Replication:** Sharding is often combined with data replication within each shard to provide fault tolerance and high availability, ensuring that data remains accessible even if a shard fails. [Understand Data Replication](../../../data-replication/README.md).
-
-## Core
-
-## Comparison
-
-## Trade-offs

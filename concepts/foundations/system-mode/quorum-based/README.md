@@ -6,6 +6,28 @@ A **quorum-based** system mode is a technique used in distributed systems to ens
 
 This approach is based on the idea that by requiring a majority of nodes to agree on an operation, the system can guarantee that the operation is durable and that reads will see the results of the most recent writes.
 
+## Characteristics
+
+- **Tunable Consistency**: Quorum-based systems provide tunable consistency by adjusting the read and write quorums.
+- **Fault Tolerance**: They are resilient to a certain number of node failures.
+- **Availability**: They can remain available even if some nodes are offline.
+- **Latency**: The latency of an operation depends on the number of nodes in the quorum.
+- **Complexity**: Quorum-based systems can be complex to configure and manage.
+
+## Comparison
+
+| Feature | Quorum-Based | Majority-Based |
+|---|---|---|
+| **Flexibility** | High | Low |
+| **Consistency** | Tunable | Strong |
+| **Performance** | Tunable | Low |
+
+## Trade-offs
+
+- **Consistency vs. Availability**: Quorum-based systems allow for a trade-off between consistency and availability.
+- **Performance vs. Consistency**: Higher consistency levels can lead to higher latency.
+- **Flexibility vs. Complexity**: The flexibility of tuning the quorums comes at the cost of increased complexity.
+
 ## How It Works
 
 A quorum-based system is typically configured with three parameters:
@@ -63,7 +85,3 @@ By tuning R and W, system designers can trade off between read and write latency
 -   **Data Replication:** Quorum reads and writes are commonly used in replicated storage systems to ensure data integrity and availability across multiple copies of data, allowing for flexible consistency guarantees. [Understand Data Replication](../../data-replication/README.md).
 
 -   **Distributed Consensus:** Quorum is a cornerstone of many distributed consensus algorithms (e.g., Paxos, Raft), where a majority of nodes must agree on a decision to ensure consistency and fault tolerance, directly influencing quorum-based system design. [Understand Distributed Consensus](../../distributed-consensus/README.md).
-
-## Comparison
-
-## Trade-offs
