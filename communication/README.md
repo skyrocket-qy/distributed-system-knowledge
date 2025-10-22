@@ -9,10 +9,19 @@ This section explores various communication patterns, protocols, and models used
 ### Key Challenges
 
 -   **Network Latency:** The delay introduced by the time it takes for data to travel across the network.
+    *   **Interconnection:** Often mitigated by techniques discussed in [Data Replication](../data-replication/README.md) (e.g., placing data closer to users) and efficient [Topology](../topology/README.md) design.
+
 -   **Message Loss:** Messages can be dropped due to network congestion, hardware failures, or other issues.
+    *   **Interconnection:** Addressed through reliable messaging patterns (e.g., acknowledgments, retries) often implemented within [Messaging](../messaging/README.md) systems like Message Queues, and considered in [Fault Tolerance](../fault-tolerance/README.md) strategies.
+
 -   **Message Ordering:** Ensuring messages are processed in the order they were sent, especially across different nodes.
+    *   **Interconnection:** Crucial for maintaining [Consistency Models](../consistency-models/README.md) and often managed using mechanisms like logical clocks or sequence numbers, which relate to [Coordination](../coordination/README.md) and [Distributed Transactions](../distributed-transactions/README.md).
+
 -   **Partial Failures:** One part of the system failing while others continue to operate, leading to inconsistent states.
+    *   **Interconnection:** A core concern for [Fault Tolerance](../fault-tolerance/README.md), often requiring robust [Distributed Consensus](../distributed-consensus/README.md) algorithms and careful design of [System Modes](../system-mode/README.md) (e.g., active-passive, active-active).
+
 -   **Security:** Protecting communication channels from eavesdropping, tampering, and unauthorized access.
+    *   **Interconnection:** A dedicated concern within the [Security](../security/README.md) topic, involving encryption, authentication, and authorization mechanisms applied to communication protocols.
 
 ## Comparison
 
