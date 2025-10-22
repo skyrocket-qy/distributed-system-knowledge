@@ -2,6 +2,7 @@
 
 ## Foundations
 
+- [Availability](./concepts/foundations/availability)
 - [CAP Theorem](./concepts/foundations/cap-theorem)
 - [Communication](./concepts/foundations/communication)
 - [Concurrency Control](./concepts/foundations/concurrency-control)
@@ -11,10 +12,12 @@
 - [Distributed Consensus](./concepts/foundations/distributed-consensus)
 - [Distributed Transactions](./concepts/foundations/distributed-transactions)
 - [Fault Tolerance](./concepts/foundations/fault-tolerance)
+- [Reliability](./concepts/foundations/reliability)
 - [Scalability](./concepts/foundations/scalability)
 - [Security](./concepts/foundations/security)
 - [System Mode](./concepts/foundations/system-mode)
 - [Topology](./concepts/foundations/topology)
+- [Transparency](./concepts/foundations/transparency)
 
 ## Infrastructure
 

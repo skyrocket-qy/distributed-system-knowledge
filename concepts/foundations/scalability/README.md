@@ -2,34 +2,37 @@
 
 ## Core
 
-Scalability is the property of a system to handle a growing amount of work by adding resources to the system. In the context of a distributed system, scalability is the ability of the system to accommodate a larger number of requests, users, or data without a noticeable degradation in performance.
-
-A scalable system is one that can be easily expanded to handle increased load. This is a critical attribute for any system that is expected to grow over time.
-
-## Characteristics
-
-A scalable system typically exhibits the following characteristics:
-
-*   **Performance:** The system's performance remains consistent even as the load increases.
-*   **Availability:** The system remains available and responsive, even during periods of high traffic.
-*   **Cost-Effective:** The cost of adding new resources to the system is proportional to the increase in capacity.
-*   **Maintainability:** The system is easy to maintain and manage, even as it grows in size and complexity.
-
-## Comparison
+Scalability is the property of a system to handle a growing amount of work by adding resources to the system. In the context of distributed systems, scalability is crucial for ensuring that the system can accommodate increasing numbers of users, data, or transactions without a significant degradation in performance.
 
 There are two primary ways to scale a system:
 
-*   **Vertical Scaling (Scaling Up):** This involves adding more resources to a single server, such as a more powerful CPU, more memory, or a faster storage system. Vertical scaling is often easier to implement than horizontal scaling, but it has its limits. There is a physical limit to the amount of resources you can add to a single machine, and it can be expensive.
+*   **Vertical Scaling (Scaling Up):** This involves adding more resources (e.g., CPU, RAM) to a single node. It's a straightforward approach but has limitations, as there is a physical limit to the resources that can be added to a single machine.
+*   **Horizontal Scaling (Scaling Out):** This involves adding more nodes to the system. This is the more common approach in distributed systems, as it allows for virtually limitless scaling.
 
-*   **Horizontal Scaling (Scaling Out):** This involves adding more servers to the system and distributing the load across them. Horizontal scaling is more complex to implement than vertical scaling, but it is more flexible and can be more cost-effective. It also provides better availability, as there is no single point of failure.
+## Characteristics
+
+-   **Performance:** A scalable system should be able to maintain or improve its performance as the load increases.
+-   **Elasticity:** The ability to add or remove resources on-demand to match the current workload.
+-   **Reliability:** A scalable system should also be reliable, as adding more components can increase the probability of failures.
+
+## Comparison
+
+| Feature            | Vertical Scaling (Scaling Up)          | Horizontal Scaling (Scaling Out)       |
+| ------------------ | -------------------------------------- | -------------------------------------- |
+| **Resource**       | Add more resources (CPU, RAM) to a single node. | Add more nodes to the system.          |
+| **Complexity**     | Relatively simple to implement.        | More complex, requires load balancing and coordination. |
+| **Cost**           | Can be expensive due to high-end hardware. | Can be more cost-effective with commodity hardware. |
+| **Limitations**    | Limited by the capacity of a single machine. | Can scale to a much larger extent.     |
 
 ## Trade-offs
 
-The choice between vertical and horizontal scaling involves a number of trade-offs:
+### Vertical Scaling
 
-*   **Cost:** Vertical scaling can be more expensive than horizontal scaling, as high-end hardware is often more expensive than commodity hardware.
-*   **Complexity:** Horizontal scaling is more complex to implement and manage than vertical scaling, as it requires a load balancer and a way to distribute data across multiple servers.
-*   **Flexibility:** Horizontal scaling is more flexible than vertical scaling, as you can add or remove servers as needed to meet demand.
-*   **Availability:** Horizontal scaling provides better availability than vertical scaling, as there is no single point of failure.
+*   **Advantages:** Simpler to manage, no need for complex coordination between nodes.
+*   **Disadvantages:** Single point of failure, limited scalability, higher cost for high-end hardware.
 
-In general, horizontal scaling is the preferred approach for large-scale distributed systems, as it provides better flexibility, availability, and cost-effectiveness.
+### Horizontal Scaling
+
+*   **Advantages:** High scalability, improved fault tolerance, cost-effective.
+*   **Disadvantages:** Increased complexity in managing multiple nodes, requires load balancing and service discovery.
+
