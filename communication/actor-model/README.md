@@ -1,6 +1,17 @@
 # Actor Model
 
+## Core
+
 This section describes the Actor Model, a concurrency model for distributed systems where "actors" are the universal primitives of concurrent computation, communicating via asynchronous message passing.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Isolation** | Actors encapsulate state and behavior, communicating only via messages. |
+| **Concurrency** | Achieved through asynchronous message passing, not shared memory. |
+| **Fault Tolerance** | Built-in supervision hierarchies allow for resilient systems. |
+| **Location Transparency** | Actors can be local or remote, abstracting distribution. |
 
 ## Which service use it?
 

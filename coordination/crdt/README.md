@@ -1,6 +1,17 @@
 # CRDTs (Conflict-free Replicated Data Types)
 
+## Core
+
 This section introduces CRDTs as a mechanism for coordination in distributed systems, allowing concurrent updates without conflicts.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Conflict Resolution** | Automatic and deterministic. |
+| **Consistency** | Eventual consistency. |
+| **Complexity** | Can be complex to design and implement. |
+| **Use Case** | Collaborative editing, shared data structures. |
 
 ## Which service use it?
 

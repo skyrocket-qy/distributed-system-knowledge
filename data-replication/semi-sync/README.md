@@ -1,6 +1,17 @@
 # Semi-Synchronous Replication
 
+## Core
+
 This section explains Semi-Synchronous Replication, a data replication mode that offers a balance between synchronous and asynchronous replication, providing stronger consistency guarantees than async without the full latency impact of sync.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Consistency** | Stronger than eventual, weaker than strong. |
+| **Performance** | Better than synchronous, worse than asynchronous. |
+| **Data Loss** | Reduced risk compared to asynchronous. |
+| **Complexity** | More complex than asynchronous, less than synchronous. |
 
 ## Which service use it?
 

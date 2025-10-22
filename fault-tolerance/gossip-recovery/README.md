@@ -1,6 +1,17 @@
 # Gossip-Based Recovery
 
+## Core
+
 This section explores Gossip-Based Recovery mechanisms, where the Gossip protocol is used to disseminate recovery information and facilitate fault tolerance in distributed systems.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Decentralization** | No central point of failure for recovery. |
+| **Robustness** | Highly resilient to node failures and network partitions. |
+| **Scalability** | Scales well to a large number of nodes. |
+| **Convergence** | Information eventually propagates throughout the network. |
 
 ## Which service use it?
 

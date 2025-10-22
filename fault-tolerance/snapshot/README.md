@@ -1,6 +1,17 @@
 # Snapshot Recovery
 
+## Core
+
 This section describes Snapshot Recovery as a fault-tolerance mechanism, where the state of a distributed system is periodically saved to allow for quick restoration after a failure.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Recovery Time** | Fast, direct restoration from a saved state. |
+| **Data Loss** | Data loss up to the last snapshot. |
+| **Overhead** | Can be high, depending on snapshot frequency and data size. |
+| **Complexity** | Relatively simple to implement for individual components. |
 
 ## Which service use it?
 

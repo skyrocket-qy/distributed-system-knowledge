@@ -1,6 +1,17 @@
 # Coordination Consensus
 
+## Core
+
 This section discusses consensus mechanisms specifically in the context of distributed coordination.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Agreement** | All nodes agree on a single value. |
+| **Fault Tolerance** | Can tolerate a certain number of node failures. |
+| **Complexity** | Generally complex to implement and reason about. |
+| **Performance** | Can incur significant latency due to coordination overhead. |
 
 ## Which service use it?
 

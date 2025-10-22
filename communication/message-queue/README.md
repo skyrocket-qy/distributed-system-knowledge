@@ -1,8 +1,6 @@
 # Message Queue Communication
 
-This section describes Message Queue communication, an asynchronous communication pattern where messages are stored in a queue until they are processed by a receiver, enabling decoupling and reliable message delivery.
-
-## Core Concept
+## Core
 
 The **Message Queue** model is a communication pattern that enables asynchronous communication between distributed components. It is based on the concept of a **queue**, which is a temporary storage for messages.
 
@@ -19,7 +17,16 @@ The communication between the producer and the consumer is **asynchronous**, mea
 -   **Reliability**: Messages are stored in the queue until they are processed, ensuring that they are not lost in case of a component failure.
 -   **Scalability**: The producer and consumer can be scaled independently.
 
-## Advantages and Disadvantages
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Asynchronicity** | Decoupled communication, producer doesn't wait for consumer. |
+| **Decoupling** | Producer and consumer are independent. |
+| **Reliability** | Messages persisted until processed. |
+| **Scalability** | Producers and consumers can scale independently. |
+
+## Trade-offs
 
 | Advantages | Disadvantages |
 |---|---|

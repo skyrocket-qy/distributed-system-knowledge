@@ -1,6 +1,17 @@
 # Multi-Leader Replication
 
+## Core
+
 This section explains Multi-Leader Replication, a data replication strategy where multiple nodes can act as leaders, accepting writes and then replicating them to other leaders and followers, often used for multi-datacenter deployments.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Write Availability** | High, writes can occur at multiple nodes. |
+| **Read Performance** | High, reads can be served locally. |
+| **Conflict Resolution** | Requires robust conflict resolution mechanisms. |
+| **Complexity** | High, due to conflict management and synchronization. |
 
 ## Which service use it?
 

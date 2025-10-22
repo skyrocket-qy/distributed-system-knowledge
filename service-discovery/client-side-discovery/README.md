@@ -16,6 +16,15 @@ Client-Side Service Discovery is a pattern where the client application is respo
 -   **Service Registry:** A database that stores the locations of service instances (e.g., Netflix Eureka, Apache ZooKeeper, HashiCorp Consul).
 -   **Client-Side Load Balancer:** A component within the client application (or a library used by the client) that selects a service instance from the registry's response (e.g., Netflix Ribbon).
 
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Client Responsibility** | Client handles discovery and load balancing. |
+| **Infrastructure Complexity** | Simpler infrastructure, more complex clients. |
+| **Performance** | Potentially lower latency due to direct communication. |
+| **Flexibility** | High, clients can implement custom logic. |
+
 ## Pros
 
 -   **Simplicity for Infrastructure:** The infrastructure layer (e.g., load balancers) doesn't need to be aware of service instances, simplifying its configuration.

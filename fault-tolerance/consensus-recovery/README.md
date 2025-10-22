@@ -1,6 +1,17 @@
 # Consensus-Based Recovery
 
+## Core
+
 This section discusses Consensus-Based Recovery, where distributed consensus algorithms are leveraged to ensure consistent state recovery after failures in a distributed system.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Consistency** | Strong consistency guarantees during recovery. |
+| **Complexity** | High, due to the nature of consensus algorithms. |
+| **Recovery Time** | Can be slower due to coordination overhead. |
+| **Fault Tolerance** | Highly fault-tolerant, can withstand multiple failures. |
 
 ## Which service use it?
 

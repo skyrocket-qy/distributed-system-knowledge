@@ -1,6 +1,17 @@
 # Publish-Subscribe (Pub/Sub) Communication
 
+## Core
+
 This section explains the Publish-Subscribe (Pub/Sub) communication pattern, where senders (publishers) broadcast messages to an intermediary, and receivers (subscribers) receive messages they are interested in.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Decoupling** | Publishers and subscribers are highly decoupled. |
+| **Asynchronicity** | Communication is typically asynchronous. |
+| **Scalability** | Can scale to a large number of publishers and subscribers. |
+| **Flexibility** | New subscribers can be added without changing publishers. |
 
 ## Which service use it?
 

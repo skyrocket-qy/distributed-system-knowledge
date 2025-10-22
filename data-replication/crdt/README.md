@@ -1,6 +1,17 @@
 # CRDTs (Conflict-free Replicated Data Types) for Data Replication
 
+## Core
+
 This section explores CRDTs as a method for data replication that inherently handles conflicts, ensuring eventual consistency without complex coordination.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Conflict Resolution** | Automatic and deterministic. |
+| **Consistency** | Eventual consistency. |
+| **Complexity** | Can be complex to design and implement. |
+| **Use Case** | Collaborative editing, shared data structures. |
 
 ## Which service use it?
 

@@ -1,6 +1,17 @@
 # Message Queue
 
+## Core
+
 This section describes the Message Queue pattern, where messages are sent to a queue and consumed by a single receiver.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Delivery** | One-to-one message delivery. |
+| **Decoupling** | High decoupling between sender and receiver. |
+| **Asynchronicity** | Asynchronous communication. |
+| **Scalability** | Scalable for task distribution and load leveling. |
 
 ## Which service use it?
 

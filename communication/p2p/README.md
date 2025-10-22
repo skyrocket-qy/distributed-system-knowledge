@@ -1,6 +1,17 @@
 # Peer-to-Peer (P2P) Communication
 
+## Core
+
 This section explains Peer-to-Peer (P2P) communication, a decentralized communication model where each node can act as both a client and a server, directly exchanging data with other nodes.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Decentralization** | No central authority; nodes act as both clients and servers. |
+| **Scalability** | Can scale well as more peers join the network. |
+| **Resilience** | Highly fault-tolerant due to distributed nature. |
+| **Complexity** | Can be complex to manage and ensure consistency. |
 
 ## Which service use it?
 

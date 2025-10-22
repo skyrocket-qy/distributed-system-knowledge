@@ -1,6 +1,17 @@
 # Eventual Consistency
 
+## Core
+
 This section describes the eventual consistency model, where the system guarantees that if no new updates are made to a given data item, eventually all accesses to that item will return the last updated value.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Guarantee** | Eventually all replicas will converge to the same state. |
+| **Availability** | High availability, even during network partitions. |
+| **Performance** | High write and read performance. |
+| **Complexity** | Developers need to handle potential inconsistencies. |
 
 ## Which service use it?
 

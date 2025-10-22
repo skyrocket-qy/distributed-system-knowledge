@@ -1,6 +1,17 @@
 # Checkpointing
 
+## Core
+
 This section explains Checkpointing as a fault-tolerance technique, involving periodically saving the state of a distributed computation to stable storage to enable rollback recovery.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Recovery** | Enables rollback recovery to a previous consistent state. |
+| **Overhead** | Introduces overhead due to state saving. |
+| **Recovery Time** | Depends on the frequency of checkpoints and state size. |
+| **Data Loss** | Minimal data loss, up to the last checkpoint. |
 
 ## Which service use it?
 

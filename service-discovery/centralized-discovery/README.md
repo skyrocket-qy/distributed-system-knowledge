@@ -11,6 +11,15 @@ Centralized Discovery is a service discovery pattern where a central server, oft
 3.  **Discovery:** When a new peer or client wants to find other peers or service instances, it queries the central discovery server. The server responds with a list of active and healthy peers.
 4.  **Direct Communication:** After obtaining the list of peers, the new peer or client can then establish direct connections with the discovered peers. While the discovery mechanism is centralized, the actual data exchange and communication between peers remain decentralized.
 
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Architecture** | Centralized server. |
+| **Single Point of Failure** | Yes, the central server. |
+| **Scalability** | Can be a bottleneck. |
+| **Complexity** | Simpler to implement initially. |
+
 ## Pros
 
 -   **Simplicity:** Easier to implement and manage compared to decentralized discovery mechanisms.

@@ -1,6 +1,17 @@
 # Active-Active Cluster
 
+## Core
+
 This section describes the Active-Active Cluster configuration for fault tolerance, where multiple nodes are simultaneously active and capable of handling requests, providing high availability and improved performance.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Availability** | High, all nodes are active. |
+| **Performance** | Improved, workload distributed across nodes. |
+| **Complexity** | High, requires robust conflict resolution and synchronization. |
+| **Cost** | Higher, more resources are actively used. |
 
 ## Which service use it?
 

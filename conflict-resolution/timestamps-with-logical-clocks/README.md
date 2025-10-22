@@ -1,6 +1,17 @@
 # Timestamps with Logical Clocks for Conflict Resolution
 
+## Core
+
 This section explains how timestamps combined with logical clocks (e.g., Lamport timestamps, Vector Clocks) are used to resolve conflicts in distributed systems by establishing a causal order of events.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Causal Ordering** | Establishes a partial order of events. |
+| **Conflict Detection** | Can detect concurrent updates. |
+| **Complexity** | More complex than simple LWW, but less than CRDTs. |
+| **Implementation** | Requires careful management of clock values. |
 
 ## Which service use it?
 

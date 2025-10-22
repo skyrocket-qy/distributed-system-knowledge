@@ -1,4 +1,17 @@
+# Gossip Protocol
+
+## Core
+
 The Gossip protocol, also known as the epidemic protocol, is a style of computer-to-computer communication inspired by the way diseases spread or rumors circulate among humans. In a distributed system, nodes periodically exchange information with a small, randomly selected set of other nodes. This decentralized communication pattern ensures that information eventually propagates throughout the entire network without relying on a central coordinator. It's commonly used for tasks like membership management, failure detection, and data dissemination due to its robustness, scalability, and fault tolerance.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Decentralization** | No central coordinator. |
+| **Robustness** | Highly resilient to node failures and network partitions. |
+| **Scalability** | Scales well to a large number of nodes. |
+| **Convergence** | Information eventually propagates throughout the network. |
 
 ## Which service use it?
 

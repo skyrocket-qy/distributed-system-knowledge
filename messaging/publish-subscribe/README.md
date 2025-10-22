@@ -1,6 +1,17 @@
 # Publish-Subscribe
 
+## Core
+
 This section describes the Publish-Subscribe pattern, where messages are published to a topic and received by multiple subscribers.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Delivery** | One-to-many message delivery. |
+| **Decoupling** | High decoupling between publisher and subscribers. |
+| **Asynchronicity** | Asynchronous communication. |
+| **Scalability** | Scalable for broadcasting events to many consumers. |
 
 ## Which service use it?
 

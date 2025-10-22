@@ -1,6 +1,17 @@
 # Horizontal Scaling
 
+## Core
+
 This section explains Horizontal Scaling (scaling out), a method of increasing capacity by adding more machines to a distributed system.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Approach** | Add more machines/nodes. |
+| **Scalability** | High, theoretically unlimited. |
+| **Cost** | Can be cost-effective using commodity hardware. |
+| **Complexity** | Higher, requires distributed coordination and data partitioning. |
 
 ## Which service use it?
 

@@ -1,6 +1,17 @@
 # Quorum
 
+## Core
+
 This section explains the concept of Quorum in distributed systems, particularly its role in ensuring consistency and availability for coordination.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Consistency** | Configurable, balancing consistency and availability. |
+| **Availability** | Can maintain availability during some node failures. |
+| **Fault Tolerance** | Tolerates failures up to a certain threshold. |
+| **Complexity** | Adds complexity in configuration and management. |
 
 ## Which service use it?
 

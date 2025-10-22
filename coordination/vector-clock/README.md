@@ -1,6 +1,17 @@
 # Vector Clocks
 
+## Core
+
 This section explains Vector Clocks as a mechanism for tracking causality and achieving coordination in distributed systems.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Causal Ordering** | Provides a strong guarantee of causal ordering. |
+| **Conflict Detection** | Excellent at detecting concurrent updates. |
+| **Complexity** | More complex to implement and manage than simple timestamps. |
+| **Overhead** | Can incur storage and communication overhead with many nodes. |
 
 ## Which service use it?
 

@@ -1,6 +1,17 @@
 # Event Streaming
 
+## Core
+
 This section explores event streaming as a coordination pattern in distributed systems, enabling real-time data flow and integration.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Data Flow** | Continuous, real-time flow of events. |
+| **Decoupling** | Producers and consumers are highly decoupled. |
+| **Scalability** | Highly scalable for high-throughput data. |
+| **Durability** | Events are typically persisted for a configurable duration. |
 
 ## Which service use it?
 

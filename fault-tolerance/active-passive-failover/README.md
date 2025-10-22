@@ -1,6 +1,17 @@
 # Active-Passive Failover
 
+## Core
+
 This section describes Active-Passive Failover, a fault-tolerance strategy where a standby (passive) system takes over operations from a primary (active) system upon failure.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Availability** | High, but with a brief downtime during failover. |
+| **Complexity** | Relatively simple to implement. |
+| **Cost** | Lower than active-active, as passive resources are idle. |
+| **Performance** | No performance gain, as only one node is active. |
 
 ## Which service use it?
 

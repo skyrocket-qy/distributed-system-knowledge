@@ -1,6 +1,17 @@
 # Synchronous Replication
 
+## Core
+
 This section describes Synchronous Replication, a data replication mode where the primary node waits for confirmation from replica nodes that they have received and committed the transaction before committing itself, prioritizing strong consistency.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Consistency** | Strong consistency, zero data loss. |
+| **Performance** | Higher latency for writes. |
+| **Availability** | Reduced availability during replica failures. |
+| **Complexity** | More complex to implement and manage. |
 
 ## Which service use it?
 

@@ -1,6 +1,17 @@
 # Vector Clocks for Conflict Resolution
 
+## Core
+
 This section explains how Vector Clocks are used in conflict resolution to detect concurrent updates and establish a partial ordering of events across distributed systems.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Causal Ordering** | Provides a strong guarantee of causal ordering. |
+| **Conflict Detection** | Excellent at detecting concurrent updates. |
+| **Complexity** | More complex to implement and manage than simple timestamps. |
+| **Overhead** | Can incur storage and communication overhead with many nodes. |
 
 ## Which service use it?
 

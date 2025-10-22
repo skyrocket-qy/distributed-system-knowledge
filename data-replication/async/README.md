@@ -1,6 +1,17 @@
 # Asynchronous Replication
 
+## Core
+
 This section describes Asynchronous Replication, a data replication mode where the primary node commits a transaction before receiving confirmation that the replica nodes have received or applied the changes, prioritizing performance and availability over immediate consistency.
+
+## Comparison
+
+| Feature | Description |
+|---|---|
+| **Consistency** | Eventual consistency. |
+| **Performance** | High write throughput, low latency. |
+| **Data Loss** | Potential for data loss on primary failure. |
+| **Complexity** | Relatively simple to implement. |
 
 ## Which service use it?
 
