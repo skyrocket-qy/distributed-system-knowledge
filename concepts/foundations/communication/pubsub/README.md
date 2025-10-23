@@ -12,30 +12,21 @@ graph TD
     B --> E[Subscriber 3];
 ```
 
-
-## Characteristics
-
--   **Asynchronous Communication**: Publishers and subscribers operate independently and do not need to be available at the same time.
--   **Loose Coupling**: Publishers and subscribers are decoupled; publishers do not know who the subscribers are, and subscribers do not know who the publishers are.
--   **Scalability**: The system can be scaled by adding more publishers or subscribers.
--   **Flexibility**: New subscribers can be added without affecting existing publishers.
-
-## Comparison
-
-| Feature | Description |
-|---|---|
-| **Decoupling** | Publishers and subscribers are highly decoupled. |
-| **Asynchronicity** | Communication is typically asynchronous. |
-| **Scalability** | Can scale to a large number of publishers and subscribers. |
-| **Flexibility** | New subscribers can be added without changing publishers. |
-
 ## Trade-offs
 
-| Advantages | Disadvantages |
-|---|---|
-| **Decoupling**: Publishers and subscribers are decoupled and do not need to know about each other. | **Complexity**: The pub/sub system adds another component to the system, which increases the complexity. |
-| **Scalability**: The system can be scaled by adding more publishers or subscribers. | **Message Ordering**: Message ordering is not guaranteed. |
-| **Flexibility**: New subscribers can be added without affecting existing publishers. | **Message Delivery**: Message delivery is not guaranteed. |
+### Advantages
+-   **Decoupling**: Publishers and subscribers operate independently, without direct knowledge of each other, leading to highly modular and maintainable systems.
+-   **Scalability**: The system can easily scale by adding more publishers or subscribers without impacting existing components.
+-   **Flexibility**: New subscribers can be introduced to consume existing message streams without requiring changes to publishers.
+-   **Asynchronous Communication**: Publishers can send messages and continue processing without waiting for subscribers, improving overall system responsiveness.
+-   **Event-Driven Architecture**: Naturally supports event-driven patterns, allowing for reactive and responsive systems.
+
+### Disadvantages
+-   **Increased Complexity**: Introducing a pub/sub system adds an intermediary layer, increasing the overall system's complexity and potential points of failure.
+-   **Message Ordering**: Strict message ordering is often not guaranteed across all subscribers or partitions, which can be a challenge for applications requiring sequential processing.
+-   **Message Delivery Guarantees**: Ensuring reliable message delivery (e.g., at-least-once, exactly-once) can be complex and depends heavily on the specific pub/sub implementation.
+-   **Monitoring and Debugging**: Tracing message flows and debugging issues in a distributed pub/sub system can be more challenging than in direct communication models.
+-   **No Direct Feedback**: Publishers typically don't receive direct feedback on whether messages have been processed by subscribers, which can complicate error handling.
 
 ## Which service use it?
 

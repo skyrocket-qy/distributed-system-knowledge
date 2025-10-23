@@ -17,13 +17,6 @@ graph TD
 
 The communication between the producer and the consumer is **asynchronous**, meaning the producer can send a message and continue its execution without waiting for the consumer to process it.
 
-## Characteristics
-
--   **Asynchronous Communication**: The producer and consumer do not need to be available at the same time.
--   **Loose Coupling**: The producer and consumer are decoupled and do not need to know about each other.
--   **Reliability**: Messages are stored in the queue until they are processed, ensuring that they are not lost in case of a component failure.
--   **Scalability**: The producer and consumer can be scaled independently.
-
 ```mermaid
 sequenceDiagram
     participant P as Producer
@@ -36,26 +29,23 @@ sequenceDiagram
     C-->>MQ: Message Processed
 ```
 
-## Comparison
-
-| Feature | Description |
-|---|---|
-| **Asynchronicity** | Decoupled communication, producer doesn't wait for consumer. |
-| **Decoupling** | Producer and consumer are independent. |
-| **Reliability** | Messages persisted until processed. |
-| **Scalability** | Producers and consumers can scale independently. |
-
 ## Trade-offs
 
-| Advantages | Disadvantages |
-|---|---|
-| **Decoupling**: The producer and consumer are decoupled and do not need to know about each other. | **Complexity**: The message queue adds another component to the system, which increases the complexity. |
-| **Reliability**: Messages are stored in the queue until they are processed, ensuring that they are not lost in case of a component failure. | **Latency**: The message queue adds latency to the system, as messages are not processed immediately. |
-| **Scalability**: The producer and consumer can be scaled independently. | **Cost**: The message queue can be expensive to set up and maintain. |
+### Advantages
+-   **Decoupling**: Producers and consumers are decoupled, operating independently without direct knowledge of each other. This enhances modularity and reduces interdependencies.
+-   **Reliability**: Messages are persisted in the queue until successfully processed, ensuring data integrity and preventing loss even if consuming services fail temporarily.
+-   **Scalability**: Producers and consumers can scale independently based on demand, allowing for flexible resource allocation and improved system performance.
+-   **Asynchronous Communication**: Enables non-blocking operations, improving responsiveness for producers and allowing consumers to process messages at their own pace.
+-   **Load Leveling**: Queues can buffer messages during peak loads, preventing downstream services from being overwhelmed and ensuring stable performance.
+
+### Disadvantages
+-   **Increased Complexity**: Introducing a message queue adds another component to the system architecture, increasing operational overhead and potential points of failure.
+-   **Latency**: Messages are not processed instantaneously; they sit in the queue, introducing a delay between production and consumption.
+-   **Ordering Guarantees**: While many queues offer FIFO, strict global ordering across multiple consumers or partitions can be challenging to maintain.
+-   **Monitoring and Debugging**: Tracing messages through a distributed system with queues can be more complex than direct communication, requiring robust monitoring tools.
+-   **Cost**: Setting up and maintaining a message queue infrastructure can incur additional costs, especially for managed services or highly available deployments.
 
 ## Which service use it?
-
-
 
 -   **Asynchronous Task Processing:** Sending emails, generating reports, processing images, or performing other time-consuming tasks in the background without blocking the user interface.
 

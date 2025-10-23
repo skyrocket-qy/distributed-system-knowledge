@@ -44,34 +44,21 @@ graph TD
 -   **Scalability:** Location transparency and message-driven communication facilitate scaling out by distributing actors across multiple nodes.
 -   **Responsiveness:** Non-blocking communication ensures that actors can continue processing other messages even when waiting for a response from another actor.
 
-## Characteristics
-
-- **Concurrency**: The model is inherently concurrent, with actors executing independently.
-- **Asynchronous Communication**: Actors communicate through asynchronous message passing.
-- **Isolation**: Actors are isolated and do not share state.
-- **Fault Tolerance**: The model supports fault tolerance through supervision hierarchies.
-- **Location Transparency**: Actors can be located on any node in the system.
-
-## Comparison
-
-| Feature | Description |
-|---|---|
-| **Isolation** | Actors encapsulate state and behavior, communicating only via messages. |
-| **Concurrency** | Achieved through asynchronous message passing, not shared memory. |
-| **Fault Tolerance** | Built-in supervision hierarchies allow for resilient systems. |
-| **Location Transparency** | Actors can be local or remote, abstracting distribution. |
-
 ## Trade-offs
 
-| Advantages | Disadvantages |
-|---|---|
-| **Concurrency**: The model simplifies concurrent programming. | **Complexity**: The model can be complex to debug. |
-| **Fault Tolerance**: The model supports fault tolerance. | **State Management**: State management can be complex. |
-| **Scalability**: The model is highly scalable. | **Message Ordering**: Message ordering is not guaranteed. |
+### Advantages
+-   **Concurrency**: The model simplifies concurrent programming, making it easier to reason about parallel execution.
+-   **Fault Tolerance**: The supervision hierarchy allows for robust fault tolerance and self-healing systems.
+-   **Scalability**: The message-driven, isolated nature of actors facilitates horizontal scaling across distributed systems.
+-   **Responsiveness**: Asynchronous communication prevents blocking, leading to more responsive systems.
+
+### Disadvantages
+-   **Complexity**: Designing and debugging actor-based systems can be complex, especially for those new to the paradigm.
+-   **State Management**: While isolation simplifies concurrency, managing and coordinating state across multiple actors can introduce its own complexities.
+-   **Message Ordering**: Strict message ordering is not guaranteed by default, which can require careful design to handle dependencies.
+-   **Overhead**: The overhead of message passing and actor management can be a concern in very high-performance, low-latency scenarios if not carefully optimized.
 
 ## Which service use it?
-
-
 
 -   **Erlang/OTP Applications:** Erlang is a programming language built around the Actor Model, and its OTP (Open Telecom Platform) framework is widely used for building highly concurrent, fault-tolerant distributed systems in telecommunications, messaging, and other industries.
 

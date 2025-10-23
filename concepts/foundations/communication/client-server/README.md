@@ -24,21 +24,6 @@ sequenceDiagram
 
 This interaction is typically **synchronous**, meaning the client blocks (waits) for the response from the server before continuing its execution.
 
-## Characteristics
-
-- **Centralized Control**: A central server manages resources and data, simplifying administration and security.
-- **Synchronous Communication**: Clients typically send a request and wait for a response, leading to a blocking interaction model.
-- **One-to-Many Relationship**: A single server serves multiple clients.
-- **Scalability**: Can be scaled vertically (increasing server resources) or horizontally (adding more servers behind a load balancer).
-
-## Comparison
-
-| Model | Coupling | Key Difference | Example |
-|---|---|---|---|
-| **Client-Server** | Tight | Centralized server manages all resources and clients. | Web server (HTTP) |
-| **[Peer-to-Peer (P2P)](../p2p)** | Loose | Decentralized; all nodes are equal and can act as both client and server. | BitTorrent |
-| **[Publish-Subscribe](../pubsub)** | Loose | Decoupled; publishers send messages to topics without knowing the subscribers. | Apache Kafka |
-
 ## Trade-offs
 
 ### Advantages
@@ -54,8 +39,6 @@ This interaction is typically **synchronous**, meaning the client blocks (waits)
 -   **Cost**: The server can be expensive to purchase, set up, and maintain, especially for high-traffic applications that require powerful hardware and infrastructure.
 
 ## Which service use it?
-
-
 
 -   **Web Applications:** The most ubiquitous example, where web browsers (clients) request web pages and resources from web servers.
 

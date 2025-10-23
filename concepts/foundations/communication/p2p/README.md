@@ -24,22 +24,6 @@ graph TD
 
 This interaction can be **synchronous** or **asynchronous**, depending on the specific application and protocol.
 
-## Characteristics
-
-- **Decentralization**: There is no central server; peers communicate directly with each other.
-- **Symmetry**: All peers are equal and can act as both clients and servers.
-- **Scalability**: The network scales as more peers join.
-- **Resilience**: The network is resilient to failures, as there is no single point of failure.
-- **Dynamic Topology**: The network topology can change as peers join and leave the network.
-
-## Comparison
-
-| Model | Coupling | Key Difference | Example |
-|---|---|---|---|
-| **Peer-to-Peer (P2P)** | Loose | Decentralized; all nodes are equal and can act as both client and server. | BitTorrent |
-| **[Client-Server](../client-server)** | Tight | Centralized server manages all resources and clients. | Web server (HTTP) |
-| **[Publish-Subscribe](../pubsub)** | Loose | Decoupled; publishers send messages to topics without knowing the subscribers. | Apache Kafka |
-
 ## Trade-offs
 
 ### Advantages
@@ -53,7 +37,7 @@ This interaction can be **synchronous** or **asynchronous**, depending on the sp
 
 -   **Complexity**: P2P networks can be complex to design, manage, and secure, especially in areas like data consistency and discovery of peers.
 -   **Security**: The lack of a central authority can make it harder to enforce security policies and trust between peers.
--   **Resource Discovery**: Finding specific resources or data in a large P2P network can be challenging and inefficient.
+-   **Resource Discovery**: Finding specific resources or data in a large P2P network can be challenging and inefficient. This often necessitates robust [Service Discovery](../../../patterns/service-discovery/README.md) mechanisms.
 -   **Inconsistent Performance**: The performance of the network can be unpredictable and depends on the number of active peers and their network conditions.
 
 ## Use Cases
