@@ -11,12 +11,6 @@ graph LR
     C[Node 3] --- Bus
 ```
 
-### Characteristics
-
--   **Shared Medium:** All devices share a single communication channel.
--   **Simplicity:** Easy to implement for small networks.
--   **Termination:** Both ends of the bus must be terminated to prevent signal reflection.
-
 ### How it Works
 
 When a node wants to send data, it broadcasts the data onto the bus. All other nodes on the bus listen for data. If the data's destination address matches a node's address, that node accepts the data. If not, the node ignores the data.

@@ -11,11 +11,6 @@ graph LR
     D[Node 3] --- C
 ```
 
-### Characteristics
-
--   **Centralized Connection:** Every device connects to a single central point.
--   **Point-to-Point Links:** Each node has a dedicated connection to the central hub.
--   **Hub/Switch Dependent:** The central device is critical for network operation.
 
 ### How it Works
 

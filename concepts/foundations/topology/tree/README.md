@@ -14,12 +14,6 @@ graph TD
     C --> G(Node 4)
 ```
 
-### Characteristics
-
--   **Hierarchical Structure:** Nodes are organized in levels, with a root node at the top.
--   **Central Backbone (Bus-like):** The main cable connecting the primary hubs often resembles a bus.
--   **Star-like Branches:** Individual nodes connect to local hubs, forming star segments.
-
 ### How it Works
 
 Data flows from the root down to the branches and vice-versa. Each hub acts as a repeater, forwarding data to its connected nodes or up the hierarchy. This structure allows for efficient management of larger networks by segmenting them into smaller, more manageable star networks.
