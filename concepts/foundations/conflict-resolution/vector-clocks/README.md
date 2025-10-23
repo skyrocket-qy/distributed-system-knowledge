@@ -1,5 +1,35 @@
 # Vector Clocks for Conflict Resolution
 
+## Core
+
+Vector clocks are a mechanism used in distributed systems to track the causality and ordering of events across multiple nodes or processes. They help in understanding the sequence of operations and maintaining consistency in systems without a global clock.
+
+### How Vector Clocks Work
+
+Each process or node in a distributed system maintains a vector of integers, where each element in the vector corresponds to a specific process. When a process performs an event (e.g., sends a message, performs a local computation), it increments its own entry in its vector clock.
+
+When a process sends a message, it includes its current vector clock with the message. When a process receives a message, it updates its own vector clock by taking the element-wise maximum of its current vector clock and the received vector clock. It then increments its own entry in the vector clock.
+
+### Comparing Vector Clocks
+
+Vector clocks can be compared to determine the causal relationship between two events:
+
+-   **Event A happened before Event B:** If all elements in A's vector clock are less than or equal to the corresponding elements in B's vector clock, and at least one element is strictly less.
+-   **Event B happened before Event A:** If all elements in B's vector clock are less than or equal to the corresponding elements in A's vector clock, and at least one element is strictly less.
+-   **Events A and B are concurrent:** If neither A happened before B nor B happened before A.
+
+### Example
+
+Consider three processes P1, P2, and P3. Initially, their vector clocks are [0,0,0].
+
+1.  P1 performs a local event: VC(P1) = [1,0,0]
+2.  P2 performs a local event: VC(P2) = [0,1,0]
+3.  P1 sends a message to P2. The message carries VC(P1) = [1,0,0].
+4.  P2 receives the message from P1. P2 updates its VC: max([0,1,0], [1,0,0]) = [1,1,0]. Then P2 performs a local event: VC(P2) = [1,2,0]
+5.  P3 performs a local event: VC(P3) = [0,0,1]
+
+By comparing these vector clocks, we can determine causal relationships. For example, the event at P1 ([1,0,0]) happened before the second event at P2 ([1,2,0]). The event at P3 ([0,0,1]) is concurrent with both events at P1 and P2.
+
 ## Pros & Cons
 
 ### Pros
