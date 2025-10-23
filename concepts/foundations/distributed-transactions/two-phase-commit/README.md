@@ -6,6 +6,31 @@
 
 The protocol involves a coordinator and multiple participants. It operates in two distinct phases:
 
+```mermaid
+sequenceDiagram
+    participant C as Coordinator
+    participant P1 as Participant 1
+    participant P2 as Participant 2
+
+    C->>P1: Prepare?
+    C->>P2: Prepare?
+
+    alt All Participants can commit
+        P1-->>C: Vote Commit
+        P2-->>C: Vote Commit
+        C->>P1: Global Commit
+        C->>P2: Global Commit
+        P1-->>C: Acknowledgment
+        P2-->>C: Acknowledgment
+    else Any Participant votes Abort or Fails
+        P1-->>C: Vote Abort
+        C->>P1: Global Abort
+        C->>P2: Global Abort
+        P1-->>C: Acknowledgment
+        P2-->>C: Acknowledgment
+    end
+```
+
 ### Phase 1: Commit-Request (Vote) Phase
 
 1.  **Coordinator sends prepare message:** The coordinator sends a "prepare" message to all participants, asking them to prepare to commit the transaction.

@@ -6,6 +6,17 @@ Optimistic locking is a concurrency control strategy that assumes conflicts betw
 
 The core idea behind optimistic locking is to use a version identifier, such as a timestamp or a version number, to track changes to data. When a transaction reads an item, it also reads its version. When the transaction attempts to update the item, it checks if the version has changed. If the version is the same, the update is allowed, and the version is incremented. If the version has changed, it means another transaction has modified the data in the meantime, and the current transaction is rolled back.
 
+```mermaid
+graph TD
+    A[Start Transaction] --> B{Read Data and Version};
+    B --> C[Modify Data Locally];
+    C --> D{Attempt to Commit};
+    D -- Version Matches --> E[Write New Data and Increment Version];
+    E --> F[End Transaction (Success)];
+    D -- Version Mismatch --> G[Abort Transaction];
+    G --> H[Retry Transaction (Optional)];
+```
+
 ## Characteristics
 
 - **Conflict Detection**: Conflicts are detected at commit time rather than being prevented upfront.

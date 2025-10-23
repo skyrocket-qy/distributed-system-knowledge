@@ -4,6 +4,23 @@
 
 This section discusses consensus mechanisms specifically in the context of distributed coordination.
 
+```mermaid
+graph TD
+    subgraph Nodes
+        A[Node 1]
+        B[Node 2]
+        C[Node 3]
+    end
+
+    A -- Propose Value --> D(Consensus Protocol);
+    B -- Propose Value --> D;
+    C -- Propose Value --> D;
+    D -- Reach Agreement --> E[Agreed Value];
+    E --> A;
+    E --> B;
+    E --> C;
+```
+
 ## Characteristics
 
 - **Agreement**: All non-faulty processes agree on the same value.

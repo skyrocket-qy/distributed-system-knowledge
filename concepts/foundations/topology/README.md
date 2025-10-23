@@ -11,10 +11,43 @@ Different topologies have different characteristics. For example, some topologie
 There are a number of different network topologies that can be used in a distributed system. Some of the most common ones include:
 
 - **Bus:** All nodes are connected to a single, shared communication link. This is a simple topology, but it has a single point of failure.
+```mermaid
+graph LR
+    A[Node 1] --- Bus(Bus)
+    B[Node 2] --- Bus
+    C[Node 3] --- Bus
+```
 - **Star:** All nodes are connected to a central hub. This is a more fault-tolerant topology than the bus, but the hub can become a bottleneck.
+```mermaid
+graph LR
+    A[Node 1] --- C(Hub)
+    B[Node 2] --- C
+    D[Node 3] --- C
+```
 - **Ring:** All nodes are connected in a closed loop. This is a simple and reliable topology, but it can be difficult to add and remove nodes.
+```mermaid
+graph LR
+    A[Node 1] --- B[Node 2]
+    B --- C[Node 3]
+    C --- A
+```
 - **Mesh:** All nodes are connected to all other nodes. This is the most fault-tolerant topology, but it is also the most expensive to build and maintain.
+```mermaid
+graph LR
+    A[Node 1] --- B[Node 2]
+    A --- C[Node 3]
+    B --- C
+```
 - **Tree:** A hybrid topology that combines the bus and star topologies. This is a scalable and flexible topology, but it can be complex to manage.
+```mermaid
+graph TD
+    A(Root) --> B(Hub 1)
+    A --> C(Hub 2)
+    B --> D(Node 1)
+    B --> E(Node 2)
+    C --> F(Node 3)
+    C --> G(Node 4)
+```
 
 The choice of which topology to use is a trade-off between a number of factors, including cost, performance, reliability, and scalability.
 
