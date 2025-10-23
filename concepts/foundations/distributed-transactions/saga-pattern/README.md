@@ -20,6 +20,28 @@ There are two main ways to coordinate Sagas:
 1.  **Choreography:** Each service produces and listens to events, and decides what to do next without a central coordinator. This is decentralized and can be more resilient but harder to monitor and manage complex workflows.
 2.  **Orchestration:** A central orchestrator (or Saga execution coordinator) tells each participant service what local transaction to execute. The orchestrator manages the sequence of steps and executes compensating transactions if a step fails. This provides a clearer view of the Saga's progress and simplifies error handling.
 
+```mermaid
+sequenceDiagram
+    participant O as Orchestrator
+    participant S1 as Service 1 (Order)
+    participant S2 as Service 2 (Payment)
+    participant S3 as Service 3 (Shipping)
+
+    O->>S1: Execute Transaction 1 (Create Order)
+    S1-->>O: Success
+    O->>S2: Execute Transaction 2 (Process Payment)
+    S2-->>O: Success
+    O->>S3: Execute Transaction 3 (Ship Order)
+    S3-->>O: Failure
+
+    Note over O,S3: Order shipment fails!
+
+    O->>S2: Execute Compensating Tx 2 (Refund Payment)
+    S2-->>O: Acknowledged
+    O->>S1: Execute Compensating Tx 1 (Cancel Order)
+    S1-->>O: Acknowledged
+```
+
 ## Characteristics
 
 - **Eventual Consistency**: Sagas provide eventual consistency, not atomic consistency.

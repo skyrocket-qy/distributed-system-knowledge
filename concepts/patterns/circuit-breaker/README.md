@@ -10,6 +10,15 @@ This pattern is essential for building resilient and fault-tolerant applications
 
 The Circuit Breaker pattern operates as a state machine with three distinct states:
 
+```mermaid
+stateDiagram-v2
+    [*] --> Closed
+    Closed --> Open: Failure threshold exceeded
+    Open --> HalfOpen: Timeout expires
+    HalfOpen --> Closed: Trial requests succeed
+    HalfOpen --> Open: Trial requests fail
+```
+
 *   **Closed:** This is the normal, default state. All requests are routed to the downstream service as usual. The circuit breaker monitors the number of failures (e.g., timeouts, HTTP 5xx errors) within a specific time window. If the number of failures exceeds a pre-configured threshold, the breaker "trips" and moves to the **Open** state.
 
 *   **Open:** In this state, the circuit breaker immediately rejects all requests to the downstream service without attempting to call it. This is the "tripped" state. It returns an error or a fallback response to the client. The breaker remains in this state for a configured timeout period. This timeout gives the downstream service time to recover from its issues without being overwhelmed by new requests. After the timeout expires, the breaker moves to the **Half-Open** state.

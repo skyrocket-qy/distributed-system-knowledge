@@ -4,6 +4,21 @@
 
 This section describes Active-Passive Failover, a fault-tolerance strategy where a standby (passive) system takes over operations from a primary (active) system upon failure.
 
+```mermaid
+graph TD
+    subgraph "Normal Operation"
+        C1(Client) --> A1(Node 1 - Active)
+        A1 -- "Replication" --> P1(Node 2 - Passive)
+    end
+
+    subgraph "After Failover"
+        C2(Client) --> P2(Node 2 - Active)
+    end
+
+    style A1 fill:#f9f,stroke:#333,stroke-width:2px
+    style P2 fill:#f9f,stroke:#333,stroke-width:2px
+```
+
 ## Characteristics
 
 - **High Availability**: Active-passive failover provides high availability by ensuring that a standby system is available to take over in case of a failure.

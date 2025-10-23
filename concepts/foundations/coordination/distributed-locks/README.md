@@ -4,6 +4,53 @@
 
 **Distributed Locks** are a mechanism used in distributed systems to coordinate access to a shared resource or critical section of code among multiple independent processes or nodes. Just like a mutex or semaphore in a single-process environment, a distributed lock ensures that only one process can hold the lock at any given time, thereby preventing race conditions and ensuring data consistency when multiple processes try to modify the same resource concurrently.
 
+```mermaid
+sequenceDiagram
+    participant C1 as Client 1
+    participant C2 as Client 2
+    participant LS as Lock Service
+    participant R as Shared Resource
+
+    C1->>LS: Acquire Lock
+    activate LS
+    LS-->>C1: Lock Granted
+    deactivate LS
+    activate C1
+
+    C1->>R: Access Resource
+    activate R
+    R-->>C1: Response
+    deactivate R
+
+    C2->>LS: Acquire Lock
+    activate LS
+    LS-->>C2: Lock Denied (Held by C1)
+    deactivate LS
+
+    C1->>LS: Release Lock
+    activate LS
+    LS-->>C1: Acknowledged
+    deactivate LS
+    deactivate C1
+
+    C2->>LS: Acquire Lock (Retry)
+    activate LS
+    LS-->>C2: Lock Granted
+    deactivate LS
+    activate C2
+
+    C2->>R: Access Resource
+    activate R
+    R-->>C2: Response
+    deactivate R
+
+    C2->>LS: Release Lock
+    activate LS
+    LS-->>C2: Acknowledged
+    deactivate LS
+    deactivate C2
+```
+
 Implementing distributed locks correctly is notoriously challenging due to the inherent complexities of distributed systems, such as network partitions, node failures, and varying clock speeds. A poorly implemented distributed lock can lead to deadlocks, data corruption, or reduced availability.
 
 ### Key Challenges

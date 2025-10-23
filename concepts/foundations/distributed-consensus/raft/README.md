@@ -7,6 +7,17 @@
 ### Key Concepts
 
 -   **States:** Each server in a Raft cluster is in one of three states: Leader, Follower, or Candidate.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Follower
+    Follower --> Candidate: Timeout, starts election
+    Candidate --> Candidate: Election times out
+    Candidate --> Follower: Discovers new leader
+    Candidate --> Leader: Receives majority vote
+    Leader --> Follower: Discovers higher term
+```
+
 -   **Leader:** Handles all client requests (if it's a client-facing system), replicates log entries to followers, and sends heartbeats to maintain its leadership.
 -   **Follower:** Passive, responds to requests from leaders and candidates. If a follower receives no communication for a period, it becomes a candidate.
 -   **Candidate:** Initiates an election to become the new leader.

@@ -36,6 +36,35 @@
 ## Algorithms
 
 -   **Bully Algorithm:** A simple algorithm where the process with the highest identifier (e.g., IP address, process ID) is elected as the leader. When a process detects a leader failure, it initiates an election by sending election messages to all processes with higher identifiers. If no one responds, it declares itself the leader. If a higher-ranked process responds, that process takes over the election.
+
+```mermaid
+sequenceDiagram
+    participant P1 as Process 1 (ID=1)
+    participant P2 as Process 2 (ID=2)
+    participant P3 as Process 3 (ID=3)
+    participant P4 as Process 4 (ID=4, Leader)
+
+    Note over P1,P4: P4 (Leader) fails.
+
+    P1->>P2: Election
+    P1->>P3: Election
+    P1->>P4: Election (No response)
+
+    P2-->>P1: OK
+    P3-->>P1: OK
+
+    P2->>P3: Election
+    P2->>P4: Election (No response)
+
+    P3-->>P2: OK
+
+    P3->>P4: Election (No response)
+
+    Note over P3,P4: P3 receives no OK, becomes Leader.
+
+    P3->>P1: Coordinator (P3 is Leader)
+    P3->>P2: Coordinator (P3 is Leader)
+```
 -   **Ring Algorithm:** Processes are arranged in a logical ring. When a process detects a leader failure, it sends an election message with its identifier around the ring. Processes compare identifiers and forward the message with the highest ID seen so far. When the message completes a full circle, the process that initiated the election and receives its own message knows the highest ID and declares that process as the leader.
 -   **Paxos/Raft:** These are consensus algorithms that inherently solve the leader election problem as part of their mechanism to achieve agreement on a single value or state. They are more robust and widely used in practice for critical systems.
 

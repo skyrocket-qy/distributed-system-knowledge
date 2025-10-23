@@ -4,6 +4,28 @@
 
 The Gossip protocol, also known as the epidemic protocol, is a style of computer-to-computer communication inspired by the way diseases spread or rumors circulate among humans. In a distributed system, nodes periodically exchange information with a small, randomly selected set of other nodes. This decentralized communication pattern ensures that information eventually propagates throughout the entire network without relying on a central coordinator. It's commonly used for tasks like membership management, failure detection, and data dissemination due to its robustness, scalability, and fault tolerance.
 
+```mermaid
+graph TD
+    subgraph Cluster
+        A --- B
+        A --- C
+        B --- D
+        C --- E
+        D --- F
+        E --- A
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:2px
+    style E fill:#ccf,stroke:#333,stroke-width:2px
+    style F fill:#ccf,stroke:#333,stroke-width:2px
+
+    A -- "Gossip" --> B
+    A -- "Gossip" --> C
+```
+
 ## Characteristics
 
 - **Decentralized**: There is no central coordinator; all nodes are equal.

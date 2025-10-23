@@ -4,6 +4,23 @@
 
 This section describes the Active-Active Cluster configuration for fault tolerance, where multiple nodes are simultaneously active and capable of handling requests, providing high availability and improved performance.
 
+```mermaid
+graph TD
+    LB(Load Balancer) --> N1(Node 1 - Active)
+    LB --> N2(Node 2 - Active)
+    LB --> N3(Node 3 - Active)
+
+    subgraph "Clients"
+        C1(Client 1)
+        C2(Client 2)
+        C3(Client 3)
+    end
+
+    C1 --> LB
+    C2 --> LB
+    C3 --> LB
+```
+
 ## Characteristics
 
 - **High Availability**: All nodes are active and can handle requests, providing high availability.

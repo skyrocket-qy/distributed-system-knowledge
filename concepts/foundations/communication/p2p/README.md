@@ -8,16 +8,13 @@ The **Peer-to-Peer (P2P)** model is a decentralized communication architecture w
 
 The communication in a P2P network is distributed and dynamic:
 
-```
-+--------+         +--------+
-|  Peer  | <-----> |  Peer  |
-+--------+         +--------+
-    ^                  ^
-    |                  |
-    v                  v
-+--------+         +--------+
-|  Peer  | <-----> |  Peer  |
-+--------+         +--------+
+```mermaid
+graph TD
+    A[Peer] <--> B[Peer];
+    A <--> C[Peer];
+    A <--> D[Peer];
+    B <--> C;
+    C <--> D;
 ```
 
 1.  A peer discovers other peers in the network.

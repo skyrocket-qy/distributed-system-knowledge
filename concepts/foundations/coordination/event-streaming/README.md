@@ -4,6 +4,29 @@
 
 This section explores event streaming as a coordination pattern in distributed systems, enabling real-time data flow and integration.
 
+```mermaid
+graph TD
+    subgraph Producers
+        P1(Producer 1)
+        P2(Producer 2)
+    end
+
+    subgraph Consumers
+        C1(Consumer 1)
+        C2(Consumer 2)
+        C3(Consumer 3)
+    end
+
+    ESP(Event Streaming Platform)
+
+    P1 -->|Event A| ESP
+    P2 -->|Event B| ESP
+
+    ESP -->|Event A| C1
+    ESP -->|Event A, Event B| C2
+    ESP -->|Event B| C3
+```
+
 ## Characteristics
 
 - **Real-time**: Events are processed in real-time as they are generated.

@@ -4,6 +4,27 @@
 
 This section explains Semi-Synchronous Replication, a data replication mode that offers a balance between synchronous and asynchronous replication, providing stronger consistency guarantees than async without the full latency impact of sync.
 
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant P as Primary
+    participant R1 as Replica 1
+    participant R2 as Replica 2
+
+    C->>P: Write Request
+    activate P
+
+    P->>R1: Replicate Data
+    P->>R2: Replicate Data (Async)
+    activate R1
+
+    R1-->>P: Acknowledgment
+    deactivate R1
+
+    P-->>C: Write Successful
+    deactivate P
+```
+
 ## Characteristics
 
 - **Reduced Data Loss**: Semi-synchronous replication reduces the risk of data loss compared to asynchronous replication.

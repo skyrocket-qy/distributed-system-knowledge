@@ -39,6 +39,30 @@
 
 ## How It Works (Simplified Two-Phase Paxos)
 
+```mermaid
+sequenceDiagram
+    participant P as Proposer
+    participant A1 as Acceptor 1
+    participant A2 as Acceptor 2
+    participant A3 as Acceptor 3
+
+    P->>A1: Prepare(n)
+    P->>A2: Prepare(n)
+    P->>A3: Prepare(n)
+
+    A1-->>P: Promise(n, prev_v)
+    A2-->>P: Promise(n, prev_v)
+    A3-->>P: Promise(n, prev_v)
+
+    P->>A1: Accept(n, v)
+    P->>A2: Accept(n, v)
+    P->>A3: Accept(n, v)
+
+    A1-->>P: Accepted(n, v)
+    A2-->>P: Accepted(n, v)
+    A3-->>P: Accepted(n, v)
+```
+
 1.  **Phase 1 (Prepare):**
     *   A Proposer chooses a new proposal number `n` (higher than any it has seen before) and sends a `prepare` message to a majority of Acceptors.
     *   An Acceptor, upon receiving a `prepare(n)` message, if `n` is greater than any proposal number it has already responded to, promises not to accept any more proposals with a number less than `n`. It also responds with the proposal number and value of the highest-numbered proposal it has accepted (if any).

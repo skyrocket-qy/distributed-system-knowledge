@@ -4,6 +4,30 @@
 
 This section describes Synchronous Replication, a data replication mode where the primary node waits for confirmation from replica nodes that they have received and committed the transaction before committing itself, prioritizing strong consistency.
 
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant P as Primary
+    participant R1 as Replica 1
+    participant R2 as Replica 2
+
+    C->>P: Write Request
+    activate P
+
+    P->>R1: Replicate Data
+    P->>R2: Replicate Data
+    activate R1
+    activate R2
+
+    R1-->>P: Acknowledgment
+    deactivate R1
+    R2-->>P: Acknowledgment
+    deactivate R2
+
+    P-->>C: Write Successful
+    deactivate P
+```
+
 ## Characteristics
 
 - **Strong Consistency**: Synchronous replication provides strong consistency, as all replicas are guaranteed to be up-to-date.

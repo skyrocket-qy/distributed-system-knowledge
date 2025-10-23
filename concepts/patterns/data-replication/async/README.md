@@ -4,6 +4,23 @@
 
 This section describes Asynchronous Replication, a data replication mode where the primary node commits a transaction before receiving confirmation that the replica nodes have received or applied the changes, prioritizing performance and availability over immediate consistency.
 
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant P as Primary
+    participant R1 as Replica 1
+    participant R2 as Replica 2
+
+    C->>P: Write Request
+    activate P
+
+    P-->>C: Write Successful
+    deactivate P
+
+    P->>R1: Replicate Data (Async)
+    P->>R2: Replicate Data (Async)
+```
+
 ## Characteristics
 
 - **Eventual Consistency**: Asynchronous replication provides eventual consistency, as there is a delay in propagating changes to replicas.

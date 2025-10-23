@@ -6,6 +6,31 @@
 
 Like 2PC, 3PC involves a coordinator and multiple participants. It operates in three distinct phases:
 
+```mermaid
+sequenceDiagram
+    participant C as Coordinator
+    participant P1 as Participant 1
+    participant P2 as Participant 2
+
+    C->>P1: CanCommit?
+    C->>P2: CanCommit?
+
+    P1-->>C: Yes
+    P2-->>C: Yes
+
+    C->>P1: PreCommit
+    C->>P2: PreCommit
+
+    P1-->>C: Ack
+    P2-->>C: Ack
+
+    C->>P1: DoCommit
+    C->>P2: DoCommit
+
+    P1-->>C: Done
+    P2-->>C: Done
+```
+
 ### Phase 1: CanCommit? Phase
 
 1.  **Coordinator sends CanCommit? message:** The coordinator sends a "CanCommit?" message to all participants, asking if they are ready to commit the transaction.
