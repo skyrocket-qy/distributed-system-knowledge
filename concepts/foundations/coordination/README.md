@@ -24,7 +24,7 @@ Without proper coordination, a distributed system can suffer from a variety of p
 |---|---|---|---|---|---|---|
 | **[Quorum](./quorum)** | Consistency | Strong (tunable) | High (depends on quorum size) | Medium | Medium | Read/write operations in replicated systems |
 | **[Gossip](./gossip)** | Dissemination | Eventual | High | High | Low | Cluster membership, failure detection |
-| **[Vector Clock](../conflict-resolution/vector-clocks)** | Causality | Causal | High | Medium | Detecting concurrent updates, versioning |
+| **[Vector Clock](../conflict-resolution/vector-clocks)** | Causality | Causal | High | High | Medium to High | Detecting causal relationships, conflict resolution, versioning in eventually consistent systems |
 | **[CRDT](../conflict-resolution/crdts)** | Conflict-free replication | Strong Eventual | High | High | High | Collaborative applications, enabling automatic conflict resolution as seen in [Conflict Resolution](../conflict-resolution/README.md) and used in [Data Replication](../data-replication/README.md) |
 | **[Event Streaming](./event-streaming)** | Data flow | Eventual (for consumers) | High (with durable logs) | High | Medium | Real-time data processing, microservices |
 | **[Leader Election](./leader-election)** | Fault Tolerance | Strong (for leader state) | Medium (leader failure requires re-election) | Medium | Medium | Consensus, distributed databases |
