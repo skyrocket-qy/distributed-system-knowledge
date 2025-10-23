@@ -18,7 +18,6 @@ Availability is often expressed as a percentage of uptime over a given period. F
 | -------------------- | ---------------------------------------------------- | -------------------------------------------------- |
 | **Active-Passive**   | One node is active, and the other is on standby.     | A simple, cost-effective high-availability solution. |
 | **Active-Active**    | All nodes are active and share the workload.         | A more complex but highly available and scalable solution. |
-| **Load Balancing**   | Distributes traffic across multiple nodes.           | Improves availability by routing traffic away from failed nodes. |
 
 ## Trade-offs
 
