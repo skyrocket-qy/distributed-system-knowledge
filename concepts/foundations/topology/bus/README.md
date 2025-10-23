@@ -2,38 +2,40 @@
 
 ## Core
 
-This section explains the Bus topology in distributed systems. A bus topology is a network setup where each computer and network device are connected to a single cable or backbone.
+In a **Bus Topology**, all nodes in the network are connected to a single, shared communication line, often called the "bus" or "backbone." Data is transmitted along this central cable, and all nodes receive the transmission, but only the intended recipient processes it.
 
-## Characteristics
+```mermaid
+graph LR
+    A[Node 1] --- Bus(Bus)
+    B[Node 2] --- Bus
+    C[Node 3] --- Bus
+```
 
-- **Simplicity**: Bus topology is simple to install and requires less cable than other topologies.
-- **Cost-effective**: It is a cost-effective choice for small networks.
-- **Single Point of Failure**: A break in the main cable can bring down the entire network.
-- **Scalability**: It is difficult to add new nodes to the network.
-- **Performance**: The performance of the network degrades as more nodes are added.
+### Characteristics
 
-## Comparison
+-   **Shared Medium:** All devices share a single communication channel.
+-   **Simplicity:** Easy to implement for small networks.
+-   **Termination:** Both ends of the bus must be terminated to prevent signal reflection.
 
-| Topology | Simplicity | Cost | Scalability | Performance |
-|---|---|---|---|---|
-| **Bus** | High | Low | Low | Low |
-| **Star** | Medium | Medium | Medium | Medium |
-| **Ring** | Medium | Medium | Medium | Medium |
-| **Mesh** | Low | High | High | High |
+### How it Works
 
-## Trade-offs
+When a node wants to send data, it broadcasts the data onto the bus. All other nodes on the bus listen for data. If the data's destination address matches a node's address, that node accepts the data. If not, the node ignores the data.
 
-- **Simplicity vs. Reliability**: Bus topology is simple, but it is not very reliable.
-- **Cost vs. Performance**: Bus topology is cost-effective, but it does not offer good performance.
+### Advantages
 
-## Which service use it?
+-   **Easy to Install:** Requires less cabling than other topologies.
+-   **Cost-Effective:** Lower cost for small networks.
+-   **Linear Structure:** Simple to understand and manage.
 
+### Disadvantages
 
+-   **Single Point of Failure:** If the main bus cable breaks, the entire network goes down.
+-   **Limited Scalability:** Performance degrades significantly with more nodes due to increased traffic and collisions.
+-   **Difficult Troubleshooting:** Identifying cable faults can be challenging.
+-   **Low Security:** All nodes can see all traffic on the bus.
 
--   **Early Ethernet Networks:** Historically, 10Base2 (ThinNet) and 10Base5 (ThickNet) Ethernet networks used a bus topology where all devices were connected to a single coaxial cable.
+## Use Cases
 
--   **Industrial Control Systems (e.g., CAN bus):** In automotive and industrial automation, bus topologies like CAN (Controller Area Network) are used for communication between various electronic control units (ECUs) and sensors.
-
--   **Embedded Systems:** Simple embedded systems or sensor networks might use a bus topology for inter-component communication due to its simplicity and low cost.
-
--   **Peripheral Connections:** Internally, a computer's PCI bus or USB bus can be seen as a form of bus topology, where multiple devices share a common communication path.
+-   **Small, Temporary Networks:** Often used in environments where a quick and simple network setup is needed.
+-   **Legacy Ethernet:** Early Ethernet implementations (10Base2, 10Base5) used a bus topology.
+-   **Industrial Control Systems:** Sometimes found in specific industrial automation or embedded systems for connecting sensors and actuators.

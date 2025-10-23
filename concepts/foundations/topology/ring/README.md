@@ -4,6 +4,13 @@
 
 This section explains the Ring topology in distributed systems. In a ring topology, each device is connected to two other devices on either side of it.
 
+```mermaid
+graph LR
+    A[Node 1] --- B[Node 2]
+    B --- C[Node 3]
+    C --- A
+```
+
 ## Characteristics
 
 - **Simplicity**: Ring topology is simple to install and manage.

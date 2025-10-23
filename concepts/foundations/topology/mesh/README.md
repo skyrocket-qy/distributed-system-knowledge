@@ -2,40 +2,41 @@
 
 ## Core
 
-This section explains the Mesh topology in distributed systems. In a mesh topology, each network device is interconnected with every other device.
+In a **Mesh Topology**, every node in the network is connected directly to every other node. This creates multiple paths for data to travel, offering high redundancy and fault tolerance. There are two main types: full mesh and partial mesh.
 
-## Characteristics
+```mermaid
+graph LR
+    A[Node 1] --- B[Node 2]
+    A --- C[Node 3]
+    B --- C
+```
 
-- **Reliability**: Mesh topology is highly reliable due to the presence of multiple paths between any two nodes.
-- **Scalability**: It is difficult to add new nodes to a mesh network.
-- **Cost**: Mesh topology is expensive to implement due to the large amount of cabling required.
-- **Performance**: Mesh topology offers high performance due to the presence of dedicated links between nodes.
-- **Complexity**: Mesh topology is complex to manage and troubleshoot.
+### Characteristics
 
-## Comparison
+-   **Redundant Paths:** Multiple connections between nodes ensure data can reach its destination even if some links fail.
+-   **High Fault Tolerance:** No single point of failure; the network can continue to operate even with several link or node failures.
+-   **Complex Cabling:** Requires a large number of connections, especially in a full mesh.
 
-| Topology | Reliability | Scalability | Cost | Performance | Complexity |
-|---|---|---|---|---|---|
-| **Mesh** | High | Low | High | High | High |
-| **Star** | Medium | Medium | Medium | Medium | Medium |
-| **Bus** | Low | Low | Low | Low | Low |
-| **Ring** | Medium | Low | Medium | Medium | Medium |
+### How it Works
 
-## Trade-offs
+In a full mesh topology, each node has a direct point-to-point connection to every other node. When a node sends data, it can choose the most efficient path to the destination. In a partial mesh, some nodes are connected to all others, while others are only connected to a subset, balancing redundancy with cost.
 
-- **Reliability vs. Cost**: Mesh topology is highly reliable, but it is also expensive.
-- **Performance vs. Complexity**: Mesh topology offers high performance, but it is also complex to manage.
+### Advantages
 
-## Which service use it?
+-   **High Reliability and Fault Tolerance:** The most robust topology; network remains operational even if multiple components fail.
+-   **High Performance:** Dedicated links between nodes can provide very fast communication.
+-   **Security:** Data travels on dedicated paths, making it more secure.
+-   **Easy Troubleshooting:** Faults are often isolated to specific links.
 
+### Disadvantages
 
+-   **Very Expensive:** Requires extensive cabling and many network interfaces, especially for a full mesh.
+-   **Complex Implementation:** Difficult to install and manage due to the sheer number of connections.
+-   **Scalability Challenges:** Adding new nodes requires many new connections, making it impractical for large networks.
 
--   **Backbone Networks of the Internet:** The core routing infrastructure of the internet uses a highly interconnected mesh topology to ensure high availability and fault tolerance.
+## Use Cases
 
--   **Wireless Sensor Networks (WSNs):** In WSNs, sensors often form a mesh network to relay data to a central sink, providing redundancy and extending network coverage.
-
--   **Critical Infrastructure Communications:** Systems requiring extremely high reliability, such as military communications or power grid control systems, often employ mesh topologies.
-
--   **Some Distributed Databases:** Certain distributed databases or storage systems might use a full or partial mesh topology for inter-node communication to ensure data replication and consistency.
-
--   **Service Meshes (e.g., Istio, Linkerd):** While not a physical network topology, the concept of a service mesh creates a logical mesh of communication between microservices, providing features like traffic management, observability, and security.
+-   **Critical Infrastructure:** Used in military, power plants, and other mission-critical systems where uptime is paramount.
+-   **Backbone Networks:** Often employed for the core infrastructure of large networks like the internet.
+-   **Wireless Sensor Networks:** In some cases, mesh networks are used to provide robust communication among sensors.
+-   **High-Performance Computing:** Environments requiring extremely low latency and high reliability between computing nodes.
