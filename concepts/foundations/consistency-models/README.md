@@ -24,12 +24,12 @@ The choice of a consistency model has a significant impact on the performance, a
 
 ## Comparison
 
-| Model | Guarantee | Performance | Use Case |
-|---|---|---|---|
-| **[Strong Consistency](./strong-consistency)** | All replicas are always up-to-date | High latency (due to coordination overhead) | Financial systems, critical data |
-| **[Sequential Consistency](./sequential)** | All operations appear to execute in a single, global order, preserving program order. | High latency (due to strict global ordering and coordination) | Distributed shared memory, critical sections |
-| **[Eventual Consistency](./eventual-consistency)** | Replicas will eventually be consistent | Low latency (allows for faster writes) | Social media, e-commerce |
-| **[Causal Consistency](./causal-consistency)** | Causal order of operations is preserved | Medium latency (requires tracking causal dependencies) | Collaborative editing, chat |
+| Model | Guarantee | Performance | Staleness | Debug Complexity | Implementation Complexity | Use Case |
+|---|---|---|---|---|---|---|
+| **[Strong Consistency](./strong-consistency)** | All replicas are always up-to-date | High latency (due to coordination overhead) | No | Low | High | Financial systems, critical data |
+| **[Sequential Consistency](./sequential)** | All operations appear to execute in a single, global order, preserving program order. | High latency (due to strict global ordering and coordination) | No | Medium | High | Distributed shared memory, critical sections |
+| **[Eventual Consistency](./eventual-consistency)** | Replicas will eventually be consistent | Low latency (allows for faster writes) | Yes | High | Low | Social media, e-commerce |
+| **[Causal Consistency](./causal-consistency)** | Causal order of operations is preserved | Medium latency (requires tracking causal dependencies) | Yes | High | Medium | Collaborative editing, chat |
 
 ## Trade-offs
 
