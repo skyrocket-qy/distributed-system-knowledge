@@ -1,34 +1,22 @@
 # Vector Clocks for Conflict Resolution
 
-## Core
+## Pros & Cons
 
-This section explains how Vector Clocks are used in conflict resolution to detect concurrent updates and establish a partial ordering of events across distributed systems.
+### Pros
+-   **Accurate Causality Tracking:** Vector clocks excel at tracking the "happened-before" relationship between events, crucial for maintaining consistency and preventing conflicts.
+-   **Conflict Detection and Resolution:** They provide a systematic way to detect concurrent updates or operations, vital for conflict resolution in distributed systems.
+-   **No Central Coordinator Needed:** Enables decentralized event ordering, avoiding a single point of failure.
+-   **Fault Tolerance:** Enhances fault tolerance by allowing the system to handle network partitions or node failures gracefully.
+-   **Concurrency Detection:** Unlike Lamport timestamps, vector clocks can identify concurrent events, providing more complete information about the system's state.
 
-## Characteristics
-
-- **Causal Ordering**: Vector clocks can establish a partial causal order of events.
-- **Conflict Detection**: They can detect concurrent updates and potential conflicts.
-- **No Clock Synchronization**: Vector clocks do not require synchronized physical clocks.
-- **Overhead**: They introduce overhead in terms of storage and network bandwidth, as the size of the vector clock is proportional to the number of nodes.
-- **Complexity**: Vector clocks can be complex to implement and manage.
-
-## Comparison
-
-| Feature | Description |
-|---|---|
-| **Causal Ordering** | Provides a strong guarantee of causal ordering. |
-| **Conflict Detection** | Excellent at detecting concurrent updates. |
-| **Complexity** | More complex to implement and manage than simple timestamps. |
-| **Overhead** | Can incur storage and communication overhead with many nodes. |
-
-## Trade-offs
-
-- **Overhead vs. Correctness**: Vector clocks introduce overhead, but they can ensure correctness in the presence of concurrent updates.
-- **Complexity vs. Power**: Vector clocks are more complex than simple timestamps, but they are also more powerful.
+### Cons
+-   **Scalability Issues (Vector Size):** The size of a vector clock grows linearly with the number of nodes, leading to significant memory usage and communication overhead in large systems.
+-   **Communication Overhead:** Every message must carry the full vector clock, adding extra bytes and potentially impacting bandwidth and latency.
+-   **Implementation Complexity:** Correctly implementing vector clocks can be challenging, especially in dynamic systems with frequent node changes or network partitions.
+-   **No Inherent Conflict Resolution Strategy:** While vector clocks detect conflicts, they do not inherently provide strategies to resolve them; this logic must be implemented separately.
+-   **Operational Complexity:** Introduces operational complexity, requiring specialized monitoring and debugging to understand causal relationships.
 
 ## Which service use it?
-
-
 
 -   **Distributed Databases (e.g., Riak):** Riak uses vector clocks to detect and manage concurrent updates, allowing applications to resolve conflicts when they read data.
 
