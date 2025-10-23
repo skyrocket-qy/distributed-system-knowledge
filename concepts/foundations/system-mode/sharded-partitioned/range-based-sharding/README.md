@@ -58,15 +58,3 @@ Range-based sharding is a sharding strategy where data is partitioned based on a
 *   **Database Partitioning:** Many relational databases support range partitioning for tables.
 *   **Log Management Systems:** Storing logs by date ranges.
 *   **E-commerce Platforms:** Sharding orders or products by creation date or product ID ranges.
-
-## Related Concepts
-
--   **Sharded/Partitioned System Mode:** Range-based sharding is a specific strategy for partitioning data across multiple nodes, forming a core component of sharded distributed systems. [Explore Sharded/Partitioned Systems](../README.md).
-
--   **Hash-Based Sharding:** In contrast to range-based sharding, hash-based sharding distributes data more evenly by using a hash function on the shard key, but it can make range queries less efficient. [Compare with Hash-Based Sharding](../hash-based-sharding/README.md).
-
--   **Directory-Based Sharding:** Another sharding strategy that uses a lookup table to map shard keys to physical shards, offering flexibility but introducing the overhead of managing the directory service. [Explore Directory-Based Sharding](../directory-based-sharding/README.md).
-
--   **Horizontal Scaling:** Range-based sharding is a fundamental technique for achieving horizontal scalability in databases and data stores, allowing systems to handle larger datasets and higher loads by adding more machines. [Learn about Horizontal Scaling](../../../scaling/horizontal/README.md).
-
--   **Data Replication:** Sharding is often combined with data replication within each shard to provide fault tolerance and high availability, ensuring that data remains accessible even if a shard fails. [Understand Data Replication](../../../data-replication/README.md).

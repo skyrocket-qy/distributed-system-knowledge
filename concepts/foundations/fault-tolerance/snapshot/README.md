@@ -42,13 +42,3 @@ This section describes Snapshot Recovery as a fault-tolerance mechanism, where t
 -   **Cloud Storage Services:** Cloud providers offer snapshot features for block storage volumes (e.g., AWS EBS snapshots) or entire virtual disks, facilitating disaster recovery and data migration.
 
 -   **Data Warehouses and Analytics Platforms:** Snapshots are often used to create consistent copies of large datasets for reporting, analysis, or testing purposes, without impacting the live system.
-
-## Related Concepts
-
--   **Fault Tolerance:** Snapshot recovery is a direct and effective fault tolerance mechanism, enabling systems to quickly restore to a known good state after a failure, minimizing downtime and data loss. [Explore other Fault Tolerance strategies](../README.md).
-
--   **Data Replication:** Snapshots are often used in conjunction with data replication strategies to create consistent backups of replicated data, providing a point-in-time recovery option for the entire dataset. [Understand Data Replication](../../data-replication/README.md).
-
--   **Checkpointing:** Snapshot recovery is closely related to checkpointing, where the state of a process or system is periodically saved. Snapshots typically refer to a broader system state, while checkpointing can be more granular. [Compare with Checkpointing](../checkpoint/README.md).
-
--   **Consistency Models:** Ensuring a consistent snapshot across a distributed system, especially one with concurrent writes, requires careful consideration of consistency models to guarantee that the captured state is valid and coherent. [Learn about Consistency Models](../../consistency-models/README.md).

@@ -58,15 +58,3 @@ Hash-based sharding is a sharding strategy where data is distributed across shar
 *   **Key-Value Stores:** Many distributed key-value stores use consistent hashing or similar hash-based methods to distribute data.
 *   **User Profile Services:** Storing user profiles where access is typically by a unique user ID.
 *   **Caching Systems:** Distributing cached items across multiple cache servers.
-
-## Related Concepts
-
--   **Sharded/Partitioned System Mode:** Hash-based sharding is a specific strategy for partitioning data across multiple nodes, forming a core component of sharded distributed systems, particularly when even data distribution is paramount. [Explore Sharded/Partitioned Systems](../README.md).
-
--   **Range-Based Sharding:** In contrast to hash-based sharding, range-based sharding partitions data based on contiguous value ranges, which is efficient for range queries but can lead to uneven data distribution. [Compare with Range-Based Sharding](../range-based-sharding/README.md).
-
--   **Directory-Based Sharding:** Another sharding strategy that uses a lookup table to map shard keys to physical shards, offering flexibility in data placement and rebalancing, but introducing the overhead of managing the directory service. [Explore Directory-Based Sharding](../directory-based-sharding/README.md).
-
--   **Horizontal Scaling:** Hash-based sharding is a fundamental technique for achieving horizontal scalability in databases and data stores, allowing systems to handle larger datasets and higher loads by adding more machines, especially for key-value lookups. [Learn about Horizontal Scaling](../../../scaling/horizontal/README.md).
-
--   **Data Replication:** Sharding is often combined with data replication within each shard to provide fault tolerance and high availability, ensuring that data remains accessible even if a shard fails. [Understand Data Replication](../../../data-replication/README.md).

@@ -66,15 +66,3 @@ This interaction is typically **synchronous**, meaning the client blocks (waits)
 -   **Database Access:** Applications (clients) connect to a database server to query and manipulate data.
 
 -   **Online Gaming:** Many online games use a client-server model where game clients connect to central game servers for multiplayer interactions and game state management.
-
-## Related Concepts
-
--   **Communication:** The client-server model is a foundational communication pattern in distributed systems, defining a clear request-response interaction between distinct roles. [Explore other Communication Patterns](../README.md).
-
--   **Scaling:** Client-server architectures often employ various scaling techniques, including horizontal scaling (adding more servers behind a load balancer) and vertical scaling (upgrading server resources) to handle increased client demand. [Learn about Scaling](../../scaling/README.md).
-
--   **Fault Tolerance:** The server in a client-server model can be a single point of failure, necessitating fault tolerance strategies like redundancy, failover mechanisms, and replication to ensure continuous availability. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
--   **Service Discovery:** In dynamic client-server environments, especially with microservices, service discovery mechanisms are crucial for clients to locate and connect to available server instances without hardcoding network addresses. [Understand Service Discovery](../../service-discovery/README.md).
-
--   **Topology:** The star topology is a common physical network arrangement that aligns well with the client-server model, where clients connect to a central server or hub. [Explore Star Topology](../../topology/star/README.md).

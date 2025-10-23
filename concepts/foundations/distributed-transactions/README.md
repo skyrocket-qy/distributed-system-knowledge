@@ -41,15 +41,3 @@ Traditional ACID transactions are straightforward in a single-node environment. 
 
 -   **Two-Phase Commit (2PC):** Used in traditional distributed relational databases (e.g., XA transactions in Oracle, SQL Server) and some enterprise application servers.
 -   **Saga Pattern:** Widely adopted in modern microservices architectures (e.g., e-commerce platforms, order processing systems) to maintain data consistency across multiple services without using distributed transactions.
-
-## Related Concepts
-
--   **Consistency Models:** Distributed transactions aim to uphold strong consistency across multiple data stores, ensuring that all participants agree on the outcome of a transaction. However, this often comes with trade-offs in availability and partition tolerance. [Explore Consistency Models](../consistency-models/README.md).
-
--   **Coordination:** The successful execution of a distributed transaction heavily relies on robust coordination mechanisms to manage the state and actions of all participating nodes, especially during commit or rollback phases. [Understand Coordination Concepts](../coordination/README.md).
-
--   **Fault Tolerance:** Designing fault-tolerant distributed transactions is a significant challenge, as failures in any participant or network can jeopardize the atomicity and consistency of the entire operation. [Learn about Fault Tolerance](../fault-tolerance/README.md).
-
--   **Distributed Consensus:** While not always a direct application, the principles of distributed consensus are often at play in the commit phases of protocols like Two-Phase Commit, where all participants must agree on a final decision. [Understand Distributed Consensus](../distributed-consensus/README.md).
-
--   **Microservices Architecture (System Mode):** In modern microservices, traditional distributed transactions are often replaced by patterns like Saga, which prioritize availability and use eventual consistency, reflecting a different approach to system design. [Discover System Modes](../system-mode/README.md).
