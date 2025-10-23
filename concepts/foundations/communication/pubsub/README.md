@@ -4,6 +4,15 @@
 
 This section explains the Publish-Subscribe (Pub/Sub) communication pattern, where senders (publishers) broadcast messages to an intermediary, and receivers (subscribers) receive messages they are interested in.
 
+```mermaid
+graph TD
+    A[Publisher] --> B(Topic);
+    B --> C[Subscriber 1];
+    B --> D[Subscriber 2];
+    B --> E[Subscriber 3];
+```
+
+
 ## Characteristics
 
 -   **Asynchronous Communication**: Publishers and subscribers operate independently and do not need to be available at the same time.

@@ -23,6 +23,22 @@ The **Actor Model** is a powerful and elegant concurrency model that simplifies 
 
 The Actor Model's principles make it particularly well-suited for distributed environments:
 
+```mermaid
+graph TD
+    subgraph Actor 1
+        A[State]
+        B[Behavior]
+    end
+    subgraph Actor 2
+        C[State]
+        D[Behavior]
+    end
+    E(Message) --> F(Mailbox for Actor 2);
+    F --> C;
+    G(Message) --> H(Mailbox for Actor 1);
+    H --> A;
+```
+
 -   **Concurrency:** Asynchronous message passing and isolated state naturally support high levels of concurrency and parallelism.
 -   **Fault Tolerance:** The supervision hierarchy allows systems to self-heal and recover from failures gracefully, making them resilient.
 -   **Scalability:** Location transparency and message-driven communication facilitate scaling out by distributing actors across multiple nodes.

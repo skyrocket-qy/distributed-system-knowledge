@@ -8,6 +8,13 @@ The **Message Queue** model is a communication pattern that enables asynchronous
 -   **Consumer**: A component that retrieves and processes messages from the queue.
 -   **Queue**: A data structure that stores messages in a first-in, first-out (FIFO) order.
 
+```mermaid
+graph TD
+    A[Producer] --> B(Message Queue);
+    B --> C[Consumer];
+```
+
+
 The communication between the producer and the consumer is **asynchronous**, meaning the producer can send a message and continue its execution without waiting for the consumer to process it.
 
 ## Characteristics
@@ -16,6 +23,18 @@ The communication between the producer and the consumer is **asynchronous**, mea
 -   **Loose Coupling**: The producer and consumer are decoupled and do not need to know about each other.
 -   **Reliability**: Messages are stored in the queue until they are processed, ensuring that they are not lost in case of a component failure.
 -   **Scalability**: The producer and consumer can be scaled independently.
+
+```mermaid
+sequenceDiagram
+    participant P as Producer
+    participant MQ as Message Queue
+    participant C as Consumer
+
+    P->>MQ: Publish Message
+    MQ-->>P: Message Acknowledged
+    MQ->>C: Deliver Message
+    C-->>MQ: Message Processed
+```
 
 ## Comparison
 
