@@ -20,12 +20,12 @@ Without proper coordination, a distributed system can suffer from a variety of p
 
 ## Comparison
 
-| Mechanism | Primary Goal | Scalability | Complexity | Use Case |
-|---|---|---|---|---|
-| **[Quorum](./quorum)** | Consistency | Medium | Medium | Read/write operations in replicated systems |
-| **[Gossip](./gossip)** | Dissemination | High | Low | Cluster membership, failure detection |
-| **[Vector Clock](../conflict-resolution/vector-clocks)** | Causality | High | Medium | Detecting concurrent updates, versioning |
-| **[CRDT](../conflict-resolution/crdts)** | Conflict-free replication | High | High | Collaborative applications, enabling automatic conflict resolution as seen in [Conflict Resolution](../conflict-resolution/README.md) and used in [Data Replication](../data-replication/README.md) |
-| **[Event Streaming](./event-streaming)** | Data flow | High | Medium | Real-time data processing, microservices |
-| **[Leader Election](./leader-election)** | Fault Tolerance | Medium | Medium | Consensus, distributed databases |
-| **[Distributed Locks](./distributed-locks)** | Mutual Exclusion | Low | High | Resource access, critical sections |
+| Mechanism | Primary Goal | Consistency Model | Fault Tolerance | Scalability | Complexity | Use Case |
+|---|---|---|---|---|---|---|
+| **[Quorum](./quorum)** | Consistency | Strong (tunable) | High (depends on quorum size) | Medium | Medium | Read/write operations in replicated systems |
+| **[Gossip](./gossip)** | Dissemination | Eventual | High | High | Low | Cluster membership, failure detection |
+| **[Vector Clock](../conflict-resolution/vector-clocks)** | Causality | Causal | High | Medium | Detecting concurrent updates, versioning |
+| **[CRDT](../conflict-resolution/crdts)** | Conflict-free replication | Strong Eventual | High | High | High | Collaborative applications, enabling automatic conflict resolution as seen in [Conflict Resolution](../conflict-resolution/README.md) and used in [Data Replication](../data-replication/README.md) |
+| **[Event Streaming](./event-streaming)** | Data flow | Eventual (for consumers) | High (with durable logs) | High | Medium | Real-time data processing, microservices |
+| **[Leader Election](./leader-election)** | Fault Tolerance | Strong (for leader state) | Medium (leader failure requires re-election) | Medium | Medium | Consensus, distributed databases |
+| **[Distributed Locks](./distributed-locks)** | Mutual Exclusion | Strong | Medium (lock service failure can cause issues) | Low | High | Resource access, critical sections |
