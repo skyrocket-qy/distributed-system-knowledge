@@ -21,9 +21,9 @@ To achieve this, strong consistency models often rely on two more specific conce
 
 | Algorithm | Description | Fault Tolerance | Performance | Use Case |
 |---|---|---|---|---|
-| **Paxos** | A family of protocols for reaching consensus in a network of unreliable processors. | Byzantine faults | Moderate | Distributed databases, Chubby |
-| **Raft** | A consensus algorithm that is designed to be easy to understand. | Crash-stop faults | High | etcd, CockroachDB |
-| **ZAB** | (ZooKeeper Atomic Broadcast) A protocol for atomic broadcast and primary-backup replication. | Crash-stop faults | High | ZooKeeper |
+| **[Paxos](../../distributed-consensus/paxos/README.md)** | A family of protocols for reaching consensus in a network of unreliable processors. | [Byzantine faults](../../fault-tolerance/byzantine-faults/README.md) | Moderate | Distributed databases, Chubby |
+| **[Raft](../../distributed-consensus/raft/README.md)** | A consensus algorithm that is designed to be easy to understand. | [Crash-stop faults](../../fault-tolerance/crash-stop-faults/README.md) | High | etcd, CockroachDB |
+| **[ZAB](../../distributed-consensus/zab/README.md)** | (ZooKeeper Atomic Broadcast) A protocol for atomic broadcast and primary-backup replication. | [Crash-stop faults](../../fault-tolerance/crash-stop-faults/README.md) | High | ZooKeeper |
 
 ## Trade-offs
 
