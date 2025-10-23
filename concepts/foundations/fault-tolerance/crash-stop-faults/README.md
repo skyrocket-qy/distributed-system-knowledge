@@ -10,7 +10,3 @@ A crash-stop fault (also known as fail-stop) is a type of fault in distributed s
 -   **Easy to Detect:** Failures are typically easy to detect through timeouts or heartbeat mechanisms.
 -   **Simpler Recovery:** Recovery mechanisms are simpler compared to Byzantine faults.
 
-## Related Concepts
-
--   **Fault Tolerance:** Many distributed systems are designed to tolerate crash-stop faults.
--   **Distributed Consensus:** Algorithms like Raft and Paxos are often designed to tolerate crash-stop faults.

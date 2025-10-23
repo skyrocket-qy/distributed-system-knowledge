@@ -99,10 +99,3 @@ Implementing distributed locks correctly is notoriously challenging due to the i
 -   **Distributed Databases:** For internal coordination, such as leader election or managing schema changes.
 -   **Microservices Architectures:** To protect shared resources or prevent duplicate processing of events across different service instances.
 
-## Related Concepts
-
--   **Coordination:** Distributed locks are a fundamental coordination primitive, enabling processes to synchronize access to shared resources. [Explore Coordination Concepts](../README.md).
--   **Distributed Consensus:** Robust distributed lock implementations often rely on underlying distributed consensus algorithms to ensure safety and liveness. [Understand Distributed Consensus ../../distributed-consensus/README.md].
--   **Fault Tolerance:** Designing distributed locks to be fault-tolerant is crucial to prevent deadlocks and ensure the system can recover from failures of the lock holder or the lock service itself. [Understand Fault Tolerance ../../fault-tolerance/README.md].
--   **Distributed Transactions:** In some cases, distributed locks can be used as part of a distributed transaction to ensure atomicity across multiple operations. [Explore Distributed Transactions ../../distributed-transactions/README.md].
--   **Leader Election:** Often, the leader in a distributed system implicitly holds a form of a distributed lock for certain operations. [Understand Leader Election ./leader-election/README.md].

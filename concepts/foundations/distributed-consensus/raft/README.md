@@ -73,10 +73,3 @@ Raft operates in terms of *terms*, which are continuously increasing integers. E
 -   **CockroachDB:** A distributed SQL database that uses a variant of Raft (called Raft-based replication) for data consistency and fault tolerance.
 -   **TiKV:** A distributed transactional key-value database that uses Raft for data replication and consistency.
 
-## Related Concepts
-
--   **Distributed Consensus:** Raft is a prominent algorithm for solving the distributed consensus problem, ensuring agreement among nodes. [Explore Distributed Consensus](../README.md).
--   **Leader Election:** Leader election is an integral part of the Raft algorithm, as a new leader is elected at the beginning of each term. [Understand Leader Election](../../coordination/leader-election/README.md).
--   **Strong Consistency:** Raft is designed to provide strong consistency, ensuring that all committed operations are visible to all clients in the same order. [Learn about Strong Consistency](../../consistency-models/strong-consistency/README.md).
--   **Fault Tolerance:** Raft is inherently fault-tolerant, capable of tolerating failures of a minority of nodes (e.g., `(N-1)/2` failures in an N-node cluster). [Understand Fault Tolerance](../../fault-tolerance/README.md).
--   **Paxos:** A more complex but foundational consensus algorithm that Raft aims to simplify. [Compare with Paxos](./paxos/README.md).

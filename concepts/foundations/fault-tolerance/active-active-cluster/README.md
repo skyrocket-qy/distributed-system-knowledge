@@ -60,16 +60,3 @@ graph TD
 
 -   **Global Traffic Management (GTM) for Geo-Redundancy:** Systems that direct user traffic to the closest or healthiest active data center, where each data center is an active cluster.
 
-## Related Concepts
-
--   **Fault Tolerance:** Active-active clusters are a robust fault tolerance strategy, ensuring high availability and continuous operation by distributing the workload across multiple active nodes, so that the failure of one does not halt the service. [Explore other Fault Tolerance strategies](../README.md).
-
--   **Active-Passive Failover:** In contrast, active-passive failover relies on a single active node with a standby passive node, which takes over only upon failure, typically offering simpler management but with potential downtime during failover. [Compare with Active-Passive Failover](../active-passive-failover/README.md).
-
--   **Multi-Leader Data Replication:** Active-active clusters often leverage multi-leader (or multi-master) data replication, allowing writes to occur on multiple nodes simultaneously, which then synchronize their state, introducing challenges in conflict resolution. [Understand Multi-Leader Replication](../../data-replication/multi-leader/README.md).
-
--   **Horizontal Scaling:** Active-active configurations inherently provide horizontal scaling benefits, as adding more active nodes directly increases the system's capacity to handle more requests and process more data. [Learn about Horizontal Scaling](../../scaling/horizontal/README.md).
-
--   **Conflict Resolution:** A critical challenge in active-active clusters, especially those allowing writes to multiple nodes, is managing and resolving conflicts that arise from concurrent updates to the same data. [Explore Conflict Resolution](../../conflict-resolution/README.md).
-
--   **Service Discovery:** Load balancers and service discovery mechanisms are essential for distributing incoming requests efficiently across all active nodes in the cluster and for dynamically routing traffic away from failed instances. [Understand Service Discovery](../../service-discovery/README.md).

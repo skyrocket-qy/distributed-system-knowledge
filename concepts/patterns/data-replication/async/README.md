@@ -57,12 +57,3 @@ sequenceDiagram
 
 -   **Content Delivery Networks (CDNs):** Content updates are asynchronously replicated to edge servers around the globe.
 
-## Related Concepts
-
--   **Eventual Consistency:** Asynchronous replication is a primary mechanism for achieving eventual consistency, where data across replicas converges over time rather than immediately. [Learn more about Eventual Consistency](../../consistency-models/eventual-consistency/README.md).
-
--   **Synchronous Replication:** In contrast, synchronous replication ensures that all replicas are updated before a transaction is committed, prioritizing strong consistency over performance. [Compare with Synchronous Replication](../sync/README.md).
-
--   **Semi-Synchronous Replication:** A hybrid approach that offers a balance between the consistency guarantees of synchronous replication and the performance benefits of asynchronous replication. [Explore Semi-Synchronous Replication](../semi-sync/README.md).
-
--   **Fault Tolerance:** Asynchronous replication plays a crucial role in disaster recovery and high availability strategies, allowing systems to recover from failures by having data replicated to other nodes. [Understand Fault Tolerance](../../fault-tolerance/README.md).

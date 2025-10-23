@@ -72,16 +72,3 @@ sequenceDiagram
 -   **Distributed Databases:** Used in traditional distributed relational databases (e.g., XA transactions in Oracle, SQL Server) to maintain ACID properties across multiple database instances.
 -   **Enterprise Systems:** Employed in enterprise application servers and transaction processing monitors where strong consistency and atomicity are critical for business operations.
 
-## Related Concepts
-
--   **Distributed Transactions:** Two-Phase Commit (2PC) is a foundational protocol for ensuring atomicity and consistency across multiple participants in a distributed transaction. [Explore Distributed Transactions](../README.md).
-
--   **Three-Phase Commit (3PC):** 2PC is often compared with Three-Phase Commit (3PC), which attempts to mitigate some of 2PC's blocking issues and single points of failure, though at the cost of increased complexity. [Compare with Three-Phase Commit](../three-phase-commit/README.md).
-
--   **Saga Pattern:** In modern distributed systems, particularly microservices, the Saga pattern is often preferred over 2PC as an alternative for managing consistency across services, trading strong consistency for eventual consistency and improved availability. [Explore the Saga Pattern](../saga-pattern/README.md).
-
--   **Distributed Consensus:** Atomic commitment protocols like 2PC are fundamentally a form of distributed consensus, where all participating nodes must agree on whether to commit or abort a transaction. [Understand Distributed Consensus](../../distributed-consensus/README.md).
-
--   **Fault Tolerance:** 2PC has known limitations regarding fault tolerance, particularly its blocking nature and the coordinator being a single point of failure, which can lead to participants being stuck in an uncertain state. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
-
--   **Strong Consistency:** Protocols like 2PC are designed to achieve strong consistency across distributed data, ensuring that all participants see the same state after a transaction is committed. [Explore Strong Consistency](../../consistency-models/strong-consistency/README.md).

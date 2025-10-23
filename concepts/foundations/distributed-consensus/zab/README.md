@@ -21,9 +21,3 @@ The ZAB (ZooKeeper Atomic Broadcast) protocol is a consensus protocol that under
 
 -   **Apache ZooKeeper:** ZAB is the core protocol used by Apache ZooKeeper for distributed coordination, configuration management, naming, and providing distributed synchronization.
 
-## Related Concepts
-
--   **Distributed Consensus:** ZAB is a distributed consensus protocol.
--   **Strong Consistency:** ZAB provides strong consistency guarantees.
--   **Sequential Consistency:** ZAB ensures sequential consistency by enforcing a total order on transactions.
--   **Crash-stop Faults:** ZAB is designed to tolerate crash-stop faults.

@@ -80,14 +80,3 @@ graph TD
 
 -   **Distributed File Systems:** Some distributed file systems use quorum-like mechanisms to ensure data integrity and availability, especially when dealing with metadata or critical control plane operations.
 
-## Related Concepts
-
--   **Coordination:** Quorum is a fundamental coordination mechanism in distributed systems, enabling a group of nodes to make decisions or perform operations by requiring a minimum number of participants to agree. [Explore other Coordination techniques](../README.md).
-
--   **Distributed Consensus:** Quorum is a cornerstone of many distributed consensus algorithms (e.g., Paxos, Raft), where a majority of nodes must agree on a decision to ensure consistency and fault tolerance. [Learn more about Distributed Consensus](../../distributed-consensus/README.md).
-
--   **Consistency Models:** The concept of quorum allows for tunable consistency, enabling systems to balance strong consistency with availability and performance by adjusting the number of replicas required for read and write operations. [Explore Consistency Models](../../consistency-models/README.md).
-
--   **Fault Tolerance:** Quorum-based systems are inherently fault-tolerant, as they can continue to operate and maintain consistency even if a minority of nodes fail, provided the quorum threshold is still met. [Understand Fault Tolerance](../../fault-tolerance/README.md).
-
--   **Data Replication:** Quorum reads and writes are commonly used in replicated storage systems to ensure data integrity and availability across multiple copies of data, allowing for flexible consistency guarantees. [Understand Data Replication](../../data-replication/README.md).

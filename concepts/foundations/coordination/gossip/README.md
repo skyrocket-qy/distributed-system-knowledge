@@ -65,14 +65,3 @@ graph TD
 
 -   **Peer-to-Peer Networks:** Gossip protocols are fundamental to many P2P systems for disseminating information and maintaining network health without central coordination.
 
-## Related Concepts
-
--   **Coordination:** The Gossip protocol is a decentralized coordination mechanism that enables nodes in a distributed system to efficiently disseminate information and maintain a consistent view of the system's state without relying on a central authority. [Explore other Coordination techniques](../README.md).
-
--   **Fault Tolerance:** Gossip protocols are highly effective for building fault-tolerant systems, particularly for decentralized failure detection and the rapid dissemination of recovery information, as seen in gossip-based recovery. [Understand Gossip-Based Recovery for Fault Tolerance](../../fault-tolerance/gossip-recovery/README.md).
-
--   **Peer-to-Peer Communication:** Gossip protocols are inherently suited for peer-to-peer communication models, where nodes interact directly with a subset of other nodes, making them ideal for decentralized information exchange. [Understand Peer-to-Peer Communication](../../communication/p2p/README.md).
-
--   **Decentralized Service Discovery:** Gossip can be leveraged to implement decentralized service discovery and cluster membership management, allowing nodes to dynamically discover new members and detect failures without a centralized registry. [Explore Decentralized Service Discovery](../../service-discovery/decentralized-discovery/README.md).
-
--   **Data Replication:** Gossip protocols can be used to efficiently propagate data updates and replica states across a distributed system, contributing to the consistency and availability of replicated data. [Understand Data Replication](../../data-replication/README.md).

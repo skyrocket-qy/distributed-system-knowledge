@@ -62,16 +62,3 @@ sequenceDiagram
 
 -   **High-Availability Clusters:** In active-passive or active-active setups for critical applications, synchronous replication ensures that the standby node always has an up-to-date copy of the data.
 
-## Related Concepts
-
--   **Data Replication:** Synchronous replication is a fundamental data replication strategy that prioritizes strong consistency by ensuring all replicas acknowledge an update before the transaction is committed. [Explore other Data Replication strategies](../README.md).
-
--   **Asynchronous Replication:** In contrast, asynchronous replication prioritizes performance and availability, allowing the primary to commit before replicas confirm, leading to eventual consistency. [Compare with Asynchronous Replication](../async/README.md).
-
--   **Semi-Synchronous Replication:** A hybrid approach that balances consistency and performance, where the primary waits for at least one replica to acknowledge the update before committing. [Explore Semi-Synchronous Replication](../semi-sync/README.md).
-
--   **Strong Consistency:** Synchronous replication is a primary mechanism for achieving strong consistency, guaranteeing that all reads return the most recent write and that data is consistent across all replicas. [Explore Strong Consistency](../../consistency-models/strong-consistency/README.md).
-
--   **Distributed Consensus:** Algorithms like Paxos or Raft often employ synchronous communication patterns to ensure that all participants agree on the order of operations and the state of the data, which is critical for synchronous replication. [Understand Distributed Consensus](../../distributed-consensus/README.md).
-
--   **Fault Tolerance:** While synchronous replication ensures zero data loss, it can impact availability during replica failures, as the primary might block until a quorum of replicas responds. [Understand Fault Tolerance](../../fault-tolerance/README.md).

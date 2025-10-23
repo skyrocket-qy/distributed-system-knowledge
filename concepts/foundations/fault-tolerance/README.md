@@ -81,18 +81,4 @@ The goal of fault tolerance is to mask failures from the end-user, providing the
 
 -   **Gossip-Based Recovery:** Peer-to-peer networks, distributed hash tables (DHTs), and some cluster membership services.
 
-## Related Concepts
 
--   **Data Replication:** A fundamental technique for achieving fault tolerance by maintaining multiple copies of data across different nodes, ensuring availability even if some nodes fail. [Explore Data Replication strategies](../data-replication/README.md).
-
--   **Distributed Consensus:** Algorithms like Paxos or Raft are crucial for fault-tolerant decision-making in distributed systems, enabling nodes to agree on a single value or state despite failures. [Understand Distributed Consensus](../distributed-consensus/README.md).
-
--   **Consistency Models:** The choice of consistency model (e.g., strong, eventual) is often influenced by fault tolerance requirements, as stronger consistency can sometimes be harder to maintain during network partitions or node failures. [Learn about Consistency Models](../consistency-models/README.md).
-
--   **System Modes:** Various system architectures and modes (e.g., active-passive, quorum-based) are designed with specific fault tolerance characteristics to handle different types of failures and recovery scenarios. [Discover System Modes](../system-mode/README.md).
-
--   **Coordination:** Fault tolerance mechanisms, especially failure detection, leader election, and recovery processes, heavily rely on effective coordination among distributed components. [Explore Coordination Concepts](../coordination/README.md).
-
--   **Idempotency:** A crucial property for operations in fault-tolerant systems, ensuring that repeated executions of an operation produce the same result, preventing unintended side effects during retries. [Understand Idempotency](./idempotency/README.md).
-
--   **Chaos Engineering:** A proactive approach to testing the resilience of distributed systems by intentionally injecting failures to uncover weaknesses. [Understand Chaos Engineering ./chaos-engineering/README.md].

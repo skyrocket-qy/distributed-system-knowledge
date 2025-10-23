@@ -56,16 +56,3 @@ graph TD
 
 -   **State Machine Replication:** Systems that replicate a state machine across multiple nodes use consensus to ensure that all nodes process the same sequence of commands in the same order, maintaining a consistent state.
 
-## Related Concepts
-
--   **Strong Consistency:** Distributed consensus algorithms are fundamental for achieving strong consistency in distributed systems, ensuring that all replicas agree on the order of operations and the state of the data. [Learn more about Strong Consistency](../consistency-models/strong-consistency/README.md).
-
--   **Fault Tolerance:** Consensus protocols are inherently designed to tolerate failures (e.g., node crashes, network partitions) and ensure the system can continue to operate and make progress even in the presence of faults. [Understand Fault Tolerance](../fault-tolerance/README.md).
-
--   **Distributed Transactions:** While challenging, some distributed transaction protocols, such as Two-Phase Commit, utilize consensus-like mechanisms to ensure atomicity across multiple participating nodes. [Explore Distributed Transactions](../distributed-transactions/README.md).
-
--   **Coordination:** Consensus is a core mechanism for coordination in distributed systems, enabling nodes to agree on shared states, elect leaders, and manage distributed locks. [Discover Coordination Concepts](../coordination/README.md).
-
--   **Paxos:** A foundational, albeit complex, algorithm for achieving distributed consensus, known for its strong theoretical guarantees. [Understand Paxos ./paxos/README.md].
-
--   **Raft:** A consensus algorithm designed for understandability, often preferred over Paxos for its clarity and ease of implementation in practical systems. [Understand Raft ./raft/README.md].

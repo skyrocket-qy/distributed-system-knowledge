@@ -78,10 +78,3 @@ sequenceDiagram
 -   **Google Spanner:** A globally distributed database that uses Paxos for strong consistency across replicas.
 -   **Apache ZooKeeper (ZAB protocol):** While not pure Paxos, ZooKeeper's ZAB (ZooKeeper Atomic Broadcast) protocol is inspired by Paxos and is used for distributed coordination and leader election.
 
-## Related Concepts
-
--   **Distributed Consensus:** Paxos is one of the foundational algorithms for solving the distributed consensus problem. [Explore Distributed Consensus](../README.md).
--   **Leader Election:** Paxos often requires a leader election mechanism to ensure liveness and make progress. [Understand Leader Election](../../coordination/leader-election/README.md).
--   **Strong Consistency:** Paxos is used to achieve strong consistency in distributed systems by ensuring all replicas agree on the order of operations. [Learn about Strong Consistency](../../consistency-models/strong-consistency/README.md).
--   **Fault Tolerance:** Paxos is designed to tolerate crash failures of nodes and message loss, making it a key component in building fault-tolerant systems. [Understand Fault Tolerance](../../fault-tolerance/README.md).
--   **Raft:** A more understandable alternative to Paxos for achieving distributed consensus. [Compare with Raft](./raft/README.md).

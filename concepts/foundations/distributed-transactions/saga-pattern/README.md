@@ -71,14 +71,3 @@ sequenceDiagram
 -   **Long-Running Business Processes:** Ideal for complex business workflows that involve multiple steps and services, where immediate global consistency is not strictly required.
 -   **Systems Prioritizing Availability:** When high availability and partition tolerance are more critical than strong consistency, Sagas offer a viable alternative to blocking distributed transactions.
 
-## Related Concepts
-
--   **Distributed Transactions:** The Saga pattern serves as a powerful alternative to traditional distributed transactions (like 2PC/3PC), especially in environments where strong ACID guarantees across services are impractical or undesirable. [Explore Distributed Transactions](../README.md).
-
--   **Eventual Consistency:** Sagas inherently achieve eventual consistency across the distributed system, meaning that while the system may temporarily be in an inconsistent state, it will eventually converge to a consistent state after all local and compensating transactions complete. [Learn more about Eventual Consistency](../../consistency-models/eventual-consistency/README.md).
-
--   **Messaging:** Sagas heavily rely on asynchronous messaging, often using event-driven communication, to coordinate local transactions between participating services and to trigger compensating actions. [Explore Messaging Systems](../../messaging/README.md).
-
--   **Microservices Architecture (System Mode):** The Saga pattern is a cornerstone for managing data consistency in microservices architectures, where each service typically owns its data and direct distributed transactions are avoided. [Discover System Modes](../../system-mode/README.md).
-
--   **Fault Tolerance:** Sagas contribute to fault tolerance by providing a structured way to handle failures within a distributed business process, allowing for recovery through compensating transactions rather than a complete rollback. [Understand Fault Tolerance](../../fault-tolerance/README.md).

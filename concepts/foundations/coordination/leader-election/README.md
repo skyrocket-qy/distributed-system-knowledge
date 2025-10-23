@@ -75,9 +75,3 @@ sequenceDiagram
 -   **Message Queues (e.g., Apache Kafka):** For partition leaders to manage message offsets and replication.
 -   **Container Orchestration (e.g., Kubernetes):** For electing leaders among control plane components (e.g., `kube-controller-manager`, `kube-scheduler`) to ensure only one instance is active.
 
-## Related Concepts
-
--   **Coordination:** Leader election is a primary mechanism for coordination in distributed systems, enabling centralized control for specific tasks. [Explore Coordination Concepts](../README.md).
--   **Distributed Consensus:** Algorithms like Paxos and Raft, which are used for distributed consensus, inherently include leader election as a core component. [Understand Distributed Consensus](../../distributed-consensus/README.md).
--   **Fault Tolerance:** A robust leader election mechanism is essential for fault-tolerant systems, allowing them to recover from leader failures and maintain continuous operation. [Learn about Fault Tolerance](../../fault-tolerance/README.md).
--   **System Modes:** Many distributed system architectures, such as master-slave (leader-follower) or quorum-based systems, rely heavily on leader election for their operational model. [Discover System Modes](../../system-mode/README.md).
