@@ -12,23 +12,12 @@ This section details how CRDTs are designed to resolve conflicts automatically a
 - **Associative**: Updates can be grouped together in any way.
 - **Idempotent**: Applying the same update multiple times has the same effect as applying it once.
 
-## Comparison
-
-| Feature | Description |
-|---|---|
-| **Conflict Resolution** | Automatic and deterministic. |
-| **Consistency** | Eventual consistency. |
-| **Complexity** | Can be complex to design and implement. |
-| **Use Case** | Collaborative editing, shared data structures. |
-
 ## Trade-offs
 
 - **Complexity vs. Power**: CRDTs are more complex than other conflict resolution strategies, but they are also more powerful.
 - **Performance vs. Correctness**: CRDTs can have a performance overhead, but they can ensure correctness in the presence of concurrent updates.
 
 ## Which service use it?
-
-
 
 -   **Collaborative Text Editors:** Applications like Google Docs or Atom Teletype use CRDTs to allow multiple users to edit the same document concurrently without explicit locking, and changes are merged automatically.
 
