@@ -4,13 +4,7 @@
 
 This section describes the eventual consistency model, where the system guarantees that if no new updates are made to a given data item, eventually all accesses to that item will return the last updated value.
 
-## Characteristics
-
-- **High Availability**: Eventual consistency provides high availability, as it allows the system to continue operating even in the presence of network partitions.
-- **Low Latency**: Eventual consistency allows for low-latency reads and writes, as operations can be performed on local replicas without waiting for coordination with other nodes.
-- **Scalability**: Eventual consistency is highly scalable, as it allows new nodes to be added to the system without requiring a global re-synchronization.
-- **Stale Reads**: Eventual consistency can result in stale reads, as a read operation may return a value that is not the most recent write.
-- **Conflict Resolution**: Eventual consistency requires a mechanism to resolve conflicts that can arise from concurrent writes to different replicas.
+## Pros & Cons
 
 ## Which service use it?
 

@@ -9,14 +9,6 @@ To achieve this, strong consistency models often rely on two more specific conce
 -   **Linearizability:** This is the strongest form of consistency. It requires that all operations appear to have been executed atomically at some point between their invocation and their completion. This gives the illusion of a single, centralized system, making it easier to reason about the system's behavior.
 -   **Sequential Consistency:** This is a slightly weaker model that still provides strong guarantees. It requires that all operations appear to be executed in some sequential order, and that the operations of any individual client appear in the same order as they were issued. However, the global order of operations from different clients is not guaranteed to be the same as the real-time order.
 
-## Characteristics
-
-- **Linearizability**: All operations appear to be executed atomically at some point in time.
-- **Sequential Consistency**: All operations appear to be executed in some sequential order.
-- **High Latency**: Strong consistency can introduce high latency due to the need for coordination.
-- **Low Availability**: Strong consistency can reduce availability in the presence of network partitions.
-- **Simplicity**: Strong consistency is simple for developers to reason about.
-
 ## Comparison
 
 | Algorithm | Description | Fault Tolerance | Performance | Use Case |
@@ -25,14 +17,14 @@ To achieve this, strong consistency models often rely on two more specific conce
 | **[Raft](../../distributed-consensus/raft/README.md)** | A consensus algorithm that is designed to be easy to understand. | [Crash-stop faults](../../fault-tolerance/crash-stop-faults/README.md) | High | etcd, CockroachDB |
 | **[ZAB](../../distributed-consensus/zab/README.md)** | (ZooKeeper Atomic Broadcast) A protocol for atomic broadcast and primary-backup replication. | [Crash-stop faults](../../fault-tolerance/crash-stop-faults/README.md) | High | ZooKeeper |
 
-## Trade-offs
+## Pros & Cons
 
-### Advantages
+### Pros
 
 -   **Simplicity:** Strong consistency makes it easier for developers to reason about the state of the system, as there is a single, authoritative view of the data.
 -   **Correctness:** It eliminates the risk of stale reads and other anomalies that can occur with weaker consistency models, which is critical for applications like financial systems.
 
-### Disadvantages
+### Cons
 
 -   **High Latency:** Achieving strong consistency often requires synchronous communication between replicas, which can increase the latency of write operations.
 -   **Lower Availability:** If a replica is unable to communicate with the others, it may not be able to serve read or write requests, reducing the overall availability of the system.

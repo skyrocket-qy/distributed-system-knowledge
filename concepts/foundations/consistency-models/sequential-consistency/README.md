@@ -12,16 +12,7 @@ Sequential consistency is a strong consistency model that ensures that the resul
 - **Weaker than Linearizability**: Sequential consistency does not guarantee real-time ordering, meaning that an operation that physically completed before another might still appear to happen after it in the global sequential order.
 - **High Latency**: Sequential consistency can introduce high latency due to the need for global ordering.
 
-## Comparison
-
-| Feature | Description |
-|---|---|
-| **Ordering** | Total order of all operations, preserving program order. |
-| **Strength** | Strong, but weaker than Linearizability. |
-| **Performance** | High latency due to strict ordering and coordination. |
-| **Implementation Complexity** | Complex to implement and scale in distributed systems. |
-
-## Trade-offs
+## Pros & Cons
 
 ### Pros
 
