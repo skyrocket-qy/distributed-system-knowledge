@@ -22,11 +22,32 @@ Vector clocks can be compared to determine the causal relationship between two e
 
 Consider three processes P1, P2, and P3. Initially, their vector clocks are [0,0,0].
 
-1.  P1 performs a local event: VC(P1) = [1,0,0]
-2.  P2 performs a local event: VC(P2) = [0,1,0]
-3.  P1 sends a message to P2. The message carries VC(P1) = [1,0,0].
-4.  P2 receives the message from P1. P2 updates its VC: max([0,1,0], [1,0,0]) = [1,1,0]. Then P2 performs a local event: VC(P2) = [1,2,0]
-5.  P3 performs a local event: VC(P3) = [0,0,1]
+```mermaid
+sequenceDiagram
+    participant P1
+    participant P2
+    participant P3
+
+    Note over P1,P2,P3: Initial VCs: P1=[0,0,0], P2=[0,0,0], P3=[0,0,0]
+
+    P1->>P1: Local event (e1)
+    Note over P1: VC(P1) = [1,0,0]
+
+    P2->>P2: Local event (e2)
+    Note over P2: VC(P2) = [0,1,0]
+
+    P1->>P2: Send message (m1) with VC=[1,0,0]
+    Note over P1: VC(P1) = [1,0,0]
+
+    P2->>P2: Receive m1; Update VC: max([0,1,0], [1,0,0]) = [1,1,0]
+    P2->>P2: Local event (e3)
+    Note over P2: VC(P2) = [1,2,0]
+
+    P3->>P3: Local event (e4)
+    Note over P3: VC(P3) = [0,0,1]
+
+    Note over P1,P2,P3: Final VCs: P1=[1,0,0], P2=[1,2,0], P3=[0,0,1]
+```
 
 By comparing these vector clocks, we can determine causal relationships. For example, the event at P1 ([1,0,0]) happened before the second event at P2 ([1,2,0]). The event at P3 ([0,0,1]) is concurrent with both events at P1 and P2.
 
