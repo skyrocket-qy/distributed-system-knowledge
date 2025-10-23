@@ -14,14 +14,6 @@ The choice of a consistency model has a significant impact on the performance, a
 -   **Conflict Resolution:** How conflicts arising from concurrent updates are handled, especially in weaker consistency models.
 -   **Network Partitions:** The system's behavior and data availability during network failures that partition the system.
 
-## Characteristics
-
-- **Ordering**: The order in which operations are seen by different processes.
-- **Visibility**: The time it takes for a write to be visible to other processes.
-- **Staleness**: The possibility of reading stale data.
-- **Complexity**: The complexity of the consistency model for developers to reason about.
-- **Performance**: The performance of the system in terms of latency and throughput.
-
 ## Comparison
 
 | Model | Guarantee | Performance | Staleness | Debug Complexity | Implementation Complexity | Use Case |
@@ -30,24 +22,6 @@ The choice of a consistency model has a significant impact on the performance, a
 | **[Sequential Consistency](./sequential)** | All operations appear to execute in a single, global order, preserving program order. | High latency (due to strict global ordering and coordination) | No | Medium | High | Distributed shared memory, critical sections |
 | **[Eventual Consistency](./eventual-consistency)** | Replicas will eventually be consistent | Low latency (allows for faster writes) | Yes | High | Low | Social media, e-commerce |
 | **[Causal Consistency](./causal-consistency)** | Causal order of operations is preserved | Medium latency (requires tracking causal dependencies) | Yes | High | Medium | Collaborative editing, chat |
-
-## Trade-offs
-
-| Model | Advantages | Disadvantages |
-|---|---|---|
-| **Strong Consistency** | Simplifies application development, predictable behavior | Higher latency, lower availability |
-| **Eventual Consistency** | High availability, low latency for writes | More complex for developers, potential for stale data |
-| **Causal Consistency** | Good balance, preserves logical order | More complex than eventual, dependency tracking overhead |
-
-## Which service use it?
-
-
-
--   **Strong Consistency:** Financial transaction systems, banking applications, and critical data management systems where immediate data accuracy is paramount.
-
--   **Eventual Consistency:** Social media feeds, e-commerce product catalogs, DNS, and large-scale web services where high availability and performance are prioritized over immediate consistency.
-
--   **Causal Consistency:** Collaborative editing applications, distributed social networks, and systems that need to preserve the causal order of events without requiring global strong consistency.
 
 ## Related Concepts
 
