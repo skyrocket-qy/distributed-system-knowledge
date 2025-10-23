@@ -28,7 +28,7 @@ sequenceDiagram
     participant P2
     participant P3
 
-    Note over P1,P2,P3: Initial VCs: P1=[0,0,0], P2=[0,0,0], P3=[0,0,0]
+    Note over P1,P3: Initial VCs for all processes are [0,0,0]
 
     P1->>P1: Local event (e1)
     Note over P1: VC(P1) = [1,0,0]
@@ -39,14 +39,14 @@ sequenceDiagram
     P1->>P2: Send message (m1) with VC=[1,0,0]
     Note over P1: VC(P1) = [1,0,0]
 
-    P2->>P2: Receive m1; Update VC: max([0,1,0], [1,0,0]) = [1,1,0]
+    P2->>P2: Receive m1 and update VC to [1,1,0]
     P2->>P2: Local event (e3)
     Note over P2: VC(P2) = [1,2,0]
 
     P3->>P3: Local event (e4)
     Note over P3: VC(P3) = [0,0,1]
 
-    Note over P1,P2,P3: Final VCs: P1=[1,0,0], P2=[1,2,0], P3=[0,0,1]
+    Note over P1,P3: Final VCs are P1=[1,0,0], P2=[1,2,0], P3=[0,0,1]
 ```
 
 By comparing these vector clocks, we can determine causal relationships. For example, the event at P1 ([1,0,0]) happened before the second event at P2 ([1,2,0]). The event at P3 ([0,0,1]) is concurrent with both events at P1 and P2.
