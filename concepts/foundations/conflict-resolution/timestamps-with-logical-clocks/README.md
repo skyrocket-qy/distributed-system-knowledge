@@ -52,6 +52,37 @@ sequenceDiagram
 
 In this example, we can see the causal relationships. For instance, Event A (P1=1) happened before the event where P2 received M1 (P2=3). However, Event B (P2=1) and Event C (P3=1) are concurrent, even though their timestamps are equal, demonstrating the partial ordering nature of Lamport clocks.
 
+### Illustrating Concurrency with Lamport Timestamps
+
+To further clarify that `timestamp A < timestamp B` does not imply `A happened before B` (they could be concurrent), consider this scenario:
+
+```mermaid
+sequenceDiagram
+    participant P1
+    participant P2
+
+    Note over P1,P2: Initial Clocks: P1=0, P2=0
+
+    P1->>P1: Event X (P1 increments to 1)
+    Note over P1: Clock = 1
+
+    P2->>P2: Event Y (P2 increments to 1)
+    Note over P2: Clock = 1
+
+    P1->>P1: Event A (P1 increments to 2)
+    Note over P1: Clock = 2
+
+    P2->>P2: Event B (P2 increments to 2)
+    Note over P2: Clock = 2
+
+    Note over P1,P2: At this point, P1's clock is 2 and P2's clock is 2.
+    Note over P1,P2: Event A and Event B are concurrent, but their timestamps are equal.
+    Note over P1,P2: If P1 then sends a message to P2, P2's clock will become 3.
+    Note over P1,P2: A new event on P2 would have timestamp 3, which is > P1's timestamp of 2.
+    Note over P1,P2: However, P1's event (timestamp 2) and P2's new event (timestamp 3) are concurrent.
+    Note over P1,P2: This shows that a lower timestamp does not guarantee a happened-before relationship.
+```
+
 ## Characteristics
 
 - **Causal Ordering**: Logical clocks can establish a partial or total order of events.
