@@ -54,6 +54,30 @@ sequenceDiagram
 - **Durable**: The outcome of the transaction is durable, even in the case of failures.
 - **Centralized**: The protocol relies on a central coordinator to make the final decision.
 
+### Worst Case Scenario
+
+The most critical worst-case scenario for 2PC occurs if the **coordinator fails permanently after sending the `prepare` message but before sending either `global-commit` or `global-abort` to all participants.** In this situation, participants that have voted `commit` are left in an "in-doubt" state. They cannot unilaterally commit (as they don't know if all others committed) nor abort (as others might have committed). Consequently, these participants remain blocked indefinitely, holding onto critical resources and locks, until the coordinator recovers or manual intervention resolves the ambiguity. This can lead to severe system unavailability and resource starvation.
+
+```mermaid
+sequenceDiagram
+    participant C as Coordinator
+    participant P1 as Participant 1
+    participant P2 as Participant 2
+
+    C->>P1: Prepare?
+    C->>P2: Prepare?
+
+    P1-->>C: Vote Commit
+    P2-->>C: Vote Commit
+
+    Note over C: Coordinator fails permanently
+
+    P1->>P1: (P1 remains blocked, holding resources)
+    P2->>P2: (P2 remains blocked, holding resources)
+
+    Note over P1,P2: Participants are in an 'in-doubt' state, blocked indefinitely.
+```
+
 
 ## Pros & Cons
 

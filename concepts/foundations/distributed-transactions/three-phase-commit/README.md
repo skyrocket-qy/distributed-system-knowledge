@@ -58,6 +58,34 @@ sequenceDiagram
 - **Durable**: The outcome of the transaction is durable, even in the case of failures.
 - **Complex**: 3PC is more complex than 2PC, as it involves an extra phase.
 
+### Worst Case Scenario
+
+While 3PC aims to be non-blocking, its worst-case scenario arises primarily from **network partitions combined with coordinator failures**. If a network partition occurs, isolating the coordinator from a subset of participants, and the coordinator then fails, the non-blocking guarantee can be violated. For example, if the coordinator sends a `PreCommit` message to a participant, then the network partitions, and the coordinator fails, the isolated participant might decide to commit (assuming the coordinator failed and it was safe to proceed), while other participants in a different partition might decide to abort (if a new coordinator is elected in their partition and doesn't see the `PreCommit` from the original coordinator). This can lead to an inconsistent state where some participants commit and others abort, violating atomicity. 3PC relies on strong assumptions about bounded network delays to prevent this, which are often difficult to guarantee in real-world distributed systems.
+
+```mermaid
+sequenceDiagram
+    participant C as Coordinator
+    participant P1 as Participant 1
+    participant P2 as Participant 2
+
+    C->>P1: CanCommit?
+    C->>P2: CanCommit?
+
+    P1-->>C: Yes
+    P2-->>C: Yes
+
+    C->>P1: PreCommit
+    Note over C,P2: Coordinator fails after sending PreCommit to P1, before P2
+    Note over P1,P2: Network partition occurs, isolating P1 from P2
+
+    alt P1 commits, P2 aborts
+        P1->>P1: (P1 commits locally due to timeout/new coordinator in its partition)
+        P2->>P2: (P2 aborts locally due to timeout/new coordinator in its partition)
+    end
+
+    Note over P1,P2: Inconsistent state: P1 committed, P2 aborted
+```
+
 ## ## Pros & Cons
 
 ### Pros
