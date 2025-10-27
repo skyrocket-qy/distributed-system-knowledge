@@ -14,23 +14,6 @@ In a multi-master setup, each master node can process writes independently and t
 - **Complexity**: Multi-master systems are complex due to the need for conflict resolution.
 - **Eventual Consistency**: Data is typically eventually consistent across all master nodes.
 
-## Comparison
-
-| Feature | Multi-Master | Single-Master |
-|---|---|---|
-| **Writes** | Multiple Nodes | Single Node |
-| **Availability** | High | Low |
-| **Latency** | Low | High |
-| **Complexity** | High | Low |
-
-## Trade-offs
-
-- **High Availability**: Multi-master systems provide high availability for writes.
-- **Low Latency**: Clients can connect to the nearest master, reducing write latency.
-- **Scalability**: The write load is distributed across multiple nodes, increasing write throughput.
-- **Complexity**: Multi-master systems are complex due to the need for conflict resolution.
-- **Eventual Consistency**: Data is typically eventually consistent across all master nodes.
-
 ## How It Works
 
 When a write is made to any master node, that node updates its local data store and then propagates the change to all other master nodes in the system. This propagation often occurs via change logs or message queues, ensuring that all masters eventually receive the updates. Since writes can occur concurrently on different masters, conflicts can arise. For example, two clients might update the same piece of data on two different masters at the same time.
@@ -56,15 +39,6 @@ Replication between masters can be synchronous or asynchronous. Asynchronous rep
 -   **Conflict Resolution Complexity:** The need to handle and resolve write conflicts adds significant complexity to the system.
 -   **[Eventual Consistency](../../consistency-models/eventual-consistency/README.md):** Due to replication lag and the asynchronous nature of updates, data is typically eventually consistent. This means that different nodes might have different versions of the data for a short period, and all replicas are guaranteed to converge to the same state only if no new updates are made for a sufficient period.
 -   **Difficult to Reason About:** The possibility of concurrent writes and conflicts can make it harder to reason about the state of the data and the behavior of the system.
-
-## Key Considerations
-
-When designing a system with multi-master replication, several factors need careful consideration:
-
--   **Network Latency:** While multi-master reduces write latency for local clients, high network latency between master nodes can increase replication lag and the window for conflicts.
--   **Data Consistency Requirements:** Multi-master inherently leads to eventual consistency. Systems requiring strong consistency for all operations might find multi-master unsuitable without additional mechanisms (e.g., distributed transactions, which add complexity).
--   **Operational Overhead:** Managing multiple active masters, monitoring replication, and handling conflict resolution logic adds to operational complexity compared to single-master setups.
--   **Application Design:** Applications need to be designed to gracefully handle eventual consistency and potential conflicts. This might involve implementing custom conflict resolution logic or designing data models that minimize conflicts (e.g., using CRDTs).
 
 ## Which service use it?
 
