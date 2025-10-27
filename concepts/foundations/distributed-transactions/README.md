@@ -15,14 +15,6 @@ Traditional ACID transactions are straightforward in a single-node environment. 
 -   **Network Latency:** The time taken for messages to travel between participants can significantly slow down distributed transactions.
 -   **Partial Failures:** Handling situations where some participants fail while others succeed, making it difficult to coordinate a global commit or rollback.
 
-## Characteristics
-
-- **Atomicity**: All participants either commit or abort the transaction.
-- **Consistency**: The transaction brings the system from one valid state to another.
-- **Isolation**: Concurrent transactions do not interfere with each other.
-- **Durability**: The outcome of the transaction is durable, even in the case of failures.
-- **Complexity**: Distributed transactions are more complex than local transactions.
-
 ## Comparison
 
 | Mechanism | Trade-offs | Use Case |
@@ -30,14 +22,3 @@ Traditional ACID transactions are straightforward in a single-node environment. 
 | **[Two-Phase Commit (2PC)](./two-phase-commit)** | High latency, blocking, single point of failure (coordinator) | Distributed databases, enterprise systems requiring strong consistency |
 | **[Three-Phase Commit (3PC)](./three-phase-commit)** | More complex, still susceptible to network partitions, higher overhead than 2PC | Systems where blocking is unacceptable, but strong consistency is still desired |
 | **[Saga Pattern](./saga-pattern)** | Eventual consistency, increased complexity in error handling, no global rollback | Microservices architectures, long-running business processes |
-
-## Trade-offs
-
-- **Performance**: Distributed transactions can be slow due to the overhead of coordination and network latency.
-- **Availability**: Distributed transactions can be blocked if a participant is unavailable.
-- **Complexity**: Distributed transactions are complex to implement and manage.
-
-## Which service use it?
-
--   **Two-Phase Commit (2PC):** Used in traditional distributed relational databases (e.g., XA transactions in Oracle, SQL Server) and some enterprise application servers.
--   **Saga Pattern:** Widely adopted in modern microservices architectures (e.g., e-commerce platforms, order processing systems) to maintain data consistency across multiple services without using distributed transactions.
