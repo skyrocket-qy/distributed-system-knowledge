@@ -44,13 +44,23 @@ graph TD
 | **Scalability** | Highly scalable for high-throughput data. |
 | **Durability** | Events are typically persisted for a configurable duration. |
 
-## Trade-offs
+## Pros & Cons 
 
-| Advantages | Disadvantages |
-|---|---|
-| **Real-time**: Events are processed in real-time as they are generated. | **Complexity**: Event streaming platforms can be complex to set up and manage. |
-| **Scalable**: Event streaming platforms are highly scalable and can handle a large volume of events. | **Cost**: Event streaming platforms can be expensive to operate. |
-| **Durable**: Events are stored in a durable log and can be replayed. | **Latency**: Event streaming platforms can introduce latency. |
+### Advantages
+-   **Real-time Processing:** Enables immediate processing of data as it is generated, crucial for real-time analytics, monitoring, and reactive systems.
+-   **High Scalability and Throughput:** Designed to handle massive volumes of events and can scale horizontally to accommodate increasing data loads.
+-   **Durability and Replayability:** Events are stored in a persistent, ordered log, allowing for data replay, recovery, and processing by new consumers.
+-   **Decoupling:** Producers and consumers are highly decoupled, promoting independent development, deployment, and evolution of services.
+-   **Fault Tolerance:** With proper configuration, event streaming platforms are highly fault-tolerant, ensuring data is not lost even if nodes fail.
+-   **Auditability:** The immutable log of events provides a complete audit trail of all changes and actions within the system.
+
+### Disadvantages
+-   **Increased Complexity:** Setting up, configuring, and managing an event streaming platform can be complex and requires specialized knowledge.
+-   **Operational Overhead:** Requires significant operational effort for monitoring, maintenance, and ensuring high availability.
+-   **Potential for Latency:** While often real-time, latency can be introduced by network delays, processing bottlenecks, or batching strategies.
+-   **Cost:** Operating event streaming infrastructure, especially at scale, can be expensive due to hardware, software licenses, and operational costs.
+-   **Data Governance Challenges:** Managing data schemas, evolution, and ensuring data quality across numerous event types and consumers can be challenging.
+-   **Debugging and Troubleshooting:** Tracing event flows and debugging issues in a distributed event-driven system can be more difficult than in traditional request-response architectures.
 
 ## Which service use it?
 
