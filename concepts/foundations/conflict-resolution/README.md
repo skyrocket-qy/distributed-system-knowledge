@@ -20,14 +20,6 @@ This section addresses various strategies and mechanisms for resolving these con
 -   **Complexity:** The difficulty of implementing and maintaining the conflict resolution mechanism.
 -   **Determinism:** Whether the resolution process always yields the same result given the same set of conflicting updates.
 
-## Characteristics
-
-- **Conflict Detection**: The ability to detect when two or more updates conflict with each other.
-- **Conflict Resolution**: The process of resolving a conflict and choosing a winning update.
-- **Data Convergence**: The process of ensuring that all replicas of the data eventually converge to the same state.
-- **Data Loss**: The possibility of losing data during conflict resolution.
-- **Complexity**: The complexity of the conflict resolution algorithm.
-
 ## Comparison
 
 | Strategy | Complexity | Data Loss Risk | Resolution Logic | Use Case |
@@ -36,26 +28,3 @@ This section addresses various strategies and mechanisms for resolving these con
 | **[Vector Clocks](./vector-clocks)** | Medium | Low | Causal history | Detecting concurrency, manual resolution |
 | **[CRDTs](./crdts)** | High | None | Automatic, deterministic | Collaborative editing, real-time apps |
 | **[Timestamps with Logical Clocks](./timestamps-with-logical-clocks)** | Medium | Medium | Causal ordering | Distributed databases, event sourcing |
-
-## Trade-offs
-
-| Strategy | Advantages | Disadvantages |
-|---|---|---|
-| **Last-Write-Wins (LWW)** | Simple, low overhead | Potential for data loss, relies on synchronized clocks |
-| **Vector Clocks** | Detects concurrency, prevents data loss | Increased complexity, requires application-level resolution |
-| **CRDTs** | Automatic resolution, no data loss | High complexity, limited data types |
-| **Timestamps with Logical Clocks** | Causal ordering, prevents data loss | Increased overhead, requires clock synchronization |
-
-## Which service use it?
-
-
-
--   **Last-Write-Wins (LWW):** Often used in systems where simplicity is prioritized and occasional data loss due to concurrent updates is acceptable, such as caching systems or some eventually consistent key-value stores.
-
--   **Vector Clocks:** Employed in distributed databases (e.g., Riak) and collaborative systems to detect concurrent updates and allow for application-level conflict resolution or merging.
-
--   **CRDTs (Conflict-free Replicated Data Types):** Ideal for real-time collaborative applications (e.g., text editors, whiteboards) where multiple users can concurrently modify data, and conflicts need to be resolved automatically and deterministically.
-
--   **Timestamps with Logical Clocks:** Used in distributed databases and event sourcing systems to establish a causal order of events and resolve conflicts based on that order, providing stronger consistency guarantees than simple physical timestamps.
-
--   **Application-specific Logic:** Many complex distributed systems, especially those dealing with business logic, implement custom conflict resolution strategies tailored to their specific domain requirements.
