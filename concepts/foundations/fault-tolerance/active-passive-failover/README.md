@@ -27,22 +27,21 @@ graph TD
 - **Consistency**: Data is replicated from the active node to the passive node to ensure consistency.
 - **Failover**: The process of switching from the active node to the passive node is called failover.
 
-## Comparison
+## Pros & Cons
 
-| Feature | Description |
-|---|---|
-| **Availability** | High, but with a brief downtime during failover. |
-| **Complexity** | Relatively simple to implement. |
-| **Cost** | Lower than active-active, as passive resources are idle. |
-| **Performance** | No performance gain, as only one node is active. |
+### Pros
+-   **Simplicity:** Generally easier to set up, configure, and manage compared to more complex high-availability solutions like active-active.
+-   **Clear Failover Mechanism:** The failover process is predictable, with a defined standby system ready to take over.
+-   **Data Consistency:** Easier to maintain strong data consistency as only one node is actively writing at any given time, simplifying replication.
+-   **Cost-Effective (in some cases):** The passive node might run with fewer resources or be a less powerful machine, potentially reducing costs compared to having two fully active systems.
 
-## Trade-offs
+### Cons
+-   **Downtime During Failover:** There is an inevitable period of downtime during the switch from the active to the passive node, which can range from seconds to minutes.
+-   **Resource Underutilization:** The passive server remains idle or underutilized, representing a wasted resource until a failover occurs.
+-   **Limited Scalability:** Scaling typically involves upgrading the capacity of both the active and passive servers, rather than distributing the load across multiple active nodes.
+-   **Potential for Data Loss:** If data replication to the passive node lags, there's a risk of losing recent transactions during a failover event.
+-   **Failover Testing Complexity:** Thoroughly testing the failover process can be challenging and disruptive.
 
-| Advantages | Disadvantages |
-|---|---|
-| **High Availability**: Active-passive failover provides high availability. | **Downtime**: There is a brief downtime during failover. |
-| **Simple**: Active-passive failover is relatively simple to implement. | **Cost**: The passive node is idle and does not contribute to the performance of the system. |
-| **Consistent**: Data is replicated from the active node to the passive node to ensure consistency. | **Data Loss**: Data loss can occur if the active node fails before the data is replicated to the passive node. |
 
 ## Which service use it?
 
