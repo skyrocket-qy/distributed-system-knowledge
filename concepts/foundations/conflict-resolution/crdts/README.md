@@ -4,6 +4,23 @@
 
 This section details how CRDTs are designed to resolve conflicts automatically and deterministically, making them suitable for collaborative and eventually consistent distributed systems.
 
+### How CRDTs Work
+
+CRDTs achieve conflict-free replication by ensuring that concurrent operations commute, meaning the order in which they are applied does not affect the final state. There are two main types of CRDTs:
+
+1.  **Operation-based CRDTs (CmRDTs - Commutative Replicated Data Types):**
+    *   These CRDTs transmit operations (e.g., "increment by 1", "add element X").
+    *   Each operation is applied locally and then broadcast to other replicas.
+    *   The operations must be commutative, meaning `op1(op2(state))` yields the same result as `op2(op1(state))`.
+    *   They require reliable, causally ordered message delivery.
+
+2.  **State-based CRDTs (CvRDTs - Convergent Replicated Data Types):**
+    *   These CRDTs transmit their full local state (or a merge of states).
+    *   When a replica receives a state from another replica, it merges it with its own state using a join function (least upper bound) that is commutative, associative, and idempotent.
+    *   They only require eventual message delivery, as states can be merged in any order.
+
+Both types guarantee strong eventual consistency: all replicas will eventually converge to the same state, even with concurrent updates and network partitions, without requiring complex coordination protocols or manual conflict resolution.
+
 ## Characteristics
 
 - **Conflict-free**: CRDTs are designed to be conflict-free, meaning that they can be updated concurrently without requiring a central authority to resolve conflicts.
