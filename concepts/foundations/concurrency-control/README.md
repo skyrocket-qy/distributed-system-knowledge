@@ -6,7 +6,7 @@ Concurrency control in distributed systems refers to the mechanisms used to ensu
 
 The primary goal of concurrency control is to manage the execution of concurrent operations in a way that maintains data integrity while maximizing system performance. This involves preventing undesirable phenomena such as lost updates, dirty reads, and non-repeatable reads. By coordinating access to shared resources, concurrency control protocols ensure that the system behaves as if all operations were executed in a sequential, well-defined order.
 
-## Characteristics
+## Key Challenges
 
 - **Isolation**: Concurrency control mechanisms provide isolation, which ensures that each transaction appears to execute in isolation from others. This is one of the key properties of ACID (Atomicity, Consistency, Isolation, Durability).
 - **Correctness**: They maintain the correctness of data by preventing race conditions and conflicts that could lead to inconsistencies.
@@ -15,11 +15,9 @@ The primary goal of concurrency control is to manage the execution of concurrent
 
 ## Comparison
 
-- **Optimistic vs. Pessimistic**: Concurrency control strategies are often categorized as either optimistic or pessimistic. Pessimistic approaches, like locking, prevent conflicts from happening, while optimistic methods, like versioning, detect and resolve them after they occur.
-- **Granularity**: The granularity of concurrency control can range from fine-grained (e.g., locking a single record) to coarse-grained (e.g., locking an entire table), which has implications for performance and complexity.
+Concurrency control strategies are broadly categorized into two main approaches:
 
-## Trade-offs
-
-- **Performance vs. Consistency**: Stricter concurrency control models, such as two-phase locking, provide strong consistency guarantees but can introduce performance overhead due to contention and deadlocks.
-- **Complexity vs. Scalability**: Simpler concurrency control mechanisms may be easier to implement but may not scale well in highly concurrent environments, whereas more advanced techniques can offer better scalability at the cost of increased complexity.
-- **Deadlocks**: Pessimistic concurrency control methods, particularly those involving locks, can lead to deadlocks, where two or more transactions are blocked indefinitely, waiting for each other to release resources.
+| Approach | Mechanism | When Conflicts Detected | Performance Impact | Use Case |
+|---|---|---|---|---|
+| **[Optimistic Locking](./optimistic-locking)** | Allows concurrent transactions to proceed without locks, assuming conflicts are rare. Conflicts are detected at commit time. | At commit time | Lower overhead for low contention; higher overhead for high contention (rollbacks) | High-read, low-write workloads; web applications; collaborative editing | 
+| **[Pessimistic Locking](./pessimistic-locking)** | Prevents conflicts by acquiring locks on resources before accessing them. Transactions wait for locks to be released. | Before access (prevented) | Higher overhead due to locking; potential for deadlocks | High-contention environments; critical financial transactions; resource-intensive operations |
