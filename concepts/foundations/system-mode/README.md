@@ -29,14 +29,6 @@ Understanding the trade-offs between these different system modes is essential f
 -   **Development and Operational Complexity:** The effort required to build, deploy, and maintain the system.
 -   **Cost:** The financial implications of infrastructure, development, and operations for a given system mode.
 
-## Characteristics
-
-- **Scalability**: The ability of a system to handle a growing amount of work.
-- **Consistency**: The property that ensures that every node in a distributed system has the same view of the data.
-- **Availability**: The property that ensures that a system is operational and accessible.
-- **Fault Tolerance**: The ability of a system to continue operating in the event of failures.
-- **Complexity**: The degree to which a system is difficult to understand, design, and implement.
-
 ## Comparison
 
 | Mode | Scalability | Consistency | Availability | Complexity | Use Case |
@@ -54,36 +46,3 @@ Understanding the trade-offs between these different system modes is essential f
 | **[CAP Tradeoff (Tunable)](./cap-tradeoff-tunable)** | Varies | Tunable | Tunable | High | Systems requiring flexibility |
 | **Microservices** | High | Varies | High | High | Modern cloud-native applications, complex business systems |
 
-## Trade-offs
-
-- **Scalability vs. Consistency**: Systems that are highly scalable often have weaker consistency guarantees.
-- **Availability vs. Consistency**: Systems that are highly available often have weaker consistency guarantees.
-- **Performance vs. Consistency**: Systems that have high performance often have weaker consistency guarantees.
-
-## Which service use it?
-
-
-
--   **Client-Server:** Most web applications, email services, file servers, and traditional client-server enterprise software.
-
--   **Peer-to-Peer (P2P):** File sharing networks, cryptocurrencies, some online gaming, and distributed content delivery.
-
--   **Leader-Follower:** Replicated databases (e.g., MySQL, PostgreSQL), distributed consensus systems (e.g., ZooKeeper, etcd), and message queues. This pattern was historically also referred to as Master-Slave.
-
--   **Multi-Master:** Geographically distributed databases, distributed version control systems (e.g., Git), and some highly available web services.
-
--   **Sharded (Partitioned):** Large-scale databases (SQL and NoSQL), distributed search engines, and big data processing systems.
-
--   **Shared-Nothing:** Most modern NoSQL databases, massively parallel processing (MPP) data warehouses, and large-scale web services.
-
--   **Microservices:** Modern cloud-native applications, complex business systems, and highly scalable web platforms.
-
--   **Quorum-Based:** Distributed storage systems, distributed databases with tunable consistency, and consensus algorithms.
-
--   **Event-Driven:** Microservices communication, real-time analytics, IoT platforms, and serverless computing.
-
--   **Log-Based:** Event sourcing, distributed transaction logs, change data capture (CDC), and stream processing platforms.
-
--   **Federated Multi-Cluster:** Multi-cloud deployments, large enterprise IT infrastructures, and global service meshes.
-
--   **CAP Tradeoff (Tunable):** NoSQL databases like Cassandra and Riak, where consistency levels can be configured per operation.
