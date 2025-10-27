@@ -58,18 +58,19 @@ sequenceDiagram
 - **Durable**: The outcome of the transaction is durable, even in the case of failures.
 - **Complex**: 3PC is more complex than 2PC, as it involves an extra phase.
 
-## Comparison
+## ## Pros & Cons
 
-| Protocol | Blocking | Complexity |
-|---|---|---|
-| **3PC** | No | High |
-| **2PC** | Yes | Medium |
+### Pros
+-   **Non-blocking (Improved):** Designed to be non-blocking in the event of a coordinator failure, allowing participants to reach a consistent decision without indefinite waiting, unlike 2PC.
+-   **Reduced Blocking Scenarios:** Mitigates some of the blocking issues of 2PC by introducing the "PreCommit" phase, which allows participants to commit even if the coordinator fails after sending PreCommit.
+-   **Data Consistency:** Like 2PC, it ensures atomicity and consistency across distributed transactions.
 
-## Trade-offs
-
--   **More Complex:** The addition of an extra phase makes 3PC more complex to implement and manage than 2PC.
--   **Still Susceptible to Network Partitions:** While it aims to be non-blocking in coordinator failure, it can still block or lead to inconsistencies under certain network partition scenarios.
--   **Higher Overhead:** The extra communication phase introduces even higher latency and network overhead compared to 2PC.
+### Cons
+-   **Increased Complexity:** Significantly more complex to implement and manage than 2PC due to the additional phase and state transitions.
+-   **Higher Message Overhead:** The extra phase (PreCommit) means more messages exchanged between the coordinator and participants, leading to increased network traffic and latency.
+-   **Strong Assumptions:** Relies on strong assumptions about bounded network delays and node response times, which may not hold true in real-world, unpredictable distributed environments.
+-   **Not Fully Non-blocking:** While improved, it can still block under certain failure scenarios, particularly during network partitions where it might be indistinguishable from multiple site failures.
+-   **Limited Practical Adoption:** Due to its complexity and remaining vulnerabilities, 3PC is rarely implemented in practical systems; 2PC or alternative patterns like Saga are more common.
 
 ## Use Case
 

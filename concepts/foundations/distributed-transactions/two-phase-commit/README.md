@@ -54,18 +54,20 @@ sequenceDiagram
 - **Durable**: The outcome of the transaction is durable, even in the case of failures.
 - **Centralized**: The protocol relies on a central coordinator to make the final decision.
 
-## Comparison
 
-| Protocol | Blocking | Complexity |
-|---|---|---|
-| **2PC** | Yes | Medium |
-| **3PC** | No | High |
+## Pros & Cons
 
-## Trade-offs
+### Pros
+-   **Atomicity and Consistency:** Guarantees that all participating nodes either commit or abort the transaction together, ensuring data consistency across distributed systems.
+-   **Simplicity (Relative):** Compared to more complex distributed consensus algorithms, the basic concept of 2PC is relatively straightforward to understand.
+-   **Durability:** Once committed, the changes are permanent and survive failures.
 
--   **High Latency:** The two-phase communication and blocking nature introduce significant latency, especially with many participants or high network delays.
--   **Blocking:** Participants hold resources (e.g., locks) during the entire protocol, which can lead to reduced concurrency and potential deadlocks if the coordinator fails.
--   **Single Point of Failure:** If the coordinator fails during the commit phase, participants may be left in an uncertain state, unable to commit or abort until the coordinator recovers or a recovery protocol is initiated.
+### Cons
+-   **Blocking Protocol:** This is the most significant drawback. If the coordinator fails after the "prepare" phase but before sending the "commit" or "abort" message, participants can remain indefinitely blocked, holding resources.
+-   **Single Point of Failure (Coordinator):** The coordinator is central to the protocol. Its failure can leave transactions in an "in-doubt" state, requiring manual intervention.
+-   **Performance Overhead:** Involves multiple rounds of communication, leading to increased latency and reduced throughput, especially in high-latency networks or with many participants.
+-   **Scalability Limitations:** Due to its synchronous and blocking nature, 2PC can struggle with scalability in large-scale distributed systems.
+-   **Not Fully Resilient:** While it handles some failures, it's not robust against all possible failure scenarios, particularly concurrent failures of the coordinator and participants.
 
 ## Use Case
 
