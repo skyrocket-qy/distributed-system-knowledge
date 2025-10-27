@@ -34,14 +34,6 @@ The goal of fault tolerance is to mask failures from the end-user, providing the
 -   **Complexity:** The added complexity to the system design, development, and operation.
 -   **Testing:** Thoroughly testing failure scenarios to ensure the fault-tolerance mechanisms work as expected.
 
-## Characteristics
-
-- **Availability**: The ability of a system to remain operational and accessible.
-- **Reliability**: The ability of a system to perform its intended function correctly.
-- **Redundancy**: The duplication of critical components or functions of a system.
-- **Failover**: The process of switching to a redundant or standby system upon the failure of the primary system.
-- **Recovery**: The process of restoring a system to a normal or operational state after a failure.
-
 ## Comparison
 
 | Technique | Recovery Time | Resource Overhead | Complexity | Use Case |
@@ -54,31 +46,3 @@ The goal of fault tolerance is to mask failures from the end-user, providing the
 | **[Gossip-Based Recovery](./gossip-recovery)** | Slow | Low | Low | Peer-to-peer networks, cluster membership |
 | **[Idempotency](./idempotency)** | Instant | Low | Medium | Message processing, payment systems |
 | **[Chaos Engineering](./chaos-engineering)** | Proactive | Medium | High | Validating system resilience in production |
-
-## Trade-offs
-
-- **Cost**: Fault tolerance can be expensive to implement and maintain.
-- **Complexity**: Fault tolerance can add complexity to the system.
-- **Performance**: Fault tolerance can introduce performance overhead.
-
-## Which service use it?
-
-
-
--   **Redundancy (Replication):** Distributed databases (e.g., Cassandra, MongoDB), distributed file systems (e.g., HDFS), and cloud storage services (e.g., Amazon S3) extensively use replication to ensure data availability and durability.
-
--   **Failure Detection:** Cluster management systems (e.g., Kubernetes, Apache Mesos), distributed coordination services (e.g., ZooKeeper, etcd), and load balancers use various mechanisms to detect unhealthy nodes or services.
-
--   **Checkpointing and Recovery:** Long-running batch processing jobs (e.g., in Apache Spark, Flink), scientific simulations, and stateful stream processing applications use checkpointing to recover from failures without restarting from scratch.
-
--   **Graceful Degradation:** Content delivery networks (CDNs), large-scale web services, and streaming platforms often implement graceful degradation to maintain some level of service even when parts of the system are under stress or experiencing failures.
-
--   **Active-Passive Failover:** Traditional high-availability setups for databases, application servers, and network devices.
-
--   **Active-Active Cluster:** Load-balanced web servers, stateless microservices, and distributed caching systems.
-
--   **Consensus-Based Recovery:** Distributed databases (e.g., CockroachDB), distributed transaction systems, and state machine replication systems.
-
--   **Gossip-Based Recovery:** Peer-to-peer networks, distributed hash tables (DHTs), and some cluster membership services.
-
-
