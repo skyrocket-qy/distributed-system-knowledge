@@ -1,6 +1,6 @@
 # Coordination
 
-## Core
+
 
 **Coordination** is the process of managing the interactions and dependencies between multiple processes in a distributed system. In a distributed environment, where processes are running on different nodes and communicating over a network, it's essential to have mechanisms in place to ensure that they can work together in a consistent and orderly manner.
 

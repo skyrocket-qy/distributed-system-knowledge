@@ -1,6 +1,6 @@
 # Caching
 
-## Core
+
 
 **Caching** is the process of storing copies of files or data in a temporary storage location, or "cache," so that they can be accessed more quickly. Caching is used to reduce latency and improve the performance of systems by serving data from the cache instead of fetching it from the original source.
 

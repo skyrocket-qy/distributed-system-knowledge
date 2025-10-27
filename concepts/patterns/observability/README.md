@@ -1,6 +1,6 @@
 # Observability
 
-## Core
+
 
 **Observability** in distributed systems refers to the ability to infer the internal states of a system by examining its external outputs. In complex, dynamic, and often ephemeral distributed environments, it's impossible to predict every failure mode or performance bottleneck. Therefore, having robust observability practices is crucial for understanding how a system is behaving, diagnosing issues, and ensuring its reliability and performance.
 

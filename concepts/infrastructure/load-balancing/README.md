@@ -1,6 +1,6 @@
 # Load Balancing
 
-## Core
+
 
 **Load balancing** is the process of distributing incoming network traffic across multiple servers to ensure that no single server is overwhelmed. By spreading the load, load balancing improves responsiveness and increases the availability of applications.
 

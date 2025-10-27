@@ -1,6 +1,6 @@
 # Server-Side Service Discovery
 
-## Core
+
 
 Server-Side Service Discovery is a pattern where clients make requests to a service via a router, load balancer, or API Gateway. This intermediary is responsible for querying the service registry to find available service instances and then forwarding the client's request to one of them. The client itself does not need to know about the service registry or the specific network locations of service instances.
 

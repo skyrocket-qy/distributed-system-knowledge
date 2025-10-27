@@ -1,6 +1,6 @@
 # Quorum-Based System Mode
 
-## Core
+
 
 A **quorum-based** system mode is a technique used in distributed systems to ensure data consistency and availability, even when some nodes are unavailable. A quorum is the minimum number of nodes that must participate in an operation (a read or a write) for it to be considered successful.
 

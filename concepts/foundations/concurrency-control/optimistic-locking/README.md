@@ -1,6 +1,6 @@
 # Optimistic Locking
 
-## Core
+
 
 Optimistic locking is a concurrency control strategy that assumes conflicts between transactions are rare. Instead of preventing conflicts by locking resources, it allows transactions to proceed and checks for conflicts at the time of commit. If a conflict is detected, the transaction is aborted and must be retried. This approach is well-suited for systems with low data contention, as it avoids the overhead of acquiring and releasing locks.
 

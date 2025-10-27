@@ -1,6 +1,6 @@
 # Distributed Tracing
 
-## Core
+
 
 **Distributed Tracing** is a technique used to monitor and observe requests as they flow through a distributed system. In a microservices architecture or any complex distributed environment, a single user request might traverse multiple services, databases, and queues. Distributed tracing provides an end-to-end view of this request's journey, allowing developers and operators to understand the performance bottlenecks, identify failures, and debug issues across service boundaries.
 

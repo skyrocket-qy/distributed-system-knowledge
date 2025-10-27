@@ -1,6 +1,6 @@
 # System Modes
 
-## Core
+
 
 In the context of distributed systems, a **system mode** (also known as an architectural pattern or deployment model) describes the fundamental way in which the components of the system are organized and interact with each other. The choice of a system mode is a critical architectural decision that has a profound impact on the system's properties, such as its scalability, fault tolerance, consistency, and complexity.
 

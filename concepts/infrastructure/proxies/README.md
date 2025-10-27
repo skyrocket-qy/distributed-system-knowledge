@@ -1,6 +1,6 @@
 # Proxies
 
-## Core
+
 
 A **proxy** is a server that acts as an intermediary for requests from clients seeking resources from other servers. Proxies provide a gateway between users and the internet, and they can be used for a variety of purposes, including load balancing, security, and caching.
 

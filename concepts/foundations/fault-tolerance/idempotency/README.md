@@ -1,6 +1,6 @@
 # Idempotency
 
-## Core
+
 
 **Idempotency** is the property of an operation that, when executed multiple times with the same parameters, produces the same result or causes the same side effect as if it were executed only once. In distributed systems, where network issues, retries, and partial failures are common, designing idempotent operations is crucial for ensuring correctness and reliability.
 

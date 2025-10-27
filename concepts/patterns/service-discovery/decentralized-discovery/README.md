@@ -1,6 +1,6 @@
 # Decentralized Discovery
 
-## Core
+
 
 Decentralized Discovery is a service discovery pattern where there is no central authority or server responsible for maintaining a registry of active peers or service instances. Instead, peers discover each other through distributed protocols and data structures, making the system more resilient to single points of failure and censorship.
 

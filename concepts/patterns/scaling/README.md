@@ -1,6 +1,6 @@
 # Scaling
 
-## Core
+
 
 **Scaling** is the process of designing and building a system in a way that it can handle a growing amount of work. In the context of a distributed system, this typically means being able to handle more users, more data, or more transactions. A scalable system is one that can maintain or even improve its performance and cost-effectiveness as the load on the system increases.
 

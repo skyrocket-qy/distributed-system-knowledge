@@ -1,6 +1,6 @@
 # Two-Phase Commit (2PC)
 
-## Core
+
 
 **Two-Phase Commit (2PC)** is a classic atomic commitment protocol that ensures all participating nodes in a distributed transaction either commit or abort the transaction together. It is designed to guarantee atomicity across multiple participants, even in the face of failures.
 

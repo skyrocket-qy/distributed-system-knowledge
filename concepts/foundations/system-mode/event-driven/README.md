@@ -1,6 +1,6 @@
 # Event-Driven System Mode
 
-## Core
+
 
 An **event-driven** system mode is an architectural pattern in which the flow of the system is determined by events. Events are messages that are sent by one component to signal that something has happened, such as a user action, a sensor reading, or a change in the state of the system.
 

@@ -1,6 +1,6 @@
 # Client-Server Communication
 
-## Core
+
 
 The **Client-Server** model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called **servers**, and service requesters, called **clients**. It is the most traditional and widely used architecture for network applications.
 

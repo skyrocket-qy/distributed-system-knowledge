@@ -1,6 +1,6 @@
 # Fault Tolerance
 
-## Core
+
 
 **Fault tolerance** is a critical property of distributed systems that enables them to continue operating correctly even in the presence of failures (or "faults"). In a distributed system, where many independent components are communicating over an unreliable network, failures are not the exception—they are the norm. Therefore, designing systems that can withstand and recover from these failures is essential for building reliable and highly available services.
 

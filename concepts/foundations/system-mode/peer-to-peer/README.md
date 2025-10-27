@@ -1,6 +1,6 @@
 # Peer-to-Peer (P2P) Mode
 
-## Core
+
 
 A **Peer-to-Peer (P2P)** system mode is a decentralized architectural model where all participating nodes, called peers, have equivalent capabilities and responsibilities. Unlike the client-server model, there is no central server. Peers communicate directly with each other to share resources, workloads, and data.
 

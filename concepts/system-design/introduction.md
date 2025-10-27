@@ -1,6 +1,6 @@
 # Introduction to System Design
 
-## Core
+
 
 System design is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements. In the context of distributed systems, it involves making critical decisions about how to structure and operate a collection of independent computers to achieve a common goal.
 

@@ -1,6 +1,6 @@
 # Saga Pattern
 
-## Core
+
 
 The **Saga Pattern** is a way to manage transactions that span multiple services in a distributed system, ensuring data consistency without using traditional distributed transactions (like Two-Phase Commit). It's particularly well-suited for microservices architectures where services have their own databases and strong ACID guarantees across services are difficult to achieve.
 

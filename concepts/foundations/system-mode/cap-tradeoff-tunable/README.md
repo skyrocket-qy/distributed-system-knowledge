@@ -1,6 +1,6 @@
 # CAP Tradeoff (Tunable) System Mode
 
-## Core
+
 
 In distributed systems, the **CAP theorem** states that it is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees:
 

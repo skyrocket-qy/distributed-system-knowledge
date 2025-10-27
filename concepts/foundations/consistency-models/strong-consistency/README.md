@@ -1,6 +1,6 @@
 # Strong Consistency
 
-## Core
+
 
 Strong consistency is the strictest consistency model, guaranteeing that all clients see the same, most up-to-date version of the data at all times. This means that any read operation will return the value of the most recent write, and all operations appear to be executed in a single, atomic order.
 

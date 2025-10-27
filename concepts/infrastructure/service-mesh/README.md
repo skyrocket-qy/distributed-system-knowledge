@@ -1,6 +1,6 @@
 # Service Mesh
 
-## Core
+
 
 A service mesh is a dedicated, configurable infrastructure layer that manages service-to-service communication in a microservices architecture. Its primary goal is to make communication between services reliable, secure, and observable. It works by routing all traffic between services through a network of proxies, which are deployed alongside each service instance as a "sidecar."
 

@@ -1,6 +1,6 @@
 # Distributed Locks
 
-## Core
+
 
 **Distributed Locks** are a mechanism used in distributed systems to coordinate access to a shared resource or critical section of code among multiple independent processes or nodes. Just like a mutex or semaphore in a single-process environment, a distributed lock ensures that only one process can hold the lock at any given time, thereby preventing race conditions and ensuring data consistency when multiple processes try to modify the same resource concurrently.
 

@@ -1,6 +1,6 @@
 # Mesh Topology
 
-## Core
+
 
 In a **Mesh Topology**, every node in the network is connected directly to every other node. This creates multiple paths for data to travel, offering high redundancy and fault tolerance. There are two main types: full mesh and partial mesh.
 

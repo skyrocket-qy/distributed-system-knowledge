@@ -1,6 +1,6 @@
 # Centralized Discovery
 
-## Core
+
 
 Centralized Discovery is a service discovery pattern where a central server, often referred to as a tracker or bootstrap server, maintains a registry of all active peers or service instances within a distributed system. New peers or clients connect to this central server to obtain a list of other available peers or services they can communicate with.
 

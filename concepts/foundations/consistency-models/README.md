@@ -1,6 +1,6 @@
 # Consistency Models
 
-## Core
+
 
 In a distributed system, a **consistency model** is a contract between the system and the application that specifies the guarantees the system will provide regarding the visibility and ordering of updates to data. When data is replicated across multiple nodes, it's not always possible to ensure that all clients see the same data at the same time. A consistency model defines the rules for how and when the system will propagate updates and make them visible to clients.
 

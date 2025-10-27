@@ -1,6 +1,6 @@
 # Scalability
 
-## Core
+
 
 Scalability is the property of a system to handle a growing amount of work by adding resources to the system. In the context of distributed systems, scalability is crucial for ensuring that the system can accommodate increasing numbers of users, data, or transactions without a significant degradation in performance.
 

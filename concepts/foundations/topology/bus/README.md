@@ -1,6 +1,6 @@
 # Bus Topology
 
-## Core
+
 
 In a **Bus Topology**, all nodes in the network are connected to a single, shared communication line, often called the "bus" or "backbone." Data is transmitted along this central cable, and all nodes receive the transmission, but only the intended recipient processes it.
 

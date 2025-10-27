@@ -1,6 +1,6 @@
 # Databases in Distributed Systems
 
-## Core
+
 
 In a distributed system, a database is a critical component responsible for storing, managing, and retrieving data. Unlike traditional monolithic databases, a distributed database stores data across multiple physical locations, which can be in different data centers or geographic regions. The primary goal is to achieve high availability, fault tolerance, and scalability by distributing the data and workload.
 

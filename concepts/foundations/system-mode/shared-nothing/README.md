@@ -1,6 +1,6 @@
 # Shared-Nothing Architecture
 
-## Core
+
 
 **Shared-nothing** is a distributed computing architecture in which each node is a self-contained, independent system with its own private memory, CPU, and disk storage. The nodes do not share any resources and communicate with each other by passing messages over a network.
 

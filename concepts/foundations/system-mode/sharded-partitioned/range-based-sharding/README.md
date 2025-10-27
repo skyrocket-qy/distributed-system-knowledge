@@ -1,6 +1,6 @@
 # Range-Based Sharding
 
-## Core
+
 
 Range-based sharding is a sharding strategy where data is partitioned based on a contiguous range of values of the shard key. Each shard is responsible for storing data whose shard key falls within a predefined range. This method is intuitive and often aligns well with how data is naturally queried.
 

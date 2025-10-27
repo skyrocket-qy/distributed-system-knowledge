@@ -1,6 +1,6 @@
 # Service Discovery
 
-## Core
+
 
 Service Discovery is a crucial component in modern distributed systems, especially in microservices architectures. It is the process of automatically detecting network services and devices. Without service discovery, applications would need to be configured with the hostnames and port numbers of all the services they consume, which is impractical in dynamic environments where service instances are frequently scaled up/down, replaced, or moved.
 

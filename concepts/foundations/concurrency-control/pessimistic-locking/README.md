@@ -1,6 +1,6 @@
 # Pessimistic Locking
 
-## Core
+
 
 Pessimistic locking is a concurrency control strategy that assumes conflicts between transactions are likely to occur. To prevent conflicts, it locks resources when they are first accessed by a transaction, ensuring that no other transaction can modify them until the lock is released. This approach guarantees that a transaction will not be affected by the activities of other concurrent transactions, providing a high level of isolation.
 

@@ -1,6 +1,6 @@
 # Topology
 
-## Core
+
 
 In the context of a distributed system, **topology** refers to the arrangement of the nodes and the communication links between them. The network topology has a significant impact on the performance, reliability, and scalability of the system.
 

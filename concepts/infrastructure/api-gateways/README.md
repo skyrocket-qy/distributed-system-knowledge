@@ -1,6 +1,6 @@
 # API Gateways
 
-## Core
+
 
 An API Gateway is a server that acts as a single entry point for all client requests to a system's backend services. In a microservices architecture, instead of clients calling individual services directly, they communicate with the API Gateway. The gateway then routes requests to the appropriate downstream services, aggregates the results, and returns them to the client.
 

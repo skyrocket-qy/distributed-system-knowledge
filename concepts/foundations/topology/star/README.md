@@ -1,6 +1,6 @@
 # Star Topology
 
-## Core
+
 
 In a **Star Topology**, all nodes in the network are individually connected to a central device, such as a hub, switch, or router. This central device acts as a server, relaying all communications between the connected nodes.
 

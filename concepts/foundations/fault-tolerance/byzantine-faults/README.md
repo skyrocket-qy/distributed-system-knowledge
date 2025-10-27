@@ -1,6 +1,6 @@
 # Byzantine Faults
 
-## Core
+
 
 Byzantine faults are a class of fault tolerance problems in distributed computing where components of a system can fail in arbitrary ways, including malicious behavior, sending conflicting information to different parts of the system, or failing to respond. This is the most general and difficult class of failures to deal with.
 

@@ -1,6 +1,6 @@
 # Distributed Caching
 
-## Core
+
 
 **Distributed Caching** involves storing frequently accessed data across multiple servers in a distributed system. The primary goal is to improve application performance by reducing the latency of data retrieval and decreasing the load on backend data stores (like databases). Instead of fetching data from a slower, persistent storage every time, applications can retrieve it quickly from an in-memory cache.
 

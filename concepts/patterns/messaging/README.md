@@ -1,6 +1,6 @@
 # Messaging
 
-## Core
+
 
 **Messaging** is a powerful communication paradigm in distributed systems where components interact by sending and receiving messages. Unlike direct request-response communication (like RPC or REST), messaging is typically asynchronous, meaning the sender does not need to wait for an immediate response from the receiver. This decoupling of senders and receivers is a key feature that provides numerous benefits for building scalable, resilient, and maintainable distributed systems.
 

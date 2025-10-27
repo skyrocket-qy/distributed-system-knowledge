@@ -1,6 +1,6 @@
 # Raft
 
-## Core
+
 
 **Raft** is a consensus algorithm designed to be understandable and to provide fault tolerance in distributed systems. It is equivalent to Paxos in terms of fault tolerance and performance but is structured to be more comprehensible for humans, making it easier to implement and reason about. Raft ensures that all nodes in a distributed system agree on the same sequence of state changes, even in the presence of node failures or network partitions.
 

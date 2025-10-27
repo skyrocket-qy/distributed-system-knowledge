@@ -1,6 +1,6 @@
 # Log-Based System Mode
 
-## Core
+
 
 A **log-based** system mode is an architectural pattern in which the state of a system is represented as an immutable, append-only log of events. The log is the single source of truth, and the current state of the system is derived by replaying the events in the log.
 

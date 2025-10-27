@@ -1,6 +1,6 @@
 # Multi-Master Mode
 
-## Core
+
 
 **Multi-master** (or active-active) replication is a system mode where multiple nodes in a distributed system can accept write operations. This is in contrast to a single-master (or master-slave) architecture, where only one node is designated to handle writes.
 

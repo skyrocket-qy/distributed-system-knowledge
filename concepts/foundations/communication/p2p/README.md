@@ -1,6 +1,6 @@
 # Peer-to-Peer (P2P) Communication
 
-## Core
+
 
 The **Peer-to-Peer (P2P)** model is a decentralized communication architecture where individual nodes in the network, called **peers**, can act as both clients and servers. Unlike the traditional client-server model, there is no central authority or server. Peers communicate directly with each other to share resources, data, or services.
 

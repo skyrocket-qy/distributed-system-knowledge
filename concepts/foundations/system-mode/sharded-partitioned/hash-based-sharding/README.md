@@ -1,6 +1,6 @@
 # Hash-Based Sharding
 
-## Core
+
 
 Hash-based sharding is a sharding strategy where data is distributed across shards by applying a hash function to the shard key. The output of the hash function determines which shard a particular piece of data will reside on. This method aims to achieve an even distribution of data across all available shards.
 

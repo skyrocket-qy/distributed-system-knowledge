@@ -1,6 +1,6 @@
 # Transparency
 
-## Core
+
 
 Transparency, in the context of distributed systems, is the concealment of the separation of components, so that the system is perceived as a whole rather than a collection of independent components. The goal is to make the distributed nature of the system invisible to the user.
 

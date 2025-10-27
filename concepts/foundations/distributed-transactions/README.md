@@ -1,6 +1,6 @@
 # Distributed Transactions
 
-## Core
+
 
 In distributed systems, a **distributed transaction** is a transaction that involves multiple participants (e.g., databases, services) that are located on different network hosts. The primary challenge is to ensure atomicity, consistency, isolation, and durability (ACID properties) across all participating nodes, even in the face of network failures or node crashes.
 

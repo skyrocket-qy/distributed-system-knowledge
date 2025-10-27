@@ -1,6 +1,6 @@
 # Saga Pattern
 
-## Core
+
 
 The Saga pattern is a design pattern for managing failures in distributed transactions. In a microservices architecture, a single business transaction can span multiple services, each with its own database. Since traditional two-phase commit (2PC) protocols are often not feasible in a distributed environment due to their locking and coupling requirements, the Saga pattern provides a way to maintain data consistency across services.
 

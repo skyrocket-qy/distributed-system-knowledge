@@ -1,6 +1,6 @@
 # CAP Theorem
 
-## Core
+
 
 The CAP Theorem, also known as Brewer's theorem, states that it is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees:
 

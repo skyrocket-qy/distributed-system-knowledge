@@ -1,6 +1,6 @@
 # Leader Election
 
-## Core
+
 
 **Leader Election** is a fundamental problem in distributed systems where a unique process (the leader) needs to be chosen from a set of competing processes. The elected leader is typically responsible for coordinating tasks, managing shared resources, ensuring consistency, or handling specific operations that require a single point of control. This mechanism is crucial for many distributed algorithms and system architectures, especially in scenarios requiring strong consistency or centralized decision-making.
 

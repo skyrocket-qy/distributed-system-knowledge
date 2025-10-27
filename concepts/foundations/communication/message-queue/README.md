@@ -1,6 +1,6 @@
 # Message Queue Communication
 
-## Core
+
 
 The **Message Queue** model is a communication pattern that enables asynchronous communication between distributed components. It is based on the concept of a **queue**, which is a temporary storage for messages.
 

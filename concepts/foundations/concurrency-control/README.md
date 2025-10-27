@@ -1,6 +1,6 @@
 # Concurrency Control
 
-## Core
+
 
 Concurrency control in distributed systems refers to the mechanisms used to ensure that concurrent operations on shared data do not violate the data's correctness. It addresses the challenges that arise when multiple transactions or processes access and modify the same data simultaneously. Without effective concurrency control, systems can suffer from data corruption, inconsistencies, and race conditions, leading to unreliable behavior.
 

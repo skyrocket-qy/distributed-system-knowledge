@@ -1,6 +1,6 @@
 # Distributed Consensus
 
-## Core
+
 
 This section discusses consensus mechanisms specifically in the context of distributed coordination.
 

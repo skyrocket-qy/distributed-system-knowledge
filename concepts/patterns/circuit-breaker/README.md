@@ -1,6 +1,6 @@
 # Circuit Breaker Pattern
 
-## Core
+
 
 The Circuit Breaker is a design pattern used in distributed systems to detect failures and prevent a client from repeatedly trying to call a service that is likely to fail. Just like an electrical circuit breaker, it interrupts the flow of requests to a failing service when a certain threshold of failures is reached, preventing a cascade of failures across the system.
 

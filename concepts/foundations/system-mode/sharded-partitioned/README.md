@@ -1,6 +1,6 @@
 # Sharded/Partitioned System Mode
 
-## Core
+
 
 **Sharding** (also known as **partitioning**) is a database architecture pattern used to horizontally scale a data store. In a sharded system, a large dataset is broken down into smaller, more manageable pieces called **shards** or **partitions**. Each shard is stored on a separate server or node.
 

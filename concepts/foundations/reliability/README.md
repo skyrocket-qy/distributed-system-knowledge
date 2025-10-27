@@ -1,6 +1,6 @@
 # Reliability
 
-## Core
+
 
 Reliability is the probability that a system will perform its intended function without failure for a specified period. In distributed systems, reliability is a critical attribute, as it ensures that the system can be trusted to operate correctly and consistently over time.
 

@@ -1,6 +1,6 @@
 # Actor Model
 
-## Core
+
 
 The **Actor Model** is a powerful and elegant concurrency model that simplifies the design and implementation of concurrent and distributed systems. It treats "actors" as the universal primitives of concurrent computation. Each actor is an independent, isolated entity that encapsulates its own state and behavior, and communicates with other actors exclusively through asynchronous message passing.
 

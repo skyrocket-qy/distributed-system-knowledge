@@ -1,6 +1,6 @@
 # Paxos
 
-## Core
+
 
 **Paxos** is a family of protocols for solving the distributed consensus problem in an asynchronous network prone to failures (including crash failures of processes and message loss, duplication, or reordering). Its primary goal is to ensure that all non-faulty processes agree on a single value, even if some processes fail or messages are lost. Paxos is renowned for its correctness and resilience but is also known for its complexity.
 

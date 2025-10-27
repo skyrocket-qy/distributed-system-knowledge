@@ -1,6 +1,6 @@
 # Causal Consistency
 
-## Core
+
 
 Causal consistency means that if one event directly influences another, everyone who sees both events will see them in the correct order. If events aren't related, their order might vary. It's a middle ground: stronger than eventual consistency (where order can be completely mixed up) but not as strict as strong consistency (where everything is always in perfect order everywhere).
 

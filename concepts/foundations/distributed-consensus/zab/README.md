@@ -1,6 +1,6 @@
 # ZAB (ZooKeeper Atomic Broadcast)
 
-## Core
+
 
 The ZAB (ZooKeeper Atomic Broadcast) protocol is a consensus protocol that underpins Apache ZooKeeper, ensuring strong consistency and fault tolerance in distributed systems. It is designed to maintain a consistent state across all nodes in a ZooKeeper ensemble, even in the presence of failures or network partitions. ZAB ensures that all nodes process transactions in the exact same order, guaranteeing sequential consistency.
 

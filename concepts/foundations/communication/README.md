@@ -1,6 +1,6 @@
 # Communication
 
-## Core
+
 
 In distributed systems, **communication** is the mechanism by which processes running on different nodes interact and exchange information. Effective communication is fundamental to the functioning of any distributed system, as it enables coordination, data sharing, and the execution of distributed algorithms.
 

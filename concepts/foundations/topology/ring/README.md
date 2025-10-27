@@ -1,6 +1,6 @@
 # Ring Topology
 
-## Core
+
 
 This section explains the Ring topology in distributed systems. In a ring topology, each device is connected to two other devices on either side of it.
 

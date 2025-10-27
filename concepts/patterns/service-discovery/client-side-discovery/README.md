@@ -1,6 +1,6 @@
 # Client-Side Service Discovery
 
-## Core
+
 
 Client-Side Service Discovery is a pattern where the client application is responsible for determining the network locations of available service instances. Instead of relying on an intermediary, the client directly queries a service registry to retrieve a list of healthy and available service instances. Once it has this list, the client typically uses a load-balancing algorithm to select one of the instances for its request.
 

@@ -1,6 +1,6 @@
 # Conflict Resolution
 
-## Core
+
 
 **Conflict resolution** is the process of managing and resolving inconsistencies that arise when multiple nodes in a distributed system attempt to update the same piece of data concurrently. In any system where data is replicated and can be modified in more than one location, conflicts are inevitable.
 

@@ -1,6 +1,6 @@
 # Security
 
-## Core
+
 
 Security in distributed systems is a multifaceted discipline aimed at protecting the system from unauthorized access, use, disclosure, alteration, or destruction. It involves implementing a combination of preventative and detective controls to ensure the confidentiality, integrity, and availability of the system and its data.
 

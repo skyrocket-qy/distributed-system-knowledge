@@ -1,6 +1,6 @@
 # Availability
 
-## Core
+
 
 Availability is a measure of the time that a system is operational and accessible to its users. In distributed systems, high availability is a key requirement, as it ensures that the system can continue to function even in the event of node failures or network partitions.
 

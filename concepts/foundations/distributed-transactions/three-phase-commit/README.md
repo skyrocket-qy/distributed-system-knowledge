@@ -1,6 +1,6 @@
 # Three-Phase Commit (3PC)
 
-## Core
+
 
 **Three-Phase Commit (3PC)** is an atomic commitment protocol designed to address some of the blocking issues inherent in Two-Phase Commit (2PC), particularly in the event of a coordinator failure. It adds an extra phase to 2PC to ensure that participants are not left in an uncertain state if the coordinator crashes after sending a commit message but before all participants receive it.
 

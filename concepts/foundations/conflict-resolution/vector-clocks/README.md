@@ -1,6 +1,6 @@
 # Vector Clocks for Conflict Resolution
 
-## Core
+
 
 Vector clocks are a mechanism used in distributed systems to track the causality and ordering of events across multiple nodes or processes. They help in understanding the sequence of operations and maintaining consistency in systems without a global clock.
 

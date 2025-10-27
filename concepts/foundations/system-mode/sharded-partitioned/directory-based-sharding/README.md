@@ -1,6 +1,6 @@
 # Directory-Based Sharding
 
-## Core
+
 
 Directory-based sharding is a sharding strategy where a lookup table, often called a "directory" or "router," is maintained to map each shard key to the specific shard where its corresponding data resides. Instead of using a deterministic function (like a hash or range) to locate data, the system consults this directory to find the correct shard for any given piece of data.
 

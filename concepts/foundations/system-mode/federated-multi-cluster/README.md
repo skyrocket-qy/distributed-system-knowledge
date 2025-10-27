@@ -1,6 +1,6 @@
 # Federated Multi-Cluster Mode
 
-## Core
+
 
 A **federated multi-cluster** system mode is an architectural pattern in which multiple, independent clusters are loosely coupled to form a larger, distributed system. Each cluster is self-contained and has its own control plane, but they can communicate and share resources with each other in a controlled manner.
 

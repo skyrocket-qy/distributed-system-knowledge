@@ -1,6 +1,6 @@
 # Chaos Engineering
 
-## Core
+
 
 **Chaos Engineering** is the discipline of experimenting on a distributed system in order to build confidence in that system's capability to withstand turbulent conditions in production. Instead of waiting for failures to occur, Chaos Engineering proactively injects controlled failures into a system to identify weaknesses and improve its resilience. It's about learning from failure before it impacts customers.
 

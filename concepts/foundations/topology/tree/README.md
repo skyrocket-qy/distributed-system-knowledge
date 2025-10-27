@@ -1,6 +1,6 @@
 # Tree Topology
 
-## Core
+
 
 A **Tree Topology** is a hybrid topology that combines characteristics of both bus and star topologies. It is essentially a collection of star networks arranged in a hierarchical structure, with a central root node and branches extending outwards. Each branch can further subdivide into more branches or connect to individual nodes.
 
